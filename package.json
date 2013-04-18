@@ -1,0 +1,37 @@
+{
+  "name": "micloud.github.com",
+  "description": "MiCloud Wiki",
+  "version": "0.0.1",
+  "author": {
+    "name": "Simon Su",
+    "email": "simonsu@mitac.com.tw"
+  },
+  "contributors": [
+    {
+      "name": "Simon Su",
+      "email": "simonsu@mitac.com.tw"
+    }
+  ],
+  "dependencies": {
+    "markdown":"*"
+  },
+  "keywords": [
+    "http","server","web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/micloud/micloud.github.com"
+  },
+  "main": "index",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+  },
+  "optionalDependencies": {},
+  "_engineSupported": true,
+  "_defaultsLoaded": true,
+  "_from": "Simon"
+}
