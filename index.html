@@ -18,7 +18,7 @@
     <script type="text/javascript">
     $(document).ready(function(){
       $('#menu').load('./menu.html');
-      var p = getURLParameter('page');
+      var p = getURLParameter('page').split('#')[0];
       
 
       $('#pagename').html(p.split('.md')[0]);
