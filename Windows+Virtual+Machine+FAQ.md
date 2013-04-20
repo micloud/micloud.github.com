@@ -38,7 +38,7 @@ You will see this box. Click the 'Activate Now' button.
 
 
 
-<img src='images/Windows+Virtual+Machine+FAQ-win_activate_1.png' width='650' align='left'/>
+<img src='images/Windows+Virtual+Machine+FAQ-win-activate-1.png' width='650' align='left'/>
 
 
 
@@ -46,7 +46,7 @@ Then you want to click the 'Activate Windows online now' Button.
 
 
 
-<img src='images/Windows+Virtual+Machine+FAQ-win_activate_2.png' width='650' align='left'/>
+<img src='images/Windows+Virtual+Machine+FAQ-win-activate-2.png' width='650' align='left'/>
 
 
 
@@ -54,7 +54,7 @@ It may take a few minuets for the Microsoft Activation servers to finish the Act
 
 
 
-<img src='images/Windows+Virtual+Machine+FAQ-win_activate_3.png' width='650' align='left'/>
+<img src='images/Windows+Virtual+Machine+FAQ-win-activate-3.png' width='650' align='left'/>
 
 
 
@@ -62,7 +62,7 @@ Once your Windows system is activated you will see this confirmation:
 
 
 
-<img src='images/Windows+Virtual+Machine+FAQ-win_activate_4.png' width='650' align='left'/>
+<img src='images/Windows+Virtual+Machine+FAQ-win-activate-4.png' width='650' align='left'/>
 
 
 

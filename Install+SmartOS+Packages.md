@@ -32,7 +32,7 @@
 #pkgin list
 ```
 
-<img src='images/Install+SmartOS+Packages-pkgin_list.png' width='650'  align='center'/>
+<img src='images/Install+SmartOS+Packages-pkgin-list.png' width='650'  align='center'/>
 
 搜尋套件
 ===
@@ -43,7 +43,7 @@
 ex:pkgin search postgre
 ```
 
-<img src='images/Install+SmartOS+Packages-pkgin_search.png' width='650'  align='center'/>
+<img src='images/Install+SmartOS+Packages-pkgin-search.png' width='650'  align='center'/>
 
 安裝套件
 ===
@@ -53,7 +53,7 @@ ex:pkgin search postgre
 ex:pkgin install postgresql90-adminpack-9.0.4
 ```
 
-<img src='images/Install+SmartOS+Packages-pkgin_install.png' width='650'  align='center'/>
+<img src='images/Install+SmartOS+Packages-pkgin-install.png' width='650'  align='center'/>
 
 刪除套件
 ===
@@ -64,7 +64,7 @@ ex:pkgin install postgresql90-adminpack-9.0.4
 ex:pkgin remove postgresql90-adminpack-9.0.4
 ```
 
-<img src='images/Install+SmartOS+Packages-pkgin_remove.png' width='650'  align='center'/>
+<img src='images/Install+SmartOS+Packages-pkgin-remove.png' width='650'  align='center'/>
 
 常用套件
 ===

@@ -26,7 +26,7 @@ memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主�
 ```
 
 
-<img src='images/Using+Memcached-memcached_1.png' width='650' align='center'/>
+<img src='images/Using+Memcached-memcached-1.png' width='650' align='center'/>
 
 
 
@@ -39,7 +39,7 @@ memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主�
 ```
 
 
-<img src='images/Using+Memcached-memcached_2.png' width='650' align='center'/>
+<img src='images/Using+Memcached-memcached-2.png' width='650' align='center'/>
 
 
 
@@ -55,7 +55,7 @@ memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主�
 ```
 
 
-<img src='images/Using+Memcached-memcached_3.png' width='650' align='center'/>
+<img src='images/Using+Memcached-memcached-3.png' width='650' align='center'/>
 
 
 從上方的擷圖可以看到目前memcached大小為64 MB
@@ -70,4 +70,4 @@ memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主�
 ```
 
 
-<img src='images/Using+Memcached-memcached_4.png' width='650' align='center'/>
+<img src='images/Using+Memcached-memcached-4.png' width='650' align='center'/>

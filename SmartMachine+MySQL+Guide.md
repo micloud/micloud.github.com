@@ -886,7 +886,7 @@ Notice that this will show all queries, even if they aren't successful. Now that
 
 
 ```
-root@ferrari:~# dtrace -qn 'pid$target:mysqld:*mysql_parse*:entry { @queries[copyinstr(arg1)] = count() }' -p `pgrep -x mysqld`](root@ferrari:~# dtrace -qn 'pid$target:mysqld:*mysql_parse*:entry { @queries[copyinstr - arg1 = count -  }' -p `pgrep -x mysqld`)
+root@ferrari:~# dtrace -qn 'pid$target:mysqld:*mysql_parse*:entry { @queries[copyinstr(arg1)] = count() }' -p `pgrep -x mysqld`](root@ferrari:~# dtrace -qn 'pid$target:mysqld:*mysql-parse*:entry { @queries[copyinstr - arg1 = count -  }' -p `pgrep -x mysqld`)
 ^C
 
 select * from blah                                                5

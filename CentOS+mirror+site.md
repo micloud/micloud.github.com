@@ -152,7 +152,7 @@ http://ftp.isu.edu.tw/pub/Linux/CentOS/
 #yum list
 ```
 
-<img src='images/CentOS+mirror+site-ce_list.jpg' width='650' align='center'/>
+<img src='images/CentOS+mirror+site-ce-list.jpg' width='650' align='center'/>
 
 若找不到您需要的套件也可透過下面的指令來搜尋
 
@@ -160,7 +160,7 @@ http://ftp.isu.edu.tw/pub/Linux/CentOS/
 #yum search [套件名稱/關鍵字]](#yum search [套件名稱/關鍵字)
 ```
 
-<img src='images/CentOS+mirror+site-ce_search.jpg' width='650' align='center'/>
+<img src='images/CentOS+mirror+site-ce-search.jpg' width='650' align='center'/>
 
 再執行安裝，指令如下
 
@@ -168,7 +168,7 @@ http://ftp.isu.edu.tw/pub/Linux/CentOS/
 #yum install [套件名稱]](#yum install [套件名稱)
 ```
 
-<img src='images/CentOS+mirror+site-ce_install.jpg' width='650' align='center'/>
+<img src='images/CentOS+mirror+site-ce-install.jpg' width='650' align='center'/>
 
 若想移除套件，指令如下
 
@@ -176,4 +176,4 @@ http://ftp.isu.edu.tw/pub/Linux/CentOS/
 #yum remove [套件名稱]](#yum remove [套件名稱)
 ```
 
-<img src='images/CentOS+mirror+site-ce_remove.jpg' width='650' align='center'/>
+<img src='images/CentOS+mirror+site-ce-remove.jpg' width='650' align='center'/>

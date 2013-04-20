@@ -1,10 +1,10 @@
 
 影片:[MiCloud帳戶資訊管理](http://www.youtube.com/watch?v=qyEhOfV7GA0)
 <div align="center">
-[{Flash src='http://www.youtube.com/v/qyEhOfV7GA0&hd=1' controls= 'false' play='false' width=640 height=480 }]
+<embed width="420" height="345" src="http://www.youtube.com/v/qyEhOfV7GA0&hd=1" type="application/x-shockwave-flash"></embed>
 </div>
 __MiCloud__帳戶資訊修改(__[http://micloud.tw]__)
-===](__MiCloud__帳戶資訊修改 - __[http://micloud.tw__
+===](--MiCloud--帳戶資訊修改 - --[http://micloud.tw--
 ===)
 若您還未註冊__MiCloud__，請於網頁左上角點選右邊選項＜__註冊__＞([申請帳號](Apply MiCloud Account - new)
 
@@ -12,7 +12,7 @@ __MiCloud__帳戶資訊修改(__[http://micloud.tw]__)
 若您已註冊完__MiCloud__，請於網頁左上角點選左邊選項＜__登入__＞。
 
 
-<img src='images/MiCloud+Account+Modify-p1_2.png' width='650' align='center'/>
+<img src='images/MiCloud+Account+Modify-p1-2.png' width='650' align='center'/>
 ----
 登入與帳戶設定
 ===
@@ -30,7 +30,7 @@ MiCloud產品購買頁面
 設定您的__[付款方式](Pay way)
 
 
-<img src='images/MiCloud+Account+Modify-p1+-5_2.png' width='650' align='center'/>
+<img src='images/MiCloud+Account+Modify-p1+-5-2.png' width='650' align='center'/>
 ----
 帳戶設定
 ===

@@ -91,7 +91,7 @@ http://ftp.twaren.net/ubuntu/
 #apt-cache pkgnames
 ```
 
-<img src='images/Ubuntu+mirror+site-un_apt_cache.jpg' width='650' align='center'/>
+<img src='images/Ubuntu+mirror+site-un-apt-cache.jpg' width='650' align='center'/>
 
 若找不到您需要的套件也可透過下面的指令來搜尋
 
@@ -99,7 +99,7 @@ http://ftp.twaren.net/ubuntu/
 #apt-cache search [套件名稱/關鍵字]](#apt-cache search [套件名稱/關鍵字)
 ```
 
-<img src='images/Ubuntu+mirror+site-un_apt_cache_search.jpg' width='650' align='center'/>
+<img src='images/Ubuntu+mirror+site-un-apt-cache-search.jpg' width='650' align='center'/>
 
 再執行安裝，指令如下
 
@@ -107,7 +107,7 @@ http://ftp.twaren.net/ubuntu/
 #apt-get install [套件名稱]](#apt-get install [套件名稱)
 ```
 
-<img src='images/Ubuntu+mirror+site-un_apt_+install.png' width='650' align='center'/>
+<img src='images/Ubuntu+mirror+site-un-apt-+install.png' width='650' align='center'/>
 
 檢查是否安裝成功，指令
 
@@ -115,7 +115,7 @@ http://ftp.twaren.net/ubuntu/
 #dpkg --get-selections | grep "套件名稱"
 ```
 
-<img src='images/Ubuntu+mirror+site-un_selection.jpg' width='650' align='center'/>
+<img src='images/Ubuntu+mirror+site-un-selection.jpg' width='650' align='center'/>
 
 若想移除套件，指令如下
 
@@ -123,7 +123,7 @@ http://ftp.twaren.net/ubuntu/
 #apt-get remove [套件名稱]](#apt-get remove [套件名稱)
 ```
 
-<img src='images/Ubuntu+mirror+site-un_apt_+remove.jpg' width='650' align='center'/>
+<img src='images/Ubuntu+mirror+site-un-apt-+remove.jpg' width='650' align='center'/>
 
 若要更新己安裝的套件，指令如下:
 
@@ -134,7 +134,7 @@ http://ftp.twaren.net/ubuntu/
 #apt-get upgrade
 ```
 
-<img src='images/Ubuntu+mirror+site-un_aptupgrade.jpg' width='650' align='center'/>
+<img src='images/Ubuntu+mirror+site-un-aptupgrade.jpg' width='650' align='center'/>
 
 只更新某套件
 
@@ -142,4 +142,4 @@ http://ftp.twaren.net/ubuntu/
 #apt-get upgrade [套件名稱]](#apt-get upgrade [套件名稱)
 ```
 
-<img src='images/Ubuntu+mirror+site-un_aptupgrade1.jpg' width='650' align='center'/>
+<img src='images/Ubuntu+mirror+site-un-aptupgrade1.jpg' width='650' align='center'/>

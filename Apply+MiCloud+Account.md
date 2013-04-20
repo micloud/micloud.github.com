@@ -1,7 +1,7 @@
 
 ===
 
-<img src='images/Apply+MiCloud+Account-p1+-5_2.png' width='650' align='center'/>
+<img src='images/Apply+MiCloud+Account-p1+-5-2.png' width='650' align='center'/>
 ----
 
 ===

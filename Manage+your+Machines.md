@@ -17,4 +17,4 @@
 
 
 <img src='images/Manage+your+Machines-p1+-18.png' width='650' align='center'/>
-__登入說明請參考：[MiCloud Credential Description]__](__登入說明請參考：[MiCloud Credential Description__)
+__登入說明請參考：[MiCloud Credential Description]__](--登入說明請參考：[MiCloud Credential Description--)

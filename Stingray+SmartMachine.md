@@ -68,7 +68,7 @@ Stingray介面中以簡單的幾個區塊負責不同的功能模組之顯示，
 <img src='images/Stingray+SmartMachine-p5.PNG' width='350' align='center'/>
 步驟一：設定Pool
 ===
-在此我們要設定一個名稱為"PHTTP_245.11_PORT8080"的Pool，Pool的Name可以是任何文字，而Node的部份則為[IP]:[PORT]的一組數值，其中IP可以是Stingray伺服器對應得到的一組DNS名稱。](在此我們要設定一個名稱為"PHTTP_245.11_PORT8080"的Pool，Pool的Name可以是任何文字，而Node的部份則為[IP:[PORT]的一組數值，其中IP可以是Stingray伺服器對應得到的一組DNS名稱。)
+在此我們要設定一個名稱為"PHTTP_245.11_PORT8080"的Pool，Pool的Name可以是任何文字，而Node的部份則為[IP]:[PORT]的一組數值，其中IP可以是Stingray伺服器對應得到的一組DNS名稱。](在此我們要設定一個名稱為"PHTTP-245.11-PORT8080"的Pool，Pool的Name可以是任何文字，而Node的部份則為[IP:[PORT]的一組數值，其中IP可以是Stingray伺服器對應得到的一組DNS名稱。)
 在此範例中，Stingray伺服器位置為：211.78.245.31，而欲導向之伺服器位置為211.78.245.11:8080，並有一資源位置http://211.78.245.11:8080/test.html
 
 <img src='images/Stingray+SmartMachine-p6.PNG' width='650' align='center'/>

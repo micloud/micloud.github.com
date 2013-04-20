@@ -260,7 +260,7 @@ You then check with svcs -p inetd that it went back into maintenance.
 
 
 ```
-Jul 15 00:34:34 SOMETHING.joyent.us inetd[12202]: [ID 702911 daemon.error] Property 'connection_backlog' of instance svc:/network/ftp/tcp:default is missing, inconsistent or invalid](Jul 15 00:34:34 SOMETHING.joyent.us inetd[12202: [ID 702911 daemon.error] Property 'connection_backlog' of instance svc:/network/ftp/tcp:default is missing, inconsistent or invalid)
+Jul 15 00:34:34 SOMETHING.joyent.us inetd[12202]: [ID 702911 daemon.error] Property 'connection_backlog' of instance svc:/network/ftp/tcp:default is missing, inconsistent or invalid](Jul 15 00:34:34 SOMETHING.joyent.us inetd[12202: [ID 702911 daemon.error] Property 'connection-backlog' of instance svc:/network/ftp/tcp:default is missing, inconsistent or invalid)
 ```
 
 

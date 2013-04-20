@@ -2,7 +2,7 @@
 
 Node.js相關網站
 ===
-[Node.js實戰聖經](http://blog.labin.cc/?page_id=857)
+[Node.js實戰聖經](http://blog.labin.cc/?page-id=857)
 
 [Node.js Tutorial](http://www.nodebeginner.org/)
 
@@ -26,14 +26,14 @@ TermKit（模擬主機端console之node實作品，原TermKit為Mac上很讚的�
 
 [Putting Node on Mobile Device](http://howtonode.org/arm-chroot-fun)
 
-[Node.js implement https](http://www.diybl.com/course/4_webprogram/jsp/jsp_js/20100721/477945.html)
+[Node.js implement https](http://www.diybl.com/course/4-webprogram/jsp/jsp-js/20100721/477945.html)
 
 [node.js伺服器實戰](http://ithelp.ithome.com.tw/event/ironman4/index/personal/type/participant-list/page/1/user/20000108)
 ----
 From Kevin@Joyent
 ===
 
-[Bryan's Site](http://www.wilcoxd.com/whitepapers/node_js/)
+[Bryan's Site](http://www.wilcoxd.com/whitepapers/node-js/)
 
 [Node Toolbox](http://toolbox.no.de/)
 
@@ -48,25 +48,25 @@ Tutorials
 
 Videos
 ===
-[Introduction to Node.js with Ryan Dahl](http://www.youtube.com/watch?v=jo_B4LTHi3I)
+[Introduction to Node.js with Ryan Dahl](http://www.youtube.com/watch?v=jo-B4LTHi3I)
 
 
 [Node.js: Asynchronous Purity Leads to Faster Development](http://www.google.com/url?q=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2Fnodejs&sa=D&sntz=1&usg=AFrqEzcZmwIQWHwrzary7B9KLhqsep6MWg)
 
 
-[Parallel Programming with Node.js](http://www.google.com/url?q=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FParallel-Programming-with-Nodejs&sa=D&sntz=1&usg=AFrqEzf1vS7TNLqTzLJ_Fbqy4r34Pc2QJQ)
+[Parallel Programming with Node.js](http://www.google.com/url?q=http%3A%2F%2Fwww.infoq.com%2Fpresentations%2FParallel-Programming-with-Nodejs&sa=D&sntz=1&usg=AFrqEzf1vS7TNLqTzLJ-Fbqy4r34Pc2QJQ)
 
 
-[Server-side JavaScript with Node, Connect & Express](http://www.google.com/url?q=http%3A%2F%2Fvimeo.com%2F18077379&sa=D&sntz=1&usg=AFrqEzcNR6SkIp8mUCrxtVJMkQkrHim_sw)
+[Server-side JavaScript with Node, Connect & Express](http://www.google.com/url?q=http%3A%2F%2Fvimeo.com%2F18077379&sa=D&sntz=1&usg=AFrqEzcNR6SkIp8mUCrxtVJMkQkrHim-sw)
 
 
 
 Books
 ===
-[The Node Beginner Book](http://www.google.com/url?q=http%3A%2F%2Fnodebeginner.org%2F&sa=D&sntz=1&usg=AFrqEzcLcIoIMmf_MSBk9EFrOAfvMiVapg)
+[The Node Beginner Book](http://www.google.com/url?q=http%3A%2F%2Fnodebeginner.org%2F&sa=D&sntz=1&usg=AFrqEzcLcIoIMmf-MSBk9EFrOAfvMiVapg)
 
 
-[Mastering Node.js](http://www.google.com/url?q=http%3A%2F%2Fvisionmedia.github.com%2Fmasteringnode%2F&sa=D&sntz=1&usg=AFrqEzdG8ojM59Jubo_sxDfUJqPTGpqBQA)
+[Mastering Node.js](http://www.google.com/url?q=http%3A%2F%2Fvisionmedia.github.com%2Fmasteringnode%2F&sa=D&sntz=1&usg=AFrqEzdG8ojM59Jubo-sxDfUJqPTGpqBQA)
 
 
 [Up and Running with Node.js](http://www.google.com/url?q=http%3A%2F%2Fofps.oreilly.com%2Ftitles%2F9781449398583%2Findex.html&sa=D&sntz=1&usg=AFrqEzcquQ50tzTBx5Q0i5r13gmCkNp0iw)
@@ -75,13 +75,13 @@ Books
 
 Blogs
 ===
-[Ryan Dahl's Node blog](http://www.google.com/url?q=http%3A%2F%2Fblog.nodejs.org%2F&sa=D&sntz=1&usg=AFrqEzfTr93SE_YQse0AsCLuuoss5Z-IKg)
+[Ryan Dahl's Node blog](http://www.google.com/url?q=http%3A%2F%2Fblog.nodejs.org%2F&sa=D&sntz=1&usg=AFrqEzfTr93SE-YQse0AsCLuuoss5Z-IKg)
 
 
 [How To Node](http://www.google.com/url?q=http%3A%2F%2Fhowtonode.org%2F&sa=D&sntz=1&usg=AFrqEzcpCiHtS5aGFvjepDXBDPxkt3juzg)
 
 
-[DailyJS](http://www.google.com/url?q=http%3A%2F%2Fdailyjs.com%2F&sa=D&sntz=1&usg=AFrqEzdKYaWCgapgN8Zw8cnz_zrzX1WZ-w)
+[DailyJS](http://www.google.com/url?q=http%3A%2F%2Fdailyjs.com%2F&sa=D&sntz=1&usg=AFrqEzdKYaWCgapgN8Zw8cnz-zrzX1WZ-w)
 
 
 [Nodejitsu blog](http://www.google.com/url?q=http%3A%2F%2Fblog.nodejitsu.com%2F&sa=D&sntz=1&usg=AFrqEzcUjHz8mN8NxTP7FVuZzlsTWvrpxg)
@@ -117,7 +117,7 @@ JavaScript resources
 
 Node Modules
 ===
-[Wiki List on Github/Joyent/Node (start here last!)](http://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fjoyent%2Fnode%2Fwiki%2Fmodules&sa=D&sntz=1&usg=AFrqEzdt6uLym_GktR2GCflpc-mvxxJlPg)
+[Wiki List on Github/Joyent/Node (start here last!)](http://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fjoyent%2Fnode%2Fwiki%2Fmodules&sa=D&sntz=1&usg=AFrqEzdt6uLym-GktR2GCflpc-mvxxJlPg)
 
 
 [Search for registered node.js modules](http://www.google.com/url?q=http%3A%2F%2Fsearch.npmjs.org%2F&sa=D&sntz=1&usg=AFrqEzdYUfs2cliF3TrcRoKIED603mVWtA)

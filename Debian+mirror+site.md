@@ -97,7 +97,7 @@ http://debian.linux.org.tw/debian/
 #apt-cache pkgnames
 ```
 
-<img src='images/Debian+mirror+site-de_apt_cache.jpg' width='650' align='center'/>
+<img src='images/Debian+mirror+site-de-apt-cache.jpg' width='650' align='center'/>
 
 
 若找不到您需要的套件也可透過下面的指令來搜尋
@@ -106,7 +106,7 @@ http://debian.linux.org.tw/debian/
 #apt-cache search [套件名稱/關鍵字]](#apt-cache search [套件名稱/關鍵字)
 ```
 
-<img src='images/Debian+mirror+site-de_apt_cache_search.jpg' width='650' align='center'/>
+<img src='images/Debian+mirror+site-de-apt-cache-search.jpg' width='650' align='center'/>
 
 
 再執行安裝，指令如下
@@ -115,7 +115,7 @@ http://debian.linux.org.tw/debian/
 #apt-get install [套件名稱]](#apt-get install [套件名稱)
 ```
 
-<img src='images/Debian+mirror+site-de_apt_+install.png' width='650' align='center'/>
+<img src='images/Debian+mirror+site-de-apt-+install.png' width='650' align='center'/>
 
 
 檢查是否安裝成功，指令如下
@@ -124,7 +124,7 @@ http://debian.linux.org.tw/debian/
 #dpkg --get-selections | grep "套件名稱"
 ```
 
-<img src='images/Debian+mirror+site-de_selection.jpg' width='650' align='center'/>
+<img src='images/Debian+mirror+site-de-selection.jpg' width='650' align='center'/>
 
 若想移除套件，指令如下
 
@@ -132,7 +132,7 @@ http://debian.linux.org.tw/debian/
 #apt-get remove [套件名稱]](#apt-get remove [套件名稱)
 ```
 
-<img src='images/Debian+mirror+site-de_remove.jpg' width='650' align='center'/>
+<img src='images/Debian+mirror+site-de-remove.jpg' width='650' align='center'/>
 
 若要更新所有己安裝的套件，指令如下:
 
@@ -140,4 +140,4 @@ http://debian.linux.org.tw/debian/
 #apt-get upgrade
 ```
 
-<img src='images/Debian+mirror+site-de_aptupgrade.jpg' width='650' align='center'/>
+<img src='images/Debian+mirror+site-de-aptupgrade.jpg' width='650' align='center'/>

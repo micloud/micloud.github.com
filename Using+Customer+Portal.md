@@ -1,13 +1,13 @@
 
 
 使用__MiCloud Customer Portal__(__[http://micloud.tw]__)
-===](使用__MiCloud Customer Portal__ - __[http://micloud.tw__
+===](使用--MiCloud Customer Portal-- - --[http://micloud.tw--
 ===)
 若您還未註冊__MiCloud__，請點選右邊選項＜__註冊__＞。
 
 
 若您已註冊完__MiCloud__，請點選左邊選項＜__登入__＞。
-<img src='images/Using+Customer+Portal-p1_2.png' width='650'align='center'/>
+<img src='images/Using+Customer+Portal-p1-2.png' width='650'align='center'/>
 ----
 登入與帳戶設定
 ===
@@ -81,7 +81,7 @@ SSH KEY 詳細用法：[Windows](SSH KeyGen & Connect Tutorial - Windows)
 下方則是提供每秒TCP or HTTP連線數量。
 <img src='images/Using+Customer+Portal-pic+-9.png' width='650' align='center'/>
 ----
-主機與控制面板說明影片:[Go to YouTube](http://www.youtube.com/v/_nv4UaMt1p4&hl=en&fs=1&rel=0)
+主機與控制面板說明影片:[Go to YouTube](http://www.youtube.com/v/-nv4UaMt1p4&hl=en&fs=1&rel=0)
 
 ----
 分析

@@ -87,7 +87,7 @@ Username (login): (qrtt1) user_account@example.mail.com
 Password:
 The following keys exist in SmartDataCenter:
 [1] sysGen-e10b3d16-5d92-45b0-b84f-299e4669b905]([1 sysGen-e10b3d16-5d92-45b0-b84f-299e4669b905)
-[2] id_rsa]([2 id_rsa)
+[2] id_rsa]([2 id-rsa)
 Would you like to use an existing key? (yes) yes
 Select a key:(1) 1
 
@@ -107,7 +107,7 @@ You'll additionally want to set SDC_CLI_IDENTITY to the full path location of th
 我們使用 ssh-keygen 產生一組新的 ssh key 讓 MiCloud 使用：
 
 ```
-[qrtt1@localhost ~]$ ssh-keygen -b 2048 -t rsa -f ~/.ssh/micloud_at_vm]([qrtt1@localhost ~$ ssh-keygen -b 2048 -t rsa -f ~/.ssh/micloud_at_vm)
+[qrtt1@localhost ~]$ ssh-keygen -b 2048 -t rsa -f ~/.ssh/micloud_at_vm]([qrtt1@localhost ~$ ssh-keygen -b 2048 -t rsa -f ~/.ssh/micloud-at-vm)
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
@@ -137,7 +137,7 @@ Username (login): (qrtt1) user_account@example.mail.com
 Password:
 The following keys exist in SmartDataCenter:
 [1] sysGen-e10b3d16-5d92-45b0-b84f-299e4669b905]([1 sysGen-e10b3d16-5d92-45b0-b84f-299e4669b905)
-[2] id_rsa]([2 id_rsa)
+[2] id_rsa]([2 id-rsa)
 Would you like to use an existing key? (yes) no
 SSH public key: (/home/qrtt1/.ssh/id_rsa.pub) /home/qrtt1/.ssh/micloud_at_vm.pub
 
@@ -275,7 +275,7 @@ export SDC_CLI_IDENTITY=/home/qrtt1/.ssh/micloud_at_vm
 對 IaaS 最迷人之處是：用 API 能搞定一切！所以，我們就換個角度，不應該手工地事後補救。我們可以事前指定要執行的s cript 。這功能幾乎是 IaaS Provider 都有支援的功能，指定開機時執行下列s cript ：
 
 ```
-[qrtt1@localhost ~]$ cat change_yum.sh]([qrtt1@localhost ~$ cat change_yum.sh)
+[qrtt1@localhost ~]$ cat change_yum.sh]([qrtt1@localhost ~$ cat change-yum.sh)
 yum_cfg=https://raw.github.com/gist/4109252/2899290f3749bb7ce4a5a6934757512d9b980523/yum.base.cfg
 curl $yum_cfg > /etc/yum.repos.d/CentOS-Base.repo
 ```
@@ -284,7 +284,7 @@ curl $yum_cfg > /etc/yum.repos.d/CentOS-Base.repo
 機器時，加上 --s cript參數：
 
 ```
-[qrtt1@localhost ~]$ sdc-createmachine --package "S 1GB RAM (1CORE)" --dataset "centos6:0.1.0" -- s cript change_yum.sh]([qrtt1@localhost ~$ sdc-createmachine --package "S 1GB RAM  - 1CORE" --dataset "centos6:0.1.0" -- s cript change_yum.sh)
+[qrtt1@localhost ~]$ sdc-createmachine --package "S 1GB RAM (1CORE)" --dataset "centos6:0.1.0" -- s cript change_yum.sh]([qrtt1@localhost ~$ sdc-createmachine --package "S 1GB RAM  - 1CORE" --dataset "centos6:0.1.0" -- s cript change-yum.sh)
 {
 "id": "e743dde0-3005-41fd-9848-07a114e9819c",
 "name": "a2bc32d",
@@ -400,4 +400,4 @@ http://s3-ap-southeast-1.amazonaws.com/qrtt1.software/rpms/nodejs-0.6.8-1.el6.x8
 ----
 轉載至:
 
-[https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8 ]( https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8)
+[https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8 ]( https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh-tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8)

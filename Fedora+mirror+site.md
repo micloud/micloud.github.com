@@ -86,7 +86,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/$releasever/SRPMS/
 修改完後儲存即可。
 
 
-<img src='images/Fedora+mirror+site-fevifedora_up.jpg' width='650' align='center'/>
+<img src='images/Fedora+mirror+site-fevifedora-up.jpg' width='650' align='center'/>
 
 
 
@@ -115,7 +115,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 修改完後儲存即可。
 
 
-<img src='images/Fedora+mirror+site-fevifedora_up_test.jpg' width='650' align='center'/>
+<img src='images/Fedora+mirror+site-fevifedora-up-test.jpg' width='650' align='center'/>
 
 
 
@@ -195,7 +195,7 @@ http://opensource.nchc.org.tw/fedora/linux/
 #yum list
 ```
 
-<img src='images/Fedora+mirror+site-fe_list.png' width='650' align='center'/>
+<img src='images/Fedora+mirror+site-fe-list.png' width='650' align='center'/>
 
 若找不到您需要的套件也可透過下面的指令來搜尋
 
@@ -203,7 +203,7 @@ http://opensource.nchc.org.tw/fedora/linux/
 #yum search [套件名稱/關鍵字]](#yum search [套件名稱/關鍵字)
 ```
 
-<img src='images/Fedora+mirror+site-fe_search.jpg' width='650' align='center'/>
+<img src='images/Fedora+mirror+site-fe-search.jpg' width='650' align='center'/>
 
 再執行安裝，指令如下
 
@@ -211,7 +211,7 @@ http://opensource.nchc.org.tw/fedora/linux/
 #yum install [套件名稱]](#yum install [套件名稱)
 ```
 
-<img src='images/Fedora+mirror+site-fe_install.jpg' width='650' align='center'/>
+<img src='images/Fedora+mirror+site-fe-install.jpg' width='650' align='center'/>
 
 若想移除套件，指令如下
 
@@ -219,5 +219,5 @@ http://opensource.nchc.org.tw/fedora/linux/
 #yum remove [套件名稱]](#yum remove [套件名稱)
 ```
 
-<img src='images/Fedora+mirror+site-fe_remove.jpg' width='650' align='center'/>
+<img src='images/Fedora+mirror+site-fe-remove.jpg' width='650' align='center'/>
 

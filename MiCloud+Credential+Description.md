@@ -35,7 +35,7 @@ SmartOS修改密碼
 
 ```#passwd```
 
-<img src='images/MiCloud+Credential+Description-clip_image001.jpg' width='650' align='center'/>
+<img src='images/MiCloud+Credential+Description-clip-image001.jpg' width='650' align='center'/>
 
 
 修改Mysql密碼
@@ -54,7 +54,7 @@ SmartOS修改密碼
 
 ```mysql> SET PASSWORD FOR root@localhost=PASSWORD('yournewpassword'); ```
 
-<img src='images/MiCloud+Credential+Description-clip_image002.jpg' width='650' align='center'/>
+<img src='images/MiCloud+Credential+Description-clip-image002.jpg' width='650' align='center'/>
 
 
 
@@ -64,4 +64,4 @@ SmartOS修改密碼
 
 ```#passwd admin```
 
-<img src='images/MiCloud+Credential+Description-clip_image003.jpg' width='650' align='center'/>
+<img src='images/MiCloud+Credential+Description-clip-image003.jpg' width='650' align='center'/>

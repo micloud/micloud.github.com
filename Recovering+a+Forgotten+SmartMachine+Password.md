@@ -12,7 +12,7 @@ https://<HOSTNAME>:10000/password-recovery
 ```
 
 
-您可以參考相關影片片段：[http://p.castfire.com/NTYYi/video/511969/511969_2011-02-14-160309.sd.m4v]](您可以參考相關影片片段：[http://p.castfire.com/NTYYi/video/511969/511969_2011-02-14-160309.sd.m4v)
+您可以參考相關影片片段：[http://p.castfire.com/NTYYi/video/511969/511969_2011-02-14-160309.sd.m4v]](您可以參考相關影片片段：[http://p.castfire.com/NTYYi/video/511969/511969-2011-02-14-160309.sd.m4v)
 
 
 
