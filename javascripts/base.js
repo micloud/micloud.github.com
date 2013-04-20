@@ -15,7 +15,9 @@ function htmlEscape(str) {
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#39;')
             .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;').replace(/\n/g, '<br/>');
+            .replace(/>/g, '&gt;')
+            //.replace(/_/g, '')
+            .replace(/\n/g, '<br/>');
 }
 
 function htmlUnescape(value){
