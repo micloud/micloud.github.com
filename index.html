@@ -16,6 +16,11 @@
     <script type="text/javascript" src="https://raw.github.com/peihsinsu/markdown-js/master/lib/markdown.js"></script>
     <script type="text/javascript" src="https://raw.github.com/malsup/blockui/master/jquery.blockUI.js"></script>
     <script type="text/javascript">
+    var config={
+      user:'micloud',
+      project:'micloud.github.com'
+    };
+
     $(document).ready(function(){
       $('#menu').load('./menu.html');
 
@@ -51,7 +56,12 @@
               width: '810px' 
             }
           }); 
-        }); 
+        });
+
+        $('#edit').click(function(){
+          var edit_url = 'https://github.com/'+config.user+'/'+config.project+'/edit/master/'+p+'#fullscreen_blob_contents';
+          window.open(edit_url);
+        });
       } else {
         $('#pagename').html('Welcome');
         
@@ -78,7 +88,9 @@
         <div style="width:100%;">
           <!-- <h2>Page&nbsp;:&nbsp;<span id="pagename"></span></h2> -->
           <div align="right" style="float:right">
-            <a id="show" href="#" >Show Raw</a>
+            <button id="back" onclick="history.go(-1)">Back</button> 
+            <button id="edit">Edit</button> 
+            <button id="show">Raw</button>
           </div>
         </div>
 
@@ -92,6 +104,7 @@
         <p><small>2013 Copy Right @ Power By MiCloud.TW</small></p>
       </footer>
     </div>
+
     <script src="javascripts/scale.fix.js"></script>
     
   </body>
