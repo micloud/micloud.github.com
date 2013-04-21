@@ -30,7 +30,7 @@ SmartMachines是虛擬化運算平台，能夠運行多元雲端應用。在MiCl
 
 
 
-|<img src='images/Main-p1.png' width='650'  align='center'}/>
+<img src='images/Main-p1.png' width='650'  align='center'}/>
 
 
 
