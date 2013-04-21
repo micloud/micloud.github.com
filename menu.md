@@ -1,4 +1,3 @@
-
 [<img width="15px" src="images/point.png"/>自助服務操作資訊](/index.html?page=ApplyAndOrder.md)
 
 [<img width="15px" src="images/point.png"/>MiCloud第三方服務主機](/index.html?page=3PartyCloudServer.md)
@@ -15,5 +14,6 @@
 
 [<img width="15px" src="images/point.png"/> MiCloud Blog](http://blogger.micloud.tw)
 
+[<img width="15px" src="images/point.png"/> WikitPage](http://github.com/peihsinsu/wikitpage)
 
 <small>2013 Copy Right @ Power By MiCloud.TW</small>
