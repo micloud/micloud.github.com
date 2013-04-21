@@ -13,8 +13,4 @@
 
 [<img width="15px" src="images/point.png"/> MiCloud官方網站](http://micloud.tw)
 
-[<img width="15px" src="images/point.png"/> MiCloud產品規格](http://micloud.tw/ch/price/price)
-
 [<img width="15px" src="images/point.png"/> MiCloud Blog](http://blogger.micloud.tw)
-
-[<img width="15px" src="images/point.png"/> MiCloud服務信箱](mailto:service@micloud.tw)
