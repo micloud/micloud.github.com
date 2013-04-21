@@ -14,3 +14,6 @@
 [<img width="15px" src="images/point.png"/> MiCloud官方網站](http://micloud.tw)
 
 [<img width="15px" src="images/point.png"/> MiCloud Blog](http://blogger.micloud.tw)
+
+
+<small>2013 Copy Right @ Power By MiCloud.TW</small>

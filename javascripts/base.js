@@ -4,7 +4,6 @@ var config={
     };
 
     $(document).ready(function(){
-      $('#menu').load('./menu.html');
 
       $('#md_menu').load('menu.md', function(){
         $('#menu').html(htmlUnescape(marked($('#md_menu').html()), mkdOpt));  
@@ -17,38 +16,14 @@ var config={
         $('#pagename').html(p.split('.md')[0]);
         
         $('#md').load(p, function(){
-          //$('#page').html(htmlUnescape(markdown.toHTML($('#md').html()))); 
           $('#page').html(htmlUnescape(marked($('#md').html(), mkdOpt))); 
           $('#page a').each(function(){
             $(this).append('<img width="15px" src="images/link.png"/>');
           });
         });
-
-        $('#show').click(function() { 
-          $.blockUI({ 
-            message: $('#md'), 
-            onOverlayClick: $.unblockUI,
-            css: { 
-              border: 'none', 
-              padding: '15px', 
-              backgroundColor: '#000', 
-              '-webkit-border-radius': '10px',  
-              '-moz-border-radius': '10px', 
-              opacity: .8, 
-              color: '#fff', 
-              "vertical-align": "left",
-              top:  "30px",
-              left: ($(window).width() - 810) /2 + 'px', 
-              width: '810px' 
-            }
-          }); 
-        });
-
-        $('#edit').click(function(){
-          var edit_url = 'https://github.com/'+config.user+'/'+config.project+'/edit/master/'+p+'#fullscreen_blob_contents';
-          window.open(edit_url);
-        });
+        
       } else {
+        p = 'Main.md';
         $('#pagename').html('Welcome');
         
         $('#md').load('Main.md', function(){
@@ -56,8 +31,32 @@ var config={
         });
       }
 
+      $('#show').click(function() { 
+        $.blockUI({ 
+          message: $('#md'), 
+          onOverlayClick: $.unblockUI,
+          css: { 
+            border: 'none', 
+            padding: '15px', 
+            backgroundColor: '#000', 
+            '-webkit-border-radius': '10px',  
+            '-moz-border-radius': '10px', 
+            opacity: .8, 
+            color: '#fff', 
+            "vertical-align": "left",
+            top:  "30px",
+            left: ($(window).width() - 810) /2 + 'px', 
+            width: '810px' 
+          }
+        }); 
+      });
 
-    });
+      $('#edit').click(function(){
+        var edit_url = 'https://github.com/'+config.user+'/'+config.project+'/edit/master/'+p;
+        window.open(edit_url);
+      });
+
+    }); //End document.ready
 
 var mkdOpt = {
   gfm: true,
