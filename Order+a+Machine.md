@@ -4,10 +4,10 @@
 若您還未建立您的 __SSH-Key__ 以及 __付款方式__ 的資料填寫 ，請先建立完成。
 
 
-SSH-Key 相關教學:[Windows](index.html?page=SSH+KeyGen+&+Connect+Tutorial+-+Windows.md)
+SSH-Key 相關教學:[Windows](index.html?page=SSH+KeyGen+Connect+Tutorial-Windows.md)
 
 
-付款方式 相關教學:[付費方式](Pay way)
+付款方式 相關教學:[付費方式](index.html?page=Pay+way.md)
 
 
 

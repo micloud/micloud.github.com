@@ -1,12 +1,12 @@
+MiCloud帳戶資訊修改
+===
 
 影片:[MiCloud帳戶資訊管理](http://www.youtube.com/watch?v=qyEhOfV7GA0)
 <div align="center">
 <embed width="420" height="345" src="http://www.youtube.com/v/qyEhOfV7GA0&hd=1" type="application/x-shockwave-flash"></embed>
 </div>
-__MiCloud__帳戶資訊修改(__[http://micloud.tw]__)
-===](--MiCloud--帳戶資訊修改 - --[http://micloud.tw--
-===)
-若您還未註冊__MiCloud__，請於網頁左上角點選右邊選項＜__註冊__＞([申請帳號](Apply MiCloud Account - new)
+
+若您還未註冊__MiCloud__，請於網頁左上角點選右邊選項＜__註冊__＞[申請帳號](/index.html?Apply+MiCloud+Account-new.md)
 
 
 若您已註冊完__MiCloud__，請於網頁左上角點選左邊選項＜__登入__＞。

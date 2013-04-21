@@ -37,7 +37,7 @@
 * [金鑰產生與連線教學(Windows)](/index.html?page=SSH+KeyGen+%26+Connect+Tutorial-Windows.MD)
 * [金鑰產生與連線教學(Linux/Unix)](/index.html?page=SSH+KeyGen+%26+Connect+Tutorial-Linux+or+Unix.md)
 * [金鑰產生與連線教學(MacOS)](/index.html?page=SSH+KeyGen+%26+Connect+Tutorial-MacOS.md)
-* [主機金鑰設置與連線教學](/index.html?page=Free+machine+%26+Connect+Tutorial)
+* [主機金鑰設置與連線教學](/index.html?page=Free+machine+%26+Connect+Tutorial.md)
 ---
 
 ### 檔案上傳教學

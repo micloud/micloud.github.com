@@ -1,7 +1,7 @@
 聖藍科技分享文章
 ===
-感謝聖藍科技使用MiCloud服務，透過CloudAPI提供聖藍科技自動Scale之功能以架構多媒體影音服務，以下文章轉載自qrtt1 github repository([本文](http://www.accupass.com/Event/Register?eid=359099570305727)
-----
+
+感謝聖藍科技使用MiCloud服務，透過CloudAPI提供聖藍科技自動Scale之功能以架構多媒體影音服務，以下文章轉載自qrtt1 github repository[本文](http://www.accupass.com/Event/Register?eid=359099570305727)
 
 
 簡介
@@ -32,9 +32,8 @@ __附錄：__
 
 安裝Node JS
 ===
+
 目前 Node.js 最新版為 0.8.x。一開始看 wiki 去試著安裝，但它並沒有說明僅支援 0.6.x 版的 Node.js（這資訊同樣也是來自客服）。所以在做帳號認證時總是無法過關。而 Node.js 在我常用的 Debian 或 CentOS 似乎沒有直接包在官方的 repo 上，如果你也遇到相同的問題，建議就自行編譯吧。（編譯時記得將 openssl-devel 與 npm 的選項開啟。）
-
-
 
 安裝完 Node.js 後，需加裝 joynet Cloud API 提供的 cli 工具，使用 Node.js 的套件管理程式安裝 smartdc 與jsontool（wiki 上的的指令沒有加 sudo，但我們下 npm -g 會安裝在系統目錄下，若您是一般用者請加 sudo）：
 
@@ -104,7 +103,9 @@ You'll additionally want to set SDC_CLI_IDENTITY to the full path location of th
 
 使用新建的SSH key
 ===
+
 我們使用 ssh-keygen 產生一組新的 ssh key 讓 MiCloud 使用：
+
 
 ```
 [qrtt1@localhost ~]$ ssh-keygen -b 2048 -t rsa -f ~/.ssh/micloud_at_vm]([qrtt1@localhost ~$ ssh-keygen -b 2048 -t rsa -f ~/.ssh/micloud-at-vm)
@@ -398,6 +399,7 @@ http://s3-ap-southeast-1.amazonaws.com/qrtt1.software/rpms/nodejs-0.6.8-1.el6.x8
 由於我們單位的程式多半是以 Java 實作的，所以實作 Java 版的 API。目前只實作會用到的功能，但它是很容易擴充的，若是有需要額外的功能就 fork 專案去加唄。網址如下：[https://github.com/qrtt1/joyent.cloudapi](https://github.com/qrtt1/joyent.cloudapi)
 
 ----
-轉載至:
 
-[https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8 ]( https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh-tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8)
+轉載自:
+
+* [https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8 ]( https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh-tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8)

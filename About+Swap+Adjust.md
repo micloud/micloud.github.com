@@ -1,23 +1,17 @@
 
 Swap調整
 ===
-Micloud 客戶的Linux虛擬機會有兩個虛擬磁碟，第一個是OS掛載在/之下，另一個是packages中設定的disk space，預設掛載在/data下。 MiCloud已為SmartMachine、及1G以下用戶預先做好swap空間的預留，其餘類型的虛擬主機沒有預設swap空間，用戶需自行做設定。
+
+Micloud 客戶的Linux虛擬機會有兩個虛擬磁碟，第一個是OS掛載在"/"之下，另一個是packages中設定的disk space，預設掛載在/data下。 MiCloud已為SmartMachine、及1G以下用戶預先做好swap空間的預留，其餘類型的虛擬主機沒有預設swap空間，用戶需自行做設定。
 
 
 如果客戶新建一個新的VM，可以採用下列Partition swap及File swap兩種方式中任一種，如果客戶已經寫了資料在/data 且無法更動，那只能選擇File swap的方式。
 
-
-
-
-
 兩種swap設定方法及說明如下：
 
+## Partition swap
 
-
-Partition swap
-===
 可以做為多重開機的swap重複使用，理論效能比較高一點點，但是無法變更大小，步驟稍為複雜，設定步驟如下。
-
 
 (1)檢查您的磁碟
 
@@ -95,9 +89,10 @@ Partition swap
 
 (8)重新開機並驗證
 <img src='images/About+Swap+Adjust-free2.jpg' width='650' align='center'/>
-----
-File swap
-===
+
+
+## File swap
+
 File swap的檔案是置於檔案系統之上，所以理論效能差一點點，可以刪除、移動與變更大小，步驟比partition swap簡單，其設定步驟如下。
 
 
