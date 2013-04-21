@@ -14,6 +14,6 @@
 
 [<img width="15px" src="images/point.png"/> MiCloud Blog](http://blogger.micloud.tw)
 
-[<img width="15px" src="images/point.png"/> WikitPage](http://github.com/peihsinsu/wikitpage)
+[<img width="15px" src="images/point.png"/> 本站由WikitPage建置](http://github.com/peihsinsu/wikitpage)
 
 <small>2013 Copy Right @ Power By MiCloud.TW</small>
