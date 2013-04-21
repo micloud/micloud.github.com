@@ -11,93 +11,24 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="javascripts/base.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="https://raw.github.com/peihsinsu/markdown-js/master/lib/markdown.js"></script>
-    <script type="text/javascript" src="https://raw.github.com/malsup/blockui/master/jquery.blockUI.js"></script>
-    <script type="text/javascript">
-    var config={
-      user:'micloud',
-      project:'micloud.github.com'
-    };
-
-    $(document).ready(function(){
-      $('#menu').load('./menu.html');
-
-      $('#md_menu').load('menu.md', function(){
-        $('#menu').html(htmlUnescape(markdown.toHTML($('#md_menu').html())));  
-      });
-
-      var p = getURLParameter('page');
-      
-      if(p && getURLParameter('page').split('#')[0]) {
-        p = getURLParameter('page').split('#')[0];
-        $('#pagename').html(p.split('.md')[0]);
-        
-        $('#md').load(p, function(){
-          $('#page').html(htmlUnescape(markdown.toHTML($('#md').html())));  
-        });
-
-        $('#show').click(function() { 
-          $.blockUI({ 
-            message: $('#md'), 
-            onOverlayClick: $.unblockUI,
-            css: { 
-              border: 'none', 
-              padding: '15px', 
-              backgroundColor: '#000', 
-              '-webkit-border-radius': '10px',  
-              '-moz-border-radius': '10px', 
-              opacity: .8, 
-              color: '#fff', 
-              "vertical-align": "left",
-              top:  "30px",//($(window).height() - 800) /2 + 'px', 
-              left: ($(window).width() - 810) /2 + 'px', 
-              width: '810px' 
-            }
-          }); 
-        });
-
-        $('#edit').click(function(){
-          var edit_url = 'https://github.com/'+config.user+'/'+config.project+'/edit/master/'+p+'#fullscreen_blob_contents';
-          window.open(edit_url);
-        });
-      } else {
-        $('#pagename').html('Welcome');
-        
-        $('#md').load('Main.md', function(){
-          $('#page').html(htmlUnescape(markdown.toHTML($('#md').html())));  
-        });
-      }
-
-
-    });
-
-    </script>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <a href="/">
-        <img src="http://portal.micloud.tw/images/logo.png">
-        </a>
+        <a href="/"><img src="images/wiki-logo.png"></a>
         <p id="menu" style="padding-left:20px;padding-top:10px"></p>
-
       </header>
       <section>
         <div style="width:100%;">
-          <!-- <h2>Page&nbsp;:&nbsp;<span id="pagename"></span></h2> -->
           <div align="right" style="float:right">
             <button id="back" onclick="history.go(-1)">Back</button> 
             <button id="edit">Edit</button> 
             <button id="show">Raw</button>
           </div>
         </div>
-
         <div id="page"></div>
-
         <textarea id="md" style="display:none;text-align:left;font-size:10px;width:800px;height:500px" disabled="disabled"></textarea>
-        <textarea id="md_menu" style="display:none;text-align:left;font-size:10px;width:800px;height:500px" disabled="disabled"></textarea>
+        <textarea id="md_menu" style="display:none;" disabled="disabled"></textarea>
       </section>
 
       <footer>
@@ -106,6 +37,9 @@
     </div>
 
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/base.js"></script>
+    <script type="text/javascript" src="javascripts/marked.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.blockUI.js"></script>
   </body>
 </html>
