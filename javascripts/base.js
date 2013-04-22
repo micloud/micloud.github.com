@@ -68,6 +68,7 @@ var config={
           $('#edit').show();
           $('#new').show();
           $('#show').show();
+          showLogout();
         } else {
           showLogin();
         }
@@ -80,6 +81,13 @@ var config={
           document.location = 'https://portal.micloud.tw/login'
         });
         $('#login').show();
+      }
+
+      function showLogout() {
+        $('#logout').click(function(){
+          document.location = 'https://portal.micloud.tw/logout'
+        });
+        $('#logout').show();
       }
     }); //End document.ready
 
