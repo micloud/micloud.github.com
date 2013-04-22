@@ -52,10 +52,35 @@ var config={
       });
 
       $('#edit').click(function(){
-        var edit_url = 'https://github.com/'+config.user+'/'+config.project+'/edit/master/'+p;
+        var edit_url = 'https://github.com/' + config.user + '/' + config.project + '/edit/master/' + p;
         window.open(edit_url);
       });
 
+      $('#new').click(function(){
+        var new_url = 'https://github.com/' + config.user + '/' + config.project + '/new/gh-pages';
+        window.open(edit_url);
+      });
+
+      if(login_session) {
+        var user= JSON.parse(login_session);
+
+        if(user.result && user.result.resultCode == '100' && user.result.resultValue.memberInfo.userId == 'micloud') {
+          $('#edit').show();
+          $('#new').show();
+          $('#show').show();
+        } else {
+          showLogin();
+        }
+      } else {
+        showLogin();
+      }
+
+      function showLogin() {
+        $('#login').click(function(){
+          document.location = 'https://portal.micloud.tw/login'
+        });
+        $('#login').show();
+      }
     }); //End document.ready
 
 var mkdOpt = {

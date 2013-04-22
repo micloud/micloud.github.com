@@ -22,8 +22,10 @@
         <div style="width:100%;">
           <div align="right" style="float:right">
             <button id="back" onclick="history.go(-1)">Back</button> 
-            <button id="edit">Edit</button> 
-            <button id="show">Raw</button>
+            <button id="edit" style="display:none">Edit</button> 
+            <button id="new" style="display:none">New</button> 
+            <button id="show" style="display:none">Raw</button>
+            <button id="login" style="display:none">Login</button>
           </div>
         </div>
         <div id="page"></div>
@@ -35,6 +37,7 @@
         <p></p>
       </footer>
     </div>
+    <script type="text/javascript" src="https://portal.micloud.tw/getMemberData2"></script>
 
     <script type="text/javascript" src="javascripts/scale.fix.js"></script>
     <script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
