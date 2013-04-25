@@ -13,7 +13,9 @@ Sandbox
     s.parentNode.insertBefore(gcse, s);
   })();
 </script>
+<div style="width:500px">
 <gcse:search></gcse:search>
+</div>
 
 
 <embed width="420" height="345" src="http://youtube.googleapis.com/v/QdHGTfH_WGg&hd=1" type="application/x-shockwave-flash"></embed> 
