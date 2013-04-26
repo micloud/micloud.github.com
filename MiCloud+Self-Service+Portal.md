@@ -11,22 +11,30 @@ MiCloud Self-Service Portal實作
 
 從申請MiCloud IaaS服務開始
 ===
-[{tw.idv.ecoast.plugin.Mediaplayer src='p1.mov' playertype='quicktime' moviewidth='650' movieheight='390' caption='從申請MiCloud IaaS服務開始' control=true autostart=false autorewind=true playcount=0 align='center'}]
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/1tyCRWOp2Xo" frameborder="0" allowfullscreen></iframe>
 
 連線我的MiCloud主機
 ===
-[{tw.idv.ecoast.plugin.Mediaplayer src='p2.mov' playertype='quicktime' moviewidth='650' movieheight='390' caption='連線我的MiCloud主機' control=true autostart=false autorewind=true playcount=0 align='center'}]
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/BrmyCzOI0uY" frameborder="0" allowfullscreen></iframe>
 
 部署我的應用程式
 ===
-[{tw.idv.ecoast.plugin.Mediaplayer src='p3.mov' playertype='quicktime' moviewidth='650' movieheight='390' caption='部屬我的應用程式01-Runtime準備' control=true autostart=false autorewind=true playcount=0 align='center'}]
-[{tw.idv.ecoast.plugin.Mediaplayer src='p4.mov' playertype='quicktime' moviewidth='650' movieheight='390' caption='部屬我的應用程式02-上傳war檔' control=true autostart=false autorewind=true playcount=0 align='center'}]
+
+Tomcat服務安裝
+<iframe width="560" height="315" src="http://www.youtube.com/embed/ya76xIDdhmQ" frameborder="0" allowfullscreen></iframe>
+
+War檔部屬
+<iframe width="560" height="315" src="http://www.youtube.com/embed/hBH6ZzEoAEc" frameborder="0" allowfullscreen></iframe>
 
 使用"分析功能"監看服務運行狀態
 ===
-[{tw.idv.ecoast.plugin.Mediaplayer src='p5.mov' playertype='quicktime' moviewidth='650' movieheight='390' caption='使用分析功能監看服務運行狀態' control=true autostart=false autorewind=true playcount=0 align='center'}]
+<iframe width="560" height="315" src="http://www.youtube.com/embed/MIfnWHD0j2c" frameborder="0" allowfullscreen></iframe>
+
 
 預防尖峰流量拖垮服務：Scale Out應用服務-線上增加主機
 ===
-[{tw.idv.ecoast.plugin.Mediaplayer src='p6.mov' playertype='quicktime' moviewidth='650' movieheight='390' caption='Scale Out應用服務-線上增加主機' control=true autostart=false autorewind=true playcount=0 align='center'}]
+<iframe width="560" height="315" src="http://www.youtube.com/embed/6QxgkmEs_zE" frameborder="0" allowfullscreen></iframe>
+
 
