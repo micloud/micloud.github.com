@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>SmartOS HTTPS安裝Self-Gen SSL憑證</h1>
+<h1>STEP1: 產生Self-Gen SSL金鑰</h1>
+<p>openssl req -new -key server.key -out server.csr</p>
+<pre><code>[root@SmartOS /opt/local/share]# cd /opt/local/etc/httpd/]([root@SmartOS /opt/local/share# cd /opt/local/etc/httpd/)
+[root@SmartOS /opt/local/etc/httpd]# openssl genrsa -des3 -out server.key 1024]([root@SmartOS /opt/local/etc/httpd# openssl genrsa -des3 -out server.key 1024)
+Generating RSA private key, 1024 bit long modulus
+......++++++
+......................++++++
+e is 65537 (0x10001)
+Enter pass phrase for server.key:
+Verifying - Enter pass phrase for server.key:
+[root@SmartOS /opt/local/etc/httpd]# openssl req -new -key server.key -out server.csr]([root@SmartOS /opt/local/etc/httpd# openssl req -new -key server.key -out server.csr)
+Enter pass phrase for server.key:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter &#39;.&#39;, the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:TW](Country Name  - 2 letter code [AU:TW)
+State or Province Name (full name) [Some-State]:Taipei](State or Province Name  - full name [Some-State:Taipei)
+Locality Name (eg, city) []:Taiwan](Locality Name  - eg, city [:Taiwan)
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:MiCloud](Organization Name  - eg, company [Internet Widgits Pty Ltd:MiCloud)
+Organizational Unit Name (eg, section) []:](Organizational Unit Name  - eg, section [:)
+Common Name (e.g. server FQDN or YOUR name) []:MiCloud](Common Name  - e.g. server FQDN or YOUR name [:MiCloud)
+Email Address []:service@micloud.tw](Email Address [:service@micloud.tw)
+
+Please enter the following &#39;extra&#39; attributes
+to be sent with your certificate request
+A challenge password []:](A challenge password [:)
+An optional company name []:](An optional company name [:)</code></pre>
+<p>openssl rsa -in server.key.org -out server.key</p>
+<pre><code>[root@SmartOS /opt/local/etc/httpd]# cp server.key server.key.org]([root@SmartOS /opt/local/etc/httpd# cp server.key server.key.org)
+[root@SmartOS /opt/local/etc/httpd]# openssl rsa -in server.key.org -out server.key]([root@SmartOS /opt/local/etc/httpd# openssl rsa -in server.key.org -out server.key)
+Enter pass phrase for server.key.org:
+writing RSA key</code></pre>
+<p>openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt</p>
+<pre><code>[root@SmartOS /opt/local/etc/httpd]# openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt]([root@SmartOS /opt/local/etc/httpd# openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt)
+Signature ok
+subject=/C=TW/ST=Taipei/L=Taiwan/O=MiCloud/CN=MiCloud/emailAddress=service@micloud.tw
+Getting Private key</code></pre>
+<h1>STEP2: 編輯Virtual Host資訊</h1>
+<pre><code># vi /opt/local/etc/httpd/virtualhosts/test.conf
+&lt;VirtualHost _default_:443&gt;
+SSLEngine On
+SSLCertificateFile /opt/local/etc/httpd/server.crt
+SSLCertificateKeyFile /opt/local/etc/httpd/server.key
+ServerName 192-168-255-10.my.micloud.tw
+DocumentRoot /opt/local/share/httpd/htdocs
+&lt;/VirtualHost&gt;</code></pre>
+<h1>STEP3: 測試連線</h1>
+<pre><code>瀏覽器連線：https://your.ip.or.domaonname/</code></pre>
+
+  </div>
+  </div>
+  </body>
+</html>

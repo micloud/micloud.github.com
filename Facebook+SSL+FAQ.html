@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>As of October 1st, 2011 Facebook requires all applications to use Secure Socket Layer ( SSL ) certificates. This page is for Facebook developers to be able to serve their applications via HTTPS with a SSL Certificate.</p>
+<p>In this page:</p>
+<h1>Why is Facebook requiring SSL certificates?</h1>
+<p>Facebook has updated their Terms of Service that require all applications served from them to have a SSL certificate and use the HTTPS protocol.</p>
+<p>More information of the change by Facebook can be found here and Joyent blogged about this.</p>
+<h1>Can I use my free Joyent Facebook developer account with SSL?</h1>
+<p>No, You will need to buy a Joyent SmartMachine to get a static IP to bind your domain to. The free Joyent Facebook accounts do not support SSL. You can get a Joyent SmartMachine form <a href="https://my.joyentcloud.com/">https://my.joyentcloud.com/</a>, then purchase a SSL certificate.</p>
+<h1>How do I get a SSL certificate?</h1>
+<p>You will have to purchase a SSL certificate from a third party vendor. Joyent uses RapidSSL for its SSL certificates, but you can use your vendor of choice.</p>
+<h1>How do I install an SSL certificate on my Joyent SmartMachine?</h1>
+<p>You can install your SSL certificate via your VirtualMin administration portal for your SmartMachine.</p>
+<pre><code>You will not be able to use the provided *.joyent.us subdomain. You will need to purchase your own domain name to be use with the SSL certificate if you have not already done so.</code></pre>
+<p>To enable this SSL setup for your site:</p>
+<ul>
+<li>Sign in to Virtualmin.</li>
+<li>Select a domain from the drop-down in the left-hand navigation. This is the domain that *you&#39;ll enable SSL for.</li>
+<li>Click Edit Virtual Server.</li>
+<li>Click Enabled features and then select &#39;SSL website enabled&#39;.</li>
+<li>Click Save Virtual Server.</li>
+<li>A page will appears warning you that SSL cannot be enabled for more than one domain on the IP address. Click Yes, Modify Virtual Server to override and conclude with the SSL setup.<br>With this feature enabled, Virtualmin will give you access to the Manage SSL Certificate page that lets you generate a new key, certificate or a signing request (i.e. generally manage your SSL protection details).</li>
+</ul>
+<pre><code>A dedicated IP is still necessary for having a real SSL certificate in place.</code></pre>
+<p>These issues are believed to be resolved now (provided your SSL is implemented using the new form, with the SSL checkbox showing up enabled), though we&#39;d welcome feedback from you.</p>
+<p><strong>More instructions on installing your SSL Certificate can be found at:<br><a href="http://oldwiki.joyent.com/smartmachine:ssl#installing-your-ssl-certificate"><a href="http://oldwiki.joyent.com/smartmachine:ssl#installing-your-ssl-certificate">http://oldwiki.joyent.com/smartmachine:ssl#installing-your-ssl-certificate</a></a>
+</strong></p>
+<h1>Performance with SSL and HTTPS on a SmartMachine</h1>
+<p>There is minimal performance reduction with the added encryption on a Joyent SmartMachine.</p>
+<p>However, all Joyent SmartMachines offer the following features that you can use to increase the general performance and monitoring of your Facebook application:</p>
+<ul>
+<li>Free subscription to New Relic included with all SmartMachines</li>
+<li>Free Joyent Cloud Analytic accessible form my.joyentcloud.com</li>
+<li>Ability to use a Zeus load balencer to increase performance and get more information about your customer traffic</li>
+</ul>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

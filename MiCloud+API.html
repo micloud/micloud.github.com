@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>MiCloud API</h1>
+<p>本文件為MiCloud API之簡短說明文件，MiCloud使用Joyent服務，進行IaaS環境部署，基於Joyent提供之API套件進行MiCloud API相關功能之提供。</p>
+<h1>MiCloud API簡介</h1>
+<h1>何謂MiCloud API?</h1>
+<p>MiCloud API 為提供一個與MiCloud平台(SmartDataCenter，文件後面簡稱為SDC)完整介接之應用程式介面，透過該介面您可以：<br><em>  進行雲端主機之建立與管理(此部份將包含SmartMachine與Linux/Windows主機)
+</em>  管理您的雲端帳戶以及相關之認證權限事宜<br>*  建立屬於您專屬的分析與監控儀表版</p>
+<h1>如何存取MiCloud API?</h1>
+<p>MiCloud API為以REST API為呈現方式的介面,您可以透過下面方法與MiCloud API進行介接：<br><em>  WEB存取方式：SmartDataCenter Customer Portal (<a href="http://micloud.tw">http://micloud.tw</a>)
+</em>  指令列存取方式：Command line interface (CLI)<br><em>  Node.js程式化介面：node.js SDK
+</em>  REST API協定</p>
+<h1>開始使用MiCloud API</h1>
+<p>在開始使用MiCloud API前，請先確認您的環境已經安裝下述套件，如未安裝，請依照下面鏈結安裝：<br><em>  Node.js
+</em>  NPM</p>
+<p>安裝完成後，您可以透過下面指令安裝MiCloud API之工具程式：</p>
+<pre><code>npm install smartdc -g</code></pre>
+<p>%%</p>
+<p>MiCloud API為以REST為協定，並以JSON為呈現之工具，為了輔助您在檢視相關訊息時格式上之排版，請依下面指令下載jsontool：</p>
+<pre><code>npm install jsontool -g</code></pre>
+<p>%%</p>
+<h1>MiCloud API連線位置</h1>
+<p>MiCloud所屬之API連線位置如下：<br>||DNS Name  ||開放區域  ||Port<br>|api.micloud.tw  |僅限MiCloud主機連線 |443<br>PS: 原micloudapi.micloud.tw之DNS已修改為api.micloud.tw。</p>
+<h1>建立與MiCloud之連線：SSH key建立</h1>
+<p>MiCloud API需透過SSH之連線方式操作，為方便操作以及保護連線密碼，請依下面指令產生所屬之SSH Key，如為Windows平台，則可使用PUTTY之Key Generator工具產生SSH Key：</p>
+<pre><code>ssh-keygen -b 2048 -t rsa</code></pre>
+<p>%%</p>
+<p>Mac, Linux系統，使用ssh-keygen產生之金鑰會放置於$HOME/.ssh/目錄中，而Windows使用者則可直接指定存放之位置儲存。</p>
+<h1>設定您的MiCloud API CLI介面</h1>
+<p>產生好SSH Key後，您可以透過下面指令設定好您的CLI環境：</p>
+<pre><code>sdc-setup https://api.example.com
+Username (login): demo
+Password:
+SSH public key: (/Users/demo/.ssh/id_rsa.pub)</code></pre>
+<p>%%</p>
+<h1>使用CLI</h1>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法：</p>
+<pre><code>sdc-listdatacenters --help
+sdc-listdatacenters [--account string] [--debug boolean] [--help boolean]](sdc-listdatacenters [--account string [--debug boolean] [--help boolean])
+[--identity path] [--keyId string] [--url url]]([--identity path [--keyId string] [--url url])</code></pre>
+<p>由顯示之提示說明，使用MiCloud API CLI時候，需要指定相關權限與帳號參數：<br>||CLI Flag    ||Description    ||Environment Variable<br>|--account    |login name (account)    |SDC_CLI_ACCOUNT<br>|--keyId    |name of the key to use for signing    |SDC_CLI_KEY_ID<br>|--url    |URL of the MiCloud API endpoint    |SDC_CLI_URL</p>
+<p>Note that you can use the short form of flags as well. For instance, you can use the -a or the --account flag.</p>
+<h1>新建立一台SmartMachine主機</h1>
+<p>在MiCloud環境上，您可以透過下面指令來新增一台雲端SmartMachine主機：</p>
+<pre><code>sdc-createmachine -n getting-started</code></pre>
+<p>當主機建立完成，您可透過下面方式查詢主機狀態：</p>
+<pre><code>sdc-listmachines -n getting-started
+
+[
+{
+&quot;id&quot;: &quot;0b97c186-05a5-4113-b05f-3e597e3cf038&quot;,
+&quot;name&quot;: getting-started&quot;,
+&quot;owner&quot;: demo&quot;,
+&quot;type&quot;: &quot;smartmachine&quot;,
+&quot;state&quot;: &quot;running&quot;,
+&quot;dataset&quot;: &quot;smartos-1.3.13&quot;,
+&quot;ips&quot;: [
+&quot;10.88.88.50&quot;
+],
+&quot;memory&quot;: 128,
+&quot;disk&quot;: 5120,
+&quot;metadata&quot;: {},
+&quot;created&quot;: &quot;2011-06-27T19:52:40+00:00&quot;,
+&quot;updated&quot;: &quot;2011-06-27T20:08:55+00:00&quot;
+}
+]</code></pre>
+<p>當主機狀態回復至running狀態時，您就可以透過SSH連線至您的主機：</p>
+<pre><code>ssh-add
+$ ssh -A admin@10.88.88.50</code></pre>
+<h1>MiCloud相關主機參數：Datasets</h1>
+<p>於MiCloud SDC環境中，您可以透過下面指令取得目前定義中的dataset (dataset為SDC環境中描述IaaS主機類別之描述檔案，開通主機時透過此描述檔案可以決定您開立主機之類別)：</p>
+<pre><code>sdc-listdatasets</code></pre>
+<p>您在開立雲端主機時，可透過下面方法指定開啓主機之類別：</p>
+<pre><code>sdc-createmachine -e sdc:sdc:nodejs:1.2.0 -n getting-started-nodejs</code></pre>
+<h1>MiCloud相關主機參數：Packages</h1>
+<p>另一各常用之主機參數為package，此參數提供主機大小規格之相關資訊，開通主機時透過指定package參數，可以決定開立之主機規格大小，下面為查詢MiCloud SDC現行定義之package內容：</p>
+<pre><code>sdc-listpackages</code></pre>
+<p>下面為指定dataset與package之建立主機範例：</p>
+<pre><code>sdc-createmachine -e sdc:sdc:nodejs:1.2.0 -n big-nodejs -p regular_1024</code></pre>
+<h1>管理您的SSH keys</h1>
+<p>透過下面指令，您可以將SSH Key上傳至MiCloud SDC管理平台，讓之後的連線均直接受到SSH加密保護：</p>
+<pre><code>sdc-createkey -n my_other_rsa_key ~/.ssh/my_other_rsa_key.pub</code></pre>
+<p>您可以透過下面指令查詢現行已經同步至SDC環境織金鑰：</p>
+<pre><code>sdc-listkeys -k my_other_rsa_key</code></pre>
+<p>當您有一組以上的key時候，您需要指定key之位置，透過下面參數的指定，可以讓smartdc認得您要使用的key：</p>
+<pre><code>export SDC_CLI_KEY_ID=my_other_rsa_key</code></pre>
+<h1>建立主機分析</h1>
+<p>MiCloud API一樣允許您建立主機之分析，SDC中特有的主機分析提供許多主機上運算與狀態資訊，透過這些資訊，您可以診斷目前環境中的弱點並予以加強，MiCloud API之分析範例(分析vnic支流量狀態)如下：</p>
+<pre><code>sdc-createinstrumentation -m nic -s vnic_bytes</code></pre>
+<p>當分析建立完成時，您可以透過連線上您的雲端主機，並操作ping指令：</p>
+<pre><code>wget joyent.com
+$ ping -I 1 joyent.com</code></pre>
+<p>此時再回分析進行檢視：</p>
+<pre><code>sdc-getinstrumentation -v 1</code></pre>
+<p>其中上面指令的”1”是您所見立分析的ID，透過取回分析的指令，您可以完整的監控您的系統。更多詳細的資訊，請參考： Appendix B: Cloud Analytics.</p>
+<h1>刪除主機</h1>
+<p>MiCloud比對Amazone之收費方式，其上的IaaS服務均是以機器的生成(create)到移除(destroy)區間計費，因此確實的移除主機，方可確認您不會再被收費。而在刪除主機之前，您可以透過下面指令將上面建立的分析刪除：</p>
+<pre><code>sdc-deleteinstrumentation 1</code></pre>
+<p>然後透過sdc-stopmachine的指令將主機關閉：</p>
+<pre><code>sdc-listmachines -n getting-started | json 0.id | xargs sdc-stopmachine</code></pre>
+<p>關閉之後，透過sdc-deletemachine將主機移除：</p>
+<pre><code>sdc-listmachines -n getting-started | json 0.state
+$ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</code></pre>
+<p>刪除SSH Key</p>
+<p>另外，您或許會想要把目前沒用到的SSH Key刪除，透過下面指令可以把SSH Key移除：</p>
+<pre><code>sdc-deletekey id_rsa</code></pre>
+
+  </div>
+  </div>
+  </body>
+</html>

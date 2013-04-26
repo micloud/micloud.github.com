@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>MiCloudAPI 實做案例</h1>
+<h1>情境：</h1>
+<p>我是一個購物網站的主機管理員，當季的商品促銷期間常會造成流量爆滿，大量的transaction會導至網頁資料傳輸與反應變慢，運行在傳統的主機服務架構下，此時除非新增加伺服器規格外，似乎無其他方法... 但在雲端的環境下，我可以規劃我的促消時間，依照網站上統計的到訪人數資料來讓我可以知道大約尖峰時期在甚麼時候，透過MiCloudAPI，我建置了一個可以依據我所規劃的時間來進行增加服務端點的架構。</p>
+<p><img src='images/MiCloud+API+Implement+1-p12.png' width='450' align='center'/><br>圖：利用MiCloudAPI建構可延展架構</p>
+<p>架構中利用admin server做系統資源的監控，並由admin server在需要延展服務的情況下進行呼叫MiCloudAPI，請MiCloudAPI在我的帳戶底下多生成一臺主機，並且利用admin在新平台上進行服務部署工作將服務所需資源作一個調適分配，最後通知前端Load Balancer將服務需求平均分攤至新加入之伺服器上。</p>
+<h1>先介紹MiCloudAPI上的基本設定</h1>
+<h1>設定主機與MiCloudAPI連線：</h1>
+<pre><code>$ sdc-setup https://api.micloud.tw
+Username (login): YOUR_ACCOUNT
+Password:
+The following keys exist in SmartDataCenter:
+[1] key1]([1 key1)
+Would you like to use an existing key? (yes) no
+SSH public key: (/Users/xxxx/.ssh/id_rsa.pub)</code></pre>
+<h1>設定環境變數</h1>
+<pre><code>export SDC_CLI_URL=https://api.micloud.tw
+export SDC_CLI_ACCOUNT=YOUR_ACCOUNT
+export SDC_CLI_KEY_ID=id_rsa
+export SDC_CLI_IDENTITY=$HOME/.ssh/id_rsa</code></pre>
+<h1>檢視目前既有主機</h1>
+<pre><code>$ sdc-listmachines
+[
+{
+&quot;id&quot;: &quot;9626a584-187c-40b0-aa84-7f6f3a22ec44&quot;,
+&quot;name&quot;: &quot;TS-72-SIMON-01&quot;,
+&quot;type&quot;: &quot;smartmachine&quot;,
+&quot;state&quot;: &quot;running&quot;,
+&quot;dataset&quot;: &quot;sdc:sdc:smartosplus64:3.0.7&quot;,
+&quot;ips&quot;: [
+&quot;211.78.xxx.xxx&quot;
+],
+&quot;memory&quot;: 1024,
+&quot;disk&quot;: 15360,
+&quot;metadata&quot;: {},
+&quot;created&quot;: &quot;2011-12-20T14:25:33+00:00&quot;,
+&quot;updated&quot;: &quot;2011-12-29T04:08:25+00:00&quot;
+}
+]</code></pre>
+<h1>檢視可用之DataSet</h1>
+<pre><code>$ sdc-listdatasets
+[
+{
+&quot;id&quot;: &quot;1f26e71c-2bb7-11e1-8266-5b14c4eccd12&quot;,
+&quot;urn&quot;: &quot;sdc:admin:WinSrv2008R2STDX64CHT:1.1.0&quot;,
+&quot;name&quot;: &quot;WinSrv2008R2STDX64CHT&quot;,
+&quot;os&quot;: &quot;WinSrv2008R2STDX64CHT&quot;,
+&quot;type&quot;: &quot;virtualmachine&quot;,
+&quot;description&quot;: &quot;WinSrv2008R2STDX64CHT 1.1.0 VM image&quot;,
+&quot;default&quot;: false,
+&quot;requirements&quot;: {},
+&quot;version&quot;: &quot;1.1.0&quot;,
+&quot;created&quot;: &quot;2011-12-21T09:37:42+00:00&quot;
+},
+{
+&quot;id&quot;: &quot;1f190e72-2d19-11e1-b4a2-7b85c599c5d2&quot;,
+&quot;urn&quot;: &quot;sdc:admin:WinSrv2008R2ENTX64ENG:1.1.0&quot;,
+&quot;name&quot;: &quot;WinSrv2008R2ENTX64ENG&quot;,
+&quot;os&quot;: &quot;WinSrv2008R2ENTX64ENG&quot;,
+&quot;type&quot;: &quot;virtualmachine&quot;,
+&quot;description&quot;: &quot;WinSrv2008R2ENTX64ENG 1.1.0 VM image&quot;,
+&quot;default&quot;: false,
+&quot;requirements&quot;: {},
+&quot;version&quot;: &quot;1.1.0&quot;,
+&quot;created&quot;: &quot;2011-12-23T03:54:28+00:00&quot;
+},...(skip)
+]</code></pre>
+<h1>檢視可用之Package</h1>
+<pre><code>$ sdc-listpackages
+[
+{
+&quot;name&quot;: &quot;S 1GB RAM (1CORE)&quot;,
+&quot;memory&quot;: 1024,
+&quot;disk&quot;: 15360,
+&quot;swap&quot;: 2048,
+&quot;default&quot;: false
+},
+{
+&quot;name&quot;: &quot;M 2GB RAM (1CORE)&quot;,
+&quot;memory&quot;: 2048,
+&quot;disk&quot;: 30720,
+&quot;swap&quot;: 4096,
+&quot;default&quot;: false
+},...(skip
+]</code></pre>
+<h1>測試開啟主機的語法</h1>
+<h1>調整一臺虛擬主機的記憶體大小</h1>
+<pre><code>$ sdc-resizemachine -p &quot;M 2GB RAM (1CORE)&quot; 9626a584-187c-40b0-aa84-7f6f3a22ec44</code></pre>
+<h1>開啟一臺主機</h1>
+<pre><code>$ sdc-createmachine -name simontest123 -package &quot;S 1GB RAM (1CORE)&quot; -dataset sdc:sdc:smartos64:1.5.1
+{
+&quot;id&quot;: &quot;845f21fe-1910-4b38-a4ca-e2a81144f9a2&quot;,
+&quot;name&quot;: &quot;simontest123&quot;,
+&quot;type&quot;: &quot;smartmachine&quot;,
+&quot;state&quot;: &quot;provisioning&quot;,
+&quot;dataset&quot;: &quot;sdc:sdc:smartos64:1.5.1&quot;,
+&quot;ips&quot;: [
+&quot;211.78.xxx.xxx&quot;
+],
+&quot;memory&quot;: 1024,
+&quot;disk&quot;: 15360,
+&quot;metadata&quot;: {},
+&quot;created&quot;: &quot;2012-01-18T02:13:31+00:00&quot;,
+&quot;updated&quot;: &quot;2012-01-18T02:13:31+00:00&quot;
+}</code></pre>
+<h1>刪除虛擬主機</h1>
+<pre><code>$ sdc-deletemachine 845f21fe-1910-4b38-a4ca-e2a81144f9a2
+Requested transition is not acceptable due to current resource state</code></pre>
+<p>(主機刪除前，必需要停機，否則會不能刪除)<br>*   Stop server first</p>
+<pre><code>$ sdc-stopmachine 845f21fe-1910-4b38-a4ca-e2a81144f9a2</code></pre>
+<ul>
+<li>Confirm stop OK and delete...</li>
+</ul>
+<pre><code>$ sdc-deletemachine 845f21fe-1910-4b38-a4ca-e2a81144f9a2</code></pre>
+<h1>實際執行</h1>
+<p>需求：於聖誕節前(12/20 AM 0:10)新增加一臺主機加入服務，而請load balancer增加路由部份與程式部署部份，因不在MiCloudAPI討論範圍，暫時不列出來。</p>
+<h1>撰寫排程程式($ HOME / script / bin / createServer.sh )</h1>
+<pre><code>#!/bin/bash
+export SDC_CLI_URL=https://api.micloud.tw
+export SDC_CLI_ACCOUNT=YOUR_ACCOUNT
+export SDC_CLI_KEY_ID=id_rsa
+export SDC_CLI_IDENTITY=/Users/simonsu/.ssh/id_rsa
+sdc-createmachine -name simontest123
+
+-package &quot;S 1GB RAM (1CORE)&quot;
+
+-dataset sdc:sdc:smartos64:1.5.1
+echo “Server Create Done” | mailx -s “Add a Server to MiCloud” simonsu.mail@gmail.com</code></pre>
+<p>增加load balancer路由(此部分程式碼需視不同Load Balancer實作)</p>
+<pre><code>addRoute2LoadBalancer.sh</code></pre>
+<p>部署應用程式(此部分程式碼需視不同應用程式實作)</p>
+<pre><code>doDeployApplication.sh</code></pre>
+<h1>將服務加入Cron Job</h1>
+<pre><code>10 0 20 12 * $ HOME / script / bin / createServer.sh</code></pre>
+<p>上述腳本正常執行後，就可以順利的在12/20當天延展AP主機的服務，並且提供服務囉！</p>
+
+  </div>
+  </div>
+  </body>
+</html>

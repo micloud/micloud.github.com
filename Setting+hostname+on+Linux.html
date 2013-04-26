@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>Linux Hostname設置</h1>
+<p>當您申請MiCloud上任何主機時，若未指定主機名稱，系統將預設以亂數產生一串文字做為您的主機名稱，可能類似：fxyzabcd.local的名稱。您可以以IP登入您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。<br>如您需要重設您的主機名稱，您可以修改某些檔案來達到修改Hostname的目的，不同的作業系統需要更改的檔案並不相同，詳細說明如下:</p>
+<h1>Debian</h1>
+<p>您需要修改的檔案如下:<br><em>  /etc/hostname
+</em>  /etc/hosts</p>
+<p>(1)修改/etc/hostname，指令如下:</p>
+<pre><code>#vi /etc/hostname</code></pre>
+<p>於下方畫面紅色框框更改您新的主機名稱<br><img src='images/Setting+hostname+on+Linux-dehostname.jpg' width='650px' align='center'/></p>
+<p>(2)修改/etc/hosts，指令如下:</p>
+<pre><code>#vi /etc/hosts</code></pre>
+<p>於下方畫面紅色框框更改您的主機名稱<br><img src='images/Setting+hostname+on+Linux-dehostname2.jpg' width='650px' align='center'/></p>
+<p>(3)修改完後執行下方指令主機名稱即被更改。</p>
+<pre><code>#/etc/init.d/hostname.sh start</code></pre>
+<p>當您設定好，您可以使用下面指令驗證：</p>
+<pre><code>#hostname</code></pre>
+<hr>
+<h1>Ubuntu</h1>
+<p>您需要修改的檔案如下:<br><em>  /etc/hostname
+</em>  /etc/hosts</p>
+<p>(1)修改/etc/hostname，指令如下:</p>
+<pre><code>#vi /etc/hostname</code></pre>
+<p>於下方畫面紅色框框更改您新的主機名稱<br><img src='images/Setting+hostname+on+Linux-ubhostname.jpg' width='650px' align='center'/></p>
+<p>(2)修改/etc/hosts，指令如下:</p>
+<pre><code>#vi /etc/hosts</code></pre>
+<p>於下方畫面紅色框框更改您的主機名稱<br><img src='images/Setting+hostname+on+Linux-ubhostname2.jpg' width='650px' align='center'/></p>
+<p>(3)修改完後執行下方指令主機名稱即被更改。</p>
+<pre><code>#start hostname</code></pre>
+<p>當您設定好，您可以使用下面指令驗證：</p>
+<pre><code>#hostname</code></pre>
+<hr>
+<h1>CentOS</h1>
+<p>您需要修改的檔案如下:<br><em>  /etc/sysconfig/network
+</em>  /etc/hosts</p>
+<p>(1)修改/etc/sysconfig/network，指令如下:</p>
+<pre><code>#vi /etc/sysconfig/network</code></pre>
+<p>於下方畫面紅色框框更改您新的主機名稱<br><img src='images/Setting+hostname+on+Linux-cehosname.jpg' width='650px' align='center'/></p>
+<p>(2)修改/etc/hosts，指令如下:</p>
+<pre><code>#vi /etc/hosts</code></pre>
+<p>於下方畫面紅色框框更改您的主機名稱<br><img src='images/Setting+hostname+on+Linux-cehosname1.jpg' width='650px' align='center'/></p>
+<p>(3)當您設定好，並重開主機後，您可以使用下面指令驗證：</p>
+<pre><code>#hostname</code></pre>
+<hr>
+<h1>Fedora</h1>
+<p>您需要修改的檔案如下:<br><em>  /etc/sysconfig/network
+</em>  /etc/hosts</p>
+<p>(1)修改/etc/sysconfig/network，指令如下:</p>
+<pre><code>#vi /etc/sysconfig/network</code></pre>
+<p>於下方畫面紅色框框更改您新的主機名稱<br><img src='images/Setting+hostname+on+Linux-fehosname.jpg' width='650px' align='center'/></p>
+<p>(2)修改/etc/hosts，指令如下:</p>
+<pre><code>#vi /etc/hosts</code></pre>
+<p>於下方畫面紅色框框更改您的主機名稱<br><img src='images/Setting+hostname+on+Linux-fehosname1.jpg' width='650px' align='center'/></p>
+<p>(3)當您設定好，並重開主機後，您可以使用下面指令驗證：</p>
+<pre><code>#hostname</code></pre>
+
+  </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>The title of the page serves as the heading to this section. It describes the problem that this page is solving.</p>
+<p>In this page:</p>
+<h1>What is the difference between an Accelerator and a SmartMachine?</h1>
+<p>SmartMachine and Accelerator are both names used to describe the same thing – a zone running on Joyent SmartOS. Accelerator was the name used prior to May 2010.</p>
+<h1>What is my SmartMachine name?</h1>
+<p>Your SmartMachine name is the default name associated with your SmartMachine when delivered. It looks like: z12345AA, z12345AB, or fjsliyaa, fjsliyab. To find the name of your SmartMachine use this command:</p>
+<pre><code>zonename</code></pre>
+<h1>How can I find my SmartMachine public or private IP?</h1>
+<p>The public and private IP of your SmartMachine is in the welcome e-mail. Or you can find your public or private IP by using the command:</p>
+<pre><code>ifconfig -a</code></pre>
+<p>The private IP will be the 10.* equivalent of your public IP.</p>
+<h1>Where can I get a SmartMachine image to use on my local computer?</h1>
+<p>Currently we do not have a publicly available SmarthMachine image. However, the SmartMachine is a pretty simple setup. We run Solaris Express Community Release and Pkgsrc.</p>
+<p>You can get the Solaris Express Community Release image at: <a href="http://opensolaris.org/os/downloads/sol_ex_dvd_1/">http://opensolaris.org/os/downloads/sol_ex_dvd_1/</a><br>See this list for our pkgsrc repository: <a href="http://wiki.joyent.com/accelerators:kb:pkgsrc:updating">http://wiki.joyent.com/accelerators:kb:pkgsrc:updating</a></p>
+<h1>How do I reset my SmartMachine to a clean image?</h1>
+<p>If you signed up for your SmartMachine through the MyJoyent control panel, delete the SmartMachine from your account and order a new SmartMachine as its replacement.</p>
+<p>If you signed up for a SmartMachine another way, submit a ticket that you would like to wipe your SmartMachine clean and start fresh. Be sure you have everything backed up because we will wipe everything.</p>
+<h1>I can&#39;t reach Webmin. <a href="https://x.x.x.x:10000/">https://x.x.x.x:10000/</a> is not working?</h1>
+<p>If Webmin is failing to load, you have one of two problems: The process is hung, or you are hitting your memory limit.</p>
+<p>First, verify that you aren&#39;t hitting your memory limit. Log in to your SmartMachine, and use the prstat -Z command and look at the RSS column in the summary. If this value is near the size of your SmartMachine, shut down some services to free memory.</p>
+<p>If this isn&#39;t the problem, restart the Webmin process:</p>
+<pre><code>sudo svcadm disable webmin
+sudo svcadm enable webmin</code></pre>
+<h1>My Path is not working ... shebang issues with /usr/bin/env</h1>
+<p>Truth be told, /usr/bin/env is just fine. The problem is really that env was not originally intended as an all-cure to resolving binary paths automagically, and it will fail if it can&#39;t find, for example, ruby in its path. And the default system PATH does not include paths for the pkgsrc layer installed by us (/opt/local), which is best dealt with in interactive login profiles (for example, the root .profile).</p>
+<p>To find out the set path for your processes, do this:</p>
+<pre><code>Chances are you will see it run with a limited PATH.</code></pre>
+<p>For example, looking for munin-node&#39;s process:</p>
+<pre><code>[root@abcdefg ~]# pargs -e `pgrep -f munin-node`](grep PATH)
+envp[34]: PATH=/usr/sbin:/usr/bin](envp[34: PATH=/usr/sbin:/usr/bin)</code></pre>
+<p>This is normally not a problem in your login shells, because those pull the full env from /root/.profile. However, this is a problem with, for example, SMF or Cron, because those run with a limited environment by default. So you want to do one of the following:</p>
+<ul>
+<li>Always use full paths in scripts&#39; shebangs.</li>
+<li>Modify the system profile to include full PATH.</li>
+<li>Change your SMF profile to set the right PATH.<br>The first option can get tedious especially with 3rd party scripts, and the second option is not recommended, so the third option is the best option. We do recommend that you always set PATH in SMF profiles.</li>
+</ul>
+<p>Here is an example for mongrel setting the path:</p>
+<pre><code>&lt;?xml version=&#39;1.0&#39;?&gt;
+&lt;!DOCTYPE service_bundle SYSTEM &#39;/usr/share/lib/xml/dtd/service_bundle.dtd.1&#39;&gt;
+&lt;service_bundle type=&#39;manifest&#39; name=&#39;mongrel/YOURAPP-production&#39;&gt;
+&lt;service name=&#39;network/mongrel/YOURAPP-production&#39; type=&#39;service&#39; version=&#39;0&#39;&gt;
+&lt;create_default_instance enabled=&#39;true&#39;/&gt;
+&lt;single_instance/&gt;
+&lt;dependency name=&#39;fs&#39; grouping=&#39;require_all&#39; restart_on=&#39;none&#39; type=&#39;service&#39;&gt;
+&lt;service_fmri value=&#39;svc:/system/filesystem/local&#39;/&gt;
+&lt;/dependency&gt;
+&lt;dependency name=&#39;net&#39; grouping=&#39;require_all&#39; restart_on=&#39;none&#39; type=&#39;service&#39;&gt;
+&lt;service_fmri value=&#39;svc:/network/loopback&#39;/&gt;
+&lt;/dependency&gt;
+&lt;dependent name=&#39;mongrel_multi-user&#39; restart_on=&#39;none&#39; grouping=&#39;optional_all&#39;&gt;
+&lt;service_fmri value=&#39;svc:/milestone/multi-user&#39;/&gt;
+&lt;/dependent&gt;
+&lt;exec_method name=&#39;start&#39; type=&#39;method&#39; exec=&#39;/opt/csw/bin/mongrel_rails cluster::start&#39; timeout_seconds=&#39;60&#39;&gt;
+&lt;method_context working_directory=&#39;/HOME/YOUR/PATH/TO/RAILS/APP&#39;&gt;
+&lt;method_credential user=&#39;USER&#39; group=&#39;GROUP&#39; /&gt;
+&lt;method_environment&gt;
+&lt;envvar name=&quot;PATH&quot; value=&quot;/usr/bin:/bin:/opt/csw/bin&quot; /&gt;
+&lt;/method_environment&gt;
+&lt;/method_context&gt;
+&lt;/exec_method&gt;
+&lt;exec_method name=&#39;stop&#39; type=&#39;method&#39; exec=&#39;:kill&#39; timeout_seconds=&#39;60&#39;&gt;
+&lt;method_context/&gt;
+&lt;/exec_method&gt;
+&lt;/service&gt;
+&lt;/service_bundle&gt;</code></pre>
+<h1>Cron not running script</h1>
+<p>What is most likely happening here is one of two things:</p>
+<ul>
+<li>path issue - cron runs under a different environment and it is best to use full paths to all programs in the script that is getting called.<br>For example if you are backing up MySQL with mysqldump, you need to call that program with:</li>
+</ul>
+<pre><code>/opt/local/bin/mysqldump</code></pre>
+<ul>
+<li>permissions issue - make sure that the script is executable and the cron credentials you are using has the correct permissions. This includes:</li>
+<li>*execute all programs in the script</li>
+<li>*write to the directory (if backing up)</li>
+<li>*access the database (if accessing a database)<h1>Apache is in maintenance</h1>
+Log rotation is set to happen at 0030 GMT. If you see that Apache has gone into maintenance at this time, then use the following instructions to change the method of log rotation.</li>
+</ul>
+<h1>Fix Virtualmin settings</h1>
+<ul>
+<li>Log into Virtualmin</li>
+<li>Follow this path (starting in the left pane):</li>
+<li>*If you never upgraded Virtualmin: System Settings &gt; Module Config &gt; Log File Rotation</li>
+<li>*If you upgraded Virtualmin and are runnign a fairly new version: System Settings &gt; Server Templates &gt; Default Settings &gt; Log File Rotation</li>
+<li>Change the Directives field to just # postrotate and click Save.</li>
+<li>In the left pane, click Webmin on top</li>
+<li>Go to: System &gt; Log File Rotation &gt; Edit Global Options</li>
+<li>Change the Truncate log file in place option to Yes and click Save.</li>
+</ul>
+<pre><code>Joyent provides Virtualmin as a third party opensource solution to help you manage your SmartMachine, but we are not responsible for the actual project. As such, we will make a best effort to solve your issue, however you may need to turn to the Virtualmin Support community for help with various Virtualmin features.</code></pre>
+<h1>Fix existing domains</h1>
+<p>Check /opt/local/etc/logrotate.conf and if any config blocks resemble the following:</p>
+<pre><code>/path/to/log/file {
+some commands here
+}</code></pre>
+<p>Remove the contents of the curly brackets. For example:</p>
+<pre><code>/path/log/file {
+}</code></pre>
+<h1>Apache restarts at 0310</h1>
+<p>Verify your settings are correct.</p>
+<ul>
+<li>Open /etc/logadm.conf</li>
+<li>Look for this:</li>
+</ul>
+<pre><code>apache
+-C 7
+-a &#39;/usr/sbin/svcadm restart apache&#39;
+-p 1d /var/log/httpd/*.log</code></pre>
+<ul>
+<li>Change it to this:</li>
+</ul>
+<pre><code>apache
+-C 5
+-c
+-s 100m /var/log/httpd/*.log</code></pre>
+<h1>Add more SmartMachines to an existing account</h1>
+<p>You can add more SmartMachines directly in my.joyent.com. These machines are created without respect to any existing infrastructure you may have. If you have special requirements to ensure that your SmartMachine are set up to work well with your existing architecture you can contact Joyent Support at support@joyent.com with your request.</p>
+<h1>inetd service is in maintenance</h1>
+<p>Looking at svcs -vx you see that inetd is in maintenance. Looking at the service log file you see these kinds of messages:</p>
+<pre><code>[ Jul 14 18:46:00 Executing start method (&quot;/usr/lib/inet/inetd start&quot;). ]]([ Jul 14 18:46:00 Executing start method  - &quot;/usr/lib/inet/inetd start&quot;. )
+[ Jul 14 18:46:00 Method &quot;start&quot; exited with status 0. ]]([ Jul 14 18:46:00 Method &quot;start&quot; exited with status 0. )
+[ Jul 14 18:46:01 Stopping because process dumped core. ]]([ Jul 14 18:46:01 Stopping because process dumped core. )
+[ Jul 14 18:46:01 Executing stop method (&quot;/usr/lib/inet/inetd stop&quot;). ]]([ Jul 14 18:46:01 Executing stop method  - &quot;/usr/lib/inet/inetd stop&quot;. )
+[ Jul 14 18:46:01 Method &quot;stop&quot; exited with status 0. ]]([ Jul 14 18:46:01 Method &quot;stop&quot; exited with status 0. )
+[ Jul 14 18:46:01 Restarting too quickly, changing state to maintenance. ]]([ Jul 14 18:46:01 Restarting too quickly, changing state to maintenance. )
+[ Jul 14 18:47:48 Leaving maintenance because disable requested. ]]([ Jul 14 18:47:48 Leaving maintenance because disable requested. )</code></pre>
+<ul>
+<li>Try to clear the service to see what happens:</li>
+</ul>
+<pre><code>svcadm clear inetd</code></pre>
+<p>You then check with svcs -p inetd that it went back into maintenance.<br>*  Then look at the output of dmesg. You see a message like this:</p>
+<pre><code>Jul 15 00:34:34 SOMETHING.joyent.us inetd[12202]: [ID 702911 daemon.error] Property &#39;connection_backlog&#39; of instance svc:/network/ftp/tcp:default is missing, inconsistent or invalid](Jul 15 00:34:34 SOMETHING.joyent.us inetd[12202: [ID 702911 daemon.error] Property &#39;connection-backlog&#39; of instance svc:/network/ftp/tcp:default is missing, inconsistent or invalid)</code></pre>
+<ul>
+<li>Then export that SMF file via</li>
+</ul>
+<pre><code>svccfg export ftp/tcp &gt; ftp.xml</code></pre>
+<ul>
+<li>Add where the rest of the propval lines are for inetd the line</li>
+</ul>
+<pre><code>&lt;propval name=&#39;connection_backlog&#39; type=&#39;integer&#39; value=&#39;10&#39;/&gt;</code></pre>
+<ul>
+<li>import the SMF file</li>
+</ul>
+<pre><code>svccfg import ftp.xml</code></pre>
+<ul>
+<li>clear the inetd service</li>
+</ul>
+<pre><code>svcadm clear inetd</code></pre>
+<ul>
+<li>check that it indeed came online:</li>
+</ul>
+<pre><code>svcs -p inetd</code></pre>
+<ul>
+<li>check that the dependent service is also online:</li>
+</ul>
+<pre><code>svcs -p ftp/tcp</code></pre>
+<h1>Unable to ssh/sftp due to encryption issues</h1>
+<p>In Ruby you will see something like this:</p>
+<pre><code>Net::SSH::Exception: could not settle on encryption_client algorithm</code></pre>
+<p>Or when trying to access through ssh from another application you may also see a cipher error – it means you need to add the cbc encryption types.</p>
+<p>To add the cbc types of encryption do the following:</p>
+<ul>
+<li>First change to root by entering the following from the command line:</li>
+</ul>
+<pre><code>su -</code></pre>
+<ul>
+<li>The system will prompt you for a password. Enter the password that is indicated in your welcome email for Root User Access</li>
+<li>Run the following command:</li>
+</ul>
+<pre><code>echo &quot;Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour128,arcfour256,arcfour,blowfish-cbc&quot; &gt;&gt; /etc/ssh/sshd_config</code></pre>
+<ul>
+<li>Restart ssh for the changes to take effect:</li>
+</ul>
+<pre><code>sudo svcadm restart ssh</code></pre>
+<p>And that&#39;s it, you should now be able to access through ssh or SFTP.</p>
+<h1>Updating RMagick-2.11.1 to RMagick-2.11.1nb1</h1>
+<p>If you are experiencing issues with RMagick, you may need to update it. You can easily update it through pkgsrc by doing the following:</p>
+<pre><code>pkgin update
+pkgin -y install ruby18-RMagick</code></pre>
+<p>You should be seeing &#39;ruby18-RMagick-2.11.1nb1&#39; instead of just &#39;ruby18-RMagick-2.11.1&#39;</p>
+<h1>disk usage (du) numbers not adding up</h1>
+<p>At times when you run du and compare it with the output of df the numbers will not add up.</p>
+<p>This is most like caused by a file handle open to a file that has been deleted.</p>
+<p>The command du won&#39;t count the file as existing, even though the filesystem still has that data allocated to a file.</p>
+<p>When the process that&#39;s holding the filehandle open exits (this could be a database, or apache, or really any other daemon) the space consumption should go away and your filesystem usage should report correctly again.</p>
+<p>The most typical thing that I&#39;ve seen cause this is a log rotation that happens and nukes a log without properly HUP&#39;ing the daemon.</p>
+<h1>Finding large files filling up disk</h1>
+<pre><code>There is a free monitoring service at NodeFly.com that you can use to monitor your disk usage and alert you before you run out of disk space.  The service is very easy to use... and free</code></pre>
+<p>You can find what files and directories are filling up your disk in one of two ways:</p>
+<p>Run the du command as root:</p>
+<pre><code>cd /
+du -sh *</code></pre>
+<p>and follow the trail</p>
+<p>The other way you can do this is with the command:</p>
+<pre><code>find / -size +200000 -type f -ls | sort -k 7,7 -n</code></pre>
+<p>You can increase or decrease the size (+200000 in the above example) depending on the length of your list.</p>
+<pre><code>At times SmartOS will report discrepancies in the amount of disk space used from the output of du compared to the output of df. The du command counts file by file and thereby counts the total space on the filesystem. The df command differs from this in that it directly calls the filesystem and queries the current disk space used. Further details available at: http://sunsolarisadmin.blogspot.com/2007/03/du-and-df-show-different-values-for.html</code></pre>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

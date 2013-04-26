@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>主機金鑰設置與連線教學</h1>
+<p>說明：本次公測主機為MiCloud 2XS型號主機，為小於一般市場提供之虛擬主機機型，提供一般網頁服務應用與開發使用，其中網路連線部分提供Public DNS，讓您用主機之專屬DNS連線，連線方式請參考下面說明：</p>
+<p>您申請免費30天試用服務後，SmartOS/Linux主機連線必須透過SSH協定與SSH Key的認證，以確保您與您的伺服器之間的連線安全。</p>
+<p>1.若您已設定ssh key則使用您原本的私鑰進行連線</p>
+<p>2.<font color='blue'>若您尚未設定ssh key則系統會發送一組私鑰和公鑰給您,相關設定如下:</font></p>
+<h1>Linux/MacOS主機</h1>
+<p>如您為Linux或MacOS用戶，在登入平台後，選擇主機，點選下方紅色框框部分的任何一台主機，會進入主機的細項畫面，您可以看到如下資訊：</p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-machine1.jpg' width='650' align='center'/></p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-dnsport.jpg' width='650' align='center'/></p>
+<p>請直接使用下面指令連線：</p>
+<pre><code>ssh root@your.domain.name -p ssh_port -i your_private_key</code></pre>
+<p>ex:</p>
+<pre><code>ssh root@192-168-255-13.my.micloud.tw -p 65013 -i ~/.ssh/id_rsa</code></pre>
+<h1>Windows主機(使用Putty工具連線範例)</h1>
+<p>由於Putty採用特有格式的puk檔案來封裝SSH Key，因此必須透過Putty相關工具將MiCloud產出之Key File進行轉換，轉換動作如下：</p>
+<p>(1)將信件中的私鑰下載至您的電腦中，如下圖。</p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-key.png' width='500' align='center'/></p>
+<p>(2)於下列網址下載PuTTy、Pageant and PuTTYgen，該工具可以協助您進行SSH Key的建立與SSH的連線。</p>
+<p>&nbsp;&nbsp;&nbsp;網址為:<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html"><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></a></p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-putty.jpg' width='500' align='center'/></p>
+<p>(3)執行puttygen.exe並點選Load，”檔案類型”選擇所有檔案，匯入您所下載的key</p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-load.jpg' width='500' align='center'/></p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-file.jpg' width='500' align='center'/></p>
+<p>(4)匯入後會才會產生putty可執行的key，並將此金鑰儲存，即可關閉程式。</p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-save.jpg' width='500' align='center'/></p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-save2.jpg' width='500' align='center'/></p>
+<p>(5)開啟pageant.exe執行後程式會在螢幕的右下角如下圖:</p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-pageant.jpg' width='500' align='center'/></p>
+<p>點開後按下Add key按鈕，將上面所儲存的key開啟。</p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-addkey.jpg' width='500' align='center'/></p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-addkey2.jpg' width='500' align='center'/></p>
+<p>(6)新增完後請先登入平台選擇主機，檢視主機的細項畫面，再開啟putty.exe，hostname為DNS，設定完按下open按鈕，進入putty後輸入root即可使用。</p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-machine.jpg' width='650' align='center'/></p>
+<p><img src='images/Free+machine+&+Connect+Tutorial-dnsport1.jpg' width='650' align='center'/></p>
+
+  </div>
+  </div>
+  </body>
+</html>

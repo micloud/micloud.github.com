@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>The latest version of npm only works with fairly recent versions of node. If you signed up with the no.de service in one of the very first pre-release betas, you might be using a very old version of Node.js™, and npm update won&#39;t quite work properly. You&#39;ll see stuff like this:</p>
+<pre><code>[node@izs ~]$ npm update]([node@izs ~$ npm update)
+npm info it worked if it ends with ok
+npm info version 0.2.2
+npm info updates npm@0.3.11
+npm info fetch http://registry.npmjs.org/npm/-/npm-0.3.11.tgz
+npm info install npm@0.3.11
+npm ERR! install failed Error: Required package: semver(1) not found.
+npm ERR! install failed     at /home/node/.node_libraries/.npm/npm/0.2.2/package/lib/build.js:139:25
+npm ERR! install failed     at cb (/home/node/.node_libraries/.npm/npm/0.2.2/package/lib/utils/graceful-fs.js:28:9)
+npm ERR! install failed     at node.js:764:9
+npm info install failed rollback
+npm info not installed npm,0.3.11
+npm info install failed rolled back
+npm ERR! install failed npm@0.3.11,semver@1
+npm info failed to update npm@0.3.11
+npm ERR! Error: Required package: semver(1) not found.
+npm ERR!     at /home/node/.node_libraries/.npm/npm/0.2.2/package/lib/build.js:139:25
+npm ERR!     at cb (/home/node/.node_libraries/.npm/npm/0.2.2/package/lib/utils/graceful-fs.js:28:9)
+npm ERR!     at node.js:764:9
+npm ERR! try running: &#39;npm help update&#39;
+npm ERR! Report this *entire* log at &lt;http://github.com/isaacs/npm/issues&gt;
+npm ERR! or email it to &lt;npm-@googlegroups.com&gt;
+npm not ok</code></pre>
+<h1>Updating to the Latest npm</h1>
+<p>Chances are that there&#39;s a very old version of npm installed in your home directory, and you need to move that away so that you can use the global npm installed in /opt/nodejs/bin. Try doing this:</p>
+<pre><code>npm rm npm
+hash -r
+which npm  # =&gt; /opt/nodejs/bin/npm</code></pre>
+<p>Of course, this command should always work:</p>
+<pre><code>curl http://npmjs.org/install.sh | sh</code></pre>
+<p>If it doesn&#39;t, then please post an issue at <a href="https://github.com/isaacs/npm/issues">https://github.com/isaacs/npm/issues</a></p>
+<h1>Use a More Recent Version of Node.js</h1>
+<p>The Node.js version in the no.de machines is determined by the ~/local/nodejs symbolic link. When your Node.js SmartMachine is created, this link points to the then-most-recent version of Node.js, so that you can deploy code without it changing out from under you, which is generally good.</p>
+<p>See Setting the Node.js Version to learn how to set the version of Node.js that your application uses.</p>
+
+  </div>
+  </div>
+  </body>
+</html>

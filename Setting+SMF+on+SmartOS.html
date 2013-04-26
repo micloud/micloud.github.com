@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>在SmartOS上設置SMF</h1>
+<p>SmartOS中的服務管理功能 (Service Management Facility, SMF)，類似於Linux系統中init.d的service架構，使用者可透過SMF的管理，系統會依設定來開啟會暫停每個服務。 本範例為如何建立一個服務加入SMF中。</p>
+<p>若要執行一項服務，首先必須設置一個腳本，透過腳本即可設定服務的狀態，SMF中所使用之腳本的檔案類型為xml。以下將透過下載一個腳本做為範例，我們將利用此下載的腳本來修改為我們需要的腳本並進行測試及驗證。</p>
+<h1>下載腳本範例(manifest)</h1>
+<pre><code>#wget --no-check-certificate http://github.com/isaacs/joyent-node-on-smart-example/raw/master/node-hello-world-service-manifest.xml</code></pre>
+<h1>設定服務</h1>
+<p>以自建服務至主機為範例，必須修改的指令如下。</p>
+<pre><code># vi noode-hello-world-service-manifest.xml</code></pre>
+<p>更改部分如下:</p>
+<pre><code>1.修改設定服務名稱，由node-hello-world-service 改為testSMF。
+原設定：&lt;service_bundle type=&quot;manifest&quot; name=&quot;node-hello-world-service&quot;&gt;
+修改為：&lt;service_bundle type=&quot;manifest&quot; name=&quot;testSMF&quot;&gt;
+
+2.修改SMF服務啟動時，服務中的狀態名稱:
+原設定：&lt;service name=&quot;site/node-hello-world-service&quot; type=&quot;service&quot; version=&quot;1&quot;&gt;
+修改為：&lt;service name=&quot;site/testSMF&quot; type=&quot;service&quot; version=&quot;1&quot;&gt;
+
+3.在執行服務的路徑中，可設定所需執行檔案的資料夾中:
+原設定：&lt;method_context&gt;&lt;working_directory=&quot;/home/admin/hello-world&quot;&gt;
+修改為：&lt;method_context&gt;&lt;working_directory=&quot;/root/testSMF&quot;&gt;
+
+4.設定user以及group中，可以執行的名稱，原範例是admin及staff，我們將他們皆設定為root。
+原設定：&lt;method_credential user=&quot;admin&quot; group=&quot;staff&quot; privileges=&#39;basic,net_privaddr&#39; /&gt;
+修改為：&lt;method_credential user=&quot;root&quot; group=&quot;root&quot; privileges=&#39;basic,net_privaddr&#39; /&gt;
+
+5.設定執行檔路徑變數，我們的範例是Nodejs服務，故需建立Nodejs執行檔的路徑。
+原設定：&lt;envvar name=&quot;PATH&quot; value=&quot;/home/admin/local/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin&quot;/&gt;
+修改為：&lt;envvar name=&quot;PATH&quot; value=&quot;/opt/node/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin&quot;/&gt;
+
+6.設定目錄的環境變數:
+原設定：&lt;envvar name=&quot;HOME&quot; value=&quot;/home/admin&quot;/&gt;
+修改為：&lt;envvar name=&quot;HOME&quot; value=&quot;/root&quot;/&gt;
+
+7.設定執行檔的路徑:
+原設定：exec=&quot;/opt/local/bin/node /home/admin/hello-world/server.js&quot;
+修改為：exec=&quot;/opt/local/bin/node /root/testSMF/server.js &quot;</code></pre>
+<p>上述修改的位置如下方黃色框框所示:</p>
+<p><img src='images/Setting+SMF+on+SmartOS-CaptureWiz143.png' width='650' align='center'/></p>
+<h1>驗證服務啟動</h1>
+<p>完成以上步驟後，開始驗證此自訂服務並將其服務匯入SMF，其指令如下:</p>
+<pre><code># svccfg import node-hello-world-service-manifest.xml</code></pre>
+<p><img src='images/Setting+SMF+on+SmartOS-p1.png' width='650' align='center'/></p>
+<p>檢視匯入服務狀態，指令如下:</p>
+<pre><code># svcs –a | grep testSMF</code></pre>
+<p><img src='images/Setting+SMF+on+SmartOS-p2.png' width='650' align='center'/><br>從上方擷圖可看出，testSMF已成功匯入，但未啟動。</p>
+<p>利用svcadm指令來啟用服務，並且再次檢視服務狀態，online表示已啟動:</p>
+<pre><code># svcadm enable testSMF
+# svcs–a | grep testSMF</code></pre>
+<p><img src='images/Setting+SMF+on+SmartOS-p3.png' width='650' align='center'/></p>
+<h1>刪除已匯入的SMF</h1>
+<p>刪除服務之前，須先關閉後，方可進行刪除動作。</p>
+<p>(1) 關閉 testSMF 服務</p>
+<pre><code># svcadm disable testSMF
+# svcs testSMF</code></pre>
+<p><img src='images/Setting+SMF+on+SmartOS-p4.png' width='650' align='center'/></p>
+<p>(2) 刪除 testSMF服務</p>
+<pre><code># svccfg delete testSMF
+# svcs testSMF</code></pre>
+<p><img src='images/Setting+SMF+on+SmartOS-p5.png' width='650' align='center'/></p>
+
+  </div>
+  </div>
+  </body>
+</html>

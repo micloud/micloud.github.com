@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>Node.js</h1>
+<p>Node.js 是一個高效能、易擴充的網站應用程式開發框架 (Web Application Framework)，是為了讓開發者能夠更容易開發高延展性的網路服務。系統不需要經過太多複雜的調校、效能調整及程式修改，就能滿足網路服務在不同發展階段對效能的要求。</p>
+<p>MiCloud所提供的SmartOS主機中，已有預載Nodejs服務的主機只有SmartOS Plus、SmartOS32+Nodejs這二種版本，若其他規格的主機想安裝Nodejs於您的主機上，請按照下列步驟進行安裝。</p>
+<h1>在SmartOS上安裝Node.js</h1>
+<p>利用pkgin指令搜尋node.js:</p>
+<pre><code># pkgin search nodejs</code></pre>
+<p><img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p1.PNG' width='650' align='center'/><br>如上圖的範例，顯示0.4.9版本可供下載安裝，利用pkgin指令安裝:</p>
+<pre><code># pkgin install nodejs-0.4.9</code></pre>
+<p><img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p2.PNG' width='650' align='center'/></p>
+<h1>檢視是否安裝成功</h1>
+<p>首先我們透過vi指令來建立名為server.js程式:</p>
+<pre><code># vi server.js</code></pre>
+<p><img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p3.PNG' width='650' align='center'/></p>
+<p>然後進入編輯文字畫面進行編輯，我們加入下列基本的測試程式指令:</p>
+<pre><code>var http = require(&#39;http&#39;);
+http.createServer(function (req, res) {
+res.writeHead(200, {&#39;Content-Type&#39;: &#39;text/plain&#39;});
+res.end(&#39;Hello Node.js
+n&#39;);
+}).listen(8102, &quot;127.0.0.1&quot;);
+console.log(&#39;Server running at http://127.0.0.1:8102/&#39;);</code></pre>
+<p>在上方指令中，您可以在.listen後方加入沒有被使用的port(本範例是使用8102)，依序是localhost的網址。如下圖所示:<br><img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p4.png' width='650' align='center'/></p>
+<p>最後就是執行server.js 檔案，且執行以下指令就可以看到您的伺服器會在所設定的網址啟動:</p>
+<pre><code># node server.js</code></pre>
+<p><img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p5.png' width='650' align='center'/></p>
+<p>最後前往瀏覽器輸入您的localhost以及後方所設定port位置來確認是否運行成功，本操作以google瀏覽器做為範例，如有出現Hello Node.js文字時，表示成功:<br><img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p6.png' width='500' align='center'/></p>
+
+  </div>
+  </div>
+  </body>
+</html>

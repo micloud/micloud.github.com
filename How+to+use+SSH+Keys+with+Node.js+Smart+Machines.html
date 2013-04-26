@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>Joyent&#39;s Node.js™ Smart Machine service uses SSH keys as the primary method of accessing the service.</p>
+<h1>Where to find your SSH key</h1>
+<p>You can find your SSH key on your local machine at ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub. If neither of those files exist, create them with this command:</p>
+<pre><code>ssh-keygen</code></pre>
+<p>To view your public key from the command line, use this command:</p>
+<pre><code>cat ~/.ssh/id_dsa.pub</code></pre>
+<pre><code>If you are on Windows and using PuTTY and puttygen.exe to generate your keys, be sure that you use the key listed in the box labeled Public key for pasting into OpenSSH authorized_keys file.
+If you continue to experience problems with PuTTY, try CygWin http://cygwin.org</code></pre>
+<h1>Adding more SSH Keys on a Node.js Smart Machines</h1>
+<p>Once you have your initial key uploaded you can add more keys from other computers to your Node.js SmartMachine. To do this generate the key on the new computer and add it to the following location on your Node.js SmartMachine:</p>
+<pre><code>/home/node/.ssh/authorized_keys</code></pre>
+<p>Be careful not to overwrite the existing file. If you delete existing keys those remote computers will not be able to log into your Node.js SmartMachine.</p>
+<h1>Changing your SSH Key on a Node.js Smart Machines</h1>
+<p>If you change your SSH key on your local computer you will need to log into your Node.js SmartMachine with your old key first.</p>
+<p>Then you need to add your new key and remove your old key from:</p>
+<pre><code>/home/node/.ssh/authorized_keys</code></pre>
+<h1>Invalid SSH Key on a Node.js Smart Machines</h1>
+<p>If you try to log into your Node.js SmartMachine and you are prompted for a password your need to update your key by opening a support ticket.</p>
+<p>To do this send an email to support@joyent.com letting us know that you can not log into your Node.js SmartMachine. Please make sure you provide us the following:</p>
+<ul>
+<li>your account name</li>
+</ul>
+<ul>
+<li>the name of your Node.js Smart Machine</li>
+</ul>
+<ul>
+<li>update your no.de account with the proper SSH keys <a href="https://api.no.de/#PUT-/sshkeys/:id">https://api.no.de/#PUT-/sshkeys/:id</a></li>
+</ul>
+<p>If you are still unable to log in as the user node to your Node.js SmartMachine please send the following to support@joyent.com:</p>
+<ul>
+<li>The output of this command:</li>
+</ul>
+<pre><code>Make sure you replace &lt;YOUR_SMARTMACHINE&gt; with the subdomain name of your Node.js SmartMachine
+Also, you need to log into your Node.js SmartMachine as the user &#39;node&#39;</code></pre>
+<pre><code>ssh -vvv node@&lt;YOUR_SMARTMACHINE&gt;.no.de</code></pre>
+<ul>
+<li>Your public SSH key</li>
+</ul>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

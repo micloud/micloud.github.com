@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>檔案上傳教學(指令)</h1>
+<p>影片:<a href="http://www.youtube.com/watch?v=Ha17-BbePI4">MiCloud 使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
+<p><div align="center"><br>[{Flash src=&#39;<a href="http://www.youtube.com/v/Ha17-BbePI4&amp;hd=1">http://www.youtube.com/v/Ha17-BbePI4&amp;hd=1</a>&#39; controls= &#39;false&#39; play=&#39;false&#39; width=640 height=480 }]<br></div></p>
+<h1>使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案</h1>
+<h1>設定環境變數</h1>
+<ul>
+<li>選擇一個資料夾放置 Putty 相關檔案(putty.exe,pscp.exe...)</li>
+</ul>
+<p>本範例放在 <strong>C:<br>putty</strong> 資料夾內</p>
+<p><img src='images/File+Upload+Tutorial-PSCP-a.png' width='600' align='center'/><br>*  於我的電腦空白處按右鍵,選擇 <strong>內容</strong></p>
+<p><img src='images/File+Upload+Tutorial-PSCP-a1.png' width='600' align='center'/><br>*  於內容之上方表單選擇 <strong>進階</strong> ,於下方點選 <strong>環境變數(N)</strong></p>
+<p><img src='images/File+Upload+Tutorial-PSCP-a2.png' width='400' align='center'/><br>*  於下方 <strong>系統變數(S)</strong> 中下拉,點選變數 <strong>Path</strong> , 使用編輯(I)</p>
+<p>於變數值最後加上<strong>分號(;)</strong>接著加上您putty所在資料夾的路徑</p>
+<p>本範例則是加上 <strong>;C:<br>putty</strong><br><img src='images/File+Upload+Tutorial-PSCP-a3.png' width='400' align='center'/><br><em>  按下 <strong>開始</strong> -&gt; <strong>執行(R)</strong> -&gt; 輸入 <strong>cmd</strong> -&gt; 按下 <strong>確定</strong> 後便會開啟命令提示字元<br><img src='images/File+Upload+Tutorial-PSCP-a4.png' width='400' align='center'/>
+</em>  在命令提示字元中輸入 <strong>pscp</strong> 測試環境變數之設定是否成功<br><img src='images/File+Upload+Tutorial-PSCP-a5.png' width='650' align='center'/></p>
+<h1>Putty 連線設定</h1>
+<p>左鍵雙擊下載之putty.exe，下圖為putty執行畫面：</p>
+<p>請於<strong>Host Name (or IP address)</strong>內輸入您機器的IP,<br><strong>Port</strong> 則是輸入 <strong>22</strong> (22為MiCloud的預設SSH連接阜)</p>
+<p>下方的 <strong>Saved Sessions</strong> 則是給您下次使用時能夠辨別這是哪一台機器用,所以能可以以您希望的名字命名,也可以使用當台機器的IP作為命名.</p>
+<p><img src='images/File+Upload+Tutorial-PSCP-b1.png' width='500' align='center'/><br>輸入完成後請於左邊的Category表單中點選 <strong>Connection</strong> -&gt; <strong>SSH</strong> -&gt; <strong>Auth</strong> 內(如下圖)</p>
+<p>點選 <strong>Browse...</strong> 後選擇您的private key加入</p>
+<p><img src='images/File+Upload+Tutorial-PSCP-b2.png' width='500' align='center'/></p>
+<p>為確保您使用Putty時不會出現中文亂碼,您可於左邊的Category表單中點選 <strong>Window</strong> -&gt; <strong>Translation</strong></p>
+<p>於右方 <strong>Remote Character set:</strong> 的下拉式選單中選擇 <strong>UTF-8</strong></p>
+<p><img src='images/File+Upload+Tutorial-PSCP-b4.png' width='500' align='center'/></p>
+<p>為了下次能夠方便使用,請於左邊的Category表單中點選<strong>Session</strong></p>
+<p>回到Session後,點選右方的Save</p>
+<p>這樣下次要連線這台機器時你就不用特別再去設定,只需要於左方Saved Sessions中左鍵雙擊你存下來的那個名子即可.</p>
+<p><img src='images/File+Upload+Tutorial-PSCP-b3.png' width='500' align='center'/></p>
+<p>進入Putty後,他會要求你輸入帳號(Login as:),請輸入root</p>
+<p><font color="red">(註：連線時，請使用root登入，可不用輸入密碼：若使用預設帳號jill登入，則請參照Customer Portal上Credential設定。)</font><br><img src='images/File+Upload+Tutorial-PSCP-b6.png' width='500' align='center'/><br><img src='images/File+Upload+Tutorial-PSCP-b5.png' width='500' align='center'/></p>
+<h1>PSCP 指令介紹</h1>
+<p>於MS-DOS 命令的視窗中輸入指令即可上傳與下載檔案<br>*  <font color="red">(1)  pscp  拷貝檔案(絕對路徑)  使用者(root)@電腦地址(IP):新檔名(絕對路徑)    - 從 MS Window 拷貝到 Linux 電腦</p>
+<p></font><br>ex : 我要從我正在使用的電腦,放在C槽中的資料夾Windows_Test底下有一個upload.cpp的檔案,上傳到我在MiCloud申請的電腦(123.123.123.123)中,並放在/home/Linux_Test底下</p>
+<p>所以我的指令會是 : pscp c:<br>Windows_Test<br>upload.cpp root@123.123.123.123:/home/Linux_Test<br>*  <font color="red">(2)  pscp  使用者(root)@電腦地址(IP):拷貝檔案(絕對路徑)  新檔名(絕對路徑)    - 從 Linux 拷貝到 MS Window 電腦</p>
+<p></font><br>ex : 我要從我在MiCloud申請的電腦(123.123.123.123)中抓一個download.cpp的檔案,它放在/home/Linux_Test底下,並將它放到我的電腦C槽中的資料夾Windows_Test底下</p>
+<p>所以我的指令會是 : pscp root@123.123.123.123:/home/Linux_Test/download.cpp c:<br>Windows_Test<br><img src='images/File+Upload+Tutorial-PSCP-a6.png' width='650' align='center'/></p>
+
+  </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>Linux系統上安裝MySQL</h1>
+<p>依下達的指令不同，各作業系統的安裝說明如下:</p>
+<h1>CentOS、Fedora 安裝MySQL</h1>
+<p>1.請使用yum安裝</p>
+<pre><code>#yum install mysql-server</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p1.png' width='650' align='center'/></p>
+<p>2.啟動MySQL服務</p>
+<pre><code>#service mysqld start</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p2.png' width='650' align='center'/></p>
+<p>3.設置MySQL登入密碼，密碼可自訂，這裡舉例為1qaz</p>
+<pre><code>#mysqladmin -u root password 1qaz</code></pre>
+<p>4.連線至MySQL</p>
+<pre><code>#mysql -uroot -p</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p4.png' width='650' align='center'/></p>
+<h1>Ubuntu、Debian 安裝MySQL</h1>
+<p>1.請使用apt-get安裝MySQL</p>
+<pre><code>#apgt-get install mysql-server</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p5.png' width='650' align='center'/></p>
+<p>2.啟動MySQL服務</p>
+<pre><code>#service mysql start</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p6.png' width='650' align='center'/></p>
+<p>3.設置MySQL登入密碼，密碼可自訂，這裡舉例為1qaz</p>
+<pre><code>#mysqladmin -u root password 1qaz</code></pre>
+<p>4.連線至MySQL</p>
+<pre><code>#mysql -uroot -p</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p4.png' width='650' align='center'/></p>
+<hr>
+<h1>重設root密碼</h1>
+<p>若您忘記MySQL的root密碼，可以用以下的方式重設密碼:<br>1.請先將MySQL服務停止</p>
+<pre><code>#service mysqld stop</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p7.png' width='650' align='center'/></p>
+<p>2.以不檢查密碼的方式啟動MySQL</p>
+<pre><code>#mysqld_safe --skip-grant-tables&amp;</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p8.png' width='650' align='center'/></p>
+<p>3.登入MySQL</p>
+<pre><code>#mysql</code></pre>
+<p>4.將root密碼重新設定為1234</p>
+<pre><code>mysql&gt;update mysql.user set password=PASSWORD(&#39;1234&#39;) where user=&#39;root&#39;;</code></pre>
+<p>5.執行上一個步驟所下達的密碼設定指令</p>
+<pre><code>mysql&gt; flush privileges;</code></pre>
+<p>6.退出MySQL</p>
+<pre><code>mysql&gt; quit</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p9.png' width='650' align='center'/></p>
+<p>7.重新啟動MySQL</p>
+<pre><code>#service mysqld restart</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p10.png' width='650' align='center'/></p>
+<p>8.驗證密碼是否已更改</p>
+<pre><code>#mysql -uroot -p</code></pre>
+<p><img src='images/Install+MySQL+on+Linux-p11.png' width='650' align='center'/></p>
+
+  </div>
+  </div>
+  </body>
+</html>

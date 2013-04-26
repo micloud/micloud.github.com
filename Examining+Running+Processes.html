@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>在這個主題中，您可以找到：</p>
+<h1>從 shell 檢查程序</h1>
+<p>||相關資訊    ||使用此命令<br>|通用處理器和內存統計資料    |prstat -Z -s cpu</p>
+<p>If prstat changes your terminal settings, use the reset command to reset them.<br>|正在運行的程序列表    |ps -elf<br>|admin用戶程序列表    |ps -uadmin -o pcpu,user,pid,args,comm,s</p>
+<p>ps -uadmin -o user,args,pcpu,pmem,vsz,time,comm<br>|MySQL用戶程序    |ps -umysql -o pcpu,vsz,osz,args,comm,s<br>|CPU使用率    |sudo /root/jinf -C<br>|記憶體使用    |sudo /root/jinf -m<br>|互換空間的使用情況    |sudo /root/jinf -S</p>
+<h1>檢查Webmin的過程</h1>
+<ul>
+<li>登錄到Virtualmin（請參考帳戶登錄及重要網址一文 ）。</li>
+<li>點擊Webmin在左上方的選單，然後點選系統=&gt;運行的程序。</li>
+<li>點擊PID、用戶、記憶體、或是CPU，以便為您的帳戶上運行的程序列表，分別按不同標準進行排序。</li>
+</ul>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

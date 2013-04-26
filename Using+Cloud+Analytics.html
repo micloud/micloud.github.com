@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>使用雲端分析工具</h1>
+<p>雲端分析工具，將幫助您做您Node.js的即時性的績效性能分析™應用。<br>使用雲端分析工具將需要Node 版本0.4.0或更高的版本。<br>在這個頁面，您將可以找到：</p>
+<p>同時看到 <a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/"><a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/">http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/</a></a></p>
+<p>顯示分析的概述如下：</p>
+<p>分析工具將顯示兩種圖表：線狀圖和等級圖。</p>
+<p>線圖顯示的數量，是根據您所給定的時間測量。</p>
+<p>例如，如果您測量的是根據IP地址的HTTP操作，其圖表疊線圖將顯示每個IP地址每秒的回應數量。<br><img src='images/Using+Cloud+Analytics-pic1.jpg' width='650' align='left'/></p>
+<p>而等級圖可讓您看到三個方面的數據，就像在某一特定地區，使用不同的顏色的雨水量畫出降雨分佈的地圖。</p>
+<p>雲端分析等級圖則顯示不同密度的彩色區塊。</p>
+<p>例如，在一個等級圖顯示了應用的細項和CPU運行速度，x軸則顯示在一秒鐘的間隔時間，Y軸則顯示了運行的時間。</p>
+<p>圖中的每個區塊、密度，代表了特定的運行時間的程式的數量。</p>
+<p>您可以使用過濾器，或以點選一個區塊的方式，查詢程式處理器多次執行的時間長短。</p>
+<p>每個區塊的高度，都是以沿y軸的值的範圍做區分。</p>
+<p><img src='images/Using+Cloud+Analytics-pic2.jpg' width='650' align='left'/></p>
+<p>在這兩種圖表，x軸表示在一秒鐘的間隔時間。 y軸代表一個變量，你測量，但規模變化值的範圍擴大或縮小。</p>
+<p>||控制     ||描述<br>|儀器儀表選項 |這些控件可以讓你創建一個儀表盤。</p>
+<p>你可以選擇從幾個指標分解以不同的方式。</p>
+<p>這些指標都在下一節描述。<br>|元素列表     |這將列出你測量的項目。</p>
+<p>例如，如果你測量HTTP服務器的URL分解操作，此窗格包含一個網址列表。</p>
+<p>在熱圖，從這個名單中選擇一個項目，突出包含該元素的測量所有的水桶。</p>
+<p>你可以使用隔離或排除選定的項目列表底部的過濾器。<br>|排名 / 線性  |這種控制讓你選擇如何密度桶熱圖呈現。</p>
+<p>線性著色意味著根據其價值，每個桶的顏色。其價值為100桶，水桶，其價值為1暗100倍。</p>
+<p>排名基於著色所有的值進行排序和顏色密度分佈其中。 排名基於著色發現離群點是非常有用的。<br>|粒度    |此滑塊控制每塊的高度，因此，每個桶的值的範圍。<br>|規模    |此滑桿可讓您控制Y軸的值的範圍。 範圍是在控制下的文本。</p>
+<p>當滑塊一路的頂部和底部，y軸的變化上顯示的值的範圍而定規模。</p>
+<p>如果您使用滑桿來設定一個上限或下限，規模不會改變。<br>|放大    |這些控件可以讓你改變每個桶的寬度，所以你可以看到一個更廣泛的時間。 每個桶的寬度始終是一秒鐘。<br>|播放 / 暫停|這些控件可以讓您暫停和恢復顯示。<br>|水桶    |點擊水桶，桶的價值分佈。</p>
+<h1>可用的度量</h1>
+<p>雲分析可以告訴你各種不同的指標:</p>
+<ul>
+<li>CPU線程處決的</li>
+<li>HTTP服務器操作</li>
+<li>HTTP客戶端操作</li>
+<li>垃圾收集作業</li>
+<li>套接字操作</li>
+<li>邏輯文件系統操作<br>在大多數情況下，操作數是不一樣分解操作延遲有趣。 潛伏期是要求其履行的金額之間的時間。</li>
+</ul>
+<h1>CPU線程處決的</h1>
+<p>這種度量可以幫助你了解你的應用程序使用的CPU。 報告數量排序的線程執行不同的標準。 一個線程開始執行時，當線程在CPU和結束時，它被取下。<br>您可以使用自己的下面的分解，得到一個線程執行數線圖或結合運行時，他們顯示熱圖。</p>
+<p>||分解 ||描述<br>|進程標識符        |對於一個給定的進程ID線程數。<br>|應用程序的名稱    |每個正在運行的應用程序的線程數。<br>|區域名稱         |在每個區域運行的線程數（SmartMachine）。</p>
+<p>如果你正在運行的只有1 SmartMachine，這個信息是不是特別有用。<br>|原因離開CPU     |離開CPU的原因排序的線程數。<br>線圖顯示處決的人數是不是特別有趣。 運行時的熱圖，這表明線程在CPU上多久，更準確，因為它們表明，當您的應用程序已經做了很多計算。</p>
+<pre><code>選擇不加分解本身的運行是在一個線程執行的熱分解圖運行，這不是特別有用的結果。</code></pre>
+<p>如果您的應用程序不運行很長時間，你可以看看為什麼它來CPU。 它可能被內核鎖阻塞（可能表明內核鎖爭用），1用戶級鎖（表示用戶級鎖爭用），1條件變量（表示它很可能等待某些其他事件，如磁盤，I / O或網絡），等等。 或者它可能已經運行的，但採取的CPU，因為別的東西更高的優先級運行所需。</p>
+<p>這是一個低級別和微妙的度量，但它可以幫助你了解是否應用程序這麼長時間的服務請求的理由是因為它在CPU上花費了很多時間。</p>
+<h1>HTTP服務器操作</h1>
+<p>HTTP服務器的性能度量Web服務器的主要性能。</p>
+<p>可以使用下面的分解，自己獲得的事件數量的線圖，或者你可以結合延遲他們獲得熱圖。</p>
+<p>||分解 ||描述<br>|方法     |HTTP方法的請求：GET，PUT，POST，DELETE<br>|網址     |通過URL請求的數量。<br>|遠程IP地址    |發出請求的客戶端的IP地址的請求數。<br>|遠程TCP端口    |發出請求的客戶端所使用的TCP端口的請求數。</p>
+<p>這個衡量標準是，挑選出來自同一客戶端的多個請求，在相同的TCP連接使用HTTP保持活動的有用。</p>
+<h1>HTTP客戶端操作</h1>
+<p>這個度量報告HTTP請求和響應，從您的應用程序發起的反對的服務。 您可以使用該數據，以幫助您確定您的服務器的延遲是由於你使用一些其他的Web服務的延遲。 舉例來說，如果Amazon的S3服務存儲數據，你可以看到如何S3 Web服務請求。</p>
+<p>如果您發現另一個Web服務是您的高延遲的源，然後你可以調查，其他的Web服務（如果你能），或重新考慮你的應用程序如何使用它，通過緩存結果在可能的情況下，也許。</p>
+<p>||分解    ||描述<br>|方法    |請求的HTTP方法。<br>|網址    |通過URL請求的數量。<br>|HTTP服務器地址    |服務器地址的請求數。<br>|HTTP服務器端口    |服務器端口的請求數。</p>
+<h1>垃圾收集作業</h1>
+<p>這種度量可以讓你觀察到的JavaScript虛擬機的垃圾收集器所產生的延遲氣泡。 垃圾收集器跟踪分配內存和釋放內存，這不再被使用。 這意味著，作為一個程序員，你不必擔心內存分配和釋放。 然而，當垃圾收集器運行時，您所有的應用程序代碼被暫停。</p>
+<p>您可以使用此指標，以觀察在您的應用程序的垃圾收集。 在這種情況下，“潛伏期”是指垃圾收集操作了多久。 如果你看到的垃圾收集活動相關的HTTP請求延遲尖峰，你可能需要重新思考如何在您的應用程序內存被使用，以免造成這麼多的垃圾，否則調整GC以避免出現大的尖峰。</p>
+<p>||分解    ||描述<br>|GC型    |按類型的垃圾收集操作。</p>
+<h1>套接字操作</h1>
+<p>套接字操作HTTP活動的WebSockets，和大多數其他類型的網絡活動的基礎上。 這種度量可以讓你觀察到非Web應用程序的活動。 因為它是不可能知道這消息對應於別人，這是不可能直接顯示在這個級別的延遲。</p>
+<p>||分解    ||描述<br>|類型    |按類型套接字操作（讀，寫）。<br>|遠程主機    |套接字操作遠程主機的數量。<br>|遠程端口    |通過遠程端口號的套接字操作。<br>|大小    |由規模數量的套接字操作。<br>|緩衝數據    |Node.js的內緩衝的數據量，因為應用程序的書面比內核更可以消耗不阻塞。</p>
+<h1>邏輯文件系統的操作</h1>
+<p>磁盤I / O可以是一個顯著的延遲源。 這種度量檢查磁盤的I / O的應用程序的首要原因之一：訪問文件系統。</p>
+<p>||分解    ||描述<br>|進程標識符    |文件系統操作的進程的ID號。<br>|應用程序的名稱    |文件系統操作的應用程序的名稱。<br>|區域名稱    |文件系統操作的區域名稱。<br>|操作類型    |按類型的文件系統操作（讀，寫，查找，訪問等）。<br>|文件系統類型    |（ZFS，進程，LOFS等），文件系統類型的文件系統操作。</p>
+<p>如果你在這裡看到顯著的延遲，HTTP請求延遲對應的，你可能會考慮改變你的應用程序與文件系統交互，也許是通過預取數據緩存。</p>
+<p>分解幫助你準確識別誰在做什麼，這樣可以優化正確的事情。 與Node.js的指標，此指標的檢查文件系統的所有的SmartMachine的活動。在這些情況下，進程ID和應用程序的名稱的分解是有用的。</p>
+<h1>學習更多關於雲分析</h1>
+<p>你可以了解更多有關使用熱圖可視化從這些資源中的延遲：<br><em>  <a href="http://cacm.acm.org/magazines/2010/7/95062-visualizing-system-latency/fulltext">可視化系統延遲 </a>
+</em>  <a href="http://dtrace.org/blogs/dap/2011/03/01/welcome-to-cloud-analytics/">雲分析</a><br>*  <a href="http://joyeur.com/2011/01/24/executive-speaker-series-bryan-cantrill-and-brendan-gregg-on-cloud-analytics/">雲性能與實時可視性解決大問題（視頻）</a></p>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

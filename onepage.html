@@ -11,10 +11,17 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
   </head>
   <body>
-  <div align="center" style="text-align:left; width:960px">
-    <h1 style="vertical-align:middle"><img src="images/wiki-logo.png" width="128px"/><a href="http://doc.micloud.tw">MiCloud Wiki Document</a></h1><hr/><p  id="3PartyCloudServer.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=3PartyCloudServer.md">3PartyCloudServer.md</h1><br/><h1>第三方服務主機</h1>
+  <div style="width:100%" align="center">
+  <div align="center" style="text-align:left; width:960px;">
+    <h1 style="vertical-align:middle"><img src="images/wiki-logo.png" width="128px"/><a href="http://doc.micloud.tw">MiCloud Wiki Document</a></h1><hr/><p  id="3PartyCloudServer.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=3PartyCloudServer.md">3PartyCloudServer.md</a></h1><br/><h1>第三方服務主機</h1>
 <ul>
 <li><a href="/index.html?page=Percona+install.md">安裝Percona</a></li>
 <li><a href="/index.html?page=Riak+SmartMachine.md">安裝Riak</a></li>
@@ -48,7 +55,7 @@
 </ul>
 </li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="About+Swap+Adjust.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=About+Swap+Adjust.md">About+Swap+Adjust.md</h1><br/><h1>Swap調整</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="About+Swap+Adjust.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=About+Swap+Adjust.md">About+Swap+Adjust.md</a></h1><br/><h1>Swap調整</h1>
 <p>Micloud 客戶的Linux虛擬機會有兩個虛擬磁碟，第一個是OS掛載在&quot;/&quot;之下，另一個是packages中設定的disk space，預設掛載在/data下。 MiCloud已為SmartMachine、及1G以下用戶預先做好swap空間的預留，其餘類型的虛擬主機沒有預設swap空間，用戶需自行做設定。</p>
 <p>如果客戶新建一個新的VM，可以採用下列Partition swap及File swap兩種方式中任一種，如果客戶已經寫了資料在/data 且無法更動，那只能選擇File swap的方式。</p>
 <p>兩種swap設定方法及說明如下：</p>
@@ -102,7 +109,8 @@
 <pre><code># vi /etc/fstab
 加入一行/data/swap.img swap swap defaults 0 0</code></pre>
 <p><img src='images/About+Swap+Adjust-mount2.jpg' width='650' align='center'/><br>附註： /data 是目前 MiCloud Linux VMs 預設第二顆磁碟的掛載點，依客戶使用方式不同而有所差異</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Accessing+Your+Machine+from+Mac+OS+X.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Accessing+Your+Machine+from+Mac+OS+X.md">Accessing+Your+Machine+from+Mac+OS+X.md</h1><br/><p>This page shows you how to use the Terminal application to generate an SSH key and to log in to your JoyentCloud machine.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Accessing+Your+Machine+from+Mac+OS+X.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Accessing+Your+Machine+from+Mac+OS+X.md">Accessing+Your+Machine+from+Mac+OS+X.md</a></h1><br/><h1>Access Machine from Mac OS</h1>
+<p>This page shows you how to use the Terminal application to generate an SSH key and to log in to your JoyentCloud machine.</p>
 <p>In this page:</p>
 <h1>About the Terminal Application</h1>
 <p>To access your JoyentCloud machine and to generate SSH keys, you will use the Terminal application. The terminal gives you a command line interface to the Unix underpinnings of Mac OS X.</p>
@@ -162,8 +170,9 @@ The key&#39;s randomart image is:
 <li>Click the SSH Keys tab.</li>
 <li>Type a name for the key in the Name field. This name is only for your convenience. You can use the name of your machine, your user name, or anything that will help you remember which key belongs to whom.</li>
 <li>Paste your public key in the SSH Key field.</li>
-<li>Click Add This Key to finish.<br><img src='images/Accessing+Your+Machine+from+Mac+OS+X-SSHKeysPortal.png' width='650' align='left'/></li>
+<li>Click Add This Key to finish.</li>
 </ul>
+<p><img src='images/Accessing+Your+Machine+from+Mac+OS+X-SSHKeysPortal.png' width='650'/></p>
 <h1>Connecting to Your Machine</h1>
 <p>You use the Terminal application and the ssh command to log in to your machine in the JoyentCloud. When you provision a machine, you will notice two IP addresses listed in the Overview section of the Machine Details page. One of the IP addresses is the public address. The second is the internal address for communication between SmartMachines / Virtual Machines in the same datacenter. After you provision a new machine, be sure to note the IP addresses. You will use the public address to connect to your machine.</p>
 <ul>
@@ -173,7 +182,7 @@ The key&#39;s randomart image is:
 <ul>
 <li>If your SSH key has a passphrase, a window opens. Type in your passphrase and click OK.</li>
 </ul>
-<p><img src='images/Accessing+Your+Machine+from+Mac+OS+X-SSHAgent.png' width='650' align='left'/></p>
+<p><img src='images/Accessing+Your+Machine+from+Mac+OS+X-SSHAgent.png' width='650'/></p>
 <ul>
 <li>If you entered your passphrase correctly, you will be logged in to your machine.</li>
 </ul>
@@ -189,13 +198,13 @@ root@198.51.100.27&#39;s password:</code></pre>
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Accessing+Your+SmartMachine+from+Windows+with+PuTTY.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Accessing+Your+SmartMachine+from+Windows+with+PuTTY.md">Accessing+Your+SmartMachine+from+Windows+with+PuTTY.md</h1><br/><p><a href="http://p.castfire.com/NTYYi/video/511975/511975-2011-02-14-160415.sd.m4v">Link</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Accessing+Your+SmartMachine+from+Windows+with+PuTTY.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Accessing+Your+SmartMachine+from+Windows+with+PuTTY.md">Accessing+Your+SmartMachine+from+Windows+with+PuTTY.md</a></h1><br/><p><a href="http://p.castfire.com/NTYYi/video/511975/511975-2011-02-14-160415.sd.m4v">Link</a></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="All+Package+List+of+SmartOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=All+Package+List+of+SmartOS.md">All+Package+List+of+SmartOS.md</h1><br/><h1>各版本SmartOS套件</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="All+Package+List+of+SmartOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=All+Package+List+of+SmartOS.md">All+Package+List+of+SmartOS.md</a></h1><br/><h1>各版本SmartOS套件</h1>
 <p>可使用pkgin search指令去查詢您需要的套件安裝</p>
 <p>pkgin詳細指令:<br><a href="[Pkgin+usage.md">pkgin usage]</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Application+Micloud.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Application+Micloud.md">Application+Micloud.md</h1><br/><h1>我要如何申請MiCloud服務？</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Application+Micloud.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Application+Micloud.md">Application+Micloud.md</a></h1><br/><h1>我要如何申請MiCloud服務？</h1>
 <p><strong>帳戶申請</strong><br><em>  您可透過連線<a href="http://micloud.tw"><a href="http://micloud.tw">http://micloud.tw</a> </a><br><strong>登入系統</strong>
 </em>  申請帳號完成後，系統將寄發通知信函給您，表示您已完成註冊。</p>
 <h1>MiCloud的計費方式如何？</h1>
@@ -206,7 +215,7 @@ root@198.51.100.27&#39;s password:</code></pre>
 <ul>
 <li>目前Micloud已有提供公測/免費主機，提供客戶三十天免費使用，每個email可免費申請256MB主機一台。<br>&nbsp;&nbsp;&nbsp;&nbsp;申請管道: 直接至<a href="http://micloud.tw"><a href="https://micloud.tw">https://micloud.tw</a></a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account%28Enterprise%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account%28Enterprise%29.md">Apply+MiCloud+Account%28Enterprise%29.md</h1><br/><p>影片:<a href="http://www.youtube.com/watch?v=24qrH7xNDwg">MiCloud企業用戶註冊教學</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account%28Enterprise%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account%28Enterprise%29.md">Apply+MiCloud+Account%28Enterprise%29.md</a></h1><br/><p>影片:<a href="http://www.youtube.com/watch?v=24qrH7xNDwg">MiCloud企業用戶註冊教學</a></p>
 <p><div align="center"><br>[{Flash src=&#39;<a href="http://www.youtube.com/v/24qrH7xNDwg&amp;hd=1">http://www.youtube.com/v/24qrH7xNDwg&amp;hd=1</a>&#39; controls= &#39;false&#39; play=&#39;false&#39; width=640 height=480 }]<br></div></p>
 <h1>申請<strong>MiCloud</strong>帳號(企業用戶)(<strong>[<a href="http://micloud.tw">http://micloud.tw</a>]</strong>)</h1>
 <h1>](申請<strong>MiCloud</strong>帳號 - 企業用戶 - <strong>[<a href="http://micloud.tw">http://micloud.tw</a></strong></h1>
@@ -227,7 +236,7 @@ root@198.51.100.27&#39;s password:</code></pre>
 <p>將需要您先行填寫信用卡資料才可進行購買(若您選擇信用卡付款)</p>
 <p>信用卡資料填寫可於頁面右上角&quot;[帳戶設定](MiCloud Account Modify)</p>
 <p><img src='images/Apply+MiCloud+Account-Enterprise-p1+-5_2.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account%28Personal%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account%28Personal%29.md">Apply+MiCloud+Account%28Personal%29.md</h1><br/><p>影片:<a href="http://www.youtube.com/watch?v=No2F5sJcwXE">MiCloud個人用戶註冊教學</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account%28Personal%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account%28Personal%29.md">Apply+MiCloud+Account%28Personal%29.md</a></h1><br/><p>影片:<a href="http://www.youtube.com/watch?v=No2F5sJcwXE">MiCloud個人用戶註冊教學</a></p>
 <p><div align="center"><br>[{Flash src=&#39;<a href="http://www.youtube.com/v/No2F5sJcwXE&amp;hd=1">http://www.youtube.com/v/No2F5sJcwXE&amp;hd=1</a>&#39; controls= &#39;false&#39; play=&#39;false&#39; width=640 height=480 }]<br></div></p>
 <h1>申請<strong>MiCloud</strong>帳號(個人用戶)(<strong>[<a href="http://micloud.tw">http://micloud.tw</a>]</strong>)</h1>
 <h1>](申請<strong>MiCloud</strong>帳號 - 個人用戶 - <strong>[<a href="http://micloud.tw">http://micloud.tw</a></strong></h1>
@@ -248,7 +257,7 @@ root@198.51.100.27&#39;s password:</code></pre>
 <p>將需要您先行填寫信用卡資料才可進行購買</p>
 <p>信用卡資料填寫可於頁面右上角&quot;[帳戶設定](MiCloud Account Modify)</p>
 <p><img src='images/Apply+MiCloud+Account-Personal-p1+-5_2.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account(new).md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account(new).md">Apply+MiCloud+Account(new).md</h1><br/><h1><a href="http://micloud.tw">申請MiCloud帳號</a></h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account(new).md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account(new).md">Apply+MiCloud+Account(new).md</a></h1><br/><h1><a href="http://micloud.tw">申請MiCloud帳號</a></h1>
 <h1>](申請<strong>MiCloud</strong>帳號 - <strong>[<a href="http://micloud.tw">http://micloud.tw</a></strong></h1>
 <p>)<br>請於<strong>MiCloud</strong>首頁左上角點選右邊選項＜<strong>註冊</strong>＞。</p>
 <p><img src='images/Apply+MiCloud+Account-new-p1_2.png' width='650' align='center'/></p>
@@ -261,7 +270,7 @@ root@198.51.100.27&#39;s password:</code></pre>
 <h1>註冊完成</h1>
 <p>註冊完成後，您將可以訂購我們所提供的產品(訂購前，需至先先完成帳單資訊及付款方式填寫，此相關操作說明，請參考&quot;[帳戶資訊修改](MiCloud Account Modify)</p>
 <p><img src='images/Apply+MiCloud+Account-new-set2.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account-Enterprise.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account-Enterprise.md">Apply+MiCloud+Account-Enterprise.md</h1><br/><p>影片:<a href="http://www.youtube.com/watch?v=24qrH7xNDwg">MiCloud企業用戶註冊教學</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account-Enterprise.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account-Enterprise.md">Apply+MiCloud+Account-Enterprise.md</a></h1><br/><p>影片:<a href="http://www.youtube.com/watch?v=24qrH7xNDwg">MiCloud企業用戶註冊教學</a></p>
 <p><div align="center"></p>
 <p><embed width="420" height="345" src="http://www.youtube.com/v/24qrH7xNDwg&hd=1" type="application/x-shockwave-flash"></embed><br></div></p>
 <h1>申請<strong>MiCloud</strong>帳號(企業用戶)(<strong>[<a href="http://micloud.tw">http://micloud.tw</a>]</strong>)</h1>
@@ -283,7 +292,7 @@ root@198.51.100.27&#39;s password:</code></pre>
 <p>將需要您先行填寫信用卡資料才可進行購買(若您選擇信用卡付款)</p>
 <p>信用卡資料填寫可於頁面右上角&quot;[帳戶設定](MiCloud Account Modify)</p>
 <p><img src='images/Apply+MiCloud+Account-Enterprise-p1+-5-2.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account-new.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account-new.md">Apply+MiCloud+Account-new.md</h1><br/><h1>申請MiCloud帳號(<a href="http://micloud.tw">http://micloud.tw</a>)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account-new.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account-new.md">Apply+MiCloud+Account-new.md</a></h1><br/><h1>申請MiCloud帳號(<a href="http://micloud.tw">http://micloud.tw</a>)</h1>
 <h2>申請MiCloud帳號</h2>
 <p>請於<strong>MiCloud</strong>首頁左上角點選右邊選項＜<strong>註冊</strong>＞。</p>
 <p><img src='images/Apply+MiCloud+Account-new-p1-2.png' width='650' align='center'/></p>
@@ -296,7 +305,7 @@ root@198.51.100.27&#39;s password:</code></pre>
 <h1>註冊完成</h1>
 <p>註冊完成後，您將可以訂購我們所提供的產品(訂購前，需至先先完成帳單資訊及付款方式填寫，此相關操作說明，請參考&quot;[帳戶資訊修改](MiCloud Account Modify)</p>
 <p><img src='images/Apply+MiCloud+Account-new-set2.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account-Personal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account-Personal.md">Apply+MiCloud+Account-Personal.md</h1><br/><p>影片:<a href="http://www.youtube.com/watch?v=No2F5sJcwXE">MiCloud個人用戶註冊教學</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account-Personal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account-Personal.md">Apply+MiCloud+Account-Personal.md</a></h1><br/><p>影片:<a href="http://www.youtube.com/watch?v=No2F5sJcwXE">MiCloud個人用戶註冊教學</a></p>
 <p><div align="center"></p>
 <p><embed width="420" height="345" src="http://www.youtube.com/v/No2F5sJcwXE&hd=1" type="application/x-shockwave-flash"></embed><br></div></p>
 <h1>申請<strong>MiCloud</strong>帳號(個人用戶)(<strong>[<a href="http://micloud.tw">http://micloud.tw</a>]</strong>)</h1>
@@ -318,7 +327,7 @@ root@198.51.100.27&#39;s password:</code></pre>
 <p>將需要您先行填寫信用卡資料才可進行購買</p>
 <p>信用卡資料填寫可於頁面右上角&quot;[帳戶設定](MiCloud Account Modify)</p>
 <p><img src='images/Apply+MiCloud+Account-Personal-p1+-5-2.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account.md">Apply+MiCloud+Account.md</h1><br/><p>===</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Apply+MiCloud+Account.md">Apply+MiCloud+Account.md</a></h1><br/><p>===</p>
 <h2><img src='images/Apply+MiCloud+Account-p1+-5-2.png' width='650' align='center'/></h2>
 <p>===</p>
 <h2><img src='images/Apply+MiCloud+Account-p1+-6.png' width='650' align='center'/></h2>
@@ -336,7 +345,7 @@ root@198.51.100.27&#39;s password:</code></pre>
 <h2><img src='images/Apply+MiCloud+Account-CC1.JPG' width='650' align='center'/></h2>
 <p>===</p>
 <h2><img src='images/Apply+MiCloud+Account-p1+-11.png' width='650' align='center'/></h2>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="ApplyAndOrder.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=ApplyAndOrder.md">ApplyAndOrder.md</h1><br/><h2>MiCloud自助服務操作資訊</h2>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="ApplyAndOrder.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=ApplyAndOrder.md">ApplyAndOrder.md</a></h1><br/><h2>MiCloud自助服務操作資訊</h2>
 <h3>申請及訂購</h3>
 <ul>
 <li><a href="/index.html?page=Apply+MiCloud+Account-new.md">申請帳號</a></li>
@@ -414,14 +423,14 @@ root@198.51.100.27&#39;s password:</code></pre>
 <li><a href="/index.html?page=Setting+Nagios.md">建置Nagios網路監控主機</a></li>
 <li><a href="/index.html?page=Setting+SMF+on+SmartOS.md">在SmartOS上設置SMF</a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Backing+Up+MySQL+with+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Backing+Up+MySQL+with+Webmin.md">Backing+Up+MySQL+with+Webmin.md</h1><br/><p><a href="http://p.castfire.com/NTYYi/video/512011/512011-2011-02-14-160711.sd.m4v">Link</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Backing+Up+MySQL+with+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Backing+Up+MySQL+with+Webmin.md">Backing+Up+MySQL+with+Webmin.md</a></h1><br/><p><a href="http://p.castfire.com/NTYYi/video/512011/512011-2011-02-14-160711.sd.m4v">Link</a></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="BlogShare.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=BlogShare.md">BlogShare.md</h1><br/><h1>Blog分享</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="BlogShare.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=BlogShare.md">BlogShare.md</a></h1><br/><h1>Blog分享</h1>
 <ul>
 <li><a href="/index.html?page=Share+by+qrtt1.md">Micloud API</a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="CentOS+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=CentOS+mirror+site.md">CentOS+mirror+site.md</h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="CentOS+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=CentOS+mirror+site.md">CentOS+mirror+site.md</a></h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>CentOS引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套件庫的修改與設定相似。實際修改方式如下說明:</p>
 <h1>變更套件來源</h1>
 <p>登入後，請先複製“CentOS-Base.repo”檔案，此檔案存放在“/etc/yum.repos.d/”下，此複製動作針對改錯時，未來可以回復原來的檔案。將CentOS-Base.repo檔案複製一份，命名為CentOS-Base.repo.bak，指令如下</p>
@@ -496,7 +505,7 @@ baseurl=http://opensource.nchc.org.tw/centos/$releasever/contrib/$basearch/</cod
 <p>若想移除套件，指令如下</p>
 <pre><code>#yum remove [套件名稱]](#yum remove [套件名稱)</code></pre>
 <p><img src='images/CentOS+mirror+site-ce-remove.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Changing+Default+SmartMachine+Passwords.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Changing+Default+SmartMachine+Passwords.md">Changing+Default+SmartMachine+Passwords.md</h1><br/><p>There are a few default passwords that should be changed when you first get your SmartMachine. This is how to change them via the command line.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Changing+Default+SmartMachine+Passwords.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Changing+Default+SmartMachine+Passwords.md">Changing+Default+SmartMachine+Passwords.md</a></h1><br/><p>There are a few default passwords that should be changed when you first get your SmartMachine. This is how to change them via the command line.</p>
 <p>If you intend to use Virtualmin to manage hosting for your SmartMachine, it&#39;s advisable to use the Virtualmin controls for password changing, so that Virtualmin knows the passwords for your users and can use them as it goes. Otherwise you may get into a situation where a single user has a different password for system login, and for MySQL or SVN. This applies to users created through Virtualmin (i.e. not &#39;root&#39; and &#39;admin&#39;).</p>
 <p>Please note, once you change any passwords, those will not update your machine credentials in your my.joyentcloud.com portal.</p>
 <pre><code>You should change passwords on older cloud SmartMachines.
@@ -535,11 +544,11 @@ If you changed the password of MySQL or PostgreSQL, and you care of any Webmin o
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Checking+Disk+Usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Checking+Disk+Usage.md">Checking+Disk+Usage.md</h1><br/><h1>檢查磁碟使用情況</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Checking+Disk+Usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Checking+Disk+Usage.md">Checking+Disk+Usage.md</a></h1><br/><h1>檢查磁碟使用情況</h1>
 <p>||如何得到這個資訊    ||請使用此命令<br>|查詢整個文件系統的磁碟空間使用情況    |df -ht<br>|查詢當前目錄的磁碟空間使用情況    |du -h<br>|查詢摘要目錄使用的空間    |du -hs /opt<br>在這些命令中的-h參數的結果，是以“人類可讀”的形式呈現。</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Connect+windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Connect+windows.md">Connect+windows.md</h1><br/><h1>Windows 遠端桌面連線</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Connect+windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Connect+windows.md">Connect+windows.md</a></h1><br/><h1>Windows 遠端桌面連線</h1>
 <p>MiCloud Windows Server預設開啓遠端桌面連線服務，讓您可以透過internet連線操控與安裝相關軟體，下面介紹如何使用遠端桌面連線從您的電腦連線至MiCloud Windows Server：</p>
 <h1>Windows 下遠端桌面連線 Windows</h1>
 <p>1.開啟&quot;遠端桌面連線&quot;,輸入您的ip並按下連線<br><img src='images/Connect+windows-p.png' width='450' align='center'/><br>2.輸入您的密碼,,進入後您就可以開始使用<br><img src='images/Connect+windows-p+-1.png' width='650' align='center'/></p>
@@ -551,13 +560,13 @@ If you changed the password of MySQL or PostgreSQL, and you care of any Webmin o
 <p>Mac下使用遠端桌面連線至windows server，要先安裝Microsoft Remote Desktop Connection Client for Mac(<a href="http://www.microsoft.com/mac/remote-desktop-client">下載</a><br>相關設定如下:</p>
 <p>1.安裝完成後，開啟Microsoft Remote Desktop Connection Client for Mac，輸入您的ip並按下connect。<br><img src='images/Connect+windows-RDCMacIntro.png' width='650' align='center'/></p>
 <p>2.輸入您的User name及Password，而Domain為您主機的ip，您就可開始使用。<br><img src='images/Connect+windows-RDCMacLogin.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Control+Panel+%26+Analysis.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Control+Panel+%26+Analysis.md">Control+Panel+%26+Analysis.md</h1><br/><h1>控制面板</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Control+Panel+%26+Analysis.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Control+Panel+%26+Analysis.md">Control+Panel+%26+Analysis.md</a></h1><br/><h1>控制面板</h1>
 <p>此頁可讓您觀察來自世界各地的連線來源分佈狀況(如果想提供的是全球性的服務，此圖表數據相信會對您有所幫助)。</p>
 <p>下方則是提供每秒TCP or HTTP連線數量。<br><img src='images/Control+Panel+%26+Analysis-p3.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Control+Panel+&+Analysis.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Control+Panel+&+Analysis.md">Control+Panel+&+Analysis.md</h1><br/><h1>控制面板</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Control+Panel+&+Analysis.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Control+Panel+&+Analysis.md">Control+Panel+&+Analysis.md</a></h1><br/><h1>控制面板</h1>
 <p>此頁可讓您觀察來自世界各地的連線來源分佈狀況(如果想提供的是全球性的服務，此圖表數據相信會對您有所幫助)。</p>
 <p>下方則是提供每秒TCP or HTTP連線數量。<br><img src='images/Control+Panel+&+Analysis-p3.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Creating+a+Deploy+User.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Creating+a+Deploy+User.md">Creating+a+Deploy+User.md</h1><br/><p>If you&#39;re using Capistrano or some other deployment utility, you should create a user account that has the proper rights and roles to deploy your application.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Creating+a+Deploy+User.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Creating+a+Deploy+User.md">Creating+a+Deploy+User.md</a></h1><br/><p>If you&#39;re using Capistrano or some other deployment utility, you should create a user account that has the proper rights and roles to deploy your application.</p>
 <p>This user is called the &quot;deploy user&quot;.<br>In this page:</p>
 <h1>Before You Begin</h1>
 <p>This topic assumes that you are deploying multiple applications on a SmartMachine and that your applications live on your SmartMachine like this:</p>
@@ -586,7 +595,7 @@ run &quot;svcadm restart http&quot;
 end</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Debian+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Debian+mirror+site.md">Debian+mirror+site.md</h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Debian+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Debian+mirror+site.md">Debian+mirror+site.md</a></h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>Debian採用APT套件管理，其套件庫的修改與設定相似，實際修改方式如下說明:</p>
 <h1>變更套件來源</h1>
 <p>登入後，請先複製“sources.list”檔案，此檔案存放在“/etc/apt/”下，此複製動作針對改錯時，未來可以回復原來的檔案。將sources.list檔案複製一份，命名為sources.bak，指令如下</p>
@@ -637,7 +646,7 @@ deb http://security.debian.org/ squeeze/updates main contrib non-free</code></pr
 <p>若要更新所有己安裝的套件，指令如下:</p>
 <pre><code>#apt-get upgrade</code></pre>
 <p><img src='images/Debian+mirror+site-de-aptupgrade.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Different.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Different.md">Different.md</h1><br/><h1>租用MiCloud與租用虛擬主機有何不同？</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Different.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Different.md">Different.md</a></h1><br/><h1>租用MiCloud與租用虛擬主機有何不同？</h1>
 <ul>
 <li>租用的虛擬主機的運算效能與資源皆是由一台主機去分割使用的，所以當其中的一個使用者所使用的資源過大時，其他的使用者都將會受到影響。而MiCloud擁有Joyent所開發的雲端運算作業系統，不但能夠將運算效能與資源完全獨立分割出來，相對於租用的虛擬主機無法進行橫向、直向的擴充以及資源的調配，MiCloud都能輕鬆的完成。</li>
 </ul>
@@ -646,7 +655,7 @@ deb http://security.debian.org/ squeeze/updates main contrib non-free</code></pr
 <li>MiCloud針對不同產業殊特需求提供服務，例如中小企業使用的ERP服務MiERP，讓中小企業可以客製化自己的線上ERP系統，還有鎖定教育市場的線上互動學習系統、網路商店服務。</li>
 <li>針對醫療產業所提供的服務，包括了提供醫院與病患使用的行動照護平台，醫院內部門診管理、健保申報、統計分析的資訊系統，還有針對生技研究需求的研究平台，供物種定序與個人基因解碼研究。</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Disabling+or+Restarting+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Disabling+or+Restarting+Webmin.md">Disabling+or+Restarting+Webmin.md</h1><br/><p>At times it may be necessary to disable the administration web server of your SmartMachine (aka. Virtualmin or Webmin).  The following is how you disable and restart this service using SMF.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Disabling+or+Restarting+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Disabling+or+Restarting+Webmin.md">Disabling+or+Restarting+Webmin.md</a></h1><br/><p>At times it may be necessary to disable the administration web server of your SmartMachine (aka. Virtualmin or Webmin).  The following is how you disable and restart this service using SMF.</p>
 <p>In this page:</p>
 <h1>Disable Webmin</h1>
 <p>SSH into your SmartMachine, then switch to the root user and run:</p>
@@ -677,7 +686,7 @@ deb http://security.debian.org/ squeeze/updates main contrib non-free</code></pr
 <p>&quot;online&quot; state indicates that the service is back and running.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="DNS+Manage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=DNS+Manage.md">DNS+Manage.md</h1><br/><h1>DNS設置</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="DNS+Manage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=DNS+Manage.md">DNS+Manage.md</a></h1><br/><h1>DNS設置</h1>
 <p>若您想在MiCloud主機上設置DNS，請先至網址註冊商(例如:Godaddy)申請一個Domain Name，設置方式有以下二種:<br><em>  子網域指向MiCloud DNS Server
 </em>  直接將您所申請的Domain Name指向MiCloud DNS Server<br>詳細說明如下:</p>
 <h1>設置子網域</h1>
@@ -714,7 +723,7 @@ DNS64.MICLOUD.TW</code></p>
 <p>或者可以直接將記錄指向MiCloud DNS server查詢：</p>
 <p><code>nslookup portal.test.facewithus.com dns60.micloud.tw</code></p>
 <p><img src='images/DNS+Manage-all-6.png' width='450' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Enable+SMTP+on+SmartOS+Plus.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Enable+SMTP+on+SmartOS+Plus.md">Enable+SMTP+on+SmartOS+Plus.md</h1><br/><p>如果您需要建立電子郵件伺服器來收發電子郵件，您必須在您的主機上啟用此服務，而處理電子郵件收發服務的通訊協定為簡易郵件傳送通訊協定，簡稱SMTP(Simple Mail Transfer Protocol)，在SmartMachines上SMTP預設是關閉，但用戶可以利用以下步驟來啟用SMTP的服務。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Enable+SMTP+on+SmartOS+Plus.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Enable+SMTP+on+SmartOS+Plus.md">Enable+SMTP+on+SmartOS+Plus.md</a></h1><br/><p>如果您需要建立電子郵件伺服器來收發電子郵件，您必須在您的主機上啟用此服務，而處理電子郵件收發服務的通訊協定為簡易郵件傳送通訊協定，簡稱SMTP(Simple Mail Transfer Protocol)，在SmartMachines上SMTP預設是關閉，但用戶可以利用以下步驟來啟用SMTP的服務。</p>
 <h1>前置作業</h1>
 <p>在啟動SmartOS 主機上的SMTP之前，必需先安裝postfix和courier，您可以先使用pkgin search指令搜尋是否已有存在postfix 、courier，指令如下：</p>
 <pre><code>#pkgin se postfix</code></pre>
@@ -759,7 +768,7 @@ DNS64.MICLOUD.TW</code></p>
 <ol>
 <li>完成後可以前往電子郵件信箱確認是否收到信件，如下圖所示收到主旨為“The Subject”的郵件，表示此設定為成功。<br><img src='images/Enable+SMTP+on+SmartOS+Plus-SMTP9.png' width='600' align='center'/></li>
 </ol>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Examining+Running+Processes.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Examining+Running+Processes.md">Examining+Running+Processes.md</h1><br/><p>在這個主題中，您可以找到：</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Examining+Running+Processes.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Examining+Running+Processes.md">Examining+Running+Processes.md</a></h1><br/><p>在這個主題中，您可以找到：</p>
 <h1>從 shell 檢查程序</h1>
 <p>||相關資訊    ||使用此命令<br>|通用處理器和內存統計資料    |prstat -Z -s cpu</p>
 <p>If prstat changes your terminal settings, use the reset command to reset them.<br>|正在運行的程序列表    |ps -elf<br>|admin用戶程序列表    |ps -uadmin -o pcpu,user,pid,args,comm,s</p>
@@ -772,7 +781,7 @@ DNS64.MICLOUD.TW</code></p>
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Facebook+SSL+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Facebook+SSL+FAQ.md">Facebook+SSL+FAQ.md</h1><br/><p>As of October 1st, 2011 Facebook requires all applications to use Secure Socket Layer ( SSL ) certificates. This page is for Facebook developers to be able to serve their applications via HTTPS with a SSL Certificate.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Facebook+SSL+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Facebook+SSL+FAQ.md">Facebook+SSL+FAQ.md</a></h1><br/><p>As of October 1st, 2011 Facebook requires all applications to use Secure Socket Layer ( SSL ) certificates. This page is for Facebook developers to be able to serve their applications via HTTPS with a SSL Certificate.</p>
 <p>In this page:</p>
 <h1>Why is Facebook requiring SSL certificates?</h1>
 <p>Facebook has updated their Terms of Service that require all applications served from them to have a SSL certificate and use the HTTPS protocol.</p>
@@ -807,7 +816,7 @@ DNS64.MICLOUD.TW</code></p>
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Fedora+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Fedora+mirror+site.md">Fedora+mirror+site.md</h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Fedora+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Fedora+mirror+site.md">Fedora+mirror+site.md</a></h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>Fedora引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套件庫的修改與設定相似。實際修改方式如下說明:</p>
 <h1>變更套件來源</h1>
 <p>登入後，請先複製“fedora.repo、fedora-updates.repo、fedora-updates-testing.repo”這三個檔案存放在“/etc/yum.repos.d/”下，此複製動作針對改錯時，未來可以回復原來的檔案。</p>
@@ -908,7 +917,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <p>若想移除套件，指令如下</p>
 <pre><code>#yum remove [套件名稱]](#yum remove [套件名稱)</code></pre>
 <p><img src='images/Fedora+mirror+site-fe-remove.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28FileZilla%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28FileZilla%29.md">File+Upload+Tutorial%28FileZilla%29.md</h1><br/><h1>檔案上傳教學(FileZilla)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28FileZilla%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28FileZilla%29.md">File+Upload+Tutorial%28FileZilla%29.md</a></h1><br/><h1>檔案上傳教學(FileZilla)</h1>
 <p>影片:<a href="http://www.youtube.com/watch?v=m_CBesKRE6s">MiCloud 使用 FileZilla 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"><br>[{Flash src=&#39;<a href="http://www.youtube.com/v/m_CBesKRE6s&amp;hd=1">http://www.youtube.com/v/m_CBesKRE6s&amp;hd=1</a>&#39; controls= &#39;false&#39; play=&#39;false&#39; width=640 height=480 }]<br></div></p>
 <h1>使用 FileZilla 配合 SSH-Key(.ppk) 上傳與下載檔案</h1>
@@ -922,14 +931,14 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <p>密碼(W):空白即可</p>
 <p>連接阜(P):22   (22為MiCloud的預設SSH連接阜)</p>
 <p><img src='images/File+Upload+Tutorial-FileZilla-fz.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28Linux+or+Unix%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28Linux+or+Unix%29.md">File+Upload+Tutorial%28Linux+or+Unix%29.md</h1><br/><h1>Linux/Unix Like 檔案傳輸</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28Linux+or+Unix%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28Linux+or+Unix%29.md">File+Upload+Tutorial%28Linux+or+Unix%29.md</a></h1><br/><h1>Linux/Unix Like 檔案傳輸</h1>
 <p>使用 openssh client，請帶參數 -i 來使用 private ssh key。</p>
 <p>上傳：</p>
 <p><code>scp -i id_rsa /home/Test/upload.txt root@211.123.123.123:/home/Test_2</code></p>
 <p><img src='images/File+Upload+Tutorial-Linux+or+Unix-l4.png' width='720' align='center'/><br>下載：</p>
 <p><code>scp -i id_rsa root@211.123.123.123:/home/Test_2/download.txt /home/Test</code></p>
 <p><img src='images/File+Upload+Tutorial-Linux+or+Unix-l3.png' width='720' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28Linux+to+Windows%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28Linux+to+Windows%29.md">File+Upload+Tutorial%28Linux+to+Windows%29.md</h1><br/><h1>檔案上傳與下載教學(Linux至Windows)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28Linux+to+Windows%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28Linux+to+Windows%29.md">File+Upload+Tutorial%28Linux+to+Windows%29.md</a></h1><br/><h1>檔案上傳與下載教學(Linux至Windows)</h1>
 <p>要從MiCloud Windows Server上進行軟體或檔案的上下載有許多方式，在此建議您使用網路芳鄰方式來進行檔案傳輸。</p>
 <p>下面介紹相關設定方式：</p>
 <h1>遠端登入Windows Server 2008 設定資料夾分享</h1>
@@ -963,14 +972,14 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <ol>
 <li>若您要進一步上傳或下載檔案,需再次驗證您要登入的角色 , 然後您就能開始上傳與下載檔案<br><img src='images/File+Upload+Tutorial-Linux+to+Windows-l4.png' width='500' align='center'/><br><img src='images/File+Upload+Tutorial-Linux+to+Windows-l5.png' width='500' align='center'/></li>
 </ol>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28MacOS%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28MacOS%29.md">File+Upload+Tutorial%28MacOS%29.md</h1><br/><h1>Mac OS 檔案傳輸</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28MacOS%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28MacOS%29.md">File+Upload+Tutorial%28MacOS%29.md</a></h1><br/><h1>Mac OS 檔案傳輸</h1>
 <p>使用 openssh client，請帶參數 -i 來使用 private ssh key。</p>
 <p>上傳：</p>
 <p><code>scp -i id_rsa ./MiCRM.tgz root@211.123.123.123:/root/</code></p>
 <p><img src='images/File+Upload+Tutorial-MacOS-l2.png' width='650' align='center'/><br>下載：</p>
 <p><code>scp -i id_rsa root@211.123.123.123:/tmp/MiCRM.tgz .</code></p>
 <p><img src='images/File+Upload+Tutorial-MacOS-l1.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28PSCP%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28PSCP%29.md">File+Upload+Tutorial%28PSCP%29.md</h1><br/><h1>檔案上傳教學(指令)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28PSCP%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28PSCP%29.md">File+Upload+Tutorial%28PSCP%29.md</a></h1><br/><h1>檔案上傳教學(指令)</h1>
 <p>影片:<a href="http://www.youtube.com/watch?v=Ha17-BbePI4">MiCloud 使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"><br>[{Flash src=&#39;<a href="http://www.youtube.com/v/Ha17-BbePI4&amp;hd=1">http://www.youtube.com/v/Ha17-BbePI4&amp;hd=1</a>&#39; controls= &#39;false&#39; play=&#39;false&#39; width=640 height=480 }]<br></div></p>
 <h1>使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案</h1>
@@ -1007,7 +1016,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <p>所以我的指令會是 : pscp c:<br>Windows_Test<br>upload.cpp root@123.123.123.123:/home/Linux_Test<br>*  <font color="red">(2)  pscp  使用者(root)@電腦地址(IP):拷貝檔案(絕對路徑)  新檔名(絕對路徑)    - 從 Linux 拷貝到 MS Window 電腦</p>
 <p></font><br>ex : 我要從我在MiCloud申請的電腦(123.123.123.123)中抓一個download.cpp的檔案,它放在/home/Linux_Test底下,並將它放到我的電腦C槽中的資料夾Windows_Test底下</p>
 <p>所以我的指令會是 : pscp root@123.123.123.123:/home/Linux_Test/download.cpp c:<br>Windows_Test<br><img src='images/File+Upload+Tutorial-PSCP-a6.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28Windows+to+Windows%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28Windows+to+Windows%29.md">File+Upload+Tutorial%28Windows+to+Windows%29.md</h1><br/><h1>檔案上傳與下載教學(Windows至Windows)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28Windows+to+Windows%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28Windows+to+Windows%29.md">File+Upload+Tutorial%28Windows+to+Windows%29.md</a></h1><br/><h1>檔案上傳與下載教學(Windows至Windows)</h1>
 <p>要從MiCloud Windows Server上進行軟體或檔案的上下載有許多方式，在此建議您使用網路芳鄰方式來進行檔案傳輸。</p>
 <p>下面介紹相關設定方式：</p>
 <h1>遠端登入Windows Server 2008 設定資料夾分享</h1>
@@ -1027,7 +1036,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <li>輸入您的帳號密碼 ,就能開始上傳與下載檔案<br><img src='images/File+Upload+Tutorial-Windows+to+Windows-id.png' width='500' align='center'/></li>
 </ol>
 <p><img src='images/File+Upload+Tutorial-Windows+to+Windows-p+-8.png' width='500' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28WinScp%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28WinScp%29.md">File+Upload+Tutorial%28WinScp%29.md</h1><br/><h1>檔案上傳教學(WinScp)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial%28WinScp%29.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial%28WinScp%29.md">File+Upload+Tutorial%28WinScp%29.md</a></h1><br/><h1>檔案上傳教學(WinScp)</h1>
 <p>影片:<a href="http://www.youtube.com/watch?v=O-HDpdX7mD8">MiCloud 使用 WinScp 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"><br>[{Flash src=&#39;<a href="http://www.youtube.com/v/O-HDpdX7mD8&amp;hd=1">http://www.youtube.com/v/O-HDpdX7mD8&amp;hd=1</a>&#39; controls= &#39;false&#39; play=&#39;false&#39; width=640 height=415 }]<br></div></p>
 <h1>使用 WinScp 配合 SSH-Key(.ppk) 上傳與下載檔案</h1>
@@ -1043,7 +1052,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <p>成功登入後,左邊紅色框框為你本機的資料夾,右邊藍色框框為你連線過去的電腦資料夾.</p>
 <p>如果要上傳A檔案,只需要從左邊紅色框框內找出那份檔案後,將其拖曳去右邊的資料夾即可.</p>
 <p>同理,如果要下載A檔案至你本機電腦,只需在右邊藍色框框內找出您的檔案後,拖曳至左邊紅色框框內即可.<br><img src='images/File+Upload+Tutorial-WinScp-winscp3.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-FileZilla.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-FileZilla.md">File+Upload+Tutorial-FileZilla.md</h1><br/><h1>檔案上傳教學(FileZilla)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-FileZilla.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-FileZilla.md">File+Upload+Tutorial-FileZilla.md</a></h1><br/><h1>檔案上傳教學(FileZilla)</h1>
 <p>影片:<a href="http://www.youtube.com/watch?v=m-CBesKRE6s">MiCloud 使用 FileZilla 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"></p>
 <p><embed width="420" height="345" src="http://www.youtube.com/v/m_CBesKRE6s&hd=1" type="application/x-shockwave-flash"></embed><br></div></p>
@@ -1058,14 +1067,14 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <p>密碼(W):空白即可</p>
 <p>連接阜(P):22   (22為MiCloud的預設SSH連接阜)</p>
 <p><img src='images/File+Upload+Tutorial-FileZilla-fz.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-Linux+or+Unix.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-Linux+or+Unix.md">File+Upload+Tutorial-Linux+or+Unix.md</h1><br/><h1>Linux/Unix Like 檔案傳輸</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-Linux+or+Unix.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-Linux+or+Unix.md">File+Upload+Tutorial-Linux+or+Unix.md</a></h1><br/><h1>Linux/Unix Like 檔案傳輸</h1>
 <p>使用 openssh client，請帶參數 -i 來使用 private ssh key。</p>
 <p>上傳：</p>
 <p><code>scp -i id_rsa /home/Test/upload.txt root@211.123.123.123:/home/Test_2</code></p>
 <p><img src='images/File+Upload+Tutorial-Linux+or+Unix-l4.png' width='720' align='center'/><br>下載：</p>
 <p><code>scp -i id_rsa root@211.123.123.123:/home/Test_2/download.txt /home/Test</code></p>
 <p><img src='images/File+Upload+Tutorial-Linux+or+Unix-l3.png' width='720' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-Linux+to+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-Linux+to+Windows.md">File+Upload+Tutorial-Linux+to+Windows.md</h1><br/><h1>檔案上傳與下載教學(Linux至Windows)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-Linux+to+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-Linux+to+Windows.md">File+Upload+Tutorial-Linux+to+Windows.md</a></h1><br/><h1>檔案上傳與下載教學(Linux至Windows)</h1>
 <p>要從MiCloud Windows Server上進行軟體或檔案的上下載有許多方式，在此建議您使用網路芳鄰方式來進行檔案傳輸。</p>
 <p>下面介紹相關設定方式：</p>
 <h1>遠端登入Windows Server 2008 設定資料夾分享</h1>
@@ -1099,14 +1108,14 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <ol>
 <li>若您要進一步上傳或下載檔案,需再次驗證您要登入的角色 , 然後您就能開始上傳與下載檔案<br><img src='images/File+Upload+Tutorial-Linux+to+Windows-l4.png' width='500' align='center'/><br><img src='images/File+Upload+Tutorial-Linux+to+Windows-l5.png' width='500' align='center'/></li>
 </ol>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-MacOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-MacOS.md">File+Upload+Tutorial-MacOS.md</h1><br/><h1>Mac OS 檔案傳輸</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-MacOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-MacOS.md">File+Upload+Tutorial-MacOS.md</a></h1><br/><h1>Mac OS 檔案傳輸</h1>
 <p>使用 openssh client，請帶參數 -i 來使用 private ssh key。</p>
 <p>上傳：</p>
 <p><code>scp -i id_rsa ./MiCRM.tgz root@211.123.123.123:/root/</code></p>
 <p><img src='images/File+Upload+Tutorial-MacOS-l2.png' width='650' align='center'/><br>下載：</p>
 <p><code>scp -i id_rsa root@211.123.123.123:/tmp/MiCRM.tgz .</code></p>
 <p><img src='images/File+Upload+Tutorial-MacOS-l1.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-PSCP.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-PSCP.md">File+Upload+Tutorial-PSCP.md</h1><br/><h1>檔案上傳教學(指令)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-PSCP.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-PSCP.md">File+Upload+Tutorial-PSCP.md</a></h1><br/><h1>檔案上傳教學(指令)</h1>
 <p>影片:<a href="http://www.youtube.com/watch?v=Ha17-BbePI4">MiCloud 使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"></p>
 <p><embed width="420" height="345" src="http://www.youtube.com/v/Ha17-BbePI4&hd=1" type="application/x-shockwave-flash"></embed><br></div></p>
@@ -1144,7 +1153,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <p>所以我的指令會是 : pscp c:<br>Windows_Test<br>upload.cpp root@123.123.123.123:/home/Linux_Test<br>*  <font color="red">(2)  pscp  使用者(root)@電腦地址(IP):拷貝檔案(絕對路徑)  新檔名(絕對路徑)    - 從 Linux 拷貝到 MS Window 電腦</p>
 <p></font><br>ex : 我要從我在MiCloud申請的電腦(123.123.123.123)中抓一個download.cpp的檔案,它放在/home/Linux_Test底下,並將它放到我的電腦C槽中的資料夾Windows_Test底下</p>
 <p>所以我的指令會是 : pscp root@123.123.123.123:/home/Linux_Test/download.cpp c:<br>Windows_Test<br><img src='images/File+Upload+Tutorial-PSCP-a6.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-Windows+to+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-Windows+to+Windows.md">File+Upload+Tutorial-Windows+to+Windows.md</h1><br/><h1>檔案上傳與下載教學(Windows至Windows)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-Windows+to+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-Windows+to+Windows.md">File+Upload+Tutorial-Windows+to+Windows.md</a></h1><br/><h1>檔案上傳與下載教學(Windows至Windows)</h1>
 <p>要從MiCloud Windows Server上進行軟體或檔案的上下載有許多方式，在此建議您使用網路芳鄰方式來進行檔案傳輸。</p>
 <p>下面介紹相關設定方式：</p>
 <h1>遠端登入Windows Server 2008 設定資料夾分享</h1>
@@ -1164,7 +1173,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <li>輸入您的帳號密碼 ,就能開始上傳與下載檔案<br><img src='images/File+Upload+Tutorial-Windows+to+Windows-id.png' width='500' align='center'/></li>
 </ol>
 <p><img src='images/File+Upload+Tutorial-Windows+to+Windows-p+-8.png' width='500' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-WinScp.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-WinScp.md">File+Upload+Tutorial-WinScp.md</h1><br/><h1>檔案上傳教學(WinScp)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="File+Upload+Tutorial-WinScp.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=File+Upload+Tutorial-WinScp.md">File+Upload+Tutorial-WinScp.md</a></h1><br/><h1>檔案上傳教學(WinScp)</h1>
 <p>影片:<a href="http://www.youtube.com/watch?v=O-HDpdX7mD8">MiCloud 使用 WinScp 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"></p>
 <p><embed width="420" height="345" src="http://www.youtube.com/v/O-HDpdX7mD8&hd=1" type="application/x-shockwave-flash"></embed><br></div></p>
@@ -1181,7 +1190,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <p>成功登入後,左邊紅色框框為你本機的資料夾,右邊藍色框框為你連線過去的電腦資料夾.</p>
 <p>如果要上傳A檔案,只需要從左邊紅色框框內找出那份檔案後,將其拖曳去右邊的資料夾即可.</p>
 <p>同理,如果要下載A檔案至你本機電腦,只需在右邊藍色框框內找出您的檔案後,拖曳至左邊紅色框框內即可.<br><img src='images/File+Upload+Tutorial-WinScp-winscp3.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Finding+Your+Way+Around+a+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Finding+Your+Way+Around+a+SmartMachine.md">Finding+Your+Way+Around+a+SmartMachine.md</h1><br/><p>If you&#39;re coming to a SmartMachine from Linux, you may find that some things are a little different than what you are familiar with. The SmartOS has most of the GNU tools that you are accustomed to, just that they are not default tools. Your fingers&#39; muscle memory may find the differences a little unsettling at first, but rest assured that everything you&#39;re used to is still here. It&#39;s just in a different place, or it may have a different name.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Finding+Your+Way+Around+a+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Finding+Your+Way+Around+a+SmartMachine.md">Finding+Your+Way+Around+a+SmartMachine.md</a></h1><br/><p>If you&#39;re coming to a SmartMachine from Linux, you may find that some things are a little different than what you are familiar with. The SmartOS has most of the GNU tools that you are accustomed to, just that they are not default tools. Your fingers&#39; muscle memory may find the differences a little unsettling at first, but rest assured that everything you&#39;re used to is still here. It&#39;s just in a different place, or it may have a different name.</p>
 <h1>Where things are</h1>
 <p>Most things are where you expect them to be. The following table lists the directories you&#39;ll find in your PATH variable.</p>
 <p>||Directory     ||Description<br>|/opt/local/bin</p>
@@ -1224,8 +1233,8 @@ sudo pkgin in tidy</code></pre>
 <p><a href="http://glennfawcett.wordpress.com/2011/01/03/solaris-eye-for-the-linux-guy-or-how-i-learned-to-stop-worrying-about-linux-and-love-solaris-part-1/">Solaris Eye for the Linux guy... or how I learned to stop worrying about Linux and Love Solaris (Part 1)</a></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Footer.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Footer.md">Footer.md</h1><br/><p>Copyright @ micloud.tw</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+%26+Connect+SSH.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free+machine+%26+Connect+SSH.md">Free+machine+%26+Connect+SSH.md</h1><br/><h1>公測/免費主機金鑰設置與連線教學</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Footer.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Footer.md">Footer.md</a></h1><br/><p>Copyright @ micloud.tw</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+%26+Connect+SSH.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free+machine+%26+Connect+SSH.md">Free+machine+%26+Connect+SSH.md</a></h1><br/><h1>公測/免費主機金鑰設置與連線教學</h1>
 <p>說明：本次公測主機為MiCloud 2XS型號主機，為小於一般市場提供之虛擬主機機型，提供一般網頁服務應用與開發使用，其中網路連線部分提供Public DNS，讓您用主機之專屬DNS連限，連線方式請參考下面說明：</p>
 <p>您申請免費30天試用服務後，SmartOS/Linux主機連線必須透過SSH協定與SSH Key的認證，以確保您與您的伺服器之間的連線安全。</p>
 <p>1.若您已設定ssh key則使用您原本的私鑰進行連線</p>
@@ -1256,7 +1265,7 @@ sudo pkgin in tidy</code></pre>
 <p>(6)新增完後請先登入平台選擇主機，檢視主機的細項畫面，再開啟putty.exe，hostname為DNS，設定完按下open按鈕，即可使用。</p>
 <p><img src='images/Free+machine+%26+Connect+SSH-machine.jpg' width='600' align='center'/></p>
 <p><img src='images/Free+machine+%26+Connect+SSH-dnsport1.jpg' width='600' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+%26+Connect+Tutorial.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free+machine+%26+Connect+Tutorial.md">Free+machine+%26+Connect+Tutorial.md</h1><br/><h1>主機金鑰設置與連線教學</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+%26+Connect+Tutorial.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free+machine+%26+Connect+Tutorial.md">Free+machine+%26+Connect+Tutorial.md</a></h1><br/><h1>主機金鑰設置與連線教學</h1>
 <p>說明：本次公測主機為MiCloud 2XS型號主機，為小於一般市場提供之虛擬主機機型，提供一般網頁服務應用與開發使用，其中網路連線部分提供Public DNS，讓您用主機之專屬DNS連線，連線方式請參考下面說明：</p>
 <p>您申請免費30天試用服務後，SmartOS/Linux主機連線必須透過SSH協定與SSH Key的認證，以確保您與您的伺服器之間的連線安全。</p>
 <p>1.若您已設定ssh key則使用您原本的私鑰進行連線</p>
@@ -1290,7 +1299,7 @@ sudo pkgin in tidy</code></pre>
 <p>(6)新增完後請先登入平台選擇主機，檢視主機的細項畫面，再開啟putty.exe，hostname為DNS，設定完按下open按鈕，進入putty後輸入root即可使用。</p>
 <p><img src='images/Free+machine+%26+Connect+Tutorial-machine.jpg' width='650' align='center'/></p>
 <p><img src='images/Free+machine+%26+Connect+Tutorial-dnsport1.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+&+Connect+SSH.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free+machine+&+Connect+SSH.md">Free+machine+&+Connect+SSH.md</h1><br/><h1>公測/免費主機金鑰設置與連線教學</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+&+Connect+SSH.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free+machine+&+Connect+SSH.md">Free+machine+&+Connect+SSH.md</a></h1><br/><h1>公測/免費主機金鑰設置與連線教學</h1>
 <p>說明：本次公測主機為MiCloud 2XS型號主機，為小於一般市場提供之虛擬主機機型，提供一般網頁服務應用與開發使用，其中網路連線部分提供Public DNS，讓您用主機之專屬DNS連限，連線方式請參考下面說明：</p>
 <p>您申請免費30天試用服務後，SmartOS/Linux主機連線必須透過SSH協定與SSH Key的認證，以確保您與您的伺服器之間的連線安全。</p>
 <p>1.若您已設定ssh key則使用您原本的私鑰進行連線</p>
@@ -1321,7 +1330,7 @@ sudo pkgin in tidy</code></pre>
 <p>(6)新增完後請先登入平台選擇主機，檢視主機的細項畫面，再開啟putty.exe，hostname為DNS，設定完按下open按鈕，即可使用。</p>
 <p><img src='images/Free+machine+&+Connect+SSH-machine.jpg' width='600' align='center'/></p>
 <p><img src='images/Free+machine+&+Connect+SSH-dnsport1.jpg' width='600' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+&+Connect+Tutorial.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free+machine+&+Connect+Tutorial.md">Free+machine+&+Connect+Tutorial.md</h1><br/><h1>主機金鑰設置與連線教學</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+&+Connect+Tutorial.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free+machine+&+Connect+Tutorial.md">Free+machine+&+Connect+Tutorial.md</a></h1><br/><h1>主機金鑰設置與連線教學</h1>
 <p>說明：本次公測主機為MiCloud 2XS型號主機，為小於一般市場提供之虛擬主機機型，提供一般網頁服務應用與開發使用，其中網路連線部分提供Public DNS，讓您用主機之專屬DNS連線，連線方式請參考下面說明：</p>
 <p>您申請免費30天試用服務後，SmartOS/Linux主機連線必須透過SSH協定與SSH Key的認證，以確保您與您的伺服器之間的連線安全。</p>
 <p>1.若您已設定ssh key則使用您原本的私鑰進行連線</p>
@@ -1355,11 +1364,11 @@ sudo pkgin in tidy</code></pre>
 <p>(6)新增完後請先登入平台選擇主機，檢視主機的細項畫面，再開啟putty.exe，hostname為DNS，設定完按下open按鈕，進入putty後輸入root即可使用。</p>
 <p><img src='images/Free+machine+&+Connect+Tutorial-machine.jpg' width='650' align='center'/></p>
 <p><img src='images/Free+machine+&+Connect+Tutorial-dnsport1.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free.md">Free.md</h1><br/><h1>有試用版可以先使用嗎？</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Free.md">Free.md</a></h1><br/><h1>有試用版可以先使用嗎？</h1>
 <ul>
 <li>目前Micloud已有提供公測/免費主機，提供客戶三十天免費使用，每個email可免費申請256MB主機一台。<br>&nbsp;&nbsp;&nbsp;&nbsp;申請管道: 直接至<a href="http://micloud.tw"><a href="https://micloud.tw">https://micloud.tw</a></a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Getting+Started+with+SmartOS+SmartMachines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Getting+Started+with+SmartOS+SmartMachines.md">Getting+Started+with+SmartOS+SmartMachines.md</h1><br/><p>This topic introduces you to your SmartMachine. It shows you how to verify that it&#39;s up and running and tells you what steps you should take next.<br>In this topic</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Getting+Started+with+SmartOS+SmartMachines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Getting+Started+with+SmartOS+SmartMachines.md">Getting+Started+with+SmartOS+SmartMachines.md</a></h1><br/><p>This topic introduces you to your SmartMachine. It shows you how to verify that it&#39;s up and running and tells you what steps you should take next.<br>In this topic</p>
 <h1>First Things First - Joyent SmartLogin</h1>
 <p>The my.joyentcloud.com portal includes a feature we called SmartLogin, which allows customers to add ssh keys to their account which in turn is use to access provisioned SmartMachines and Linux VMs. In order to provision a machine (SmartMachine, Linux, Windows), you must have an ssh key set up in your My Account under &quot;SSH Keys&quot;.You can manage multiple SSH keys here which will be required for the default initial access to your SmartMachines and Linux VMs.</p>
 <p><strong>While an SSH key is required before you can provision a SmartMachine, Linux VM, or Windows VM, access to a Windows VM is via user/password. The username and password are provided under the Machine Details page for the Windows VM.</strong></p>
@@ -1395,7 +1404,7 @@ jill : password               (this refers to username “jill” below)</code><
 <li><em>[Changing Default SmartMachine Passwords]](</em>  *[Changing Default SmartMachine Passwords)</li>
 <li><em>[Introduction to Virtualmin and Webmin]](</em>  *[Introduction to Virtualmin and Webmin)</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Host+Names%2C+IP+Addresses%2C+Zone+Names%2C+and+Reverse+Records.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Host+Names%2C+IP+Addresses%2C+Zone+Names%2C+and+Reverse+Records.md">Host+Names%2C+IP+Addresses%2C+Zone+Names%2C+and+Reverse+Records.md</h1><br/><p>Your SmartMachine can be identified by several names, depending where it&#39;s being accessed from.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Host+Names%2C+IP+Addresses%2C+Zone+Names%2C+and+Reverse+Records.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Host+Names%2C+IP+Addresses%2C+Zone+Names%2C+and+Reverse+Records.md">Host+Names%2C+IP+Addresses%2C+Zone+Names%2C+and+Reverse+Records.md</a></h1><br/><p>Your SmartMachine can be identified by several names, depending where it&#39;s being accessed from.</p>
 <h1>IP Addresses</h1>
 <p>An IP address is the unique address of your machine on a network. Every SmartMachine has two IP addresses:</p>
 <ul>
@@ -1415,7 +1424,7 @@ jill : password               (this refers to username “jill” below)</code><
 <p>Domain Name Service maps a host name to an IP address. A reverse pointer record maps an IP address to a host name. In most cases, a reverse pointer record isn&#39;t necessary. If you plan to set up a mail server, however, you will probably need one. In that case, submit a support ticket to request one. Be sure to provide your zone name and your public IP address.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Host+Names,+IP+Addresses,+Zone+Names,+and+Reverse+Records.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Host+Names,+IP+Addresses,+Zone+Names,+and+Reverse+Records.md">Host+Names,+IP+Addresses,+Zone+Names,+and+Reverse+Records.md</h1><br/><p>Your SmartMachine can be identified by several names, depending where it&#39;s being accessed from.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Host+Names,+IP+Addresses,+Zone+Names,+and+Reverse+Records.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Host+Names,+IP+Addresses,+Zone+Names,+and+Reverse+Records.md">Host+Names,+IP+Addresses,+Zone+Names,+and+Reverse+Records.md</a></h1><br/><p>Your SmartMachine can be identified by several names, depending where it&#39;s being accessed from.</p>
 <h1>IP Addresses</h1>
 <p>An IP address is the unique address of your machine on a network. Every SmartMachine has two IP addresses:</p>
 <ul>
@@ -1435,11 +1444,11 @@ jill : password               (this refers to username “jill” below)</code><
 <p>Domain Name Service maps a host name to an IP address. A reverse pointer record maps an IP address to a host name. In most cases, a reverse pointer record isn&#39;t necessary. If you plan to set up a mail server, however, you will probably need one. In that case, submit a support ticket to request one. Be sure to provide your zone name and your public IP address.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="How+to+use+SSH+Keys+with+a+Joyent+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=How+to+use+SSH+Keys+with+a+Joyent+Machine.md">How+to+use+SSH+Keys+with+a+Joyent+Machine.md</h1><br/><h1>SmartMachine連線教學</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="How+to+use+SSH+Keys+with+a+Joyent+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=How+to+use+SSH+Keys+with+a+Joyent+Machine.md">How+to+use+SSH+Keys+with+a+Joyent+Machine.md</a></h1><br/><h1>SmartMachine連線教學</h1>
 <p>MiCloud上連線SmartMachine或Linux的方式，為使用SSH(Security Shell)之連線方式，並預設透過事先產生並匯入MiCloud之SSH-Key連線，且每台主機均預設以root帳號連線，您將有該主機之最大權限。SSH Key將由客戶自行產生，並且自行上傳SSH Key中公鑰(Public Key)部分，MiCloud將不擁有您的私鑰，亦即代表MiCloud無權限侵入您的系統。而SSH-Key的產生、上傳與管理，請參考下面說明：<br><em>  [使用Windows連線SmartMachine](SSH KeyGen &amp; Connect Tutorial - Windows)
 </em>  [使用Linux連線SmartMachine](SSH KeyGen &amp; Connect Tutorial - Linux or Unix)<br>*  [使用Mac連線SmartMachine](SSH KeyGen &amp; Connect Tutorial - MacOS)</p>
 <p>附註：MiCloud上SmartOS與Linux對於SSH Key支支援程度不同，任何時間上傳的SSH Key均可即時生效來登入SmartOS系統，但Linux系統之SSH Key必須於主機建立之前匯入MiCloud，方可認證於該Linux系統。因此如您有申請MiCloud上之Linux，請務必於主機建立之後進行更換root密碼動作或另外新增管理權限帳號，並妥善保存您的帳號及密碼，避免SSH Key遺失後無法登入系統。</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="How+to+use+SSH+Keys+with+Node.js+Smart+Machines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=How+to+use+SSH+Keys+with+Node.js+Smart+Machines.md">How+to+use+SSH+Keys+with+Node.js+Smart+Machines.md</h1><br/><p>Joyent&#39;s Node.js™ Smart Machine service uses SSH keys as the primary method of accessing the service.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="How+to+use+SSH+Keys+with+Node.js+Smart+Machines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=How+to+use+SSH+Keys+with+Node.js+Smart+Machines.md">How+to+use+SSH+Keys+with+Node.js+Smart+Machines.md</a></h1><br/><p>Joyent&#39;s Node.js™ Smart Machine service uses SSH keys as the primary method of accessing the service.</p>
 <h1>Where to find your SSH key</h1>
 <p>You can find your SSH key on your local machine at ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub. If neither of those files exist, create them with this command:</p>
 <pre><code>ssh-keygen</code></pre>
@@ -1479,7 +1488,7 @@ Also, you need to log into your Node.js SmartMachine as the user &#39;node&#39;<
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Install+MySQL+on+Linux.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Install+MySQL+on+Linux.md">Install+MySQL+on+Linux.md</h1><br/><h1>Linux系統上安裝MySQL</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Install+MySQL+on+Linux.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Install+MySQL+on+Linux.md">Install+MySQL+on+Linux.md</a></h1><br/><h1>Linux系統上安裝MySQL</h1>
 <p>依下達的指令不同，各作業系統的安裝說明如下:</p>
 <h1>CentOS、Fedora 安裝MySQL</h1>
 <p>1.請使用yum安裝</p>
@@ -1528,7 +1537,7 @@ Also, you need to log into your Node.js SmartMachine as the user &#39;node&#39;<
 <p>8.驗證密碼是否已更改</p>
 <pre><code>#mysql -uroot -p</code></pre>
 <p><img src='images/Install+MySQL+on+Linux-p11.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Install+MySQL+on+SmartOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Install+MySQL+on+SmartOS.md">Install+MySQL+on+SmartOS.md</h1><br/><h1>SmartOS上安裝MySQL</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Install+MySQL+on+SmartOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Install+MySQL+on+SmartOS.md">Install+MySQL+on+SmartOS.md</a></h1><br/><h1>SmartOS上安裝MySQL</h1>
 <p>MiCloud在SmartOS Plus、SmartOS32中提供預載MySQL的服務，若剛開始沒有選擇預載之用戶，可以參考以下的步驟進行安裝，由於32bit及64bit的安裝過程有些許差異，故分開描述。</p>
 <h1>SmartOS 32bit安裝步驟</h1>
 <p>1.請先搜尋MySQL的套件，並找到mysql-server最高版本</p>
@@ -1609,7 +1618,7 @@ FLUSH PRIVILEGES;</code></pre>
 <p>7.驗證密碼是否已更改</p>
 <pre><code># mysql -uroot -p</code></pre>
 <p><img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p11.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Install+SmartOS+Packages.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Install+SmartOS+Packages.md">Install+SmartOS+Packages.md</h1><br/><h1>套件更新</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Install+SmartOS+Packages.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Install+SmartOS+Packages.md">Install+SmartOS+Packages.md</a></h1><br/><h1>套件更新</h1>
 <p>不同SmartOS版本有不同的套件庫來源，無法任意變更，但可以執行套件更新，相關指令如下:</p>
 <p>先從套件庫找出需要更新的套件，指令如下:</p>
 <pre><code>#pkgin update</code></pre>
@@ -1645,7 +1654,7 @@ ex:pkgin remove postgresql90-adminpack-9.0.4</code></pre>
 <li>Install Apache With Tomcat</li>
 <li>Install Java jdk 1.5 and jboss 4.0</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Installing+and+Configuring+Nagios.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Installing+and+Configuring+Nagios.md">Installing+and+Configuring+Nagios.md</h1><br/><p>This page shows you how to install and configure the Nagios monitoring tool on your SmartMachine.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Installing+and+Configuring+Nagios.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Installing+and+Configuring+Nagios.md">Installing+and+Configuring+Nagios.md</a></h1><br/><p>This page shows you how to install and configure the Nagios monitoring tool on your SmartMachine.</p>
 <p>In this page:</p>
 <h1>Installation</h1>
 <p>Nagios is available as a prebuilt package in the Joyent pkgsrc repository. To install it, follow these steps.</p>
@@ -1719,7 +1728,7 @@ $ sudo chown -R nagios /var/spool/nagios</code></pre>
 <p>You should be able to access your Nagios web page at <a href="http://_yourservername_/nagios/">http://_yourservername_/nagios/</a>.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Installing+MongoDB+on+a+Node.js+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Installing+MongoDB+on+a+Node.js+SmartMachine.md">Installing+MongoDB+on+a+Node.js+SmartMachine.md</h1><br/><p>This page shows you how to install MongoDB on your Node.js™ SmartMachine.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Installing+MongoDB+on+a+Node.js+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Installing+MongoDB+on+a+Node.js+SmartMachine.md">Installing+MongoDB+on+a+Node.js+SmartMachine.md</a></h1><br/><p>This page shows you how to install MongoDB on your Node.js™ SmartMachine.</p>
 <p>In this page:</p>
 <p>In the interest of conserving your no.de&#39;s RAM and CPU, if you&#39;re looking for a good hosted MongoDB instance during the 48-hour NodeKnockout Competition, we recommend checking out the free offering from MongoHQ</p>
 <h1>Using an Installation Script</h1>
@@ -1766,7 +1775,7 @@ $ bin/mongod --bind_ip=127.0.0.1 --journal --dbpath /home/node/mongo/db</code></
 <p>Note that running MongoDB this way will not restart if your Node.js SmartMachine is rebooted. You may want to create an SMF manifest for it and use SMF to make sure it runs when your machine restarts. You can use the SMF manifest from the installation script .</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.md">Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.md</h1><br/><h1>Node.js</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.md">Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.md</a></h1><br/><h1>Node.js</h1>
 <p>Node.js 是一個高效能、易擴充的網站應用程式開發框架 (Web Application Framework)，是為了讓開發者能夠更容易開發高延展性的網路服務。系統不需要經過太多複雜的調校、效能調整及程式修改，就能滿足網路服務在不同發展階段對效能的要求。</p>
 <p>MiCloud所提供的SmartOS主機中，已有預載Nodejs服務的主機只有SmartOS Plus、SmartOS32+Nodejs這二種版本，若其他規格的主機想安裝Nodejs於您的主機上，請按照下列步驟進行安裝。</p>
 <h1>在SmartOS上安裝Node.js</h1>
@@ -1792,7 +1801,7 @@ console.log(&#39;Server running at http://127.0.0.1:8102/&#39;);</code></pre>
 <pre><code># node server.js</code></pre>
 <p><img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p5.png' width='650' align='center'/></p>
 <p>最後前往瀏覽器輸入您的localhost以及後方所設定port位置來確認是否運行成功，本操作以google瀏覽器做為範例，如有出現Hello Node.js文字時，表示成功:<br><img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p6.png' width='500' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Instruction+for+2XS+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Instruction+for+2XS+Machine.md">Instruction+for+2XS+Machine.md</h1><br/><h1>免費主機主機使用說明</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Instruction+for+2XS+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Instruction+for+2XS+Machine.md">Instruction+for+2XS+Machine.md</a></h1><br/><h1>免費主機主機使用說明</h1>
 <p>Small Package 服務主機為256M記憶體、10GB硬碟、1Core CPU之SmartOs主機，網路配置部分，提供一個內部私有IP，並透過外部DNS設定串聯，內部主機彼此間可以透過私有IP互通。一般設定說明如下:</p>
 <h1>HTTP/HTTPS使用</h1>
 <p>開放80、443、8080、3000、10000等port供HTTP(S)連線使用，連線時請使用主機DNS名稱連線(Ex:<a href="http://192-168-255-13.my.micloud.tw">http://192-168-255-13.my.micloud.tw</a>)</p>
@@ -1858,14 +1867,14 @@ DocumentRoot /opt/local/share/httpd/htdocs
 關閉服務：svcadm disable [service name]](關閉服務：svcadm disable [service name)
 服務狀態檢視：svcs -a ]( grep [service name)
 服務LOG檢視：tail -f `svcs -L [service name]`](服務LOG檢視：tail -f `svcs -L [service name`)</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Introduction+to+Virtualmin+and+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Introduction+to+Virtualmin+and+Webmin.md">Introduction+to+Virtualmin+and+Webmin.md</h1><br/><p><a href="http://p.castfire.com/NTYYi/video/511999/511999-2011-02-14-160539.sd.m4v">Link</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Introduction+to+Virtualmin+and+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Introduction+to+Virtualmin+and+Webmin.md">Introduction+to+Virtualmin+and+Webmin.md</a></h1><br/><p><a href="http://p.castfire.com/NTYYi/video/511999/511999-2011-02-14-160539.sd.m4v">Link</a></p>
 <embed width="420" height="345" src="<!--http://p.castfire.com/NTYYi/video/511999/511999_2011-02-14-160539.sd.m4v" type="application/x-shockwave-flash"></embed>
 
 
 
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Joyent+MySQL+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Joyent+MySQL+SmartMachine.md">Joyent+MySQL+SmartMachine.md</h1><br/><p>The Joyent MySQL SmartMachine is a dynamically scalable virtual machine that is optimized for 64-bit MySQL. It&#39;s based on a standard SmartMachine, with general software stripped down to bare minimum, and with MySQL pre-installed and pre-configured for ultimate performance and scalability.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Joyent+MySQL+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Joyent+MySQL+SmartMachine.md">Joyent+MySQL+SmartMachine.md</a></h1><br/><p>The Joyent MySQL SmartMachine is a dynamically scalable virtual machine that is optimized for 64-bit MySQL. It&#39;s based on a standard SmartMachine, with general software stripped down to bare minimum, and with MySQL pre-installed and pre-configured for ultimate performance and scalability.</p>
 <h1>Connecting to MySQL</h1>
 <p>The MySQL server is configured to listen on the private IP (found in your machine details as the secondary IP address). It is strongly recommended that you connect to your MySQL appliance from a different SmartMachine (e.g a standard generic SmartMachine]]) using the private IP, regardless of whether from your website code directly (for regular use), or whether you set up e.g. phpMyAdmin on another SmartMachine for management or troubleshooting. You may find your MySQL passwords under the system credentials in your machine details.</p>
 <p>It is expected (recommended as a best practice) to refrain from using the MySQL &#39;root&#39; login for production, and set up a restricted user first with the minimum privileges actually needed.</p>
@@ -2010,7 +2019,7 @@ fi</code></pre>
 # svccfg import sma.xml</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Joyent+Package+Repositories.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Joyent+Package+Repositories.md">Joyent+Package+Repositories.md</h1><br/><p>The title of the page serves as the heading to this section. It describes the problem that this page is solving.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Joyent+Package+Repositories.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Joyent+Package+Repositories.md">Joyent+Package+Repositories.md</a></h1><br/><p>The title of the page serves as the heading to this section. It describes the problem that this page is solving.</p>
 <p>In this page:</p>
 <h1>About pkgsrc</h1>
 <p>Joyent maintains a pkgsrc repository of prebuilt binary packages for SmartMachines. Some of these packages are already installed by default. You can use pkgsrc to add a package that&#39;s in the repository but not in the default installation or to add a package from another source.</p>
@@ -2051,7 +2060,7 @@ fi</code></pre>
 <p><a href="http://www.netbsd.org/docs/pkgsrc/">pkgsrc documentation</a></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Joyent+Zeus+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Joyent+Zeus+SmartMachine.md">Joyent+Zeus+SmartMachine.md</h1><br/><p>The Zeus TM (Traffic Manager) controls your application traffic, inspecting, transforming and routing requests as it load-balances them across the application infrastructure, all through an easy to use GUI interface.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Joyent+Zeus+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Joyent+Zeus+SmartMachine.md">Joyent+Zeus+SmartMachine.md</a></h1><br/><p>The Zeus TM (Traffic Manager) controls your application traffic, inspecting, transforming and routing requests as it load-balances them across the application infrastructure, all through an easy to use GUI interface.</p>
 <h1>Product Differentiation</h1>
 <p>|| || || || ||Features || ||<br>||Description    ||Load Balancing    ||SSL Offload    ||Content Caching    ||Real Time Analytics    ||Bandwidth Management    ||Service Level Monitoring<br>|﻿Zeus Simple Load Balancer - 200 Mbps|v    | | | | |<br>|Zeus Load Balancer - 200 Mbps|v| | | | |<br>|ZXTM Standard   - 200 Mbps|v|v|v| | |<br>|ZXTM Hi-Throughput - 1 Gbps|v|v|v| | |<br>|ZXTM Enterprise - 200 Mbps|v|v|v|v|v|v<br>|ZXTM Enterprise Hi-Throughput - 1 Gbps    |v|v|v|v|v|v</p>
 <h1>Logging into Zeus TM</h1>
@@ -2065,7 +2074,7 @@ fi</code></pre>
 <pre><code>http.setHeader(&quot;X-Forwarded-For&quot;, request.getRemoteIP());</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="LeftMenu.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=LeftMenu.md">LeftMenu.md</h1><br/><p><div id="main"></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="LeftMenu.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=LeftMenu.md">LeftMenu.md</a></h1><br/><p><div id="main"></p>
 <p><ul id="browser" class="filetree treeview-famfamfam"></p>
 <p><ul></p>
 <li class="closed"><span class="folder">MiCloud資訊</span><br><ul><br><li class="closed"><span class="file"><a href="http://micloud.tw">MiCloud官方網站</a><br><li class="closed"><span class="file"><a href="http://micloud.tw/ch/price/price">MiCloud產品規格</a><br><li class="closed"><span class="file"><a href="mailto:service@micloud.tw">MiCloud服務信箱</a><br><br></ul><br></li><br><li class="closed"><span class="folder">MiCloud自助服務操作資訊</span><br><ul><br><li class="closed"><span class="folder">申請及訂購</span><br><ul><br><br><li class="closed"><span class="file">[申請帳號](Apply MiCloud Account - new)<br><li class="closed"><span class="file">[訂購主機](Order a Machine)<br><li class="closed"><span class="file">[2XS 256MB主機使用說明](Instruction for 2XS Machine)<br></ul><br></li><br><li class="closed"><span class="folder">線上管理</span><br><ul><br><li class="closed"><span class="folder">帳戶管理</span><br><ul><br><li class="closed"><span class="file">[帳戶資訊管理](MiCloud Account Modify)<br><li class="closed"><span class="file">[SSH金鑰管理](MiCloud SSH Key)<br><li class="closed"><span class="file">[登入密碼管理](Micloud Password)<br><br><li class="closed"><span class="file">[付款方式](Pay way)<br><br><li class="closed"><span class="file">[帳單資料](MiCloud billing)<br><br></ul><br></li>
@@ -2091,9 +2100,9 @@ fi</code></pre>
 
 <p></ul><br></li></p>
 <p><li class="closed"><span class="folder"><a href="Main">回首頁</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="LeftMenuFooter.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=LeftMenuFooter.md">LeftMenuFooter.md</h1><br/><hr>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="LeftMenuFooter.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=LeftMenuFooter.md">LeftMenuFooter.md</a></h1><br/><hr>
 <div style="text-align:center"><br>Powered by MiCloud<br></div>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Legacy+Customer+Technical+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Legacy+Customer+Technical+FAQ.md">Legacy+Customer+Technical+FAQ.md</h1><br/><h1>High-level Technical FAQ for Joyent Cloud Existing Customers</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Legacy+Customer+Technical+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Legacy+Customer+Technical+FAQ.md">Legacy+Customer+Technical+FAQ.md</a></h1><br/><h1>High-level Technical FAQ for Joyent Cloud Existing Customers</h1>
 <h1>I want to move my apps to the new Joyent Cloud. How can I do that?</h1>
 <p>Here’s some basic advice. Contact support@joyent.com for more complex installation questions.</p>
 <h1>Moving a website:</h1>
@@ -2133,7 +2142,7 @@ fi</code></pre>
 <p>See the chart in Joyent Zeus SmartMachine to learn more about the different configurations.</p>
 <h1>How do I access virtualmin/webmin on my SmartOS SmartMachines?</h1>
 <p>Virtualmin comes on non-appliance SmartOS SmartMachines. You can access it at <a href="https://your-public-ip:10000">https://your-public-ip:10000</a>. The username and password are available in your my.joyentcloud.com portal. Click on the server, then click “show credentials.”</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+KVM+Time+Drift.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+KVM+Time+Drift.md">Linux+KVM+Time+Drift.md</h1><br/><h1>Linux NTP Server Configuration</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+KVM+Time+Drift.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+KVM+Time+Drift.md">Linux+KVM+Time+Drift.md</a></h1><br/><h1>Linux NTP Server Configuration</h1>
 <p>Linux KVM can have time drift(losing or gaining seconds to minutes of time)</p>
 <p>To fix this you need to do the following:</p>
 <ol>
@@ -2159,7 +2168,7 @@ fi</code></pre>
 <ol>
 <li>Reboot your system</li>
 </ol>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+KVM+Tuning.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+KVM+Tuning.md">Linux+KVM+Tuning.md</h1><br/><p>Here are some performance options that may assist in tuning performance:</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+KVM+Tuning.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+KVM+Tuning.md">Linux+KVM+Tuning.md</a></h1><br/><p>Here are some performance options that may assist in tuning performance:</p>
 <p>What is swappiness and how do I change it?<br>The swappiness parameter controls the tendency of the kernel to move processes out of physical memory and onto the swap disk. Because disks are much slower than RAM, this can lead to slower response times for system and applications if processes are too aggressively moved out of memory.</p>
 <p>swappiness can have a value of between 0 and 100<br>swappiness=0 tells the kernel to avoid swapping processes out of physical memory for as long as possible<br>swappiness=100 tells the kernel to aggressively swap processes out of physical memory and move them to swap cache<br>The default setting in Ubuntu is swappiness=60. Reducing the default value of swappiness will probably improve overall performance for a typical Ubuntu desktop installation. A value of swappiness=10 is recommended, but feel free to experiment. Note: Ubuntu server installations have different performance requirements to desktop systems, and the default value of 60 is likely more suitable.</p>
 <p>To check the swappiness value</p>
@@ -2170,7 +2179,7 @@ fi</code></pre>
 <p>divider=10 kernel parameter<br>CentOS/Debian/Ubuntu/Fedora can benefit from this kernel boot option, it causes the vm consumes less CPU during idle times.</p>
 <p>Edit the /boot/grub/menu.lst file and add divider=10 to the first kernel line</p>
 <p>Reboot</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Repository+Update.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+Repository+Update.md">Linux+Repository+Update.md</h1><br/><h1>Server Repository Update</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Repository+Update.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+Repository+Update.md">Linux+Repository+Update.md</a></h1><br/><h1>Server Repository Update</h1>
 <p>MiCloud為維護全球使用者的利益以及OS廠商之版本著作權益，我們提供的Linux主機會盡量維持原廠登錄的Repository，如果您希望指定特定的Repository出處，可參考Wiki來修改至您偏好的下載點。</p>
 <h1>Ubuntu/Debian Repository</h1>
 <p>Repository定義檔位置：/etc/apt/sources.list.d/*.list<br>ex: 以安裝10gen Repository(for install mongodb)為例：在Repository定義檔位置新增加10gen.list檔案，指向10gen版本庫位置：</p>
@@ -2193,7 +2202,7 @@ enabled=1</code></pre>
 <p>建立好版本庫位置後，可以更新並安裝其上套件：</p>
 <pre><code>yum update
 yum install mongo-10gen mongo-10gen-server</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Update+SSH+Key.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+Update+SSH+Key.md">Linux+Update+SSH+Key.md</h1><br/><h1>Linux主機更新SSH Key</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Update+SSH+Key.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+Update+SSH+Key.md">Linux+Update+SSH+Key.md</a></h1><br/><h1>Linux主機更新SSH Key</h1>
 <p>MiCloud Linux主機於開通主機時會將您帳戶資料中之SSH Key匯入新開通的Linux主機中，匯入的目錄位於：$HOME/.ssh/authorized_keys檔案中，此為一次性設定，日後再登錄至MiCloud Customer Portal之SSH Key將不會再寫入Linux主機中(SmartOS之認證為結合SSH Key Database之認證，因此不在此限制下)。若您需要更新SSH Key，可採下面步驟：</p>
 <ul>
 <li>產生SSH Key:<br>請參考：“MiCloud自助服務操作資訊 &gt; SSH金鑰相關使用教學”中金鑰產生部分。</li>
@@ -2203,7 +2212,7 @@ yum install mongo-10gen mongo-10gen-server</code></pre>
 </ul>
 <p><code>vi $HOME/.ssh/authorized_keys</code></p>
 <p>增加您產生的public key至該檔案中</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Update+Timezone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+Update+Timezone.md">Linux+Update+Timezone.md</h1><br/><h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Update+Timezone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+Update+Timezone.md">Linux+Update+Timezone.md</a></h1><br/><h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
 <p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
 <p><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></p>
 <p>(2) 執行 date -u</p>
@@ -2212,7 +2221,7 @@ yum install mongo-10gen mongo-10gen-server</code></pre>
 <p><code># date</code></p>
 <p>(4) 重開後生效</p>
 <p><code># reboot</code></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Virtual+Machine+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+Virtual+Machine+FAQ.md">Linux+Virtual+Machine+FAQ.md</h1><br/><p>Frequently Asked Questions</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Virtual+Machine+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Linux+Virtual+Machine+FAQ.md">Linux+Virtual+Machine+FAQ.md</a></h1><br/><p>Frequently Asked Questions</p>
 <h1>What is the difference between a Linux Virtual Machine and a SmartMachine?</h1>
 <p>Both SmartMachines and Linux Virtual Machines are virtual servers that give you the power of running an entire server. SmartMachines use SmartOS, which is major fork of OpenSolaris. Linux Virtual Machines run one of three popular Linus distributions: Debian, Ubuntu, or CentOS.</p>
 <h1>What is my host name?</h1>
@@ -2246,7 +2255,7 @@ Linux version 2.6.26-2-amd64 (Debian 2.6.26-19) (dannf@debian.org)
 (gcc version 4.1.3 20080704 (prerelease) (Debian 4.1.2-25)) #1 SMP Wed Aug 19 22:33:18 UTC 2009</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Main.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Main.md">Main.md</h1><br/><h1>歡迎使用</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Main.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Main.md">Main.md</a></h1><br/><h1>歡迎使用</h1>
 <p>歡迎使用MiCloud Wiki，我們將在此分享MiCloud的相關說明文件。</p>
 <h2>我們的特色</h2>
 <ul>
@@ -2264,7 +2273,7 @@ Linux version 2.6.26-2-amd64 (Debian 2.6.26-19) (dannf@debian.org)
 <p>如有其他建議，或需要我們改進的地方，請隨時連絡我們！</p>
 <p><img src='images/Main-p1.png' width='650'  align='center'/></p>
 <p>MiCloud客服信箱：<a href="mailto:service@micloud.tw">service@micloud.tw</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Manage+your+Machines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Manage+your+Machines.md">Manage+your+Machines.md</h1><br/><h1>主機</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Manage+your+Machines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Manage+your+Machines.md">Manage+your+Machines.md</a></h1><br/><h1>主機</h1>
 <p>此頁可顯示您所建的機器與機器的IP與基本的資料(作業系統、記憶體、購買了多久以及目前狀態)</p>
 <p>若您的機器過多也可於中間的藍色框框內輸入該台機器的資訊來做搜尋的動作</p>
 <p><img src='images/Manage+your+Machines-p2.png' width='650' align='center'/><br>*  左邊藍色框框概述您的機器設備與相關訊息。</p>
@@ -2275,7 +2284,7 @@ Linux version 2.6.26-2-amd64 (Debian 2.6.26-19) (dannf@debian.org)
 <li>點擊 <strong>Show Credentials</strong>(左邊紅色框框) 則會顯示您這台機器內[預載程式之預設密碼](Preload Software Default Password)</li>
 </ul>
 <p><img src='images/Manage+your+Machines-p1+-18.png' width='650' align='center'/><br><strong>登入說明請參考：[MiCloud Credential Description]</strong>](--登入說明請參考：[MiCloud Credential Description--)</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Managing+SSL+Certificates+with+Virtualmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Managing+SSL+Certificates+with+Virtualmin.md">Managing+SSL+Certificates+with+Virtualmin.md</h1><br/><p>This page guides you through enabling SSL encryption for a domain and installing an SSL certificate through Virtualmin.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Managing+SSL+Certificates+with+Virtualmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Managing+SSL+Certificates+with+Virtualmin.md">Managing+SSL+Certificates+with+Virtualmin.md</a></h1><br/><p>This page guides you through enabling SSL encryption for a domain and installing an SSL certificate through Virtualmin.</p>
 <p>In this page:</p>
 <h1>Enable SSL for your Domain</h1>
 <ul>
@@ -2295,7 +2304,7 @@ Linux version 2.6.26-2-amd64 (Debian 2.6.26-19) (dannf@debian.org)
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Managing+Your+SmartOS+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Managing+Your+SmartOS+SmartMachine.md">Managing+Your+SmartOS+SmartMachine.md</h1><br/><p>Top level for subsequent topics</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Managing+Your+SmartOS+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Managing+Your+SmartOS+SmartMachine.md">Managing+Your+SmartOS+SmartMachine.md</a></h1><br/><p>Top level for subsequent topics</p>
 <p>Virtualmin / Webmin</p>
 <p>Setting up DNS</p>
 <p>Starting and stopping processes</p>
@@ -2341,7 +2350,7 @@ Linux version 2.6.26-2-amd64 (Debian 2.6.26-19) (dannf@debian.org)
 <ul>
 <li><em>[Security with IPFilter]](</em>  *[Security with IPFilter)</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="menu.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=menu.md">menu.md</h1><br/><p><a href="/index.html?page=ApplyAndOrder.md"><img width="15px" src="images/point.png"/>自助服務操作資訊</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="menu.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=menu.md">menu.md</a></h1><br/><p><a href="/index.html?page=ApplyAndOrder.md"><img width="15px" src="images/point.png"/>自助服務操作資訊</a></p>
 <p><a href="/index.html?page=3PartyCloudServer.md"><img width="15px" src="images/point.png"/>MiCloud第三方服務主機</a></p>
 <p><a href="/index.html?page=MiCloudCloudAPI.md"><img width="15px" src="images/point.png"/>雲端實例及API</a></p>
 <p><a href="/index.html?page=QNA.md"><img width="15px" src="images/point.png"/>常見問題</a></p>
@@ -2351,7 +2360,7 @@ Linux version 2.6.26-2-amd64 (Debian 2.6.26-19) (dannf@debian.org)
 <p><a href="http://blogger.micloud.tw"><img width="15px" src="images/point.png"/> MiCloud Blog</a></p>
 <p><a href="http://peihsinsu.github.com/wikitpage"><img width="15px" src="images/point.png"/> 本站由WikitPage建置</a></p>
 <p><small>2013 Copy Right @ Power By MiCloud.TW</small></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Account+Modify-d.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Account+Modify-d.md">MiCloud+Account+Modify-d.md</h1><br/></p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Account+Modify.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Account+Modify.md">MiCloud+Account+Modify.md</h1><br/><h1>MiCloud帳戶資訊修改</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Account+Modify-d.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Account+Modify-d.md">MiCloud+Account+Modify-d.md</a></h1><br/></p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Account+Modify.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Account+Modify.md">MiCloud+Account+Modify.md</a></h1><br/><h1>MiCloud帳戶資訊修改</h1>
 <p>影片:<a href="http://www.youtube.com/watch?v=qyEhOfV7GA0">MiCloud帳戶資訊管理</a></p>
 <div align="center"><br><embed width="420" height="345" src="http://www.youtube.com/v/qyEhOfV7GA0&hd=1" type="application/x-shockwave-flash"></embed><br></div>
 
@@ -2369,7 +2378,7 @@ Linux version 2.6.26-2-amd64 (Debian 2.6.26-19) (dannf@debian.org)
 <h1>帳戶設定</h1>
 <p>在這個頁面裡能修改您的基本資料</p>
 <p><img src='images/MiCloud+Account+Modify-p1+-6.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Account+Modify_d.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Account+Modify_d.md">MiCloud+Account+Modify_d.md</h1><br/></p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API+Implement+1.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+API+Implement+1.md">MiCloud+API+Implement+1.md</h1><br/><h1>MiCloudAPI 實做案例</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Account+Modify_d.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Account+Modify_d.md">MiCloud+Account+Modify_d.md</a></h1><br/></p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API+Implement+1.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+API+Implement+1.md">MiCloud+API+Implement+1.md</a></h1><br/><h1>MiCloudAPI 實做案例</h1>
 <h1>情境：</h1>
 <p>我是一個購物網站的主機管理員，當季的商品促銷期間常會造成流量爆滿，大量的transaction會導至網頁資料傳輸與反應變慢，運行在傳統的主機服務架構下，此時除非新增加伺服器規格外，似乎無其他方法... 但在雲端的環境下，我可以規劃我的促消時間，依照網站上統計的到訪人數資料來讓我可以知道大約尖峰時期在甚麼時候，透過MiCloudAPI，我建置了一個可以依據我所規劃的時間來進行增加服務端點的架構。</p>
 <p><img src='images/MiCloud+API+Implement+1-p12.png' width='450' align='center'/><br>圖：利用MiCloudAPI建構可延展架構</p>
@@ -2503,7 +2512,7 @@ echo “Server Create Done” | mailx -s “Add a Server to MiCloud” simonsu.m
 <h1>將服務加入Cron Job</h1>
 <pre><code>10 0 20 12 * $ HOME / script / bin / createServer.sh</code></pre>
 <p>上述腳本正常執行後，就可以順利的在12/20當天延展AP主機的服務，並且提供服務囉！</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API+Implement+2.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+API+Implement+2.md">MiCloud+API+Implement+2.md</h1><br/><h1>預防尖峰流量拖垮服務：Scale Out應用服務-使用CloudAPI排程</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API+Implement+2.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+API+Implement+2.md">MiCloud+API+Implement+2.md</a></h1><br/><h1>預防尖峰流量拖垮服務：Scale Out應用服務-使用CloudAPI排程</h1>
 <ul>
 <li>調整一臺虛擬主機的記憶體大小</li>
 </ul>
@@ -2542,7 +2551,7 @@ Requested transition is not acceptable due to current resource state
 simonsuteki-MacBook-Pro:~ simonsu$ sdc-stopmachine 845f21fe-1910-4b38-a4cae2a81144f9a2
 # Confirm stop OK and delete...
 simonsuteki-MacBook-Pro:~ simonsu$ sdc-deletemachine 845f21fe-1910-4b38-a4cae2a81144f9a2</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API+Implement+33.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+API+Implement+33.md">MiCloud+API+Implement+33.md</h1><br/></p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+API.md">MiCloud+API.md</h1><br/><h1>MiCloud API</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API+Implement+33.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+API+Implement+33.md">MiCloud+API+Implement+33.md</a></h1><br/></p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+API.md">MiCloud+API.md</a></h1><br/><h1>MiCloud API</h1>
 <p>本文件為MiCloud API之簡短說明文件，MiCloud使用Joyent服務，進行IaaS環境部署，基於Joyent提供之API套件進行MiCloud API相關功能之提供。</p>
 <h1>MiCloud API簡介</h1>
 <h1>何謂MiCloud API?</h1>
@@ -2646,9 +2655,9 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 <p>刪除SSH Key</p>
 <p>另外，您或許會想要把目前沒用到的SSH Key刪除，透過下面指令可以把SSH Key移除：</p>
 <pre><code>sdc-deletekey id_rsa</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+billing.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+billing.md">MiCloud+billing.md</h1><br/><h1>帳單資料</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+billing.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+billing.md">MiCloud+billing.md</a></h1><br/><h1>帳單資料</h1>
 <p>用戶可以在帳單資料中，查詢到過去6個月內的帳單細項資訊以及未來帳單。<br><img src='images/MiCloud+billing-http://wiki.micloud.tw/Wiki/attach/MiCloud%20Account%20Modify/p1%20-11.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Credential+Description.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Credential+Description.md">MiCloud+Credential+Description.md</h1><br/><h1>預載程式之預設密碼</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Credential+Description.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Credential+Description.md">MiCloud+Credential+Description.md</a></h1><br/><h1>預載程式之預設密碼</h1>
 <p>登入 MiCloud 完成後能在畫面左上方點選主機，在從下方表格點選您的主機查看細項。<br><img src='images/MiCloud+Credential+Description-p1+-21.png' width='650' align='center'/><br>進入查詢細項頁面，可於 <strong>概述</strong> 中找到 <strong>Credentials</strong> 欄位,左鍵點擊 <strong>Show Credentials</strong>，查看該台主機預載程式之密碼。</p>
 <p><img src='images/MiCloud+Credential+Description-p1+-18.png' width='650' align='center'/></p>
 <p>登入帳號與密碼說明如下:</p>
@@ -2669,8 +2678,8 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 <p>如欲更改其他帳戶之密碼，請於root執行下方指令。</p>
 <p><code>#passwd admin</code></p>
 <p><img src='images/MiCloud+Credential+Description-clip-image003.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Example.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Example.md">MiCloud+Example.md</h1><br/><p>MiCloud Self-Service Portal實作</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Micloud+Features.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Micloud+Features.md">Micloud+Features.md</h1><br/><h1>MiCloud的特點</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Example.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Example.md">MiCloud+Example.md</a></h1><br/><p>MiCloud Self-Service Portal實作</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Micloud+Features.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Micloud+Features.md">Micloud+Features.md</a></h1><br/><h1>MiCloud的特點</h1>
 <p>有別於台灣其他業者，不論是在服務或技術方面皆持續完善及創新，以符合整個市場需求，MiCloud是您服務的最佳選擇。MiCloud擁有以下的特點：</p>
 <p>(1) 線上快速申請</p>
 <p>透過 <a href="http://micloud.tw">http://micloud.tw</a> 即可立即申請專屬的虛擬主機。</p>
@@ -2700,9 +2709,9 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 <li>*防火牆之保護</li>
 <li>*提供不斷電系統</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Micloud+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Micloud+Password.md">Micloud+Password.md</h1><br/><h1>登入密碼管理</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Micloud+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Micloud+Password.md">Micloud+Password.md</a></h1><br/><h1>登入密碼管理</h1>
 <p>若您需要更改登入MiCloud登入時的密碼，可於此頁做變更。<br><img src='images/MiCloud+Account+Modify-p1+-8.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Self-Service+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Self-Service+Portal.md">MiCloud+Self-Service+Portal.md</h1><br/><h1>MiCloud Self-Service Portal實作</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Self-Service+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Self-Service+Portal.md">MiCloud+Self-Service+Portal.md</a></h1><br/><h1>MiCloud Self-Service Portal實作</h1>
 <h1>主題：我的第一個雲端服務</h1>
 <h1>我的雲端服務簡介</h1>
 <ul>
@@ -2720,12 +2729,12 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 <p>[{tw.idv.ecoast.plugin.Mediaplayer src=&#39;p5.mov&#39; playertype=&#39;quicktime&#39; moviewidth=&#39;650&#39; movieheight=&#39;390&#39; caption=&#39;使用分析功能監看服務運行狀態&#39; control=true autostart=false autorewind=true playcount=0 align=&#39;center&#39;}]</p>
 <h1>預防尖峰流量拖垮服務：Scale Out應用服務-線上增加主機</h1>
 <p>[{tw.idv.ecoast.plugin.Mediaplayer src=&#39;p6.mov&#39; playertype=&#39;quicktime&#39; moviewidth=&#39;650&#39; movieheight=&#39;390&#39; caption=&#39;Scale Out應用服務-線上增加主機&#39; control=true autostart=false autorewind=true playcount=0 align=&#39;center&#39;}]</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+SSH+Key.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+SSH+Key.md">MiCloud+SSH+Key.md</h1><br/><h1>SSH金鑰</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+SSH+Key.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+SSH+Key.md">MiCloud+SSH+Key.md</a></h1><br/><h1>SSH金鑰</h1>
 <p>您若需要在Micloud上建置SmartOS及Linux的作業系統</p>
 <p>則需要在這個頁面建立您的<a href="/index.html?page=SSH+KeyGen+Connect+Tutorial-Windows.md">SSH-Key Windows</a></p>
 <p>以便您在登入系統時做驗證</p>
 <p><img src='images/MiCloud+Account+Modify-p1+-7.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloudCloudAPI.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloudCloudAPI.md">MiCloudCloudAPI.md</h1><br/><h1>MiCloud CloudAPI</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloudCloudAPI.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloudCloudAPI.md">MiCloudCloudAPI.md</a></h1><br/><h1>MiCloud CloudAPI</h1>
 <ul>
 <li><a href="/index.html?page=MiCloud+Self-Service+Portal.md">在MiCloud上建置我的雲端服務</a></li>
 <li><a href="/index.html?page=Using+DTrace+on+MySQL.md">使用DTrace分析MySQL</a></li>
@@ -2736,7 +2745,7 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 </ul>
 </li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MongoDB+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MongoDB+SmartMachine.md">MongoDB+SmartMachine.md</h1><br/><h1>MongoDB</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MongoDB+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MongoDB+SmartMachine.md">MongoDB+SmartMachine.md</a></h1><br/><h1>MongoDB</h1>
 <h1>在SmartOS上安裝MongoDB</h1>
 <p>MiCloud 在SmartOS 32bit 提供預載MongoDB的服務，可以直接選擇此預載的套件，若當初沒有選擇預載服務，用戶可以依下列步驟進行安裝。</p>
 <p>1.本範例將在 /tmp路徑下安裝MongoDB，請先切換至tmp目錄下。</p>
@@ -2777,7 +2786,7 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 <p>在MiCloud平台中，自行安裝MongoDB及預載的連結方式有些許差異，自行安裝的連結方式，可參考前面介紹的指令；選擇預載的用戶，需要用admin來連結至MongoDB，其指令如下，另外，登入的密碼可以在主機細項的Credentials內查看。</p>
 <pre><code># mongo -u admin -p admin</code></pre>
 <p><img src='images/MongoDB+SmartMachine-p10.png' width='650' align='center'/><br><img src='images/MongoDB+SmartMachine-p11.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Monitor+System.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Monitor+System.md">Monitor+System.md</h1><br/><h1>主機監控之設定</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Monitor+System.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Monitor+System.md">Monitor+System.md</a></h1><br/><h1>主機監控之設定</h1>
 <h1>Windows</h1>
 <p>1.MiCloud平台虛擬主機之監控程式需使用nodejs來執行，<strong>請先登入您的Windows虛擬主機</strong>，再至<a href="http://nodejs.org/"><a href="http://nodejs.org/">http://nodejs.org/</a></a><br><img src='images/Monitor+System-node.png' width='650' align='center'/></p>
 <p>2.請下載由MiCloud研發團隊撰寫的監控程式並解壓，下載網址為</p>
@@ -2807,7 +2816,7 @@ main.js，主要用來設定排程應該執行哪支程式。</code></pre>
 <pre><code>#crontab -l</code></pre>
 <p><img src='images/Monitor+System-pl4.png' width='650' align='center'/></p>
 <p>4.cron job設定完成後，15分鐘後即可至MiCloud管理平台檢視您主機上的CPU、Memory、Disk的使用率。<br><img src='images/Monitor+System-pl5.png' width='650' align='center'/><br>也可以在歷史監控資料中查看週、月、年的資訊，並可下載近半年的原始資料。<br><img src='images/Monitor+System-pl6.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Mounting+Disks+on+a+Virtual+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Mounting+Disks+on+a+Virtual+Machine.md">Mounting+Disks+on+a+Virtual+Machine.md</h1><br/><p>The new Joyent Cloud offering currently does not autoprovision with formatted and mounted data volumes for Linux and Windows Virtual Machines. We plan to automate this in the provisioning tool in the near future, however the following is a workaround to do this.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Mounting+Disks+on+a+Virtual+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Mounting+Disks+on+a+Virtual+Machine.md">Mounting+Disks+on+a+Virtual+Machine.md</a></h1><br/><p>The new Joyent Cloud offering currently does not autoprovision with formatted and mounted data volumes for Linux and Windows Virtual Machines. We plan to automate this in the provisioning tool in the near future, however the following is a workaround to do this.</p>
 <p>In this page:</p>
 <h1>Mounting the Data Volume on Windows</h1>
 <p>To mount the data volume on Windows, you can use the Disk Manager application or the diskpart command line tool.</p>
@@ -2867,7 +2876,7 @@ exit</code></pre>
 <p>Reboot your system to verify the disk is mounted on reboot.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Mounting+the+Data+Volume+on+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Mounting+the+Data+Volume+on+Windows.md">Mounting+the+Data+Volume+on+Windows.md</h1><br/><h1>Windows主機掛載硬碟</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Mounting+the+Data+Volume+on+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Mounting+the+Data+Volume+on+Windows.md">Mounting+the+Data+Volume+on+Windows.md</a></h1><br/><h1>Windows主機掛載硬碟</h1>
 <p>訂購MiCloud Windows主機的硬碟空間屬於額外提供給每台主機的空間，並不包含在原作業系統的硬碟空間中，預設每台虛擬主機之作業系統空間有40GB，但用戶需自行將OS外之硬碟掛載後，才可使用，其掛載及啟用的操作說明如下。</p>
 <p>登入您的主機後點選”開始”在<strong>電腦</strong>上按右鍵點選<strong>管理</strong>，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis.jpg' width='500' align='center'/></p>
 <p>開啟伺服器管理員後點選存放-磁碟管理，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis1.jpg' width='600' align='center'/></p>
@@ -2877,7 +2886,7 @@ exit</code></pre>
 <p>出現新增簡單磁碟區精靈視窗，點選下一步即可。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis6.jpg' width='600' align='center'/></p>
 <p>第三步驟可選擇磁碟機代號如下圖橘色框框，再執行下一步至完成即可。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis7.jpg' width='600' align='center'/></p>
 <p>E槽即為您所掛載的硬碟，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis8.jpg' width='600' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="My.joyentcloud.com+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=My.joyentcloud.com+FAQ.md">My.joyentcloud.com+FAQ.md</h1><br/><h1>FAQ</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="My.joyentcloud.com+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=My.joyentcloud.com+FAQ.md">My.joyentcloud.com+FAQ.md</a></h1><br/><h1>FAQ</h1>
 <h1>Joyent的雲端服務將重新訂價？</h1>
 <p>是的。 Joyent雲端服務的雲端基本入門價格，在北美是以SmartMachines小時計費做為選項($0.085/hour 美元)。 而使用XL或更大規格的客戶，將以低於每小時0.04美元價格計算。 而架構在Linux上的虛擬機，使用雲端的定價將適度調低為0.04美元。 Windows虛擬機的價格雖為未定，但預計將以Linux的定價計算。（請點選此處了解全部的價格。）Joyent的雲端計劃的任何變化、新功能，都是提供給世界各地Joyent的客戶。</p>
 <h1>我原有的服務將會得到新的訂價，對不對？</h1>
@@ -2911,7 +2920,7 @@ The default username for Windows is &#39;administrator&#39;.</code></pre>
 <p><img src='images/My.joyentcloud.com+FAQ-pic1.png' width='650' align='left'/></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="No.de+Version+2.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=No.de+Version+2.md">No.de+Version+2.md</h1><br/><p>A bunch of new features have come in this release, just in time for the second annual Node Knockout competition. We&#39;ve designed this version of the no.de product in response to the feedback we&#39;ve gotten from users of the existing system.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="No.de+Version+2.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=No.de+Version+2.md">No.de+Version+2.md</a></h1><br/><p>A bunch of new features have come in this release, just in time for the second annual Node Knockout competition. We&#39;ve designed this version of the no.de product in response to the feedback we&#39;ve gotten from users of the existing system.</p>
 <h1>No Coupon Codes</h1>
 <p>That&#39;s right! You can sign up for the service, and provision right away without anyone&#39;s permission, or jumping through any extra hoops.</p>
 <p>The codes served their purpose, and gave us a way to limit the influx of new users in the first few versions, but I think everyone is pretty happy to see them go.</p>
@@ -2941,7 +2950,7 @@ The default username for Windows is &#39;administrator&#39;.</code></pre>
 <p>However, if you want access to these newer features, you&#39;ll have to provision a machine on the new v2 system.</p>
 <h1>The Future</h1>
 <p>Stay tuned for more features and functionality coming to the no.de service in the future. SmartOS and SDC are under active development, and will keep getting better, and of course Node is moving at breakneck speed.</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Node+install.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Node+install.md">Node+install.md</h1><br/><h1>Node.js安裝與使用</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Node+install.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Node+install.md">Node+install.md</a></h1><br/><h1>Node.js安裝與使用</h1>
 <h1>使用production模式</h1>
 <pre><code>NODE_ENV=production node app.js</code></pre>
 <h1>必裝套件-Express</h1>
@@ -2954,7 +2963,7 @@ cd /usr/local/lib/node
 ln -s ../node_module/ejs</code></pre>
 <h1>Eclipse Plugin for Node.js</h1>
 <pre><code>https://github.com/joyent/node/wiki/Using-Eclipse-as-Node-Applications-Debugger</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Node+reference.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Node+reference.md">Node+reference.md</h1><br/><h1>Node.js相關網站</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Node+reference.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Node+reference.md">Node+reference.md</a></h1><br/><h1>Node.js相關網站</h1>
 <p><a href="http://blog.labin.cc/?page-id=857">Node.js實戰聖經</a></p>
 <p><a href="http://www.nodebeginner.org/">Node.js Tutorial</a></p>
 <p><a href="http://wiki.joyent.com/display/node/Node.js+Home">Node.js在Joyent上的說明文件</a></p>
@@ -3001,7 +3010,7 @@ ln -s ../node_module/ejs</code></pre>
 <h1>Node Modules</h1>
 <p><a href="http://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fjoyent%2Fnode%2Fwiki%2Fmodules&amp;sa=D&amp;sntz=1&amp;usg=AFrqEzdt6uLym-GktR2GCflpc-mvxxJlPg">Wiki List on Github/Joyent/Node (start here last!)</a></p>
 <p><a href="http://www.google.com/url?q=http%3A%2F%2Fsearch.npmjs.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFrqEzdYUfs2cliF3TrcRoKIED603mVWtA">Search for registered node.js modules</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Npm+Integration.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Npm+Integration.md">Npm+Integration.md</h1><br/><p>As of the August 2011 v2 release of no.de, npm is much more tightly integrated into the service.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Npm+Integration.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Npm+Integration.md">Npm+Integration.md</a></h1><br/><p>As of the August 2011 v2 release of no.de, npm is much more tightly integrated into the service.</p>
 <p><strong>server.js → package.json</strong><br>Previously, you had to add a server.js file to your git repository and push it to no.de. Any dependencies had to be bundled and checked into git. This sometimes raised problems if the dependency had a .gitignore, or needed to be built on the target architecture.</p>
 <p>Also, some people didn&#39;t really want to have a single server.js file as the way to start their app. If you wanted to start it with cluster, or write your app in coffee-script, you&#39;d have to bootstrap it with a server.js which was sometimes a bit clumsy.</p>
 <p>In v2, if you have a package.json file, then you can specify dependencies, add custom configurations, and define a custom start command. Since the scripts.start member defaults to node server.js, the old style still works.</p>
@@ -3059,7 +3068,7 @@ npm_package_config_server_environment: &#39;no.de&#39;
 <p>If you have a lot of dependencies, then you may find that it takes a little while to deploy, since it has to fetch those every time. You can speed it up considerably by logging into your no.de machine, and installing those packages globally.</p>
 <pre><code>npm install -g express@2.0 request dnode socket.io async underscore vows mongodb</code></pre>
 <p>Then, each deploy will use the same symlinked copy of those dependencies.</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Npm+usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Npm+usage.md">Npm+usage.md</h1><br/><h1>NPM的安裝與操作</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Npm+usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Npm+usage.md">Npm+usage.md</a></h1><br/><h1>NPM的安裝與操作</h1>
 <p>Node.js 的套件管理工具(Node Package Manager)可以讓 Node.js 的開發者直接利用、擴充線上的套件庫（packages registry），加速軟體專案的開發。此外npm 提供很友善的搜尋功能，可以快速找到及安裝需要的套件，當這些套件發行新版本時，npm 也可以協助開發者自動更新這些套件。</p>
 <h1>安裝NPM</h1>
 <p>利用下方指令安裝</p>
@@ -3083,7 +3092,7 @@ npm_package_config_server_environment: &#39;no.de&#39;
 <p>利用npm uninstall指令來刪除既有套件，以textlogin套件為例，如下圖:</p>
 <pre><code># npm uninstall textlogin</code></pre>
 <p><img src='images/Npm+usage-p13.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Order+a+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Order+a+Machine.md">Order+a+Machine.md</h1><br/><h1>訂購主機</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Order+a+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Order+a+Machine.md">Order+a+Machine.md</a></h1><br/><h1>訂購主機</h1>
 <p>若您還未建立您的 <strong>SSH-Key</strong> 以及 <strong>付款方式</strong> 的資料填寫 ，請先建立完成。</p>
 <p>SSH-Key 相關教學:<a href="index.html?page=SSH+KeyGen+Connect+Tutorial-Windows.md">Windows</a></p>
 <p>付款方式 相關教學:<a href="index.html?page=Pay+way.md">付費方式</a></p>
@@ -3098,7 +3107,7 @@ npm_package_config_server_environment: &#39;no.de&#39;
 <li>確認完成即可點選 <strong>Provision</strong>(綠色框框), MiCloud 會馬上幫您建立機器.</li>
 </ul>
 <p>關於機器建立狀況與相關資訊可於 __[主機管理](Manage your Machines)<br><img src='images/Order+a+Machine-p1+-5.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pay+way.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pay+way.md">Pay+way.md</h1><br/><h1>付款方式</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pay+way.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pay+way.md">Pay+way.md</a></h1><br/><h1>付款方式</h1>
 <p>付款方式分為企業付款、信用卡付款二種，詳細解說如下:</p>
 <h1>企業付款說明</h1>
 <p>企業付款方式僅提供合作或簽約夥伴，不適用於網路申請之用戶。</p>
@@ -3106,9 +3115,9 @@ npm_package_config_server_environment: &#39;no.de&#39;
 <h1>信用卡付款說明</h1>
 <p>[{arnaud.Flash src=&#39;v4.swf&#39; width=&#39;700&#39; height=&#39;550&#39; controls=&#39;false&#39; play=&#39;false&#39; loop=&#39;false&#39; }]<br>用戶皆可透過網路做信用卡認證，認證成功後即可訂購主機，未來帳單將從此張信用卡做扣款動作。</p>
 <p><img src='images/Pay+way-p1+-9.png' width='650' align='center'/><br>請確認您的<strong>帳單寄送地址</strong>是否正確!<br><img src='images/Pay+way-p1+-10.png' width='650' align='center'/><br>請選擇您的信用卡與填寫相關資訊<br><img src='images/Pay+way-CC3.JPG' width='650' align='center'/><br>完成後請確認您的<strong>卡號</strong>是否正確<br><img src='images/Pay+way-CC1.JPG' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pay+with+business.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pay+with+business.md">Pay+with+business.md</h1><br/><h1>企業付款</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pay+with+business.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pay+with+business.md">Pay+with+business.md</a></h1><br/><h1>企業付款</h1>
 <p>如果您在個人資訊中選擇的是企業付款，在付款方式的頁面會請您連絡專人，如下圖<br><img src='images/Pay+with+business-pay1.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Percona+install.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Percona+install.md">Percona+install.md</h1><br/><h1>安裝Percona</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Percona+install.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Percona+install.md">Percona+install.md</a></h1><br/><h1>安裝Percona</h1>
 <p>MiCloud只有在SmartOS中有預載Percona的服務，用戶可參考以下的步驟，在Linux環境下安裝。</p>
 <h1>在CentOS中安裝Percona</h1>
 <p>1.將Percona的套件安裝至主機的套件庫中</p>
@@ -3184,7 +3193,7 @@ deb-src http://repo.percona.com/apt squeeze main</code></pre>
 <p>6.登入mysql</p>
 <pre><code>#mysql -uroot -p</code></pre>
 <p><img src='images/Percona+install-c7.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Percona+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Percona+SmartMachine.md">Percona+SmartMachine.md</h1><br/><p>The Joyent Percona SmartMachine is a dynamically scalable virtual machine that is optimized for the cloud. It&#39;s based on a standard MySQL SmartMachine, with general software stripped down to bare minimum, and with Percona Server (MySQL) pre-installed and preconfigured for ultimate performance and scalability. Percona Server (MySQL) is better suited for cloud environments with its added features and performance enhancements.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Percona+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Percona+SmartMachine.md">Percona+SmartMachine.md</a></h1><br/><p>The Joyent Percona SmartMachine is a dynamically scalable virtual machine that is optimized for the cloud. It&#39;s based on a standard MySQL SmartMachine, with general software stripped down to bare minimum, and with Percona Server (MySQL) pre-installed and preconfigured for ultimate performance and scalability. Percona Server (MySQL) is better suited for cloud environments with its added features and performance enhancements.</p>
 <p>The Joyent Percona Smartmachine is available in both Percona Server 5.1 and Percona Server 5.5.  Both are 64-bit.  The corresponding dataset templates in my.joyentcloud.com are as follows:</p>
 <p>Percona 5.1: percona:1.0.7</p>
 <p>Percona 5.5: percona:1.2.2</p>
@@ -3264,7 +3273,7 @@ STATE          STIME    FMRI
 online         14:30:31 svc:/network/mysql:percona</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md">Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md</h1><br/><h1>pkgin</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md">Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md</a></h1><br/><h1>pkgin</h1>
 <p>pkgin這個command是關於SmartOS套件的相關安裝與維護指令。</p>
 <p>您可以在putty或是類似的terminal工具連線至SmartOS後，輸入pkgin即可查詢pkgin的指令後面能接的command說明。</p>
 <pre><code>[root@MiCloudDBT /tmp]# pkgin]([root@MiCloudDBT /tmp# pkgin)
@@ -3320,7 +3329,7 @@ gmake
 ls
 sudo gmake install
 ruby -v</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="PkaginÃÂºÃÃÃ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=PkaginÃÂºÃÃÃ.md">PkaginÃÂºÃÃÃ.md</h1><br/><h1>pkgin</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="PkaginÃÂºÃÃÃ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=PkaginÃÂºÃÃÃ.md">PkaginÃÂºÃÃÃ.md</a></h1><br/><h1>pkgin</h1>
 <p>pkgin這個command是關於SmartOS套件的相關安裝與維護指令。</p>
 <p>您可以在putty或是類似的terminal工具連線至SmartOS後，輸入pkgin即可查詢pkgin的指令後面能接的command說明。</p>
 <pre><code>[root@MiCloudDBT /tmp]# pkgin]([root@MiCloudDBT /tmp# pkgin)
@@ -3376,7 +3385,7 @@ gmake
 ls
 sudo gmake install
 ruby -v</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pkgin+usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pkgin+usage.md">Pkgin+usage.md</h1><br/><h1>pkgin</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pkgin+usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pkgin+usage.md">Pkgin+usage.md</a></h1><br/><h1>pkgin</h1>
 <p>pkgin這個command是關於SmartOS套件的相關安裝與維護指令。</p>
 <p>您可以在putty或是類似的terminal工具連線至SmartOS後，輸入pkgin即可查詢pkgin的指令後面能接的command說明。</p>
 <pre><code>[root@MiCloudDBT /tmp]# pkgin]([root@MiCloudDBT /tmp# pkgin)
@@ -3432,11 +3441,11 @@ gmake
 ls
 sudo gmake install
 ruby -v</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Preload+Software+Default+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Preload+Software+Default+Password.md">Preload+Software+Default+Password.md</h1><br/><h1>預載程式之預設密碼</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Preload+Software+Default+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Preload+Software+Default+Password.md">Preload+Software+Default+Password.md</a></h1><br/><h1>預載程式之預設密碼</h1>
 <p>登入 MiCloud 完成後能在畫面左上方點選主機，在從下方表格點選您的主機查看細項。<br><img src='images/Preload+Software+Default+Password-p1+-21.png' width='650' align='center'/><br>進入查詢細項頁面，可於 <strong>概述</strong> 中找到 <strong>Credentials</strong> 欄位,左鍵點擊 <strong>Show Credentials</strong>，查看該台主機預載程式之密碼。<br><img src='images/Preload+Software+Default+Password-p1+-18.png' width='650' align='center'/></p>
 <p>登入帳號與密碼說明如下:</p>
 <center><br>||       ||功能   ||登入帳號  ||登入步驟<br>| root   |系統帳號 |root  |登入：ssh root@your.ip.address<br>密碼：本表格root密碼<br>| admin  |系統帳號 |admin |登入：ssh admin@your.ip.address<br>密碼：本表格admin密碼<br>| mysql  |MySQL資料庫帳號 |root |登入：mysql -uroot -p<br>密碼：本表格mysql密碼<br>| pgsql  |PostgreSQL資料庫帳號 |postgres |登入：/opt/local/bin/psql -U postgres<br>密碼：(此時輸入pgsql密碼欄位)<br>| virtualmin  |Virtualmin系統管理工具帳號 |admin |啓動服務：svcadm enable webmin<br>連線：<a href="https://your.ip.address:10000/">https://your.ip.address:10000/</a><br>帳號：admin<br>密碼：本表格virtualmin密碼<br>| jill  |系統帳號 |jill |登入：ssh jill@your.ip.address<br>密碼：本表格jill密碼<br>| zxtm  |負載平衡服務帳號 |admin |連線：<a href="http://your.ip.address:9090">http://your.ip.address:9090</a><br>帳號：admin<br>密碼：本表格zxtm密碼<br></center>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="PuttyLoginErrorCannotAgreeAClientToServerCipher.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=PuttyLoginErrorCannotAgreeAClientToServerCipher.md">PuttyLoginErrorCannotAgreeAClientToServerCipher.md</h1><br/><h1>Putty登入SmartOS錯誤訊息：Couldn&#39;t agree a client-to-server cipher</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="PuttyLoginErrorCannotAgreeAClientToServerCipher.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=PuttyLoginErrorCannotAgreeAClientToServerCipher.md">PuttyLoginErrorCannotAgreeAClientToServerCipher.md</a></h1><br/><h1>Putty登入SmartOS錯誤訊息：Couldn&#39;t agree a client-to-server cipher</h1>
 <p>申請SmartOS之用戶，如遇到登入錯誤訊息如下：<br><img src='images/PuttyLoginErrorCannotAgreeAClientToServerCipher-CannotAgreeAClientToServerCipher.png' align='center'/><br>則可能原因有數種，您可檢查下面項目：<br><em>  確認SSH Key已經上傳，且本機之連線已經使用SSH私鑰加密。
 </em>  針對SmartOS，您可重新產生SSH Key並重新上傳至Portal，應該就可以直些連線。<br><em>  如上述均未能解決連線問題，您可確認Putty版本是否為最新，可至Putty官方網站下載新版本軟體，重新執行即可正常連線。
 </em>  如均為您解決您的問題，可聯繫<a href="mailto:service@micloud.tw">MiCloud Service</a><br>參考：</p>
@@ -3444,7 +3453,7 @@ ruby -v</code></pre>
 <li><a href="http://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=putty&amp;source=web&amp;cd=1&amp;ved=0CDIQFjAA&amp;url=http%3A%2F%2Fwww.chiark.greenend.org.uk%2F~sgtatham%2Fputty%2Fdownload.html&amp;ei=YJbXTtDACITKmQXppsXtCw&amp;usg=AFQjCNEawi7s0aRUeJP3qKnncgvPiSqZYA&amp;sig2=-7FhRbxa0seZVhrrNQUBnw">Putty官方網站</a></li>
 <li>[<a href="http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001]](*">http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001]](*</a>  [<a href="http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001">http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001</a>)</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="QNA.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=QNA.md">QNA.md</h1><br/><h1>常見問題</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="QNA.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=QNA.md">QNA.md</a></h1><br/><h1>常見問題</h1>
 <ul>
 <li><a href="/index.html?page=PuttyLoginErrorCannotAgreeAClientToServerCipher.md">PUTTY連線錯誤訊息：Cannot Agree A Client To Server Cipher</a></li>
 <li><a href="/index.html?page=SmartOS+Install+Oracle.md">SmartOS如何安裝Oracle</a></li>
@@ -3455,7 +3464,7 @@ ruby -v</code></pre>
 <li><a href="/index.html?page=Used+commmands.md">常用指令集有哪些?</a></li>
 <li><a href="/index.html?page=Micloud+Features.md">MiCloud的特點是什麼？</a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="README.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=README.md">README.md</h1><br/><h1>MiCloud官方資源</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="README.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=README.md">README.md</a></h1><br/><h1>MiCloud官方資源</h1>
 <p><a href="http://micloud.tw"><img width="15px" src="images/point.png"/> MiCloud官方網站</a></p>
 <p><a href="http://micloud.tw/ch/price/price"><img width="15px" src="images/point.png"/> MiCloud產品規格</a></p>
 <p><a href="http://blogger.micloud.tw"><img width="15px" src="images/point.png"/> MiCloud Blog</a></p>
@@ -3466,7 +3475,7 @@ ruby -v</code></pre>
 <p><a href="/index.html?page=MiCloudCloudAPI.md"><img width="15px" src="images/point.png"/>雲端實例及API</a></p>
 <p><a href="/index.html?page=QNA.md"><img width="15px" src="images/point.png"/>常見問題</a></p>
 <p><a href="/index.html?page=BlogShare.md"><img width="15px" src="images/point.png"/>Blog分享</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Rebooting+or+Shutting+Down+a+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Rebooting+or+Shutting+Down+a+SmartMachine.md">Rebooting+or+Shutting+Down+a+SmartMachine.md</h1><br/><p>The best way to reboot your SmartMachine is in a way that gracefully shuts down all of your major servers (especially databases).</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Rebooting+or+Shutting+Down+a+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Rebooting+or+Shutting+Down+a+SmartMachine.md">Rebooting+or+Shutting+Down+a+SmartMachine.md</a></h1><br/><p>The best way to reboot your SmartMachine is in a way that gracefully shuts down all of your major servers (especially databases).</p>
 <p>It is highly reccomend that on production servers you use this shutdown / reboot method from the command line:</p>
 <ul>
 <li>SSH into your SmartMachine as admin.</li>
@@ -3477,14 +3486,14 @@ ruby -v</code></pre>
 <p>For development and testing systems you can also shut down or reboot your machine by using the Reboot or Shutdown buttons in my.joyentcloud.com:<br><img src='images/Rebooting+or+Shutting+Down+a+SmartMachine-myjoyent+-1.png' width='650' align='left'/></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Recovering+a+Forgotten+SmartMachine+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Recovering+a+Forgotten+SmartMachine+Password.md">Recovering+a+Forgotten+SmartMachine+Password.md</h1><br/><p>如您忘記SmartMachine只密碼，您可以使用下面方式，透過Webmin來回復您的密碼:</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Recovering+a+Forgotten+SmartMachine+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Recovering+a+Forgotten+SmartMachine+Password.md">Recovering+a+Forgotten+SmartMachine+Password.md</a></h1><br/><p>如您忘記SmartMachine只密碼，您可以使用下面方式，透過Webmin來回復您的密碼:</p>
 <pre><code>https://&lt;PUBLIC_IP&gt;:10000/password-recovery</code></pre>
 <p>or</p>
 <pre><code>https://&lt;HOSTNAME&gt;:10000/password-recovery</code></pre>
 <p>您可以參考相關影片片段：<a href="您可以參考相關影片片段：[http://p.castfire.com/NTYYi/video/511969/511969-2011-02-14-160309.sd.m4v"><a href="http://p.castfire.com/NTYYi/video/511969/511969_2011-02-14-160309.sd.m4v">http://p.castfire.com/NTYYi/video/511969/511969_2011-02-14-160309.sd.m4v</a>]</a></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Riak+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Riak+SmartMachine.md">Riak+SmartMachine.md</h1><br/><h1>安裝Riak</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Riak+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Riak+SmartMachine.md">Riak+SmartMachine.md</a></h1><br/><h1>安裝Riak</h1>
 <p>Riak為開放式、高擴增性、可容錯的NoSQL資料庫套件，提供大量資料快速存儲服務，以開放程式碼為基礎的分散式資料庫系統。<br>MiCloud所提供的SmartOS主機中，已有預載Riak服務的主機只有SmartOS32+Riak這個版本，若其他規格的主機想安裝Riak於您的主機上，請按照下列步驟進行安裝。</p>
 <p>1.檢視主機上Riak可安裝的版本</p>
 <pre><code>#pkgin se riak</code></pre>
@@ -3509,8 +3518,8 @@ ruby -v</code></pre>
 <p>6.連線至riak</p>
 <pre><code>#riak attach</code></pre>
 <p><img src='images/Riak+SmartMachine-p8.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Running+a+Web+Server+on+a+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Running+a+Web+Server+on+a+SmartMachine.md">Running+a+Web+Server+on+a+SmartMachine.md</h1><br/><p>Content</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Sandbox.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Sandbox.md">Sandbox.md</h1><br/><h1>Sandbox</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Running+a+Web+Server+on+a+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Running+a+Web+Server+on+a+SmartMachine.md">Running+a+Web+Server+on+a+SmartMachine.md</a></h1><br/><p>Content</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Sandbox.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Sandbox.md">Sandbox.md</a></h1><br/><h1>Sandbox</h1>
 <p><script><br>  (function() {<br>    var cx = &#39;002616967781504063184:ccxhequ_zu4&#39;;<br>    var gcse = document.createElement(&#39;script&#39;);<br>    gcse.type = &#39;text/javascript&#39;;<br>    gcse.async = true;<br>    gcse.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) +<br>        &#39;//www.google.com/cse/cse.js?cx=&#39; + cx;<br>    var s = document.getElementsByTagName(&#39;script&#39;)[0];<br>    s.parentNode.insertBefore(gcse, s);<br>  })();<br></script></p>
 <div style="width:500px"><br><gcse:search></gcse:search><br></div>
 
@@ -3557,11 +3566,11 @@ function(){
 }</code></pre>
 <hr>
 <p>  function(){<br>    alert(&#39;Hello&#39;);<br>  }</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Search+information.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Search+information.md">Search+information.md</h1><br/><h1>Windows察看主機資訊</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Search+information.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Search+information.md">Search+information.md</a></h1><br/><h1>Windows察看主機資訊</h1>
 <p>申請MiCloud Windows Server之後，您會需要進入Windows Server上安裝與設定您所要提供的相關服務，<a href="http://micloud.tw">MiCloud Customer Portal</a></p>
 <h1>查詢主機基本資料</h1>
 <p>1.登入 <a href="http://micloud.tw">MiCloud</a><br><img src='images/Search+information-p1.png' width='650' align='center'/><br>2.輸入您 MiCloud 的帳號密碼<br><img src='images/Search+information-p2.png' width='650' align='center'/><br>3.點選您的主機<br><img src='images/Search+information-p3.png' width='650' align='center'/><br>４.顯示其相關資訊,可點&quot;SHOW CREDENTIAL&quot;查看其登入帳密<br><img src='images/Search+information-p4.png' width='650' align='center'/><br>5.顯示其登入密碼<br><img src='images/Search+information-p5.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Security+concerns.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Security+concerns.md">Security+concerns.md</h1><br/><h1>使用MiCloud會不會有安全上的疑慮？</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Security+concerns.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Security+concerns.md">Security+concerns.md</a></h1><br/><h1>使用MiCloud會不會有安全上的疑慮？</h1>
 <ul>
 <li>MiCloud植基於Joyent公有雲架構，從SmartDataCenter的ZFS架構，使用Zone安全隔離每部虛擬機器的檔案空間，並加上網路上安全規劃的實體隔離，達到虛擬主機內部安全機制，並加上MiCloud特殊防火牆規劃，特別防護網路上多種攻擊，使您可放心使用MiCloud服務。</li>
 </ul>
@@ -3586,7 +3595,7 @@ function(){
 <ul>
 <li>*機房電力、空調、保全、消防等全面品質管控</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Security+with+IPFilter.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Security+with+IPFilter.md">Security+with+IPFilter.md</h1><br/><h1>安全與IPFILTER</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Security+with+IPFilter.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Security+with+IPFilter.md">Security+with+IPFilter.md</a></h1><br/><h1>安全與IPFILTER</h1>
 <p>在您全新Joyent的Smartmachines預設虛擬NIC的網路和default情況下， 這意味著您必須在您的電腦的網路協定中進行相關設訂。 最安全的做法，是建立一台防禦主機或是VPN伺服器，並以後端存取訪問相關服務，如資料庫存取或是Web伺服器，並加載負載平衡器如Zeus/Stingray。</p>
 <p>以下是以IPFILTER為您的SmartOS Smartmachine所做的基本的分配概況：</p>
 <h1>如何啟動與停止IPFILTER</h1>
@@ -3628,7 +3637,7 @@ block in from any to dest.ip.addr</code></pre>
 <p>只要使用XXXX / XX，而不是使用一個特定的IP，範圍可以適用於任何規則.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Server+Restart+From+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Server+Restart+From+Portal.md">Server+Restart+From+Portal.md</h1><br/><h1>主機之重啟、關閉與刪除</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Server+Restart+From+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Server+Restart+From+Portal.md">Server+Restart+From+Portal.md</a></h1><br/><h1>主機之重啟、關閉與刪除</h1>
 <p>MiCloud自助服務平台提供給您直接操控主機之重啟、關閉及刪除功能，在您登入MiCloud Customer Portal之後，您可以至主機頁面，點選您欲操控的主機，在右方控制面板中點選您所需要的服務。相關說明如下:</p>
 <h1>主機之重啟</h1>
 <p>在您登入MiCloud Customer Portal之後，您可以至主機頁面，點選您欲操控的主機，在右方控制面板中，點選&quot;REBOOT&quot;進行重啟。如下圖:</p>
@@ -3653,7 +3662,7 @@ block in from any to dest.ip.addr</code></pre>
 <p><img src='images/Server+Restart+From+Portal-delete.jpg' width='650px' align='center'/></p>
 <p>刪除後主機及其上相關資料將無法回復，請確認後再執行。</p>
 <p><img src='images/Server+Restart+From+Portal-delete1.jpg' width='650px' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+hostname+on+Linux.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+hostname+on+Linux.md">Setting+hostname+on+Linux.md</h1><br/><h1>Linux Hostname設置</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+hostname+on+Linux.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+hostname+on+Linux.md">Setting+hostname+on+Linux.md</a></h1><br/><h1>Linux Hostname設置</h1>
 <p>當您申請MiCloud上任何主機時，若未指定主機名稱，系統將預設以亂數產生一串文字做為您的主機名稱，可能類似：fxyzabcd.local的名稱。您可以以IP登入您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。<br>如您需要重設您的主機名稱，您可以修改某些檔案來達到修改Hostname的目的，不同的作業系統需要更改的檔案並不相同，詳細說明如下:</p>
 <h1>Debian</h1>
 <p>您需要修改的檔案如下:<br><em>  /etc/hostname
@@ -3706,7 +3715,7 @@ block in from any to dest.ip.addr</code></pre>
 <p>於下方畫面紅色框框更改您的主機名稱<br><img src='images/Setting+hostname+on+Linux-fehosname1.jpg' width='650px' align='center'/></p>
 <p>(3)當您設定好，並重開主機後，您可以使用下面指令驗證：</p>
 <pre><code>#hostname</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+hostname+on+SmartOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+hostname+on+SmartOS.md">Setting+hostname+on+SmartOS.md</h1><br/><h1>SmartOS Hostname設置</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+hostname+on+SmartOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+hostname+on+SmartOS.md">Setting+hostname+on+SmartOS.md</a></h1><br/><h1>SmartOS Hostname設置</h1>
 <p>當您申請MiCloud上任何主機時，若未指定主機名稱，系統將預設以亂數產生一串文字做為您的主機名稱，可能類似：fxyzabcd.local的名稱。您可以以IP登入您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。</p>
 <p>如您需要重設您的主機名稱，您可以修改某些檔案來達到修改Hostname的目的，詳細說明如下:</p>
 <p>SmartMachine需要修改的檔案如下:<br><em>  /etc/hosts：修改此檔案，讓您的主機本身認得此Hostname
@@ -3734,7 +3743,7 @@ block in from any to dest.ip.addr</code></pre>
 <p>以micloud為例：</p>
 <pre><code># nslookup portal.micloud.tw</code></pre>
 <p><img src='images/Setting+hostname+on+SmartOS-nslookup.png' width='500' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+hostname+on+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+hostname+on+Windows.md">Setting+hostname+on+Windows.md</h1><br/><h1>Windows Hostname設置</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+hostname+on+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+hostname+on+Windows.md">Setting+hostname+on+Windows.md</a></h1><br/><h1>Windows Hostname設置</h1>
 <p>當您申請MiCloud上任何主機時，若未指定主機名稱，系統將預設以亂數產生一串文字做為您的主機名稱，可能類似：fxyzabcd.local的名稱。您可以以IP登入您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。</p>
 <p>如您需要重設您的主機名稱，您可以修改某些檔案來達到修改Hostname的目的，詳細說明如下:</p>
 <p>(1)點選開始，並且進入我的電腦，進入後點選上方工具，再點選資料夾選項<br><img src='images/Setting+hostname+on+Windows-wihostname.jpg' width='650px' align='center'/></p>
@@ -3749,7 +3758,7 @@ etc</code></pre>
 <p>利用記事本或是Notepad++開啟hosts文件並且在文件內裡面的127.0.0.1 localhost底下加入您想設定新的hostname，儲存後即可使用新的hostname。</p>
 <pre><code>127.0.0.1       localhost
 127.0.1.1       windows.example.com localhost</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+IPFilter.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+IPFilter.md">Setting+IPFilter.md</h1><br/><h1>安全與IPFILTER</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+IPFilter.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+IPFilter.md">Setting+IPFilter.md</a></h1><br/><h1>安全與IPFILTER</h1>
 <p>在您全新Joyent的Smartmachines預設虛擬NIC的網路和default情況下， 這意味著您必須在您的電腦的網路協定中進行相關設訂。 最安全的做法，是建立一台防禦主機或是VPN伺服器，並以後端存取訪問相關服務，如資料庫存取或是Web伺服器，並加載負載平衡器如Zeus/Stingray。</p>
 <p>以下是以IPFILTER為您的SmartOS Smartmachine所做的基本的分配概況：</p>
 <h1>如何啟動與停止IPFILTER</h1>
@@ -3791,7 +3800,7 @@ block in from any to dest.ip.addr</code></pre>
 <p>只要使用XXXX / XX，而不是使用一個特定的IP，範圍可以適用於任何規則.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+Nagios.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+Nagios.md">Setting+Nagios.md</h1><br/><h1>建置Nagios網路監控主機</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+Nagios.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+Nagios.md">Setting+Nagios.md</a></h1><br/><h1>建置Nagios網路監控主機</h1>
 <p>Nagios是一套網路監控軟體，不僅可以監控主機(本地端或遠端)及服務，管理者可自行依需求來撰寫當監控主機或服務發生問題時的反應動作，例如.可以設置當服務出現問題時會透過電子郵件的方式通知管理人員，讓管理人員更快、精準掌握網路、主機設備等狀況。</p>
 <h1>Fedora</h1>
 <h1>安裝Nagios及相關必要套件</h1>
@@ -3871,7 +3880,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <p>b.監控Services<br>安裝完成後，您會發現http服務會有一個警告訊息如下圖紅色框框的部分<br><img src='images/Setting+Nagios-su2.png' width='650' align='center'/><br>原因:<br>雖然http服務正常，但預設apache網頁目錄/var/www/html沒有相關的index.html檔，才會出現這個警告請在此目錄下加入一個空的index.html，幾分鐘後警告即被排除，指令如下:</p>
 <pre><code>#touch /var/www/html/index.html</code></pre>
 <p>c.驗證是否收到系統報警通知<br><img src='images/Setting+Nagios-http.png' width='650' align='center'/><br>由上方service監控畫面上，可以看出Swap Usage為Critical，故Nagios會自動發信至您之前設定的郵件地址，信件內容如下<br><img src='images/Setting+Nagios-mail.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+SMF+on+SmartOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+SMF+on+SmartOS.md">Setting+SMF+on+SmartOS.md</h1><br/><h1>在SmartOS上設置SMF</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+SMF+on+SmartOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+SMF+on+SmartOS.md">Setting+SMF+on+SmartOS.md</a></h1><br/><h1>在SmartOS上設置SMF</h1>
 <p>SmartOS中的服務管理功能 (Service Management Facility, SMF)，類似於Linux系統中init.d的service架構，使用者可透過SMF的管理，系統會依設定來開啟會暫停每個服務。 本範例為如何建立一個服務加入SMF中。</p>
 <p>若要執行一項服務，首先必須設置一個腳本，透過腳本即可設定服務的狀態，SMF中所使用之腳本的檔案類型為xml。以下將透過下載一個腳本做為範例，我們將利用此下載的腳本來修改為我們需要的腳本並進行測試及驗證。</p>
 <h1>下載腳本範例(manifest)</h1>
@@ -3930,7 +3939,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <pre><code># svccfg delete testSMF
 # svcs testSMF</code></pre>
 <p><img src='images/Setting+SMF+on+SmartOS-p5.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+the+Host+Name+of+a+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+the+Host+Name+of+a+SmartMachine.md">Setting+the+Host+Name+of+a+SmartMachine.md</h1><br/><p>當您申請MiCloud上SmartMachine(或其他)主機時，當您未指定主機名稱時，系統將預設以一亂數產生您的主機名稱，可能類似：fxyzabcd.local的名稱，您可以以IP存取您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+the+Host+Name+of+a+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+the+Host+Name+of+a+SmartMachine.md">Setting+the+Host+Name+of+a+SmartMachine.md</a></h1><br/><p>當您申請MiCloud上SmartMachine(或其他)主機時，當您未指定主機名稱時，系統將預設以一亂數產生您的主機名稱，可能類似：fxyzabcd.local的名稱，您可以以IP存取您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。</p>
 <p>如您需要重設您的主機名稱，在SmartOS上，您可以修改下面幾個檔案來達到修改Hostname的目的：<br><em>  /etc/hosts：修改此檔案，讓您的主機本身認得此Hostname
 </em>  /etc/nodename：此檔案為主要Hostname所讀取的檔案<br>*  /etc/inet/ipnodes：此檔案為/etc/hosts之symbolic link，主要存放主機靜態路由之IP/Name對應</p>
 <p>修改檔案：/etc/hosts (也是/etc/inet/ipnodes)，加上您主機之新名稱，並對應到::1、127.0.0.1與您的主機IP(視申請服務類型而定，您的主機可能擁有一個或一個以上的內部或外部IP)</p>
@@ -3970,7 +3979,7 @@ Name:   portal.micloud.tw
 Address: 211.78.245.68</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+the+Host+Name+on+a+Linux+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+the+Host+Name+on+a+Linux+Machine.md">Setting+the+Host+Name+on+a+Linux+Machine.md</h1><br/><p>You set the name of your machine when you order it on my.joyent.com. If you want to change the name later on, follow the instructions for the Linux distribution you&#39;re using.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+the+Host+Name+on+a+Linux+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+the+Host+Name+on+a+Linux+Machine.md">Setting+the+Host+Name+on+a+Linux+Machine.md</a></h1><br/><p>You set the name of your machine when you order it on my.joyent.com. If you want to change the name later on, follow the instructions for the Linux distribution you&#39;re using.</p>
 <p>__</p>
 <pre><code>You need to be logged in as root or be using sudo to change the host name.</code></pre>
 <p>__</p>
@@ -4035,8 +4044,8 @@ HOSTNAME=centos.example.com</code></pre>
 <ul>
 <li>Reboot your machine by either using the reboot command or by going to my.joyent.com and clicking the Reboot button.</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+the+Host+Name+on+a+Windows+Server.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+the+Host+Name+on+a+Windows+Server.md">Setting+the+Host+Name+on+a+Windows+Server.md</h1><br/><p>TBD</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+the+Node.js+Version.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+the+Node.js+Version.md">Setting+the+Node.js+Version.md</h1><br/><p>Your Node.js™ SmartMachine uses two ways to determine the version of Node.js you use.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+the+Host+Name+on+a+Windows+Server.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+the+Host+Name+on+a+Windows+Server.md">Setting+the+Host+Name+on+a+Windows+Server.md</a></h1><br/><p>TBD</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+the+Node.js+Version.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+the+Node.js+Version.md">Setting+the+Node.js+Version.md</a></h1><br/><p>Your Node.js™ SmartMachine uses two ways to determine the version of Node.js you use.</p>
 <p>One mechanism controls the version of Node.js used in your login environment as when you SSH into your Node.js SmartMachine and use npm to install packages.</p>
 <p>The other controls the version that&#39;s used when you push a new version of your application and your application runs.</p>
 <p>In most cases you will want both mechanisms to point to the same version of Node.js. But in some situations, you may want to ensure that your application runs with a specific version of Node.js.</p>
@@ -4085,10 +4094,10 @@ v0.4.6</code></pre>
 <p>||Version Values     ||Description<br>|vX.Y.Z     |Always use this particular version of Node.js<br>|vX.Y     |The latest version for that series. For example, v0.4 refers to v0.4.1. If there are bug fixes and the version bumps to v0.4.2, your application will take advantage of those bug fixes.<br>|latest stable     |Your application will always use the latest stable version of Node.js suitable for production work.<br>|edge     |The cutting edge version of Node.js. Includes all the latest features, but may be buggy.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+Up+a+New+Domain.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+Up+a+New+Domain.md">Setting+Up+a+New+Domain.md</h1><br/><p>此部分展示如何使用Webmin與您的網域名稱連結，並透過Webmin設定FTP：<a href="此部分展示如何使用Webmin與您的網域名稱連結，並透過Webmin設定FTP：[http://p.castfire.com/NTYYi/video/511915/setting-up-new-domain-mov-2011-02-14-142915.sd.m4v"><a href="http://p.castfire.com/NTYYi/video/511915/setting-up-new-domain-mov_2011-02-14-142915.sd.m4v">http://p.castfire.com/NTYYi/video/511915/setting-up-new-domain-mov_2011-02-14-142915.sd.m4v</a>]</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+Up+a+New+Domain.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+Up+a+New+Domain.md">Setting+Up+a+New+Domain.md</a></h1><br/><p>此部分展示如何使用Webmin與您的網域名稱連結，並透過Webmin設定FTP：<a href="此部分展示如何使用Webmin與您的網域名稱連結，並透過Webmin設定FTP：[http://p.castfire.com/NTYYi/video/511915/setting-up-new-domain-mov-2011-02-14-142915.sd.m4v"><a href="http://p.castfire.com/NTYYi/video/511915/setting-up-new-domain-mov_2011-02-14-142915.sd.m4v">http://p.castfire.com/NTYYi/video/511915/setting-up-new-domain-mov_2011-02-14-142915.sd.m4v</a>]</a></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+Up+Your+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+Up+Your+SmartMachine.md">Setting+Up+Your+SmartMachine.md</h1><br/><p>You have root access so you are free to do anything within the Cloud Hosting AUP.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+Up+Your+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Setting+Up+Your+SmartMachine.md">Setting+Up+Your+SmartMachine.md</a></h1><br/><p>You have root access so you are free to do anything within the Cloud Hosting AUP.</p>
 <p>This guide attempts to describe setting up the following core functionality on an SmartMachine as well as providing more general information for new users.</p>
 <p>In this page:</p>
 <h1>Setting Up Your Domain Name (DNS)</h1>
@@ -4255,7 +4264,7 @@ openssl s_client -ssl3 -connect example.joyeurs.com:993
 Troubleshooting
 ===
 1. Seeing errors like this in /var/log/syslog</code></pre>
-<p>Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076]: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#108;&#105;&#110;&#100;&#97;&#64;&#101;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#111;&#x6d;">&#108;&#105;&#110;&#100;&#97;&#64;&#101;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#111;&#x6d;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred (host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201] (in reply to RCPT TO command))](Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#108;&#105;&#x6e;&#100;&#x61;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#108;&#105;&#x6e;&#100;&#x61;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred  - host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201]  - in reply to RCPT TO command)</p>
+<p>Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076]: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#108;&#105;&#110;&#x64;&#x61;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">&#108;&#105;&#110;&#x64;&#x61;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred (host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201] (in reply to RCPT TO command))](Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#108;&#x69;&#110;&#x64;&#97;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;">&#108;&#x69;&#110;&#x64;&#97;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred  - host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201]  - in reply to RCPT TO command)</p>
 <pre><code>
 You need to submit a ticket requesting the PTR reverse record added. When it is correct then doing host domain.tld and the host X.X.X.X will correctly resolve as shown below</code></pre>
 <p>$ host example.joyeurs.com<br>example.joyeurs.com has address 8.12.36.201<br>example.joyeurs.com mail is handled by 10 mail.example.joyeurs.com.<br>$ host 8.12.36.201<br>201.36.12.8.in-addr.arpa domain name pointer example.joyeurs.com.</p>
@@ -4296,7 +4305,7 @@ In another terminal you are able to connect to the remote mysql database.</code>
 <p>mysql -u username -ppassword -h 127.0.0.1 -P 3307<br>```</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Share+by+qrtt1.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Share+by+qrtt1.md">Share+by+qrtt1.md</h1><br/><h1>聖藍科技分享文章</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Share+by+qrtt1.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Share+by+qrtt1.md">Share+by+qrtt1.md</a></h1><br/><h1>聖藍科技分享文章</h1>
 <p>感謝聖藍科技使用MiCloud服務，透過CloudAPI提供聖藍科技自動Scale之功能以架構多媒體影音服務，以下文章轉載自qrtt1 github repository<a href="http://www.accupass.com/Event/Register?eid=359099570305727">本文</a></p>
 <h1>簡介</h1>
 <p>最近在蒐集國內 IaaS 的資料，目前只看到 MiCloud 有提供 API。依照「沒有釋出API，就不能稱得上是真正的IaaS服務。」 那目前 MiCloud 算是國內的『真。IaaS』MiCloud 採用的 solution 是 joyent <a href="https://github.com/joyent"><a href="https://github.com/joyent">https://github.com/joyent</a></a></p>
@@ -4571,14 +4580,14 @@ http://s3-ap-southeast-1.amazonaws.com/qrtt1.software/rpms/nodejs-0.6.8-1.el6.x8
 <ul>
 <li><a href="https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh-tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8"><a href="https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8">https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8</a> </a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartMachine+Introduce.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartMachine+Introduce.md">SmartMachine+Introduce.md</h1><br/><h1>SmartMachine說明</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartMachine+Introduce.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartMachine+Introduce.md">SmartMachine+Introduce.md</a></h1><br/><h1>SmartMachine說明</h1>
 <p>SmartMachine為運行於Joyent SmartOS上之最佳化虛擬平台，該平台提供相較於傳統虛擬平台的高效能，以及快速部署網頁應用程式能力。SmartMachine以Solaris為基底，全盤建構於ZFS檔案系統上，省去跨系統溝通的耗損，能夠更為動態調整資源。</p>
 <p>您可透過MiCloud雲端管理系統([<a href="http://micloud.tw])監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache">http://micloud.tw])監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache</a> HTTPD、PHP，以及遠端管理界面webmin等。](您可透過MiCloud雲端管理系統 - [<a href="http://micloud.tw監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache">http://micloud.tw監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache</a> HTTPD、PHP，以及遠端管理界面webmin等。)</p>
 <h1>更進階的說明，可以在Joyent Wiki搜尋到</h1>
 <ul>
 <li><a href="http://wiki.joyent.com/display/smart/Getting+Started+with+SmartMachines">Joyent wiki</a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartMachine+MySQL+Guide.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartMachine+MySQL+Guide.md">SmartMachine+MySQL+Guide.md</h1><br/><p>SmartMachines come with a Pkgsrc install of MySQL5 in /opt/local. Our older imaged Accelerators come with a Blastwave install of MySQL5 in /opt/csw/mysql5 and MySQL4 in /opt/csw/mysql4. MySQL5 is preferred over MySQL4 because many fixes and features have gone in to 5, especially in replication and clustering. Whatever is used, this guide will work for any of them. This will assume you have a Pkgsrc imaged SmartMachine.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartMachine+MySQL+Guide.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartMachine+MySQL+Guide.md">SmartMachine+MySQL+Guide.md</a></h1><br/><p>SmartMachines come with a Pkgsrc install of MySQL5 in /opt/local. Our older imaged Accelerators come with a Blastwave install of MySQL5 in /opt/csw/mysql5 and MySQL4 in /opt/csw/mysql4. MySQL5 is preferred over MySQL4 because many fixes and features have gone in to 5, especially in replication and clustering. Whatever is used, this guide will work for any of them. This will assume you have a Pkgsrc imaged SmartMachine.</p>
 <h1>Replication</h1>
 <p>Replication is a method that MySQL uses to mirror changes asynchronously to a secondary server. It is important to know that replication is not a true redundant configuration because there is no automatic fail over, but it is a good way to have a backup copy always on standby. Because of its limited requirements it can be used in lower memory and lower bandwidth situations making replication a good choice for using on small or large Joyent SmartMachines.</p>
 <pre><code>Do not get MySQL replication mixed up with MySQL clustering. MySQL clustering is synchronous and a true fail over solution, while replication is asynchronous and only mirrors changes to a secondary server. You would have to use BigIP to handle the fail over case.
@@ -5159,7 +5168,7 @@ gzip DATABASE.sql</code></pre>
 zcat DATABASE.sql.gz | mysql --user=USERNAME --password=PASSWORD DATABASE</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartMachine+TimeZone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartMachine+TimeZone.md">SmartMachine+TimeZone.md</h1><br/><h1>設定SmartMachine上的時區</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartMachine+TimeZone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartMachine+TimeZone.md">SmartMachine+TimeZone.md</a></h1><br/><h1>設定SmartMachine上的時區</h1>
 <h1>選擇TimeZone時區</h1>
 <pre><code>[root@XXXX /opt/local/etc/nginx]# tzselect]([root@XXXX /opt/local/etc/nginx# tzselect)
 Please identify a location so that time zone rules can be set correctly.
@@ -5222,7 +5231,7 @@ Asia/Taipei</code></pre>
 <h1>修改TZ設定內容為Asia/Taipei</h1>
 <pre><code>TZ=Asia/Taipei</code></pre>
 <h1>重新開機生效</h1>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartOS+HTTP+SSL+Configure.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartOS+HTTP+SSL+Configure.md">SmartOS+HTTP+SSL+Configure.md</h1><br/><h1>SmartOS HTTPS安裝Self-Gen SSL憑證</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartOS+HTTP+SSL+Configure.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartOS+HTTP+SSL+Configure.md">SmartOS+HTTP+SSL+Configure.md</a></h1><br/><h1>SmartOS HTTPS安裝Self-Gen SSL憑證</h1>
 <h1>STEP1: 產生Self-Gen SSL金鑰</h1>
 <p>openssl req -new -key server.key -out server.csr</p>
 <pre><code>[root@SmartOS /opt/local/share]# cd /opt/local/etc/httpd/]([root@SmartOS /opt/local/share# cd /opt/local/etc/httpd/)
@@ -5275,7 +5284,7 @@ DocumentRoot /opt/local/share/httpd/htdocs
 &lt;/VirtualHost&gt;</code></pre>
 <h1>STEP3: 測試連線</h1>
 <pre><code>瀏覽器連線：https://your.ip.or.domaonname/</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartOS+Install+Oracle.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartOS+Install+Oracle.md">SmartOS+Install+Oracle.md</h1><br/><h1>SmartOS install Oracle</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartOS+Install+Oracle.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartOS+Install+Oracle.md">SmartOS+Install+Oracle.md</a></h1><br/><h1>SmartOS install Oracle</h1>
 <h1>準備</h1>
 <p>開始安裝Oracle Universal前，的準備工作：<br><em>  建立資料庫專用帳戶、群組與目錄
 </em>  修改主機Shared Memory設定<br>*  安裝X11相關套件</p>
@@ -5317,7 +5326,7 @@ Preparing to launch Oracle Universal Installer ...</code></pre>
 <p>注意：OpenSolaris (5.11)版本非Oracle原廠建議之作業系統，因此安裝前需要加設作業系統檢查參數：-ignoreSysPrereqs</p>
 <h1>其他資訊</h1>
 <p>如果您需要更多有關於Oracle之安裝資訊，您可以參考Oracle installation manuals及 The Cuddletech SAs Guide to Oracle.</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartOS+Smartmachine+Datasets.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartOS+Smartmachine+Datasets.md">SmartOS+Smartmachine+Datasets.md</h1><br/><p>MiCloud提供許多SmartOS平台只選擇，亦有包含第三方預載服務之主機可以選擇，而不同版本之主機其預載之套件有所不同，主要分為：<br><em>  32位元與64位元版本:差異在於其上所預載之套件版本為32或是64位元，之後讀取之套件庫亦會根據平台差異而不同。
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartOS+Smartmachine+Datasets.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartOS+Smartmachine+Datasets.md">SmartOS+Smartmachine+Datasets.md</a></h1><br/><p>MiCloud提供許多SmartOS平台只選擇，亦有包含第三方預載服務之主機可以選擇，而不同版本之主機其預載之套件有所不同，主要分為：<br><em>  32位元與64位元版本:差異在於其上所預載之套件版本為32或是64位元，之後讀取之套件庫亦會根據平台差異而不同。
 </em>  SmartOS與SmartOS Plus版本：差異在於預載之套件，Plus版本之SmartOS將預載較多服務。<br><em>  </em>SmartOS Plus 3.0.4 datasets為較適用於開發者之主機版本，其中包含了較完整之AMP相關套件與插件，讓您可以快速部署您的服務與應用程式。內載軟體包含有：Apache, Nginix, PHP, Perl, Python, Ruby, Memcached, MySQL, Postgresql...等等。此作業系統含有32-bit與64-bit版本兩種選擇。<br><em>  </em>SmartOS 1.4.7 datasets較適用於需要乾淨平台的用戶，您可以針對需求客制您所需要的平台環境，此環境將較於Plus版本為精簡。</p>
 <p>SmartOS Datasets:</p>
 <h1>SmartOS Plus 64</h1>
@@ -5337,7 +5346,7 @@ Preparing to launch Oracle Universal Installer ...</code></pre>
 <p>檢視SmartOS Node.JS支援套件：[<a href="http://pkgsrc.joyent.com/sdc6/2011Q2/gcc45/All]](檢視SmartOS">http://pkgsrc.joyent.com/sdc6/2011Q2/gcc45/All]](檢視SmartOS</a> Node.JS支援套件：[<a href="http://pkgsrc.joyent.com/sdc6/2011Q2/gcc45/All">http://pkgsrc.joyent.com/sdc6/2011Q2/gcc45/All</a>)</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SMF+Manifest+Recipes.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SMF+Manifest+Recipes.md">SMF+Manifest+Recipes.md</h1><br/><p>Recipes for running servers with SMF.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SMF+Manifest+Recipes.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SMF+Manifest+Recipes.md">SMF+Manifest+Recipes.md</a></h1><br/><p>Recipes for running servers with SMF.</p>
 <p>In this page:</p>
 <h1>mongrel_cluster</h1>
 <p>This SMF profile is for running Rails apps with mongrel_cluster. It allows you to create an instance for each different Rails app you are running.</p>
@@ -5484,7 +5493,7 @@ Define instances
 &lt;/service_bundle&gt;</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Snapshot+recovery.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Snapshot+recovery.md">Snapshot+recovery.md</h1><br/><h1>使用Snapshot備份及還原</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Snapshot+recovery.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Snapshot+recovery.md">Snapshot+recovery.md</a></h1><br/><h1>使用Snapshot備份及還原</h1>
 <p>系統快照功能，可幫助您還原被刪除或被破壞的系統。</p>
 <p>當您需要操作到可能影響系統運作的動作時，可先建立系統快照，以防系統損壞無法回復。</p>
 <p><br /><br>以下為系統快照之測試：</p>
@@ -5506,7 +5515,7 @@ Define instances
 <p>請重新連線後確認檔案是否回復</p>
 <p><img src='images/Snapshot+recovery-snapshot5.jpg' width='650' align='center'/></p>
 <p>Text.txt即被回復了。</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.md">SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.md</h1><br/><h1>SSH Key 限制</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.md">SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.md</a></h1><br/><h1>SSH Key 限制</h1>
 <p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
 <ol>
 <li>SSH Key僅適用於SmartOS及Linux主機，Windows主機不適用。</li>
@@ -5570,7 +5579,7 @@ r91eLfYSbMGqqkqS371G68HFDqTgjSAOoPUTWms8afMZ67B/Fr3Yrt8egEaSdpTw== root@XXXX</co
 <li>SSH金鑰產生與設定：[<a href="http://wiki.joyent.com/display/gen/SSH+Guide]](*">http://wiki.joyent.com/display/gen/SSH+Guide]](*</a>  SSH金鑰產生與設定：[<a href="http://wiki.joyent.com/display/gen/SSH+Guide">http://wiki.joyent.com/display/gen/SSH+Guide</a>)</li>
 <li>SSH連線緩慢之設定調整：[<a href="http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin]](*">http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin]](*</a>  SSH連線緩慢之設定調整：[<a href="http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin">http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin</a>)</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SSH+KeyGen+Connect+Tutorial-MacOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SSH+KeyGen+Connect+Tutorial-MacOS.md">SSH+KeyGen+Connect+Tutorial-MacOS.md</h1><br/><h1>SSH Key 限制</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SSH+KeyGen+Connect+Tutorial-MacOS.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SSH+KeyGen+Connect+Tutorial-MacOS.md">SSH+KeyGen+Connect+Tutorial-MacOS.md</a></h1><br/><h1>SSH Key 限制</h1>
 <p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
 <ol>
 <li>SSH Key僅適用於SmartOS及Linux主機，Windows主機不適用。</li>
@@ -5602,7 +5611,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>例如：</p>
 <p><code>ssh -i id_rsa root@211.123.123.31</code></p>
 <p><img src='images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic3.png' width='500' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SSH+KeyGen+Connect+Tutorial-Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SSH+KeyGen+Connect+Tutorial-Windows.md">SSH+KeyGen+Connect+Tutorial-Windows.md</h1><br/><h1>SSH Key限制</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SSH+KeyGen+Connect+Tutorial-Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SSH+KeyGen+Connect+Tutorial-Windows.md">SSH+KeyGen+Connect+Tutorial-Windows.md</a></h1><br/><h1>SSH Key限制</h1>
 <p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
 <ol>
 <li>SSH Key僅適用於SmartOS及Linux主機，Windows主機不適用。</li>
@@ -5653,7 +5662,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p><img src='images/SSH+KeyGen+&+Connect+Tutorial-Windows-b3.png' width='500' align='center'/></p>
 <p>進入Putty後,他會要求你輸入帳號(Login as:),請輸入root</p>
 <p><font color="red">(註：連線時，請使用root登入，可不用輸入密碼：若使用預設帳號jill登入，則請參照Customer Portal上Credential設定。)</font><br><img src='images/SSH+KeyGen+&+Connect+Tutorial-Windows-b6.png' width='500' align='center'/><br><img src='images/SSH+KeyGen+&+Connect+Tutorial-Windows-b5.png' width='500' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Stingray+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Stingray+SmartMachine.md">Stingray+SmartMachine.md</h1><br/><h1>Stingray基本操作說明</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Stingray+SmartMachine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Stingray+SmartMachine.md">Stingray+SmartMachine.md</a></h1><br/><h1>Stingray基本操作說明</h1>
 <h1>簡介</h1>
 <p>Stingray原名Zeus，為Riverbed公司所購買之Zeus公司產品，專職負載平衡與網路流量管理相關功能。</p>
 <p>研究Stingray的緣起是越來越多的專案使用到網路層的Load Balancer，因大型的軟體架構中，時常需要有負載平衡及Cluster的架構，而仰賴Apache或是簡單的Load Balancer軟體常常不能滿足需求，而硬體方式的Load Balancer像是BigIP或是Cisco相對應的負載平衡設備都往往超出預算而又超出一般軟體工程師可以觸及的範圍，在這些條件之下，Stingray反而圖顯了一些他存在的重要性。</p>
@@ -5694,7 +5703,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p><img src='images/Stingray+SmartMachine-p9.PNG' width='650' align='center'/></p>
 <p>Stingray 應用影片<a href="http://www.youtube.com/embed/KM5bRJJDDaw">Go to YouTube</a></p>
 <iframe width="640" height="480" src="http://www.youtube.com/embed/KM5bRJJDDaw?rel=0" align="center" frameborder="0" allowfullscreen ></iframe>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Superiority.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Superiority.md">Superiority.md</h1><br/><h1>MiCloud有什麼優勢？</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Superiority.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Superiority.md">Superiority.md</a></h1><br/><h1>MiCloud有什麼優勢？</h1>
 <ul>
 <li>“MiCloud”採用Joyent雲端作業系統推出MiCloud公有雲服務，提供基礎即服務（IaaS），並鎖定教育、中小企業、醫療等產業特殊應用需求。</li>
 <li>IaaS服務讓企業自訂政策條件，以自動化調整CPU、記憶體、網路等硬體資源運用，強調在作業系統內建虛擬化管理功能，直接控管硬體資源，比虛擬化軟體管理的虛擬機器更直接。</li>
@@ -5726,7 +5735,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <ul>
 <li>*機房電力、空調、保全、消防等全面品質管控</li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Support+Asked+Questions.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Support+Asked+Questions.md">Support+Asked+Questions.md</h1><br/><p>The title of the page serves as the heading to this section. It describes the problem that this page is solving.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Support+Asked+Questions.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Support+Asked+Questions.md">Support+Asked+Questions.md</a></h1><br/><p>The title of the page serves as the heading to this section. It describes the problem that this page is solving.</p>
 <p>In this page:</p>
 <h1>What is the difference between an Accelerator and a SmartMachine?</h1>
 <p>SmartMachine and Accelerator are both names used to describe the same thing – a zone running on Joyent SmartOS. Accelerator was the name used prior to May 2010.</p>
@@ -5925,7 +5934,7 @@ du -sh *</code></pre>
 <pre><code>At times SmartOS will report discrepancies in the amount of disk space used from the output of du compared to the output of df. The du command counts file by file and thereby counts the total space on the filesystem. The df command differs from this in that it directly calls the filesystem and queries the current disk space used. Further details available at: http://sunsolarisadmin.blogspot.com/2007/03/du-and-df-show-different-values-for.html</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Svcadm+usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Svcadm+usage.md">Svcadm+usage.md</h1><br/><h1>使用svcadm開啟或關閉服務</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Svcadm+usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Svcadm+usage.md">Svcadm+usage.md</a></h1><br/><h1>使用svcadm開啟或關閉服務</h1>
 <p>Solaris base的技術，可以利用svcadm管理系統服務，以下列出常用管理的指令。</p>
 <h1>svcadm用法：</h1>
 <pre><code>[root@MiCloudDBT /home/user]# svcadm]([root@MiCloudDBT /home/user# svcadm)
@@ -5961,7 +5970,7 @@ ex:svcadm disable apache</code></pre>
 <h1>svcadm重新啟動服務</h1>
 <pre><code>svcadm restart [軟體名稱]](svcadm restart [軟體名稱)
 ex:svcadm restart apache</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Swap+Adjust.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Swap+Adjust.md">Swap+Adjust.md</h1><br/><h1>Swap調整</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Swap+Adjust.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Swap+Adjust.md">Swap+Adjust.md</a></h1><br/><h1>Swap調整</h1>
 <p>Micloud 客戶的Linux虛擬機會有兩個虛擬磁碟，第一個是OS掛載在/之下，另一個是packages中設定的disk space，預設掛載在/data下。</p>
 <p>如果客戶新建一個新的VM，可以採用下列兩種任一，如果客戶已經寫了資料在/data 且無法更動，那只能選擇Case2。</p>
 <h1>swap目前有兩種做法，partition swap &amp; file swap：</h1>
@@ -6010,7 +6019,7 @@ STEP 2：製作 swap 檔案格式
 <p><code>vi /etc/fstab</code></p>
 <p>加入一行 /data/swap.img swap swap defaults 0 0</p>
 <p>附註： /data 是目前 MiCloud Linux VMs 預設第二顆磁碟的掛載點，依客戶使用方式不同而有所差異</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Test.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Test.md">Test.md</h1><br/></p><hr style="border-top: 1px dotted #f00;"/><p  id="Ubuntu+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Ubuntu+mirror+site.md">Ubuntu+mirror+site.md</h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Test.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Test.md">Test.md</a></h1><br/></p><hr style="border-top: 1px dotted #f00;"/><p  id="Ubuntu+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Ubuntu+mirror+site.md">Ubuntu+mirror+site.md</a></h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>Ubuntu採用APT套件管理，其套件庫的修改與設定相似，實際修改方式如下說明:</p>
 <h1>變更套件來源</h1>
 <p>登入後，請先複製“sources.list”檔案，此檔案存放在“/etc/apt/”下，此複製動作針對改錯時，未來可以回復原來的檔案。將sources.list檔案複製一份，命名為sources.bak，指令如下</p>
@@ -6062,7 +6071,7 @@ deb-src http://opensource.nchc.org.tw/ubuntu/ lucid main restricted</code></pre>
 <p>只更新某套件</p>
 <pre><code>#apt-get upgrade [套件名稱]](#apt-get upgrade [套件名稱)</code></pre>
 <p><img src='images/Ubuntu+mirror+site-un-aptupgrade1.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Update+and+download+file.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Update+and+download+file.md">Update+and+download+file.md</h1><br/><h1>Windows 檔案上傳與下載</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Update+and+download+file.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Update+and+download+file.md">Update+and+download+file.md</a></h1><br/><h1>Windows 檔案上傳與下載</h1>
 <p>要從MiCloud Windows Server上進行軟體或檔案的上下載有許多方式，在此建議您使用網路芳鄰方式來進行檔案傳輸，下面介紹相關設定方式：</p>
 <h1>Windows Server 2008 設定檔案分享</h1>
 <p>1.新增檔案匣並加以命名</p>
@@ -6074,7 +6083,7 @@ deb-src http://opensource.nchc.org.tw/ubuntu/ lucid main restricted</code></pre>
 <p>1.先將視窗點選到桌面 , 於左上角點選 File -&gt; Connect to Server...<br><img src='images/Update+and+download+file-l1.png' width='450' align='center'/><br>2.輸入相關資訊<br><em>  Server:輸入您將上傳或下載的機器的ip
 </em>  Domain name:輸入micloud.tw<br><em>  User name:輸入您的帳號
 </em>  Password:輸入您的密碼<br><img src='images/Update+and+download+file-l2.png' width='450' align='center'/><br>3.進入後便可看到您共用的資料夾<br><img src='images/Update+and+download+file-l3.png' width='650' align='center'/><br>4.若您要進一步上傳或下載檔案,需再次驗證您要登入的角色 , 然後您就能開始上傳與下載檔案<br><img src='images/Update+and+download+file-l4.png' width='450' align='center'/><br><img src='images/Update+and+download+file-l5.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Update+Timezone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Update+Timezone.md">Update+Timezone.md</h1><br/><h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Update+Timezone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Update+Timezone.md">Update+Timezone.md</a></h1><br/><h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
 <p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
 <p><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></p>
 <p>(2) 執行 date -u</p>
@@ -6145,7 +6154,7 @@ Asia/Taipei</code></pre>
 <p>修改TZ設定內容為Asia/Taipei</p>
 <pre><code>TZ=Asia/Taipei</code></pre>
 <p>重新開機生效</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Updating+npm+From+Very+Old+Versions.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Updating+npm+From+Very+Old+Versions.md">Updating+npm+From+Very+Old+Versions.md</h1><br/><p>The latest version of npm only works with fairly recent versions of node. If you signed up with the no.de service in one of the very first pre-release betas, you might be using a very old version of Node.js™, and npm update won&#39;t quite work properly. You&#39;ll see stuff like this:</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Updating+npm+From+Very+Old+Versions.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Updating+npm+From+Very+Old+Versions.md">Updating+npm+From+Very+Old+Versions.md</a></h1><br/><p>The latest version of npm only works with fairly recent versions of node. If you signed up with the no.de service in one of the very first pre-release betas, you might be using a very old version of Node.js™, and npm update won&#39;t quite work properly. You&#39;ll see stuff like this:</p>
 <pre><code>[node@izs ~]$ npm update]([node@izs ~$ npm update)
 npm info it worked if it ends with ok
 npm info version 0.2.2
@@ -6180,7 +6189,7 @@ which npm  # =&gt; /opt/nodejs/bin/npm</code></pre>
 <h1>Use a More Recent Version of Node.js</h1>
 <p>The Node.js version in the no.de machines is determined by the ~/local/nodejs symbolic link. When your Node.js SmartMachine is created, this link points to the then-most-recent version of Node.js, so that you can deploy code without it changing out from under you, which is generally good.</p>
 <p>See Setting the Node.js Version to learn how to set the version of Node.js that your application uses.</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Updating+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Updating+Webmin.md">Updating+Webmin.md</h1><br/><p>In this page:</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Updating+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Updating+Webmin.md">Updating+Webmin.md</a></h1><br/><p>In this page:</p>
 <h1>Webmin / Virtualmin</h1>
 <p>Webmin is the web-based configuration tool provided by default with SmartMachines. It runs as its own process, and includes its own web server.</p>
 <p>After customizing your SmartMachines, you may find that you eventually need to upgrade the Webmin / Virtualmin software. Alternatively, you may also decide that you prefer to monitor and configure your system exclusively with an SSH session.</p>
@@ -6270,7 +6279,7 @@ Further upgrades will work as outlined above.</code></pre>
 sudo cat /var/webmin/miniserv.error</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Upgrading+to+Pkgsrc+2010Q4.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Upgrading+to+Pkgsrc+2010Q4.md">Upgrading+to+Pkgsrc+2010Q4.md</h1><br/><p>If you have an older Node.js™ SmartMachine, you may not be running the latest pkgsrc repository. This page shows you how to update your Node.js SmartMachine to the 2010Q4 repository.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Upgrading+to+Pkgsrc+2010Q4.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Upgrading+to+Pkgsrc+2010Q4.md">Upgrading+to+Pkgsrc+2010Q4.md</a></h1><br/><p>If you have an older Node.js™ SmartMachine, you may not be running the latest pkgsrc repository. This page shows you how to update your Node.js SmartMachine to the 2010Q4 repository.</p>
 <p>In this page:</p>
 <h1>Update to Pkgsrc 2010Q4</h1>
 <p>1.Log in to your Node.js Smart Machine using the admin username:</p>
@@ -6321,7 +6330,7 @@ instead which provides an optimized GCC 4.5.2 compiler suite.</code></pre>
 database for http://pkgsrc.joyent.com/sdc/2010Q4/gcc45/All is up-to-date</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Used+commmands.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Used+commmands.md">Used+commmands.md</h1><br/><h1>常用指令集</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Used+commmands.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Used+commmands.md">Used+commmands.md</a></h1><br/><h1>常用指令集</h1>
 <p>各版本套件指令比較表<br>雖然目前許多市面常見的作業系統例如Ubuntu、Debian、CentOS、Fedora，甚至是目前Micloud所用的SmartOS都是以linux為底的架構。不過由於開發人員的不同在指令的操作上也會有稍稍的不同，在套件的指令集中，我們利用列表來比較各版本不同的指令:</p>
 <p>||             ||Ubuntu、Debian        ||CentOS、Fedora       ||SmartOS<br>|查詢已安裝的套件         |apt-cache pkgnames     |yum list              |pkgin list<br>|查詢套件可安裝套件</p>
 <p>的名稱或關鍵字 | apt-cache search &quot;套件名稱&quot;</p>
@@ -6329,7 +6338,7 @@ database for http://pkgsrc.joyent.com/sdc/2010Q4/gcc45/All is up-to-date</code><
 <p>或yum search &quot;關鍵字&quot;  |pkgin search &quot;套件名稱&quot;</p>
 <p>或pkgin search &quot;關鍵字&quot;<br>|安裝套件       |apt-get install &quot;套件名稱&quot;     |yum install &quot;套件名稱&quot;    |pkgin install &quot;套件名稱&quot;<br>|移除套件       |apt-get remove &quot;套件名稱&quot;      |yum remove &quot;套件名稱&quot;     |pkgin remove &quot;套件名稱&quot;<br>|升級所有己安裝</p>
 <p>的最新列表  |apt-get update     |yum update               |pkgin update<br>|下載檔案       |wget &quot;網址&quot;                   |wget &quot;網址&quot;               |wget &quot;網址&quot;<br>|複製檔案       |cp &quot;來源檔&quot;  &quot;目的檔&quot;          |cp &quot;來源檔&quot;  &quot;目的檔&quot;      |cp &quot;來源檔&quot;  &quot;目的檔&quot;<br>|刪除檔案       |rm &quot;檔案或目錄&quot;                |rm &quot;檔案或目錄&quot;            |rm &quot;檔案或目錄&quot;<br>|檢視檔案內容    |cat &quot;檔案名稱&quot;                |cat &quot;檔案名稱&quot;             |cat &quot;檔案名稱&quot;<br>|切換目錄       |cd &quot;相對路徑或絕對路徑&quot;         |cd &quot;相對路徑或絕對路徑&quot;     |cd &quot;相對路徑或絕對路徑&quot;<br>|顯示所在目錄    |pwd                          |pwd                       |pwd<br>|檢視目錄下的檔案 |ls                          |ls                         |ls<br>|重新開機        |reboot                      |reboot                     |reboot</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Cloud+Analytics.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+Cloud+Analytics.md">Using+Cloud+Analytics.md</h1><br/><h1>使用雲端分析工具</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Cloud+Analytics.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+Cloud+Analytics.md">Using+Cloud+Analytics.md</a></h1><br/><h1>使用雲端分析工具</h1>
 <p>雲端分析工具，將幫助您做您Node.js的即時性的績效性能分析™應用。<br>使用雲端分析工具將需要Node 版本0.4.0或更高的版本。<br>在這個頁面，您將可以找到：</p>
 <p>同時看到 <a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/"><a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/">http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/</a></a></p>
 <p>顯示分析的概述如下：</p>
@@ -6397,14 +6406,14 @@ database for http://pkgsrc.joyent.com/sdc/2010Q4/gcc45/All is up-to-date</code><
 </em>  <a href="http://dtrace.org/blogs/dap/2011/03/01/welcome-to-cloud-analytics/">雲分析</a><br>*  <a href="http://joyeur.com/2011/01/24/executive-speaker-series-bryan-cantrill-and-brendan-gregg-on-cloud-analytics/">雲性能與實時可視性解決大問題（視頻）</a></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Customer+Portal+old.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+Customer+Portal+old.md">Using+Customer+Portal+old.md</h1><br/><h1>使用<strong>MiCloud Customer Portal</strong>(<strong>[<a href="http://micloud.tw">http://micloud.tw</a>]</strong>)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Customer+Portal+old.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+Customer+Portal+old.md">Using+Customer+Portal+old.md</a></h1><br/><h1>使用<strong>MiCloud Customer Portal</strong>(<strong>[<a href="http://micloud.tw">http://micloud.tw</a>]</strong>)</h1>
 <h1>](使用--MiCloud Customer Portal-- - --[<a href="http://micloud.tw--">http://micloud.tw--</a></h1>
 <p>)<br>若您還未註冊<strong>MiCloud</strong>，請點選右邊選項＜<strong>註冊新帳戶</strong>＞。</p>
 <p>若您已註冊完<strong>MiCloud</strong>，請點選左邊選項＜<strong>立即登入</strong>＞。</p>
 <h2><img src='images/Using+Customer+Portal+old-p1-2.png' width='650'align='center'/></h2>
 <p>登入與帳戶設定說明影片: <a href="http://www.youtube.com/v/zZplInDhTvc&amp;hl=en&amp;fs=1&amp;rel=0">Go to YouTube</a></p>
 <hr>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Customer+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+Customer+Portal.md">Using+Customer+Portal.md</h1><br/><h1>使用<strong>MiCloud Customer Portal</strong>(<strong>[<a href="http://micloud.tw">http://micloud.tw</a>]</strong>)</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Customer+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+Customer+Portal.md">Using+Customer+Portal.md</a></h1><br/><h1>使用<strong>MiCloud Customer Portal</strong>(<strong>[<a href="http://micloud.tw">http://micloud.tw</a>]</strong>)</h1>
 <h1>](使用--MiCloud Customer Portal-- - --[<a href="http://micloud.tw--">http://micloud.tw--</a></h1>
 <p>)<br>若您還未註冊<strong>MiCloud</strong>，請點選右邊選項＜<strong>註冊</strong>＞。</p>
 <p>若您已註冊完<strong>MiCloud</strong>，請點選左邊選項＜<strong>登入</strong>＞。</p>
@@ -6452,7 +6461,7 @@ database for http://pkgsrc.joyent.com/sdc/2010Q4/gcc45/All is up-to-date</code><
 <h2><img src='images/Using+Customer+Portal-pic+-10.png' width='650' align='center'/></h2>
 <p>分析說明影片:<a href="http://www.youtube.com/v/nuoEMQxiOPg&amp;hl=en&amp;fs=1&amp;rel=0">Go to YouTube</a></p>
 <hr>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+DTrace+on+MySQL.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+DTrace+on+MySQL.md">Using+DTrace+on+MySQL.md</h1><br/><p>In this page:</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+DTrace+on+MySQL.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+DTrace+on+MySQL.md">Using+DTrace+on+MySQL.md</a></h1><br/><p>In this page:</p>
 <h1>Using DTrace on MySQL</h1>
 <p>Even though there aren&#39;t DTrace probes for MySQL released yet, we can still get useful information from MySQL. DTrace has a pid provider which allows us to get into any function the program is executing and see it&#39;s arguments. The only drawback is you have to go digging around in the source code to find out what you want to see. But thanks to guys like Brendan Gregg, they have already done some of the digging for us</p>
 <p>Even if we want to go digging around ourselves, it&#39;s really not that hard; you just have to get your feet wet. And because SmartMachines have DTrace probes enabled, you can take advantage of using DTrace on MySQL. I will show some examples of this and how easy it is to hunt down your own functions.</p>
@@ -6514,7 +6523,7 @@ SELECT COUNT(*) FROM joe_visitors where  upper(vs_browser) not like &#39;%GOOGLE
 <p>As you can see DTrace can be very powerful even if we don&#39;t have probes released yet, we just have to do a little extra work. Some of the information shown can be obtained from MySQL, but using DTrace still provides a benefit because we don&#39;t have to enable anything in the MySQL configuration, possibly making us restart the server. I&#39;m providing these scripts in the <a href="http://hell.jedicoder.net/files/MySQLDTraceKit.tar.gz">MySQLDTraceKit.tar.gz</a><br>Hopefully in the near future we will have real MySQL probes.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Memcached.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+Memcached.md">Using+Memcached.md</h1><br/><p>memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主要目的是在於減少資料庫的負擔。透過memcached的快取對於使用者在等待資料存取時間可以加快進行而不會延遲服務。以下將會教您如何在SmartMachine去啟用和設置memcached。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Memcached.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Using+Memcached.md">Using+Memcached.md</a></h1><br/><p>memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主要目的是在於減少資料庫的負擔。透過memcached的快取對於使用者在等待資料存取時間可以加快進行而不會延遲服務。以下將會教您如何在SmartMachine去啟用和設置memcached。</p>
 <h1>啟動 Memcached</h1>
 <p>利用root權限或是利用sudo指令來啟動memcached:</p>
 <pre><code>#svcadm enable memcached</code></pre>
@@ -6534,7 +6543,7 @@ SELECT COUNT(*) FROM joe_visitors where  upper(vs_browser) not like &#39;%GOOGLE
 # svcprop -p config/memory memcached
 128</code></pre>
 <p><img src='images/Using+Memcached-memcached-4.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="View+network+routing+instructions.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=View+network+routing+instructions.md">View+network+routing+instructions.md</h1><br/><h1>SmartOS檢視網路路由指令</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="View+network+routing+instructions.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=View+network+routing+instructions.md">View+network+routing+instructions.md</a></h1><br/><h1>SmartOS檢視網路路由指令</h1>
 <p>透過netstat指令檢視路由表：</p>
 <pre><code># netstat -rn</code></pre>
 <pre><code>Routing Table: IPv4
@@ -6555,7 +6564,7 @@ traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
 1  254.2.......54)  0.189 ms  0.194 ms  0.096 ms
 2  211..........1 ms  0.453 ms  0.444 ms
 ....</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="View+Used+Resources.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=View+Used+Resources.md">View+Used+Resources.md</h1><br/><h1>檢查磁碟使用情況</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="View+Used+Resources.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=View+Used+Resources.md">View+Used+Resources.md</a></h1><br/><h1>檢查磁碟使用情況</h1>
 <p>||如何得到這個資訊    ||請使用此命令<br>|查詢整個文件系統的磁碟空間使用情況    |df -ht<br>|查詢當前目錄的磁碟空間使用情況    |du -h<br>|查詢摘要目錄使用的空間    |du -hs /opt<br>在這些命令中的-h參數的結果，是以“人類可讀”的形式呈現。</p>
 <h1>從 shell 檢查程序</h1>
 <p>||相關資訊    ||使用此命令<br>|通用處理器和內存統計資料    |prstat -Z -s cpu</p>
@@ -6569,7 +6578,7 @@ traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="What+is+Smart+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=What+is+Smart+Machine.md">What+is+Smart+Machine.md</h1><br/><h1>SmartMachine說明</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="What+is+Smart+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=What+is+Smart+Machine.md">What+is+Smart+Machine.md</a></h1><br/><h1>SmartMachine說明</h1>
 <p>SmartMachine係指美國Joyent所研發SDC(SmartDatacenter)上之虛擬主機。SDC提升虛擬層的各項技術，達到超越市面上一般虛擬機器的效能，因此於SDC上提供之各項服務均優於一般虛擬主機。SmartMachine為植基於Solaris Kernel所發展的作業系統，全盤建構於ZFS檔案系統上。</p>
 <p>該作業系統無縫的與SDC做緊密的結合，可提供同平台的其他作業系統將近一倍以上的運算能力，省去跨系統溝通的耗損，能夠提供用戶動態調整資源、更符合用戶的需求，達到快速部署之應用能力。</p>
 <p>您可透過MiCloud雲端管理系統([<a href="http://micloud.tw])監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache">http://micloud.tw])監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache</a> HTTPD、PHP，以及遠端管理界面webmin等。](您可透過MiCloud雲端管理系統 - [<a href="http://micloud.tw監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache">http://micloud.tw監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache</a> HTTPD、PHP，以及遠端管理界面webmin等。)</p>
@@ -6578,7 +6587,7 @@ traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
 <ul>
 <li><a href="http://wiki.joyent.com/display/smart/Getting+Started+with+SmartMachines">Joyent wiki</a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Windows+Virtual+Machine+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Windows+Virtual+Machine+FAQ.md">Windows+Virtual+Machine+FAQ.md</h1><br/><p>Frequently Asked Questions:</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Windows+Virtual+Machine+FAQ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Windows+Virtual+Machine+FAQ.md">Windows+Virtual+Machine+FAQ.md</a></h1><br/><p>Frequently Asked Questions:</p>
 <p>Do I need to activate the Windows license?</p>
 <p>No. Activation should happen automatically, but it is not immediate and may take some time. To activate manually right click on My Computer and then click on Activate windows now. Do not try to activate the licence in any other way.<br>Where is my second harddrive?</p>
 <p>The second disk in the Windows instances are not initialized. You have to use the Server Management utility to initialize the new drive and create and format a new NTFS or FAT32 partition. Please see the Windows Drive Initialization Walkthrough.zip for screenshots on this process.<br>What is my hostname?</p>
@@ -6617,9 +6626,9 @@ traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
 <p><img src='images/Windows+Virtual+Machine+FAQ-Winver.png' width='650' align='left'/></p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Working+with+Cloud+API.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Working+with+Cloud+API.md">Working+with+Cloud+API.md</h1><br/><p>The Cloud API lets you interact with your JoyentCloud machines. Using the Cloud API, you can:</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Working+with+Cloud+API.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Working+with+Cloud+API.md">Working+with+Cloud+API.md</a></h1><br/><p>The Cloud API lets you interact with your JoyentCloud machines. Using the Cloud API, you can:</p>
 <p>Provision new machines (both SmartMachines and traditional Virtual Machines)<br>Manage your account credentials<br>Create custom analytics for monitoring your infrastructure<br>To learn more about using the Cloud API, see the Cloud API documentation</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Working+with+Older+SmartMachines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Working+with+Older+SmartMachines.md">Working+with+Older+SmartMachines.md</h1><br/><p>A topic for dealing with older (Blastwave era) SmartMachines</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Working+with+Older+SmartMachines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Working+with+Older+SmartMachines.md">Working+with+Older+SmartMachines.md</a></h1><br/><p>A topic for dealing with older (Blastwave era) SmartMachines</p>
 <ul>
 <li>How can you tell which release your SmartMachine is populated with?</li>
 <li>*On templates made with 2007Q4 and 2008Q2, the PKG_PATH variable is set under /root/.profile</li>
@@ -6629,6 +6638,7 @@ traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
 </p><hr style="border-top: 1px dotted #f00;"/>
+  </div>
   </div>
   </body>
 </html>

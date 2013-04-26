@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>pkgin</h1>
+<p>pkgin這個command是關於SmartOS套件的相關安裝與維護指令。</p>
+<p>您可以在putty或是類似的terminal工具連線至SmartOS後，輸入pkgin即可查詢pkgin的指令後面能接的command說明。</p>
+<pre><code>[root@MiCloudDBT /tmp]# pkgin]([root@MiCloudDBT /tmp# pkgin)
+Usage: pkgin [-cdfFhlnPvVy] command [package ...]](Usage: pkgin [-cdfFhlnPvVy command [package ...])
+
+Commands and shortcuts:
+list (ls) -  Lists installed packages.
+avail (av) -  Lists available packages.
+install (in) -  Performs packages installation or upgrade.
+update (up) -  Creates and populates the initial database.
+remove (rm) -  Remove packages and depending packages.
+upgrade (ug) -  Upgrade main packages to their newer versions.
+full-upgrade (fug) -  Upgrade all packages to their newer versions.
+show-deps (sd) -  Display direct dependencies.
+show-full-deps (sfd) -  Display dependencies recursively.
+show-rev-deps (srd) -  Display reverse dependencies recursively.
+keep (ke) -  Marks package as &quot;non auto-removable&quot;.
+unkeep (uk) -  Marks package as &quot;auto-removable&quot;.
+show-keep (sk) -  Display &quot;non auto-removable&quot; packages.
+search (se) -  Search for a package.
+clean (cl) -  Clean packages cache.
+autoremove (ar) -  Autoremove orphan dependencies.</code></pre>
+<p><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin.png' width='750' align='center'/></p>
+<h1>下面介紹幾個較常使用的command(list、search、install、remove):</h1>
+<hr>
+<h1>List：</h1>
+<p>列出該台SmartOS您已經安裝的套件，輸入指令如下：</p>
+<pre><code>pkgin list</code></pre>
+<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin-list.png' width='750' align='center'/></h2>
+<h1>Search：</h1>
+<p>搜尋您想要安裝的軟體，輸入指令如下：</p>
+<pre><code>pkgin search [軟體名稱]](pkgin search [軟體名稱)
+ex:pkgin search postgre</code></pre>
+<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin-search.png' width='750' align='center'/></h2>
+<h1>Install：</h1>
+<p>安裝您剛剛搜尋到的套件，輸入指令如下：</p>
+<pre><code>pkgin install [套件名稱(使用pkgin search查詢)]](pkgin install [套件名稱 - 使用pkgin search查詢)
+ex:pkgin install postgresql90-adminpack-9.0.4</code></pre>
+<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin-install.png' width='750' align='center'/></h2>
+<h1>Remove:移除套件您已安裝的套件，輸入指令如下：</h1>
+<pre><code>pkgin remove [套件名稱(使用pkgin list查詢)]](pkgin remove [套件名稱 - 使用pkgin list查詢)
+ex:pkgin remove postgresql90-adminpack-9.0.4</code></pre>
+<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin-remove.png' width='750' align='center'/></h2>
+<h1>若您需要安裝的軟體在search時找不到相關的套件時，可使用以下指令：</h1>
+<pre><code>wget [軟體壓縮檔連結網址]](wget [軟體壓縮檔連結網址)
+wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p0.tar.gz
+gtar xvzf [軟體壓縮檔]](gtar xvzf [軟體壓縮檔)
+gtar xvzf ruby-1.9.2-p0.tar.gz
+cd [軟體資料夾]](cd [軟體資料夾)
+cd ruby-1.9.2-p0
+./configure
+gmake
+ls
+sudo gmake install
+ruby -v</code></pre>
+
+  </div>
+  </div>
+  </body>
+</html>

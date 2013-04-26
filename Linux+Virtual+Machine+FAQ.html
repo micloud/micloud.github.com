@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="images/wiki-logo.png" height="50px"/>
+    <img src="images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>Frequently Asked Questions</p>
+<h1>What is the difference between a Linux Virtual Machine and a SmartMachine?</h1>
+<p>Both SmartMachines and Linux Virtual Machines are virtual servers that give you the power of running an entire server. SmartMachines use SmartOS, which is major fork of OpenSolaris. Linux Virtual Machines run one of three popular Linus distributions: Debian, Ubuntu, or CentOS.</p>
+<h1>What is my host name?</h1>
+<p>To find your host name, use the hostname command.</p>
+<h1>Help The software I need is missing.</h1>
+<p>Linux Virtual Machines come preconfigured with a very small number of tools, such as Perl, Python, bash, vim, diff, and so on. To install a web server or a database, use the package manual for your Linux distribution: apt for Debian and Ubuntu, yum for CentOS.</p>
+<h1>What is my IP address?</h1>
+<p>The following one-line script displays the IP address of your Virtual Machine:</p>
+<pre><code>/sbin/ifconfig eth0|grep inet|awk {&#39;print $2&#39;}|cut -d&quot;:&quot; -f2</code></pre>
+<h1>How do I add another Linux instance?</h1>
+<p>To add another Linux machine, go to <a href="https://my.joyentcloud.com">https://my.joyentcloud.com</a>.</p>
+<h1>How do I login to my Linux instance?</h1>
+<p>When you request a Virtual Machine, you should first make sure you have added a valid SSH key via <a href="https://my.joyentcloud.com">https://my.joyentcloud.com</a>. You will be using this key to access your new Linux instance. Once provisioned, you can login as the root user using your machine&#39;s IP address.</p>
+<pre><code>ssh root@192.0.2.10</code></pre>
+<p>Once you log in, you may want to do the following:</p>
+<ul>
+<li>Change the root user&#39;s password.</li>
+<li>Create an admin user account</li>
+<li>Disable SSH root access</li>
+</ul>
+<pre><code>What Linux Distribution am I running?</code></pre>
+<p>The /proc/version file contains information about the Linux distribution. If you use the command cat /proc/version, you&#39;ll see one of these:</p>
+<pre><code>CentOS
+Linux version 2.6.18-164.el5 (mockbuild@builder10.centos.org)
+(gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)) #1 SMP Thu Sep 3 03:28:30 EDT 2009</code></pre>
+<pre><code>Ubuntu
+Linux version 2.6.32-22-server (buildd@yellow)
+(gcc version 4.4.3 (Ubuntu 4.4.3-4ubuntu5) ) #33-Ubuntu SMP Wed Apr 28 14:34:48 UTC 2010</code></pre>
+<pre><code>Debian
+Linux version 2.6.26-2-amd64 (Debian 2.6.26-19) (dannf@debian.org)
+(gcc version 4.1.3 20080704 (prerelease) (Debian 4.1.2-25)) #1 SMP Wed Aug 19 22:33:18 UTC 2009</code></pre>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>
