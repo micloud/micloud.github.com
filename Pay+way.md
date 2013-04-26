@@ -10,7 +10,7 @@
 企業付款方式僅提供合作或簽約夥伴，不適用於網路申請之用戶。
 
 
-<img src='images/Pay+way-http://wiki.micloud.tw/Wiki/attach/Pay%20with%20business/pay1.png' width='650' align='center'/>
+<img src='images/Pay+with+business-pay1.png' width='650' align='center'/>
 ----
 信用卡付款說明
 ===

@@ -68,7 +68,7 @@
 <pre><code># mysqladmin -u root password 1qaz</code></pre>
 <p>8.連線至MySQL</p>
 <pre><code># mysql -uroot -p</code></pre>
-<p><img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p4.png' width='650' align='center'/></p>
+<p><img src='images/Install+MySQL+on+SmartOS-p4.png' width='650' align='center'/></p>
 <h1>SmartOS 64bit安裝步驟</h1>
 <p>1.請先搜尋MySQL的套件</p>
 <pre><code># pkgin se mysql</code></pre>
@@ -87,7 +87,7 @@
 <pre><code># mysqladmin -u root password 1qaz</code></pre>
 <p>6.連線至MySQL</p>
 <pre><code># mysql -uroot -p</code></pre>
-<p><img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p4.png' width='650' align='center'/></p>
+<p><img src='images/Install+MySQL+on+SmartOS-p4.png' width='650' align='center'/></p>
 <p>7.外部連線設定</p>
 <p>因為SmartOS 64因安全性考量，目前服務安裝完成後預設IP是binding 127.0.0.1，所以3306 port服務外部不能連線,可以透過更新MySQL設定來開放外部連線：</p>
 <pre><code># vi /opt/local/etc/my.cnf</code></pre>
@@ -117,7 +117,7 @@ FLUSH PRIVILEGES;</code></pre>
 <pre><code># svcadm enable network/mysql</code></pre>
 <p>7.驗證密碼是否已更改</p>
 <pre><code># mysql -uroot -p</code></pre>
-<p><img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p11.png' width='650' align='center'/></p>
+<p><img src='images/Install+MySQL+on+Linux-p11.png' width='650' align='center'/></p>
 
   </div>
   </div>

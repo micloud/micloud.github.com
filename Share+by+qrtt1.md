@@ -269,7 +269,7 @@ export SDC_CLI_IDENTITY=/home/qrtt1/.ssh/micloud_at_vm
 
 常用功能:建立機器並指定user-s cript
 ===
-使用 MiCloud 時，第一次開啟 CentOS 並安裝軟體，你可能會注意到自動選擇的 mirror site 常常覺得 cn 離它比較接近。而開 Debian 時，預設似乎是抓到 us 的 mirror site。所以每次新建機器後，變更 repo mirror site 成為一個必要的例行工作。您可能曾在 MiCloud 的 wiki 到過這篇 [CentOS mirror site](http://wiki.micloud.tw/Wiki/Wiki.jsp?page=CentOS%20mirror%20site)
+使用 MiCloud 時，第一次開啟 CentOS 並安裝軟體，你可能會注意到自動選擇的 mirror site 常常覺得 cn 離它比較接近。而開 Debian 時，預設似乎是抓到 us 的 mirror site。所以每次新建機器後，變更 repo mirror site 成為一個必要的例行工作。您可能曾在 MiCloud 的 wiki 到過這篇 [CentOS mirror site](index.html?page=CentOS+mirror+site.md)
 
 
 
@@ -402,4 +402,4 @@ http://s3-ap-southeast-1.amazonaws.com/qrtt1.software/rpms/nodejs-0.6.8-1.el6.x8
 
 轉載自:
 
-* [https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8 ]( https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh-tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8)
+* [Github MiCloud.Notes.zh_tw.md]( https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh-tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8)

@@ -430,7 +430,8 @@ root@198.51.100.27&#39;s password:</code></pre>
 <ul>
 <li><a href="/index.html?page=Share+by+qrtt1.md">Micloud API</a></li>
 </ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="CentOS+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=CentOS+mirror+site.md">CentOS+mirror+site.md</a></h1><br/><p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="CentOS+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=CentOS+mirror+site.md">CentOS+mirror+site.md</a></h1><br/><h1>CentOS Mirror Site</h1>
+<p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>CentOS引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套件庫的修改與設定相似。實際修改方式如下說明:</p>
 <h1>變更套件來源</h1>
 <p>登入後，請先複製“CentOS-Base.repo”檔案，此檔案存放在“/etc/yum.repos.d/”下，此複製動作針對改錯時，未來可以回復原來的檔案。將CentOS-Base.repo檔案複製一份，命名為CentOS-Base.repo.bak，指令如下</p>
@@ -1568,7 +1569,7 @@ Also, you need to log into your Node.js SmartMachine as the user &#39;node&#39;<
 <pre><code># mysqladmin -u root password 1qaz</code></pre>
 <p>8.連線至MySQL</p>
 <pre><code># mysql -uroot -p</code></pre>
-<p><img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p4.png' width='650' align='center'/></p>
+<p><img src='images/Install+MySQL+on+SmartOS-p4.png' width='650' align='center'/></p>
 <h1>SmartOS 64bit安裝步驟</h1>
 <p>1.請先搜尋MySQL的套件</p>
 <pre><code># pkgin se mysql</code></pre>
@@ -1587,7 +1588,7 @@ Also, you need to log into your Node.js SmartMachine as the user &#39;node&#39;<
 <pre><code># mysqladmin -u root password 1qaz</code></pre>
 <p>6.連線至MySQL</p>
 <pre><code># mysql -uroot -p</code></pre>
-<p><img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p4.png' width='650' align='center'/></p>
+<p><img src='images/Install+MySQL+on+SmartOS-p4.png' width='650' align='center'/></p>
 <p>7.外部連線設定</p>
 <p>因為SmartOS 64因安全性考量，目前服務安裝完成後預設IP是binding 127.0.0.1，所以3306 port服務外部不能連線,可以透過更新MySQL設定來開放外部連線：</p>
 <pre><code># vi /opt/local/etc/my.cnf</code></pre>
@@ -1617,7 +1618,7 @@ FLUSH PRIVILEGES;</code></pre>
 <pre><code># svcadm enable network/mysql</code></pre>
 <p>7.驗證密碼是否已更改</p>
 <pre><code># mysql -uroot -p</code></pre>
-<p><img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p11.png' width='650' align='center'/></p>
+<p><img src='images/Install+MySQL+on+Linux-p11.png' width='650' align='center'/></p>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="Install+SmartOS+Packages.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Install+SmartOS+Packages.md">Install+SmartOS+Packages.md</a></h1><br/><h1>套件更新</h1>
 <p>不同SmartOS版本有不同的套件庫來源，無法任意變更，但可以執行套件更新，相關指令如下:</p>
 <p>先從套件庫找出需要更新的套件，指令如下:</p>
@@ -2656,7 +2657,7 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 <p>另外，您或許會想要把目前沒用到的SSH Key刪除，透過下面指令可以把SSH Key移除：</p>
 <pre><code>sdc-deletekey id_rsa</code></pre>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+billing.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+billing.md">MiCloud+billing.md</a></h1><br/><h1>帳單資料</h1>
-<p>用戶可以在帳單資料中，查詢到過去6個月內的帳單細項資訊以及未來帳單。<br><img src='images/MiCloud+billing-http://wiki.micloud.tw/Wiki/attach/MiCloud%20Account%20Modify/p1%20-11.png' width='650' align='center'/></p>
+<p>用戶可以在帳單資料中，查詢到過去6個月內的帳單細項資訊以及未來帳單。<br><img src='images/MiCloud+Account+Modify-p1+-11.png' width='650' align='center'/></p>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Credential+Description.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=MiCloud+Credential+Description.md">MiCloud+Credential+Description.md</a></h1><br/><h1>預載程式之預設密碼</h1>
 <p>登入 MiCloud 完成後能在畫面左上方點選主機，在從下方表格點選您的主機查看細項。<br><img src='images/MiCloud+Credential+Description-p1+-21.png' width='650' align='center'/><br>進入查詢細項頁面，可於 <strong>概述</strong> 中找到 <strong>Credentials</strong> 欄位,左鍵點擊 <strong>Show Credentials</strong>，查看該台主機預載程式之密碼。</p>
 <p><img src='images/MiCloud+Credential+Description-p1+-18.png' width='650' align='center'/></p>
@@ -3111,7 +3112,7 @@ npm_package_config_server_environment: &#39;no.de&#39;
 <p>付款方式分為企業付款、信用卡付款二種，詳細解說如下:</p>
 <h1>企業付款說明</h1>
 <p>企業付款方式僅提供合作或簽約夥伴，不適用於網路申請之用戶。</p>
-<h2><img src='images/Pay+way-http://wiki.micloud.tw/Wiki/attach/Pay%20with%20business/pay1.png' width='650' align='center'/></h2>
+<h2><img src='images/Pay+with+business-pay1.png' width='650' align='center'/></h2>
 <h1>信用卡付款說明</h1>
 <p>[{arnaud.Flash src=&#39;v4.swf&#39; width=&#39;700&#39; height=&#39;550&#39; controls=&#39;false&#39; play=&#39;false&#39; loop=&#39;false&#39; }]<br>用戶皆可透過網路做信用卡認證，認證成功後即可訂購主機，未來帳單將從此張信用卡做扣款動作。</p>
 <p><img src='images/Pay+way-p1+-9.png' width='650' align='center'/><br>請確認您的<strong>帳單寄送地址</strong>是否正確!<br><img src='images/Pay+way-p1+-10.png' width='650' align='center'/><br>請選擇您的信用卡與填寫相關資訊<br><img src='images/Pay+way-CC3.JPG' width='650' align='center'/><br>完成後請確認您的<strong>卡號</strong>是否正確<br><img src='images/Pay+way-CC1.JPG' width='650' align='center'/></p>
@@ -3273,119 +3274,7 @@ STATE          STIME    FMRI
 online         14:30:31 svc:/network/mysql:percona</code></pre>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md">Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83.md</a></h1><br/><h1>pkgin</h1>
-<p>pkgin這個command是關於SmartOS套件的相關安裝與維護指令。</p>
-<p>您可以在putty或是類似的terminal工具連線至SmartOS後，輸入pkgin即可查詢pkgin的指令後面能接的command說明。</p>
-<pre><code>[root@MiCloudDBT /tmp]# pkgin]([root@MiCloudDBT /tmp# pkgin)
-Usage: pkgin [-cdfFhlnPvVy] command [package ...]](Usage: pkgin [-cdfFhlnPvVy command [package ...])
-
-Commands and shortcuts:
-list (ls) -  Lists installed packages.
-avail (av) -  Lists available packages.
-install (in) -  Performs packages installation or upgrade.
-update (up) -  Creates and populates the initial database.
-remove (rm) -  Remove packages and depending packages.
-upgrade (ug) -  Upgrade main packages to their newer versions.
-full-upgrade (fug) -  Upgrade all packages to their newer versions.
-show-deps (sd) -  Display direct dependencies.
-show-full-deps (sfd) -  Display dependencies recursively.
-show-rev-deps (srd) -  Display reverse dependencies recursively.
-keep (ke) -  Marks package as &quot;non auto-removable&quot;.
-unkeep (uk) -  Marks package as &quot;auto-removable&quot;.
-show-keep (sk) -  Display &quot;non auto-removable&quot; packages.
-search (se) -  Search for a package.
-clean (cl) -  Clean packages cache.
-autoremove (ar) -  Autoremove orphan dependencies.</code></pre>
-<p><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin.png' width='750' align='center'/></p>
-<h1>下面介紹幾個較常使用的command(list、search、install、remove):</h1>
-<hr>
-<h1>List：</h1>
-<p>列出該台SmartOS您已經安裝的套件，輸入指令如下：</p>
-<pre><code>pkgin list</code></pre>
-<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin=list.png' width='750' align='center'/></h2>
-<h1>Search：</h1>
-<p>搜尋您想要安裝的軟體，輸入指令如下：</p>
-<pre><code>pkgin search [軟體名稱]](pkgin search [軟體名稱)
-ex:pkgin search postgre</code></pre>
-<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin=search.png' width='750' align='center'/></h2>
-<h1>Install：</h1>
-<p>安裝您剛剛搜尋到的套件，輸入指令如下：</p>
-<pre><code>pkgin install [套件名稱(使用pkgin search查詢)]](pkgin install [套件名稱 - 使用pkgin search查詢)
-ex:pkgin install postgresql90-adminpack-9.0.4</code></pre>
-<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin=install.png' width='750' align='center'/></h2>
-<h1>Remove:移除套件您已安裝的套件，輸入指令如下：</h1>
-<pre><code>pkgin remove [套件名稱(使用pkgin list查詢)]](pkgin remove [套件名稱 - 使用pkgin list查詢)
-ex:pkgin remove postgresql90-adminpack-9.0.4</code></pre>
-<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin=remove.png' width='750' align='center'/></h2>
-<h1>若您需要安裝的軟體在search時找不到相關的套件時，可使用以下指令：</h1>
-<pre><code>wget [軟體壓縮檔連結網址]](wget [軟體壓縮檔連結網址)
-wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p0.tar.gz
-gtar xvzf [軟體壓縮檔]](gtar xvzf [軟體壓縮檔)
-gtar xvzf ruby-1.9.2-p0.tar.gz
-cd [軟體資料夾]](cd [軟體資料夾)
-cd ruby-1.9.2-p0
-./configure
-gmake
-ls
-sudo gmake install
-ruby -v</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="PkaginÃÂºÃÃÃ.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=PkaginÃÂºÃÃÃ.md">PkaginÃÂºÃÃÃ.md</a></h1><br/><h1>pkgin</h1>
-<p>pkgin這個command是關於SmartOS套件的相關安裝與維護指令。</p>
-<p>您可以在putty或是類似的terminal工具連線至SmartOS後，輸入pkgin即可查詢pkgin的指令後面能接的command說明。</p>
-<pre><code>[root@MiCloudDBT /tmp]# pkgin]([root@MiCloudDBT /tmp# pkgin)
-Usage: pkgin [-cdfFhlnPvVy] command [package ...]](Usage: pkgin [-cdfFhlnPvVy command [package ...])
-
-Commands and shortcuts:
-list (ls) -  Lists installed packages.
-avail (av) -  Lists available packages.
-install (in) -  Performs packages installation or upgrade.
-update (up) -  Creates and populates the initial database.
-remove (rm) -  Remove packages and depending packages.
-upgrade (ug) -  Upgrade main packages to their newer versions.
-full-upgrade (fug) -  Upgrade all packages to their newer versions.
-show-deps (sd) -  Display direct dependencies.
-show-full-deps (sfd) -  Display dependencies recursively.
-show-rev-deps (srd) -  Display reverse dependencies recursively.
-keep (ke) -  Marks package as &quot;non auto-removable&quot;.
-unkeep (uk) -  Marks package as &quot;auto-removable&quot;.
-show-keep (sk) -  Display &quot;non auto-removable&quot; packages.
-search (se) -  Search for a package.
-clean (cl) -  Clean packages cache.
-autoremove (ar) -  Autoremove orphan dependencies.</code></pre>
-<p><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin.png' width='750' align='center'/></p>
-<h1>下面介紹幾個較常使用的command(list、search、install、remove):</h1>
-<hr>
-<h1>List：</h1>
-<p>列出該台SmartOS您已經安裝的套件，輸入指令如下：</p>
-<pre><code>pkgin list</code></pre>
-<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin-list.png' width='750' align='center'/></h2>
-<h1>Search：</h1>
-<p>搜尋您想要安裝的軟體，輸入指令如下：</p>
-<pre><code>pkgin search [軟體名稱]](pkgin search [軟體名稱)
-ex:pkgin search postgre</code></pre>
-<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin-search.png' width='750' align='center'/></h2>
-<h1>Install：</h1>
-<p>安裝您剛剛搜尋到的套件，輸入指令如下：</p>
-<pre><code>pkgin install [套件名稱(使用pkgin search查詢)]](pkgin install [套件名稱 - 使用pkgin search查詢)
-ex:pkgin install postgresql90-adminpack-9.0.4</code></pre>
-<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin-install.png' width='750' align='center'/></h2>
-<h1>Remove:移除套件您已安裝的套件，輸入指令如下：</h1>
-<pre><code>pkgin remove [套件名稱(使用pkgin list查詢)]](pkgin remove [套件名稱 - 使用pkgin list查詢)
-ex:pkgin remove postgresql90-adminpack-9.0.4</code></pre>
-<h2><img src='images/Pkagin%C3%83%C3%82%C2%BA%C3%83%C3%83%C3%83-pkgin-remove.png' width='750' align='center'/></h2>
-<h1>若您需要安裝的軟體在search時找不到相關的套件時，可使用以下指令：</h1>
-<pre><code>wget [軟體壓縮檔連結網址]](wget [軟體壓縮檔連結網址)
-wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p0.tar.gz
-gtar xvzf [軟體壓縮檔]](gtar xvzf [軟體壓縮檔)
-gtar xvzf ruby-1.9.2-p0.tar.gz
-cd [軟體資料夾]](cd [軟體資料夾)
-cd ruby-1.9.2-p0
-./configure
-gmake
-ls
-sudo gmake install
-ruby -v</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pkgin+usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pkgin+usage.md">Pkgin+usage.md</a></h1><br/><h1>pkgin</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pkgin+usage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=Pkgin+usage.md">Pkgin+usage.md</a></h1><br/><h1>Pkgin Usage</h1>
 <p>pkgin這個command是關於SmartOS套件的相關安裝與維護指令。</p>
 <p>您可以在putty或是類似的terminal工具連線至SmartOS後，輸入pkgin即可查詢pkgin的指令後面能接的command說明。</p>
 <pre><code>[root@MiCloudDBT /tmp]# pkgin]([root@MiCloudDBT /tmp# pkgin)
@@ -4264,7 +4153,7 @@ openssl s_client -ssl3 -connect example.joyeurs.com:993
 Troubleshooting
 ===
 1. Seeing errors like this in /var/log/syslog</code></pre>
-<p>Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076]: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#108;&#105;&#110;&#x64;&#x61;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">&#108;&#105;&#110;&#x64;&#x61;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred (host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201] (in reply to RCPT TO command))](Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#108;&#x69;&#110;&#x64;&#97;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;">&#108;&#x69;&#110;&#x64;&#97;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred  - host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201]  - in reply to RCPT TO command)</p>
+<p>Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076]: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#108;&#x69;&#x6e;&#x64;&#x61;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#109;">&#108;&#x69;&#x6e;&#x64;&#x61;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#109;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred (host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201] (in reply to RCPT TO command))](Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x6c;&#105;&#x6e;&#x64;&#97;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;">&#x6c;&#105;&#x6e;&#x64;&#97;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred  - host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201]  - in reply to RCPT TO command)</p>
 <pre><code>
 You need to submit a ticket requesting the PTR reverse record added. When it is correct then doing host domain.tld and the host X.X.X.X will correctly resolve as shown below</code></pre>
 <p>$ host example.joyeurs.com<br>example.joyeurs.com has address 8.12.36.201<br>example.joyeurs.com mail is handled by 10 mail.example.joyeurs.com.<br>$ host 8.12.36.201<br>201.36.12.8.in-addr.arpa domain name pointer example.joyeurs.com.</p>
@@ -4497,7 +4386,7 @@ export SDC_CLI_IDENTITY=/home/qrtt1/.ssh/micloud_at_vm</code></pre>
 &quot;primaryIp&quot;: &quot;211.78.245.129&quot;
 }</code></pre>
 <h1>常用功能:建立機器並指定user-s cript</h1>
-<p>使用 MiCloud 時，第一次開啟 CentOS 並安裝軟體，你可能會注意到自動選擇的 mirror site 常常覺得 cn 離它比較接近。而開 Debian 時，預設似乎是抓到 us 的 mirror site。所以每次新建機器後，變更 repo mirror site 成為一個必要的例行工作。您可能曾在 MiCloud 的 wiki 到過這篇 <a href="http://wiki.micloud.tw/Wiki/Wiki.jsp?page=CentOS%20mirror%20site">CentOS mirror site</a></p>
+<p>使用 MiCloud 時，第一次開啟 CentOS 並安裝軟體，你可能會注意到自動選擇的 mirror site 常常覺得 cn 離它比較接近。而開 Debian 時，預設似乎是抓到 us 的 mirror site。所以每次新建機器後，變更 repo mirror site 成為一個必要的例行工作。您可能曾在 MiCloud 的 wiki 到過這篇 <a href="index.html?page=CentOS+mirror+site.md">CentOS mirror site</a></p>
 <p>對 IaaS 最迷人之處是：用 API 能搞定一切！所以，我們就換個角度，不應該手工地事後補救。我們可以事前指定要執行的s cript 。這功能幾乎是 IaaS Provider 都有支援的功能，指定開機時執行下列s cript ：</p>
 <pre><code>[qrtt1@localhost ~]$ cat change_yum.sh]([qrtt1@localhost ~$ cat change-yum.sh)
 yum_cfg=https://raw.github.com/gist/4109252/2899290f3749bb7ce4a5a6934757512d9b980523/yum.base.cfg
@@ -4578,7 +4467,7 @@ http://s3-ap-southeast-1.amazonaws.com/qrtt1.software/rpms/nodejs-0.6.8-1.el6.x8
 <hr>
 <p>轉載自:</p>
 <ul>
-<li><a href="https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh-tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8"><a href="https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8">https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8</a> </a></li>
+<li><a href="https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh-tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8">Github MiCloud.Notes.zh_tw.md</a></li>
 </ul>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartMachine+Introduce.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="index.html?page=SmartMachine+Introduce.md">SmartMachine+Introduce.md</a></h1><br/><h1>SmartMachine說明</h1>
 <p>SmartMachine為運行於Joyent SmartOS上之最佳化虛擬平台，該平台提供相較於傳統虛擬平台的高效能，以及快速部署網頁應用程式能力。SmartMachine以Solaris為基底，全盤建構於ZFS檔案系統上，省去跨系統溝通的耗損，能夠更為動態調整資源。</p>

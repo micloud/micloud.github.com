@@ -1,3 +1,6 @@
+Access Machine from Mac OS
+===
+
 This page shows you how to use the Terminal application to generate an SSH key and to log in to your JoyentCloud machine.
 
 In this page:
@@ -120,7 +123,8 @@ To add your public key to your JoyentCloud account, follow these steps.
 *  Type a name for the key in the Name field. This name is only for your convenience. You can use the name of your machine, your user name, or anything that will help you remember which key belongs to whom.
 *  Paste your public key in the SSH Key field.
 *  Click Add This Key to finish.
-<img src='images/Accessing+Your+Machine+from+Mac+OS+X-SSHKeysPortal.png' width='650' align='left'/>
+
+<img src='images/Accessing+Your+Machine+from+Mac+OS+X-SSHKeysPortal.png' width='650'/>
 
 Connecting to Your Machine
 ===
@@ -140,7 +144,7 @@ mymac:~ myname$ ssh root@198.51.100.27
 
 
 
-<img src='images/Accessing+Your+Machine+from+Mac+OS+X-SSHAgent.png' width='650' align='left'/>
+<img src='images/Accessing+Your+Machine+from+Mac+OS+X-SSHAgent.png' width='650'/>
 
 
 

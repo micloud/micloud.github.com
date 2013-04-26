@@ -81,7 +81,7 @@ SmartOS 32bit安裝步驟
 # mysql -uroot -p
 ```
 
-<img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p4.png' width='650' align='center'/>
+<img src='images/Install+MySQL+on+SmartOS-p4.png' width='650' align='center'/>
 
 
 
@@ -135,7 +135,7 @@ SmartOS 64bit安裝步驟
 # mysql -uroot -p
 ```
 
-<img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p4.png' width='650' align='center'/>
+<img src='images/Install+MySQL+on+SmartOS-p4.png' width='650' align='center'/>
 
 7.外部連線設定
 
@@ -220,4 +220,4 @@ FLUSH PRIVILEGES;
 # mysql -uroot -p
 ```
 
-<img src='images/Install+MySQL+on+SmartOS-http://wiki.micloud.tw/Wiki/attach/Install%20MySQL%20on%20Linux/p11.png' width='650' align='center'/>
+<img src='images/Install+MySQL+on+Linux-p11.png' width='650' align='center'/>

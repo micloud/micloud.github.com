@@ -1,5 +1,5 @@
 
-pkgin
+Pkgin Usage
 ===
 pkgin這個command是關於SmartOS套件的相關安裝與維護指令。
 
