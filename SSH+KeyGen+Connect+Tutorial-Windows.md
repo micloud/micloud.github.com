@@ -5,8 +5,6 @@ MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：
 
 
 1. SSH Key僅適用於SmartOS及Linux主機，Windows主機不適用。
-
-
 2. Linux server之SSH Key必須於server建立前匯入，如於Server建立後匯入之SSH Key將無法使用於Linux主機上(但SmartOS可以使用)。
 
 
@@ -18,6 +16,7 @@ MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：
 <div align="center">
 <embed width="420" height="345" src="http://www.youtube.com/v/1s1HZiPV17Q&hd=1" type="application/x-shockwave-flash"></embed>
 </div>
+
 MiCloud SSH Key管理功能
 ===
 MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal([http://micloud.tw])進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。](MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal - [http://micloud.tw進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。)
@@ -25,7 +24,7 @@ MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal([http:
 
 
 
-3. <font color="red">申請 Linux/Unix 主機者，建議務必修改root密碼，並妥善保存，避免SSH Key遺漏時候造成無法連線問題。</font>
+<font color="red">申請 Linux/Unix 主機者，建議務必修改root密碼，並妥善保存，避免SSH Key遺漏時候造成無法連線問題。</font>
 
 
 

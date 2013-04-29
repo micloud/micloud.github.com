@@ -5,11 +5,7 @@ MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：
 
 
 1. SSH Key僅適用於SmartOS及Linux主機，Windows主機不適用。
-
-
 2. Linux server之SSH Key必須於server建立前匯入，如於Server建立後匯入之SSH Key將無法使用於Linux主機上(但SmartOS可以使用)。
-
-
 3. <font color="red">申請Linux主機者，建議務必修改root密碼，並妥善保存，避免SSH Key遺漏時候造成無法連線問題。</font>
 
 
