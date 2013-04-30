@@ -4,6 +4,7 @@ var fs = require('fs')
   , log = nu.logger.getInstance();
 
 var tree_config = '../javascripts/tree.json';
+var tree_html = '../tree.html';
 
 var ul2 = '<li><span class="folder">%s</span><ul> %s</ul></li>';
 var li = '<li><span class="file"><a href="%s">%s</a></span></li>';
@@ -48,4 +49,4 @@ html += '</ul>';
 
 log.info(html);
 
-fs.writeFileSync('tree.html', html, 'utf8');
+fs.writeFileSync(tree_html, html, 'utf8');
