@@ -41,7 +41,9 @@ function convertNode(node) {
       html += convertNode(node.nodes[i]);
     }
   } else {
-    var title = '頁面：<a href="index.html?page=' + node.link + '">' + node.name + '</a>';
+    var title = '頁面：<a href="html/' + node.link.replace(/\.md/g,'.html') + '">' + node.name + '</a>'+
+      '&nbsp;<a href="index.html?page=' + node.link + '">('+node.link+')</a>' +
+      '<a href="#' + node.link + '"></a>';
     if(!node.link.endsWith('.md')) {
       //By pass
     } else {
