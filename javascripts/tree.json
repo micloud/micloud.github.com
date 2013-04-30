@@ -181,6 +181,11 @@
     ]
   },
   {
+    "name": "單頁檢視",
+    "type": "node", 
+    "link":"/onepage.html"
+  },
+  {
     "name": "回首頁",
     "type": "node", 
     "link":"Main.md"
