@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>The Zeus TM (Traffic Manager) controls your application traffic, inspecting, transforming and routing requests as it load-balances them across the application infrastructure, all through an easy to use GUI interface.</p>
+<h1>Product Differentiation</h1>
+<p>|| || || || ||Features || ||<br>||Description    ||Load Balancing    ||SSL Offload    ||Content Caching    ||Real Time Analytics    ||Bandwidth Management    ||Service Level Monitoring<br>|﻿Zeus Simple Load Balancer - 200 Mbps|v    | | | | |<br>|Zeus Load Balancer - 200 Mbps|v| | | | |<br>|ZXTM Standard   - 200 Mbps|v|v|v| | |<br>|ZXTM Hi-Throughput - 1 Gbps|v|v|v| | |<br>|ZXTM Enterprise - 200 Mbps|v|v|v|v|v|v<br>|ZXTM Enterprise Hi-Throughput - 1 Gbps    |v|v|v|v|v|v</p>
+<h1>Logging into Zeus TM</h1>
+<p>Open the Zeus admin in your browser, in this form:</p>
+<pre><code>https://&lt;yourPublicIp&gt;:9090/</code></pre>
+<p>You may find the public IP address as the first IP address in your machine details in the portal.</p>
+<p>Use username &#39;admin&#39; and the password provided in the machine credentials next &#39;zeus&#39;.</p>
+<h1>TrafficScript tricks</h1>
+<h1>Adding a X-Forwarded-For header</h1>
+<p>Add a traffic script rule which contains:</p>
+<pre><code>http.setHeader(&quot;X-Forwarded-For&quot;, request.getRemoteIP());</code></pre>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

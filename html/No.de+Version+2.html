@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>A bunch of new features have come in this release, just in time for the second annual Node Knockout competition. We&#39;ve designed this version of the no.de product in response to the feedback we&#39;ve gotten from users of the existing system.</p>
+<h1>No Coupon Codes</h1>
+<p>That&#39;s right! You can sign up for the service, and provision right away without anyone&#39;s permission, or jumping through any extra hoops.</p>
+<p>The codes served their purpose, and gave us a way to limit the influx of new users in the first few versions, but I think everyone is pretty happy to see them go.</p>
+<p>If you were waiting in the queue to get a code, then the good news is that you don&#39;t need to wait any more. Just go provision a new no.de SmartMachine, and start pushing code onto it.</p>
+<h1>Proxied HTTP</h1>
+<p>In version 2, we&#39;re using Nodejitsu&#39;s http-proxy program, and have been very happy with it so far. For SSH access, we&#39;re assigning a specific port to every no.de machine.</p>
+<p>The net result is that we can get a lot more mileage out of each physical machine.</p>
+<p>For your purposes, it means that all HTTP requests will appear to come from the same req.socket.remoteAddress, so you&#39;ll have to look at the req.headers[&#39;x-forwarded-for&#39;] and req.headers[&#39;x-forwarded-port&#39;] headers instead.](For your purposes, it means that all HTTP requests will appear to come from the same req.socket.remoteAddress, so you&#39;ll have to look at the req.headers[&#39;x-forwarded-for&#39; and req.headers[&#39;x-forwarded-port&#39;] headers instead.)</p>
+<p>And of course, this comes along with a new version of Cloud Analytics which can interpret these headers for you to show the origin of all your incoming HTTP requests on a heatmap in real time.</p>
+<p>If you really need a public IP address for some reason, you can upgrade at any time to a full-on SmartMachine. There are lots of options to choose from.</p>
+<h1>No Space Commits: node-service-deploy</h1>
+<p>One of the biggest complaints we heard about a git-push deployment model is that sometimes you want to re-run the deployment process when something goes wrong. However, because of how git works, just running git push again won&#39;t actually do anything if there aren&#39;t new commits to push. So, what do you do? You add a space or a semicolon to a file, commit it with a message like, Something dumb just to restart the server, and then git push. It makes the commit history look pretty silly.</p>
+<p>With the new version of the no.de service, you can manually run the node-service-deploy <commit-ish> script to run the deployment process at any time. The commit-ish argument defaults to master, so just running node-service-deploy is exactly like doing a git push, but without requiring an additional &quot;space commit&quot;.</p>
+<h1>npm Integration</h1>
+<p>If you provide a package.json file with a set of dependencies and a start script, then the no.de system will see that and make sure that your dependencies are installed, and run your start script. The default npm start script is node server.js if there&#39;s a server.js file present, so if you were doing things without a package.json file before, then it&#39;ll keep working as it did before.</p>
+<p>Since your package gets started using npm, this also means that all the npm config information is available in process.env. To set a custom environment variable, you can put it in your package.json file in the config hash, or log in and run npm config set foo=bar in your machine.</p>
+<p>A bunch more detail can be found on the wiki</p>
+<h1>Updated Platform</h1>
+<p>This release comes along with an update to the underlying operating system that powers Joyent&#39;s cloud, SmartOS. This means:</p>
+<ul>
+<li>Updates to the administration portal.</li>
+<li>New instrumentations in the Cloud Analytics system.</li>
+<li>Updated packages and operating system features on the machines.<br>Some of these changes should be mostly unnoticeable, but the added stability and introspection means that bugs and issues will be fewer and easier to fix.</li>
+</ul>
+<h1>The Past</h1>
+<p>If you had a no.de machine already, don&#39;t worry. There are no plans to take it away or make any changes to it.</p>
+<p>However, if you want access to these newer features, you&#39;ll have to provision a machine on the new v2 system.</p>
+<h1>The Future</h1>
+<p>Stay tuned for more features and functionality coming to the no.de service in the future. SmartOS and SDC are under active development, and will keep getting better, and of course Node is moving at breakneck speed.</p>
+
+  </div>
+  </div>
+  </body>
+</html>

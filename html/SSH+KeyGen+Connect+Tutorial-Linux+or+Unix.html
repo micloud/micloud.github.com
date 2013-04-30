@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>SSH Key 限制</h1>
+<p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
+<ol>
+<li>SSH Key僅適用於SmartOS及Linux主機，Windows主機不適用。</li>
+<li>Linux server之SSH Key必須於server建立前匯入，如於Server建立後匯入之SSH Key將無法使用於Linux主機上(但SmartOS可以使用)。</li>
+<li><font color="red">申請Linux主機者，建議務必修改root密碼，並妥善保存，避免SSH Key遺漏時候造成無法連線問題。</font>
+
+
+
+</li>
+</ol>
+<p>影片:<a href="http://www.youtube.com/watch?v=MUxTHgrMj-E">MiCloud SSH金鑰產生教學(Linux/Unix)</a></p>
+<p><div align="center"></p>
+<p><embed width="420" height="345" src="http://www.youtube.com/v/MUxTHgrMj_E&hd=1" type="application/x-shockwave-flash"></embed><br></div></p>
+<h1>MiCloud SSH Key 管理功能</h1>
+<p>MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal([<a href="http://micloud.tw])進行SSH">http://micloud.tw])進行SSH</a> Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。](MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal - [<a href="http://micloud.tw進行SSH">http://micloud.tw進行SSH</a> Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。)</p>
+<p>SSH Key上傳與管理，請參考&quot;[使用Windows連線SmartMachine](SSH KeyGen &amp; Connect Tutorial - Windows)</p>
+<h1>Linux/Unix Like 系統建立SSH-KEY與使用方法</h1>
+<p>產生SSH Key:</p>
+<p><code>ssh-keygen -t rsa</code></p>
+<p>產生過程如下：</p>
+<pre><code>Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):    #按Enter繼續下一步
+/root/.ssh/id_rsa already exists.
+Overwrite (yes/no)? yes                            #如果已經存在會詢問是否覆蓋
+Enter passphrase (empty for no passphrase):            #按Enter繼續下一步
+Enter same passphrase again:                    #按Enter繼續下一步
+Your identification has been saved in /root/.ssh/id_rsa.    #private key (預設產出路徑為$HOME/.ssh)
+Your public key has been saved in /root/.ssh/id_rsa.pub.    #public key
+The key fingerprint is:
+ad:a2:53:fc:2c:eb:f1:3a:3d:6b:44:92:29:33:f0:a5 root@XXXXX.local</code></pre>
+<p>確定並複製產出的SSH Key:</p>
+<pre><code>cd $HOME/.ssh/        #切換到SSH Key的預設資料匣
+cat id_rsa.pub        #讀取產出的金鑰檔案</code></pre>
+<p>公開金鑰產出格式一不同機器略有不同，但大至上類似下面一串文字：</p>
+<pre><code>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsU6C3X3dwtRcpHDGb1nrYOmdWwsLAu1DVtR+UebO53Cr
+QWl7j/FKcLQFPRliiIIsR0rmt5+8s3JyIwkpd+2Ci5Szvhs/URpVhtoei4Xn0TMQg/I/8ZnKHxAsZ2tg
+r91eLfYSbMGqqkqS371G68HFDqTgjSAOoPUTWms8afMZ67B/Fr3Yrt8egEaSdpTw== root@XXXX</code></pre>
+<p>複製這段文字貼於網頁中的SSH-Key欄位中即可</p>
+<p>下圖為Linux參考畫面:</p>
+<p><img src='/images/SSH+KeyGen+&+Connect+Tutorial-Linux+or+Unix-linux-key.png' width='500' align='center'/></p>
+<h1>Linux/Unix Like 系統連線方式</h1>
+<p>使用 openssh client，請帶參數-i來使用剛剛所建的id_rsa這個private ssh key。</p>
+<p>例如：</p>
+<p><code>ssh -i id_rsa root@211.123.123.31</code></p>
+<h1>Linux 主機更新SSH Key</h1>
+<p>MiCloud Linux主機於開通主機時會將您帳戶資料中之SSH Key匯入新開通的Linux主機中，匯入的目錄位於：$HOME/.ssh/authorized_keys檔案中，此為一次性設定，日後再登錄至MiCloud Customer Portal之SSH Key將不會再寫入Linux主機中(SmartOS之認證為結合SSH Key Database之認證，因此不在此限制下)。若您需要更新SSH Key，可採下面步驟：</p>
+<ul>
+<li><p>產生SSH Key:<br>請參考：“MiCloud自助服務操作資訊 &gt; SSH金鑰相關使用教學”中金鑰產生部分。</p>
+</li>
+<li><p>將Public Key寫入Server端$HOME/.ssh/authorized_keys檔案中，以斷行隔開</p>
+</li>
+</ul>
+<p><code>vi $HOME/.ssh/authorized_keys</code></p>
+<p>增加您產生的public key至該檔案中</p>
+<h1>Joyent Wiki使用SSH連線教學與資訊</h1>
+<ul>
+<li>SSH金鑰產生與設定：[<a href="http://wiki.joyent.com/display/gen/SSH+Guide]](*">http://wiki.joyent.com/display/gen/SSH+Guide]](*</a>  SSH金鑰產生與設定：[<a href="http://wiki.joyent.com/display/gen/SSH+Guide">http://wiki.joyent.com/display/gen/SSH+Guide</a>)</li>
+<li>SSH連線緩慢之設定調整：[<a href="http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin]](*">http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin]](*</a>  SSH連線緩慢之設定調整：[<a href="http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin">http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin</a>)</li>
+</ul>
+
+  </div>
+  </div>
+  </body>
+</html>

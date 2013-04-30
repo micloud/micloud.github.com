@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>Your SmartMachine can be identified by several names, depending where it&#39;s being accessed from.</p>
+<h1>IP Addresses</h1>
+<p>An IP address is the unique address of your machine on a network. Every SmartMachine has two IP addresses:</p>
+<ul>
+<li>a public (external) address that identifies your machine on the Internet</li>
+<li>a private (internal) address that identifies your machine within the local network of SmartMachines<br><strong>Displaying the external IP adddress</strong></li>
+</ul>
+<pre><code>ifconfig external0:1 | grep inet | awk {&#39;print $2&#39;} | cut -d&quot;:&quot; -f2</code></pre>
+<p><strong>Displaying the internal IP adddress</strong></p>
+<pre><code>ifconfig internal0:1 | grep inet | awk {&#39;print $2&#39;} | cut -d&quot;:&quot; -f2</code></pre>
+<h1>Host Name</h1>
+<p>This is the name of the machine. The Domain Name Service (DNS) maps this name to an IP address. See Setting the Host Name of a SmartMachine to learn how to set your host name.</p>
+<h1>Zone Name</h1>
+<p>Your SmartMachine is a virtual machine that resides inside a physical server. The zone name is the virtual server&#39;s name within the physical server.</p>
+<p>Use the zonename command to display your SmartMachine&#39;s zone name.</p>
+<p>In addition to any host name you set up for your machine, you can always access your SmartMachine with the address zonename.joyent.us.</p>
+<h1>Reverse PTR Records</h1>
+<p>Domain Name Service maps a host name to an IP address. A reverse pointer record maps an IP address to a host name. In most cases, a reverse pointer record isn&#39;t necessary. If you plan to set up a mail server, however, you will probably need one. In that case, submit a support ticket to request one. Be sure to provide your zone name and your public IP address.</p>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

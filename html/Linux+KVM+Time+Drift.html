@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>Linux NTP Server Configuration</h1>
+<p>Linux KVM can have time drift(losing or gaining seconds to minutes of time)</p>
+<p>To fix this you need to do the following:</p>
+<ol>
+<li>Install ntp and ntpdate via your package manager</li>
+</ol>
+<p>Debian/Ubuntu -</p>
+<p><code>apt-get install ntp</code></p>
+<p>or</p>
+<p>CentOS/Fedora -</p>
+<p><code>yum install ntp</code></p>
+<ol>
+<li>Edit your cron file with crontab -e, add the following line</li>
+</ol>
+<p><code>30 * * * * ntpdate pool.ntp.org &gt; /dev/null 2&gt;&amp;1</code></p>
+<ol>
+<li><p>Run ntpdate pool.ntp.org from command line to update any current drift</p>
+</li>
+<li><p>Edit /boot/grub/menu.lst, add the following to the first line that starts with kernel, divider=10</p>
+</li>
+</ol>
+<p>eg.</p>
+<pre><code>kernel /boot/vmlinuz-2.6.32-220.2.1.el6.x86_64 ro root=/dev/vda1 rd_NO_LUKS rd_NO_LVM rd_NO_MD rd_NO_DM LANG=en_US.UTF-8 SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us crashkernel=auto rhgb quiet nohpet divider=10</code></pre>
+<ol>
+<li>Reboot your system</li>
+</ol>
+
+  </div>
+  </div>
+  </body>
+</html>

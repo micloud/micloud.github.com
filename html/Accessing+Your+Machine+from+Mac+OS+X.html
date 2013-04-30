@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>Access Machine from Mac OS</h1>
+<p>This page shows you how to use the Terminal application to generate an SSH key and to log in to your JoyentCloud machine.</p>
+<p>In this page:</p>
+<h1>About the Terminal Application</h1>
+<p>To access your JoyentCloud machine and to generate SSH keys, you will use the Terminal application. The terminal gives you a command line interface to the Unix underpinnings of Mac OS X.</p>
+<p>To open the Terminal application follow these steps.</p>
+<ul>
+<li>In the Finder, choose <strong>Utilities</strong> from the Go menu. The Utilities folder will open.</li>
+<li>Find the Terminal application in the Utilities window.</li>
+<li>Double-click the Terminal application to open it.<br>When the Terminal window opens, you&#39;ll se some text that looks like this. Yours will have the name of your machine and your username instead of mymac and myname.</li>
+</ul>
+<pre><code>mymac:~ myname$</code></pre>
+<p>This is the Terminal prompt where you will be entering commands. Be sure to press the Return key after entering a command.</p>
+<h1>Generating an SSH Key</h1>
+<p>An SSH key consists of a pair of files. One is the private key, which you should never give to anyone. The other is the public key. You will need a public key to log into most machines you provision.</p>
+<p>To generate an SSH key on a Macintosh, follow these steps.</p>
+<ul>
+<li>Type the following command in the Terminal window.</li>
+</ul>
+<pre><code>mymac:~ myname$ ssh-keygen -t rsa</code></pre>
+<ul>
+<li>After you press the Return key, the ssh-keygen tool asks you where to store the key.</li>
+</ul>
+<pre><code>Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/myname/.ssh/id_rsa):</code></pre>
+<p>Press the Return key to accept the default.<br>*  The command asks you for a passphrase. Enter a phrase you can remember. You can use a key without a passphrase, but this is not recommended.</p>
+<pre><code>Enter passphrase (empty for no passphrase):</code></pre>
+<ul>
+<li>The command asks you to enter the passphrase again to confirm it.</li>
+</ul>
+<pre><code>Enter same passphrase again:</code></pre>
+<p>After you confirm the passphrase, the command generates the key pair</p>
+<pre><code>Your identification has been saved in /Users/myname/.ssh/id_rsa.
+Your public key has been saved in /Users/myname/.ssh/id_rsa.pub.
+The key fingerprint is:
+ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
+The key&#39;s randomart image is:
++--[ RSA 2048]----+](+--[ RSA 2048----+)
+|                 |
+|         .       |
+|        E .      |
+|   .   . o       |
+|  o . . S .      |
+| + + o . +       |
+|. + o = o +      |
+| o...o * o       |
+|.  oo.o .        |
++-----------------+</code></pre>
+<p>Your private key is saved in the file named id_rsa in the .ssh directory. Never provide this file to anyone.</p>
+<p>Your public key is saved in the file named id_rsa.pub. This file contains the information you&#39;ll add to your JoyentCloud account. The easiest way to do this is to put the key data on the Macintosh clipboard.</p>
+<p>Use this command in the Terminal window to load your public key on the clipboard:</p>
+<pre><code>mymac:~ myname$ pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre>
+<h1>Adding the Public Key to Your JoyentCloud Account</h1>
+<p>To add your public key to your JoyentCloud account, follow these steps.</p>
+<ul>
+<li>Make sure that your public key is copied to the clipboard.</li>
+<li>Log in to your JoyentCloud account.</li>
+<li>In the top right corner of the browser, click the Account Settings link.</li>
+<li>Click the SSH Keys tab.</li>
+<li>Type a name for the key in the Name field. This name is only for your convenience. You can use the name of your machine, your user name, or anything that will help you remember which key belongs to whom.</li>
+<li>Paste your public key in the SSH Key field.</li>
+<li>Click Add This Key to finish.</li>
+</ul>
+<p><img src='/images/Accessing+Your+Machine+from+Mac+OS+X-SSHKeysPortal.png' width='650'/></p>
+<h1>Connecting to Your Machine</h1>
+<p>You use the Terminal application and the ssh command to log in to your machine in the JoyentCloud. When you provision a machine, you will notice two IP addresses listed in the Overview section of the Machine Details page. One of the IP addresses is the public address. The second is the internal address for communication between SmartMachines / Virtual Machines in the same datacenter. After you provision a new machine, be sure to note the IP addresses. You will use the public address to connect to your machine.</p>
+<ul>
+<li>In a Terminal window, type this command to log in to your provisioned machine.</li>
+</ul>
+<pre><code>mymac:~ myname$ ssh root@198.51.100.27</code></pre>
+<ul>
+<li>If your SSH key has a passphrase, a window opens. Type in your passphrase and click OK.</li>
+</ul>
+<p><img src='/images/Accessing+Your+Machine+from+Mac+OS+X-SSHAgent.png' width='650'/></p>
+<ul>
+<li>If you entered your passphrase correctly, you will be logged in to your machine.</li>
+</ul>
+<pre><code>root@myprovisioned:~#</code></pre>
+<h1>Troubleshooting</h1>
+<p>There are a few reasons that you may see a password prompt like this:</p>
+<pre><code>mymac:~ myname$ ssh root@198.51.100.27
+root@198.51.100.27&#39;s password:</code></pre>
+<ul>
+<li>You did not enter the correct passphrase.</li>
+<li>The private key on you Macintosh (id_rsa) does not match the public key stored with your JoyentCloud account.</li>
+<li>The public key was not entered correctly in your JoyentCloud account.</li>
+</ul>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

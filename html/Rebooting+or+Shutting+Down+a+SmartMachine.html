@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>The best way to reboot your SmartMachine is in a way that gracefully shuts down all of your major servers (especially databases).</p>
+<p>It is highly reccomend that on production servers you use this shutdown / reboot method from the command line:</p>
+<ul>
+<li>SSH into your SmartMachine as admin.</li>
+<li>Use this commnd to gracefully reboot your SmartMachine:</li>
+</ul>
+<pre><code>sudo shutdown -y -i6 -g0</code></pre>
+<pre><code>You will have to give the admin user&#39;s password.</code></pre>
+<p>For development and testing systems you can also shut down or reboot your machine by using the Reboot or Shutdown buttons in my.joyentcloud.com:<br><img src='/images/Rebooting+or+Shutting+Down+a+SmartMachine-myjoyent+-1.png' width='650' align='left'/></p>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

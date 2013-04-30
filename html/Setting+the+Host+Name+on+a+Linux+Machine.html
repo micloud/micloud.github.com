@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>You set the name of your machine when you order it on my.joyent.com. If you want to change the name later on, follow the instructions for the Linux distribution you&#39;re using.</p>
+<p>__</p>
+<pre><code>You need to be logged in as root or be using sudo to change the host name.</code></pre>
+<p>__</p>
+<h1>Debian</h1>
+<ul>
+<li>Set the host name in the /etc/hostname file:</li>
+</ul>
+<pre><code>echo &quot;debian.example.com&quot; &gt; /etc/hostname</code></pre>
+<ul>
+<li>Using and text editor, edit the file /etc/hosts so that the hostname points to the loopback address:</li>
+</ul>
+<pre><code>127.0.0.1       localhost
+127.0.1.1       debian.example.com localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts</code></pre>
+<ul>
+<li>Run the host name initialization script.</li>
+</ul>
+<pre><code>/etc/init.d/hostname.sh start</code></pre>
+<h1>Ubuntu</h1>
+<ul>
+<li>Set the host name in the /etc/hostname file:</li>
+</ul>
+<pre><code>echo &quot;debian.example.com&quot; &gt; /etc/hostname</code></pre>
+<ul>
+<li>Using and text editor, edit the file /etc/hosts so that the hostname points to the loopback address:</li>
+</ul>
+<pre><code>127.0.0.1       localhost
+127.0.1.1       ubuntu.example.com localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts</code></pre>
+<ul>
+<li>Run the host name initialization script.</li>
+</ul>
+<pre><code>start hostname</code></pre>
+<h1>CentOS</h1>
+<ul>
+<li>Using any text editor, edit the file /etc/sysconfig/network so that the HOSTNAME line contains your fully qualified domain name:</li>
+</ul>
+<pre><code>NETWORKING=yes
+NETWORKING_IPV6=no
+HOSTNAME=centos.example.com</code></pre>
+<ul>
+<li>Edit the file /etc/hosts so that the host name points to the loopback addresses:</li>
+</ul>
+<pre><code># Do not remove the following line, or various programs
+# that require network functionality will fail.
+127.0.0.1  centos  localhost
+::1        centos  localhost6</code></pre>
+<ul>
+<li>Reboot your machine by either using the reboot command or by going to my.joyent.com and clicking the Reboot button.</li>
+</ul>
+
+  </div>
+  </div>
+  </body>
+</html>
