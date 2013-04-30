@@ -9,8 +9,6 @@ var tree_html = '../tree.html';
 var ul2 = '<li><span class="folder">%s</span><ul> %s</ul></li>';
 var li = '<li><span class="file"><a href="%s">%s</a></span></li>';
 
-var isHtmlTree = false;
-
 function getHtml(json) {
   //console.log('>>', JSON.stringify(json));
   var this_line = '';
