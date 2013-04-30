@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>套件更新</h1>
+<p>不同SmartOS版本有不同的套件庫來源，無法任意變更，但可以執行套件更新，相關指令如下:</p>
+<p>先從套件庫找出需要更新的套件，指令如下:</p>
+<pre><code>#pkgin update</code></pre>
+<p><img src='/images/Install+SmartOS+Packages-update.jpg' width='650'  align='center'/><br>再執行更新，指令如下:</p>
+<pre><code>#pkgin upgrade</code></pre>
+<p><img src='/images/Install+SmartOS+Packages-upgrade.jpg' width='650'  align='center'/></p>
+<hr>
+<h1>安裝非預載套件</h1>
+<p>在SmartOS上安裝套件是非常簡單的事情，SmartOS使用pkgin及相關的指令來作套件的安裝與維護，使用上就像yum或是apt-get一樣簡單。您可在putty或其他terminal工具連上SmartOS後，使用pkgin指令說明如下:</p>
+<h1>列出系統上的套件</h1>
+<pre><code>#pkgin list</code></pre>
+<p><img src='/images/Install+SmartOS+Packages-pkgin-list.png' width='650'  align='center'/></p>
+<h1>搜尋套件</h1>
+<p>若裡面沒有您需要的軟體套件，這時能使用搜尋軟體:</p>
+<pre><code>#pkgin search [套件部份名稱]](#pkgin search [套件部份名稱)
+ex:pkgin search postgre</code></pre>
+<p><img src='/images/Install+SmartOS+Packages-pkgin-search.png' width='650'  align='center'/></p>
+<h1>安裝套件</h1>
+<pre><code>#pkgin install [套件全名]](#pkgin install [套件全名)
+ex:pkgin install postgresql90-adminpack-9.0.4</code></pre>
+<p><img src='/images/Install+SmartOS+Packages-pkgin-install.png' width='650'  align='center'/></p>
+<h1>刪除套件</h1>
+<p>安裝完若發現安裝錯誤，則可移除套件:</p>
+<pre><code>#pkgin remove [套件全名]](#pkgin remove [套件全名)
+ex:pkgin remove postgresql90-adminpack-9.0.4</code></pre>
+<p><img src='/images/Install+SmartOS+Packages-pkgin-remove.png' width='650'  align='center'/></p>
+<h1>常用套件</h1>
+<ul>
+<li>Install Apache Httpd</li>
+<li>Install Apache Tomcat</li>
+<li>Install Java</li>
+<li>Install mod_jk Module</li>
+<li>Install Apache With Tomcat</li>
+<li>Install Java jdk 1.5 and jboss 4.0</li>
+</ul>
+
+  </div>
+  </div>
+  </body>
+</html>

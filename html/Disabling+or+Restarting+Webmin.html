@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>At times it may be necessary to disable the administration web server of your SmartMachine (aka. Virtualmin or Webmin).  The following is how you disable and restart this service using SMF.</p>
+<p>In this page:</p>
+<h1>Disable Webmin</h1>
+<p>SSH into your SmartMachine, then switch to the root user and run:</p>
+<pre><code>svcadm disable webmin</code></pre>
+<h1>Restart Webmin</h1>
+<p>If a service crashes that is maintained by SMF it will be placed into a &#39;maintenance mode&#39;.  The following process is how to restart a service that has been disabled or that is in maintenance mode:</p>
+<h1>Check to see if service is in Maintenance Mode</h1>
+<p>If a service is in maintenance mode it has cashed and is usually inductive of an error with the service or your SmartMachine is running out of RAM or Disk.</p>
+<p>To check that a service is in maintenance mode:</p>
+<pre><code>svcs -a</code></pre>
+<p>If the service is in maintenance mode you will see something similar to this:</p>
+<p>maintenence 18:50:25 svc:/network/webmin:webmin</p>
+<p>You should review the log and check for a core file to derive root cause of why the service was in maintenance mode.</p>
+<p>To bring a service out of maintenance mode run the following as root:</p>
+<pre><code>svcadm clear service_name</code></pre>
+<h1>Verify service is disabled</h1>
+<p>To verify a service is disabled run this command:</p>
+<pre><code>svcs -a</code></pre>
+<p>If the service is disabled you will see something similar to this:</p>
+<p>disabled 18:51:10 svc:/network/webmin:webmin</p>
+<h1>Enable service</h1>
+<p>To start a service run this command as root:</p>
+<pre><code>svcadm enable service_name</code></pre>
+<p>Then verify the service is running with:</p>
+<pre><code>svcs -a | grep service_name</code></pre>
+<p>You should see something similar to this:</p>
+<p>online 18:50:25 svc:/network/webmin:webmin</p>
+<p>&quot;online&quot; state indicates that the service is back and running.</p>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

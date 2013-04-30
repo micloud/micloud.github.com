@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主要目的是在於減少資料庫的負擔。透過memcached的快取對於使用者在等待資料存取時間可以加快進行而不會延遲服務。以下將會教您如何在SmartMachine去啟用和設置memcached。</p>
+<h1>啟動 Memcached</h1>
+<p>利用root權限或是利用sudo指令來啟動memcached:</p>
+<pre><code>#svcadm enable memcached</code></pre>
+<p>輸入svcs指令確認memcached啟動是否成功，如以下的畫面中，可以看到memcached是online狀態，表示是啟用中:</p>
+<pre><code>#svcs memcached</code></pre>
+<p><img src='/images/Using+Memcached-memcached-1.png' width='650' align='center'/></p>
+<p>確認目前設定:</p>
+<pre><code>#prctl -i process -n process.max-file-descriptor `pgrep memcached`</code></pre>
+<p><img src='/images/Using+Memcached-memcached-2.png' width='650' align='center'/></p>
+<h1>設置 Memcached</h1>
+<p>用戶可以自行設置memcached的大小以及所允許的連線數量，使用svcprop驗證目前memcached的大小:</p>
+<pre><code># svcprop -p config/memory memcached</code></pre>
+<p><img src='/images/Using+Memcached-memcached-3.png' width='650' align='center'/></p>
+<p>從上方的擷圖可以看到目前memcached大小為64 MB<br>另外，用戶可以利用指令來調整memcached大小， 例如.從64MB調至128MB:</p>
+<pre><code># svccfg -s memcached setprop config/memory=128
+# svcadm refresh memcached
+# svcprop -p config/memory memcached
+128</code></pre>
+<p><img src='/images/Using+Memcached-memcached-4.png' width='650' align='center'/></p>
+
+  </div>
+  </div>
+  </body>
+</html>

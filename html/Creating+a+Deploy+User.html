@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>If you&#39;re using Capistrano or some other deployment utility, you should create a user account that has the proper rights and roles to deploy your application.</p>
+<p>This user is called the &quot;deploy user&quot;.<br>In this page:</p>
+<h1>Before You Begin</h1>
+<p>This topic assumes that you are deploying multiple applications on a SmartMachine and that your applications live on your SmartMachine like this:</p>
+<pre><code>/home/www.example.com/
+/home/www.example2.com/</code></pre>
+<p>You should have copies of the public SSH keys for each developer in your project who can deploy the application.</p>
+<h1>Creating the Deploy User</h1>
+<pre><code>You can use the default user, jill, as the deploy user if you&#39;re deploying only a single application on your SmartMachine.</code></pre>
+<ul>
+<li>In Virtualmin, create a new user named deploy.</li>
+<li>Log in to your SmartMachine and run the following command to grant deploy role-based rights to use svcadm, svccfg, and other SMF commands:</li>
+</ul>
+<pre><code>usermod -P &quot;Service Management&quot; deploy</code></pre>
+<ul>
+<li>Add each developer&#39;s SSH public key to /home/deploy/.ssh/authorized_keys<h1>Examples</h1>
+</li>
+</ul>
+<p>This section contains examples for different deployment systems.</p>
+<h1>Capistrano</h1>
+<p>To deploy new code have your developers SSH in and run these commands:</p>
+<pre><code>set :user, &quot;deploy&quot;
+set :runner, &quot;deploy&quot;
+
+task :restart_web_server, :roles =&gt; :web do
+run &quot;svcadm restart http&quot;
+end</code></pre>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

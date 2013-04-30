@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>SSH Key 限制</h1>
+<p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
+<ol>
+<li>SSH Key僅適用於SmartOS及Linux主機，Windows主機不適用。</li>
+<li>Linux server之SSH Key必須於server建立前匯入，如於Server建立後匯入之SSH Key將無法使用於Linux主機上(但SmartOS可以使用)。</li>
+<li><font color="red">申請Linux主機者，建議務必修改root密碼，並妥善保存，避免SSH Key遺漏時候造成無法連線問題。</font>
+
+
+
+</li>
+</ol>
+<h1>MiCloud SSH Key 管理功能</h1>
+<p>MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal([<a href="http://micloud.tw])進行SSH">http://micloud.tw])進行SSH</a> Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。](MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal - [<a href="http://micloud.tw進行SSH">http://micloud.tw進行SSH</a> Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。)</p>
+<p>SSH Key上傳與管理，請參考&quot;[使用Windows連線SmartMachine](SSH KeyGen &amp; Connect Tutorial - Windows)</p>
+<h1>Mac OS 建立 SSH-KEY 與使用方法</h1>
+<p>產生SSH Key:</p>
+<p><code>ssh-keygen -t rsa</code></p>
+<p>產生過程如下：<br><img src='/images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic1.png' width='500' align='center'/><br>上圖底下的兩個紅色框框的內容為您的私鑰與公鑰所擺放的位置。</p>
+<pre><code>cd /user/[您的帳號資料夾]/.ssh    #切換到SSH Key的預設資料匣](cd /user/[您的帳號資料夾/.ssh    #切換到SSH Key的預設資料匣)
+ls                              #查看該資料夾底下是否正確產生id_rsa(private key)及id_rsa.pub(public key)兩個檔案
+cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
+<p><img src='/images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic2.png' width='500' align='center'/><br>公開金鑰產出格式一不同機器略有不同。</p>
+<p>複製上圖下方紅色框框內的文字貼於網頁中的SSH-Key欄位中即可</p>
+<h1>Mac OS 連線方式</h1>
+<p>使用 openssh client，請帶參數-i來使用剛剛所建的id_rsa這個private ssh key。</p>
+<p>例如：</p>
+<p><code>ssh -i id_rsa root@211.123.123.31</code></p>
+<p><img src='/images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic3.png' width='500' align='center'/></p>
+
+  </div>
+  </div>
+  </body>
+</html>

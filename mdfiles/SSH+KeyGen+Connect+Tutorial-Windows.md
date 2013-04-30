@@ -19,7 +19,7 @@ MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：
 
 MiCloud SSH Key管理功能
 ===
-MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal([http://micloud.tw])進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。](MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal - [http://micloud.tw進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。)
+MiCloud提供SSH Key的管理模組，您可透過[MiCloud Customer Portal](http://micloud.tw)進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。(MiCloud提供SSH Key的管理模組，您可透過[MiCloud Customer Portal](http://micloud.tw)進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。)
 
 
 

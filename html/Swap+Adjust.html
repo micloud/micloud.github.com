@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>Swap調整</h1>
+<p>Micloud 客戶的Linux虛擬機會有兩個虛擬磁碟，第一個是OS掛載在/之下，另一個是packages中設定的disk space，預設掛載在/data下。</p>
+<p>如果客戶新建一個新的VM，可以採用下列兩種任一，如果客戶已經寫了資料在/data 且無法更動，那只能選擇Case2。</p>
+<h1>swap目前有兩種做法，partition swap &amp; file swap：</h1>
+<h1>Case1. Partition swap：</h1>
+<p>-可以做為多重開機的swap重複使用，理論效能比較高一點點，但是無法變更大小，步驟稍為複雜。</p>
+<h1>Case2. File swap：</h1>
+<p>-的檔案是置於檔案系統之上，所以理論效能差一點點，可以刪除、移動與變更大小，步驟比前者簡單。</p>
+<h1>Case1. Partition swap</h1>
+<h1>STEP 1：檢查您的磁碟</h1>
+<pre><code>fdisk -l</code></pre>
+<p><img src='/images/Swap+Adjust-pic1.gif' width='500' align='center'/><br>( 請檢查是否有 vda 與 vdb，其容量大小是否為您所申請的容量 )</p>
+<h1>STEP 2：卸載 /dev/vdb1</h1>
+<pre><code>umount /dev/vdb1</code></pre>
+<h1>STEP 3：磁碟分割，用您擅用的磁碟分割工具，我們以 fdisk 為例</h1>
+<pre><code>fdisk /dev/vdb</code></pre>
+<p><img src='/images/Swap+Adjust-pic2.gif' width='500' align='center'/></p>
+<h1>STEP 4：製作檔案系統</h1>
+<pre><code>mkfs.ext4 /dev/vdb1
+mkswap /dev/vdb2</code></pre>
+<h1>STEP 5：掛載檔案系統</h1>
+<pre><code>mount /dev/vdb1
+swapon /dev/vdb2</code></pre>
+<h1>STEP 6：檢查是否生效</h1>
+<pre><code>df -h ( 檢查 /dev/vdb1 是否已經掛載 )
+free -m ( 檢查 swap 是否有數值 )</code></pre>
+<h1>STEP 7：開機自動掛載</h1>
+<pre><code>vi /etc/fstab
+加入一行 /dev/vdb2 swap swap defaults 0 0</code></pre>
+<p><img src='/images/Swap+Adjust-pic3.gif' width='500' align='center'/><br>如果您變更過 /dev/vdb partition 的順序，或是您變更成非 ext4 檔案系統，那麼您還需要修改此檔案</p>
+<h1>STEP 8：重新開機並驗證</h1>
+<h1>Case2. File swap</h1>
+<p>因預設設定之關係，某些虛擬機器在開通時候可能預設沒有掛載swap，雖現今的記憶體夠大，不一定會使用到 swap，但建議還是要掛載 swap，以增加系統穩定度。</p>
+<h1>STEP 1：製作一個當作 swap 的檔案</h1>
+<p>```dd if=/dev/zero of=/data/swap.img bs=1024k count=1024<br>( 1024k x 1024 = 1GB，請調整 count 達到您要的大小 )</p>
+<pre><code>
+
+STEP 2：製作 swap 檔案格式
+===
+
+```mkswap /data/swap.img</code></pre>
+<h1>STEP 3：立刻啟動 swap 空間</h1>
+<p><code>swapon /data/swap.img</code></p>
+<h1>STEP 4：檢查是否生效</h1>
+<p><code>free -m</code></p>
+<h1>STEP 5：開機自動掛載 swap</h1>
+<p><code>vi /etc/fstab</code></p>
+<p>加入一行 /data/swap.img swap swap defaults 0 0</p>
+<p>附註： /data 是目前 MiCloud Linux VMs 預設第二顆磁碟的掛載點，依客戶使用方式不同而有所差異</p>
+
+  </div>
+  </div>
+  </body>
+</html>

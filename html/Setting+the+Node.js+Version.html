@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>Your Node.js™ SmartMachine uses two ways to determine the version of Node.js you use.</p>
+<p>One mechanism controls the version of Node.js used in your login environment as when you SSH into your Node.js SmartMachine and use npm to install packages.</p>
+<p>The other controls the version that&#39;s used when you push a new version of your application and your application runs.</p>
+<p>In most cases you will want both mechanisms to point to the same version of Node.js. But in some situations, you may want to ensure that your application runs with a specific version of Node.js.</p>
+<p>By default, your Node.js SmartMachine uses the latest stable version of Node.js.</p>
+<p>In this page:</p>
+<h1>Changing the nodejs Symlink</h1>
+<p>The /home/node/local/nodejs symlink points to the directory that contains the version of Node.js used when you log in to your Node.js SmartMachine. This is the version the npm looks at when you install packages</p>
+<p>To make sure that you&#39;re always using the latest version of node, see that /home/node/local/nodejs points to the latest version:</p>
+<pre><code>cd ~/local
+rm nodejs
+ln -s /opt/nodejs/latest nodejs</code></pre>
+<p>You can use any of the version designators described in Which Versions Are Available?.</p>
+<pre><code>Be careful when using tab expansion to set up the symlink. What you&#39;re linking to is actually a directory, and if you include the trailing slash, you will get an error when you push your changes.</code></pre>
+<pre><code>ln -s /opt/nodejs/v0.4.1/ nodejs # DO NOT DO THIS</code></pre>
+<h1>Using config.json to Select the Version Your Application Uses</h1>
+<p>If your application must use a specific version of Node.js, add a file named config.json that contains the following:</p>
+<pre><code>config.json
+{ &quot;version&quot;: &quot;v0.2.6&quot; }</code></pre>
+<p>When you push the change to your Node.js SmartMachine, your application runs with the version you selected:</p>
+<pre><code>$ git push joyent
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: Starting node v0.2.6...
+remote: Successful
+To ssh://node@example.no.de/home/node/repo
+e22d59d..305730f  master -&gt; master</code></pre>
+<p>If your repository does not contain a config.json, it uses the /home/node/local/nodejs symlink.</p>
+<h1>Which Versions Are Available?</h1>
+<p>To find out which Node.js versions are available, log in to your Node.js SmartMachine and look at the file /opt/nodejs/NODE-BUILDS.</p>
+<pre><code>/opt/nodejs/NODE-BUILDS
+$ cat /opt/nodejs/NODE-BUILDS
+v0.5.3 v0.5 unstable
+v0.5.2
+v0.5.1
+v0.5.0
+v0.4.11 v0.4 edge latest stable
+v0.4.10
+v0.4.8
+v0.4.9
+v0.4.7
+v0.4.6</code></pre>
+<p>You can use these special version values to make sure that you&#39;re always using the most recent version of Node.js for your requirements:</p>
+<p>||Version Values     ||Description<br>|vX.Y.Z     |Always use this particular version of Node.js<br>|vX.Y     |The latest version for that series. For example, v0.4 refers to v0.4.1. If there are bug fixes and the version bumps to v0.4.2, your application will take advantage of those bug fixes.<br>|latest stable     |Your application will always use the latest stable version of Node.js suitable for production work.<br>|edge     |The cutting edge version of Node.js. Includes all the latest features, but may be buggy.</p>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

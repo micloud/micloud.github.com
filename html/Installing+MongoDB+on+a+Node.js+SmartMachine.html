@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>This page shows you how to install MongoDB on your Node.js™ SmartMachine.</p>
+<p>In this page:</p>
+<p>In the interest of conserving your no.de&#39;s RAM and CPU, if you&#39;re looking for a good hosted MongoDB instance during the 48-hour NodeKnockout Competition, we recommend checking out the free offering from MongoHQ</p>
+<h1>Using an Installation Script</h1>
+<p>The easiest way to install MongoDB on your Node.js SmartMachine is to use this installation script .</p>
+<p>First, log into your no.de smartmachine as &quot;admin&quot;, by running</p>
+<pre><code>ssh admin@yourmachine.no.de</code></pre>
+<p>then become root with:</p>
+<pre><code>sudo bash</code></pre>
+<p>... you&#39;ll follow that &quot;become root&quot; process when you need to run the mongo shell, or perform other maintenance work, too.</p>
+<p>then:</p>
+<pre><code>$ curl -O http://wiki.joyent.com/download/attachments/1639170/mongodbnode.sh
+$ bash mongodbnode.sh 1.8.1</code></pre>
+<p>The installation script</p>
+<ul>
+<li>downloads MongoDB and the additional library needed</li>
+<li>unpacks the tar files</li>
+<li>creates the directories ~/local/bin, ~/local/lib, ~/local/var/mongodb if they don&#39;t already exist</li>
+<li>moves the files to the appropriate directories</li>
+<li>creates an SMF manifest for the MongoDB service<br>To start MongoDB, and to ensure that it restarts when your machine reboots, run these commands:</li>
+</ul>
+<pre><code>source ~/.bashrc
+pfexec svcadm enable mongodb</code></pre>
+<h1>Installing Manually</h1>
+<p>Follow these instructions to install MongoDB 1.8.1 on your Node.js SmartMachine.</p>
+<pre><code>$ curl -O http://fastdl.mongodb.org/sunos5/mongodb-sunos5-x86_64-1.8.1.tgz
+$ tar -xvzf mongodb-sunos5-x86_64-1.8.1.tgz
+$ rm mongodb-sunos5-x86_64-1.8.1.tgz
+$ mv mongodb-sunos5-x86_64-1.8.1 mongo
+
+$ cd mongo
+
+$ # get extra libraries we need (else you will get a libstdc++.so.6 dependency issue)
+$ curl -O http://downloads.mongodb.org.s3.amazonaws.com/sunos5/mongo-extra-64.tgz
+$ tar -xvzf mongo-extra-64.tgz
+$ rm mongo-extra-64.tgz
+
+$ # just as an example - you will really probably want to put these somewhere better:
+$ export LD_LIBRARY_PATH=/home/node/mongo/mongo-extra-64
+$ bin/mongod --help
+
+# run mongo in a writable directory, replying only to localhost
+$ mkdir db
+$ bin/mongod --bind_ip=127.0.0.1 --journal --dbpath /home/node/mongo/db</code></pre>
+<p>Note that running MongoDB this way will not restart if your Node.js SmartMachine is rebooted. You may want to create an SMF manifest for it and use SMF to make sure it runs when your machine restarts. You can use the SMF manifest from the installation script .</p>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>

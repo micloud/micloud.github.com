@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Micloud.github.com by micloud</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <p>The title of the page serves as the heading to this section. It describes the problem that this page is solving.</p>
+<p>In this page:</p>
+<h1>About pkgsrc</h1>
+<p>Joyent maintains a pkgsrc repository of prebuilt binary packages for SmartMachines. Some of these packages are already installed by default. You can use pkgsrc to add a package that&#39;s in the repository but not in the default installation or to add a package from another source.</p>
+<p>Joyent runs building and testing systems, builds binary packages using pkgsrc for all software that are available at a binary package repository, and uses these binary packages to create SmartMachine templates, to clone for deployment to customer. This means that when you need something that&#39;s not installled by default on an SmartMachine, you do not have to resort to building from source (although you can, of course), but can simply use our binary package repository and/or employ pkgsrc to build your own.</p>
+<p>;SmartMachines deployed before March 22, 2008 used Blastwave instead of pkgsrc.See Working with Older SmartMachines</p>
+<h1>Where pkgsrc Installs Files</h1>
+<p>Pkgsrc installs files in several directories within /opt/local. If you&#39;re used to other Unix-like systems, you might expect to find these files in /usr/local. (In fact, there is a symlink from /usr/local to /opt/local in case your fingers have gotten used to typing that instead.)</p>
+<p>||Directory     ||Description<br>|/opt/local     |This is where pkgsrc installs software including binaries, libraries, configuration files, supporting files, examples, documentation etc.<br>|/opt/local/etc     |Contains configuration files.<br>|/opt/local/share/examples     |Example configuration files.</p>
+<p>When you add a new package, pkgsrc installs sample configuration files here, and then copies them to /opt/local/etc if they don&#39;t already exist there.<br>|/var/db/pkg     |This directory contains two directories that contain the database of installed and available packages. If you delete or damage these directories, you will not be able to use the pkgsrc management tools.<br>As noted in the table above, pkgsrc copies configuration files into /opt/local/etc only if they don&#39;t already exist there. That means that you will not lose any custom configuration when you update, remove, or reinstall a pacakage. If you break your configuration file, you can always get a clean one from /opt/local/share/examples.</p>
+<p>However, for some preinstalled software such as Apache and MySQL, your SmartMachine comes with preconfigured files in /opt/local/etc which are not mirrored in /opt/local/share/examples.</p>
+<h1>Releases</h1>
+<p>Joyent follows pkgsrc&#39;s quarterly release scheme (&#39;2009Q1&#39;, &#39;2009Q1&#39; etc.), and generally rebuilds the repository for each new release published. The way the pkgsrc community updates packages works as follows:</p>
+<ul>
+<li>All changes are applied to the current (trunk) CVS branch of the pkgsrc meta tree. In general, Joyent does not use the HEAD branch.</li>
+<li>Security patches are backported to the last quarterly release. Joyent generally attempts to keep its current binary package build in sync with the current pkgsrc branch, but updates are being made in the order of weeks rather than days.</li>
+<li>When the quarterly interval comes up, the current branch is frozen and becomes the new quarterly release. For instance, 2009Q2 was released in early July, and 2009Q3 in October. When a new release is made, Joyent starts rebuilding its package repository, and may cut a new SmartMachine template based on the updated package set.<br>The important part is that only the current release is getting any security patches. Older releases are never updated, which is why it&#39;s crucial to update to the latest release. In certain cases, Joyent may backport updates to earlier binary package sets.</li>
+</ul>
+<p>While you do not have to strictly adhere to the release cycle when updating packages, very much often deep system libraries (e.g. openssl, db4 or libxml2) are bumped when launching a new release, so you may be forced to update half of your software world by pulling in more recent versions of other packages, to match what they were build against. Hence depending on the exact situation and your needs, you should choose between updating particular packages, and updating your entire SmartMachine to a new release.</p>
+<p>To find out which package release your SmartMachine has, use this command:</p>
+<pre><code>cat /opt/local/etc/pkg_install.conf</code></pre>
+<h1>Package Management</h1>
+<p>The Joyent binary repository for SmartMachines lives at:</p>
+<pre><code>http://pkgsrc.joyent.com/RELEASE/</code></pre>
+<p>Where RELEASE is to be replaced with the pkgsrc release that your SmartMachine is currently populated with (see above).</p>
+<p>If your SmartMachine runs 2009Q1 at least, we strongly recommend using <strong>pkgin</strong> to add/remove/update installed packages. Pkgin is an apt/yum like tool that was recently coded by a 3rd party programmer for use with pkgsrc.</p>
+<p>The default pkgsrc tools to manage packages are pkg<em>add, pkg<em>delete, pkg_info (and a few others), lumped into the __pkg_install package</em></em>. They work fine for package addition/removal, but are not generally suited well for package updates, especially when dependencies are involved.</p>
+<h1>Updating to a newer release</h1>
+<p>By updating to a newer release, we mean that you update every installed package on your SmartMachine to a more recent version that&#39;s available under the new release. This is a complex operation and there are various tools that can help you. Our favorite tested tool at this point is <strong>pkg_chk</strong>.</p>
+<p>;It makes sense to have a plan before you start updating your entire SmartMachine though. The update typically takes a few minutes, and software may become unavailable during the process, so it&#39;s a good measure to think of it as &#39;server maintenance&#39; or &#39;downtime&#39; even, and plan accordingly. Can you claim a maintenance and shut off all services? Good. If not, letting your users/visitors know at least will work - just in case.</p>
+<p>These are the upgrade paths that we tested and documented:</p>
+<p>||You have...     ||You want...     ||Follow these instructions<br>|2007Q3     |2009Q1    |instructions<br>|2007Q4     |2008Q2    |instructions<br>|2007Q4     |2009Q1    |instructions<br>|2008Q2     |2009Q1    |instructions<br>|2009Q1     |2009Q4    |instructions<br>|2009Q1     |2010Q1    |instructions<br>|2009Q4     |2010Q1    |instructions</p>
+<p>;If you should happen to &quot;break&quot; pkgsrc and no longer be able to log in as &#39;jill&#39;, try logging in as the &#39;admin&#39; user instead. We leave this one with Sun&#39;s copy of &#39;bash&#39; as a shell, rather than the one from pkgsrc - just in case.</p>
+<h1>Building from pkgsrc yourself</h1>
+<p>Any pkgsrc-based SmartMachine already has pkgsrc bootstrapped, and the building tools installed. In order to build your own packages (e.g. those that exist in pkgsrc, but are not built by Joyent for whatever reason), you only need to download a pkgsrc meta tree, and start building - pkgsrc will pick up existing packages and will not try to build them again.</p>
+<p>You may decide to bootstrap your very own pkgsrc setup (i.e. ignore what&#39;s already installed), maybe to create a separate installation under a new prefix, or to get pkgsrc going on a pre-pkgsrc (Blastwave) Accelerator. Note that there is normally no need for this, as our SmartMachines already come bootstrapped and ready to use as far as pkgsrc is concerned.</p>
+<p>In both cases, see this comprehensive page on <strong>using your own pkgsrc</strong>.</p>
+<h1>Reference</h1>
+<p><a href="http://www.netbsd.org/docs/pkgsrc/">pkgsrc documentation</a></p>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+
+  </div>
+  </div>
+  </body>
+</html>
