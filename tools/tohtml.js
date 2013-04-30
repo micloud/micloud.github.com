@@ -15,11 +15,12 @@ fs.readdir(mdfilepath, function(e, files) {
       fs.readFile(mdfilepath + '/' + file, 'utf8', function(e, d) {
         if(e) console.log(e);
         var output = mkup( d );
+
         output = output.replace(/\/index\.html\?page=/g,'html/').replace(/\.md\"/g, '.html"');
         output = output.replace(/[\"]images/g,'"/images');
         output = output.replace(/\'images/g,'\'/images');
-
-        output = util.format(tpl, output);
+        var title = file.replace(/\+/g, ' ').replace(/\.md/g,'');
+        output = util.format(tpl, title, title, title , output);
         fs.writeFileSync( path + '/' + file.replace(/\.md/g,'.html'), output, 'utf8', function(err){
           if(err) {
             console.log(err);
