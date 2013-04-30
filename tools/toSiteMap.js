@@ -13,7 +13,8 @@ fs.readdir(mdfilepath, function(e, files) {
   files.forEach(function(file, i) {
     console.log('Processing of %s (md file: %s)', file, file.endsWith('.md'));
     if(file.endsWith('.md')) {
-      maps += util.format(map, 'http://doc.micloud.tw/index.html?page='+file);
+      //maps += util.format(map, 'http://doc.micloud.tw/index.html?page='+file);
+      maps += util.format(map, 'http://doc.micloud.tw/html/'+file.replace(/\.md/g, '.html'));
     }
   });
 

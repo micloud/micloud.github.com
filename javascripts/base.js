@@ -7,9 +7,7 @@ var mdfilepath = '/mdfiles';
 
 $(document).ready(function(){
 
-  // $('#md_menu').load('menu.md', function(){
-  //   $('#menu').html(htmlUnescape(marked($('#md_menu').html()), mkdOpt));  
-  // });
+  $('#search').load('search.html');
 
   var p = getURLParameter('page');
   
