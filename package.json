@@ -13,7 +13,8 @@
     }
   ],
   "dependencies": {
-    "markdown":"*"
+    "markdown":"*",
+    "json2tree":"*"
   },
   "keywords": [
     "http","server","web"
