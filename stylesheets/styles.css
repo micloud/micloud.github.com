@@ -130,6 +130,16 @@ section {
   padding-bottom:50px;
 }
 
+p img {
+  -moz-box-shadow:4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+  -webkit-box-shadow:4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+  box-shadow:4px 4px 12px 4px rgba(20%,20%,40%,0.5);
+}
+
+p a img {
+  box-shadow:none; 
+}
+
 small {
   font-size:11px;
 }
