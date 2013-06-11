@@ -40,17 +40,18 @@
   </div>
   <hr style="width:960px"/>
   <div align="center" style="text-align:left; width:960px;">
-    <h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
+    <h1>如何更新主機時區？</h1>
+<h2>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h2>
 <p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
-<p><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></p>
+<pre><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></pre>
 <p>(2) 執行 date -u</p>
-<p><code># date -u</code></p>
+<pre><code># date -u</code></pre>
 <p>(3) 輸入 date 看看是否已經是正確時區</p>
-<p><code># date</code></p>
+<pre><code># date</code></pre>
 <hr>
-<h1>SmartMachine 設定時間的方式</h1>
+<h2>SmartMachine 設定時間的方式</h2>
 <p>選擇TimeZone時區</p>
-<pre><code>[root@XXXX /opt/local/etc/nginx]# tzselect]([root@XXXX /opt/local/etc/nginx# tzselect)
+<pre><code>[root@XXXX /opt/local/etc/nginx]# tzselect
 Please identify a location so that time zone rules can be set correctly.
 Please select a continent or ocean.
 1) Africa
@@ -107,7 +108,7 @@ Is the above information OK?
 Here is the TZ value again, this time on standard output:
 Asia/Taipei</code></pre>
 <p>修改Time Zone設定擋</p>
-<pre><code>[root@XXXX /opt/local/etc/nginx]# vi /etc/default/init]([root@XXXX /opt/local/etc/nginx# vi /etc/default/init)</code></pre>
+<pre><code>[root@XXXX /opt/local/etc/nginx]# vi /etc/default/init</code></pre>
 <p>修改TZ設定內容為Asia/Taipei</p>
 <pre><code>TZ=Asia/Taipei</code></pre>
 <p>重新開機生效</p>

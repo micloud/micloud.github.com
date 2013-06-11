@@ -40,15 +40,13 @@
   </div>
   <hr style="width:960px"/>
   <div align="center" style="text-align:left; width:960px;">
-    <p>In this page:</p>
-<h1>Using DTrace on MySQL</h1>
+    <h1>Using DTrace on MySQL</h1>
 <p>Even though there aren&#39;t DTrace probes for MySQL released yet, we can still get useful information from MySQL. DTrace has a pid provider which allows us to get into any function the program is executing and see it&#39;s arguments. The only drawback is you have to go digging around in the source code to find out what you want to see. But thanks to guys like Brendan Gregg, they have already done some of the digging for us</p>
 <p>Even if we want to go digging around ourselves, it&#39;s really not that hard; you just have to get your feet wet. And because SmartMachines have DTrace probes enabled, you can take advantage of using DTrace on MySQL. I will show some examples of this and how easy it is to hunt down your own functions.</p>
 <p>First let&#39;s start with functions that have already been dug up for us:</p>
 <pre><code>mysql_parse(thd, thd-&gt;query, length, &amp; found_semicolon);</code></pre>
 <p>This is the function MySQL uses to parse a query. So all we have to do is trace this function through the pid provider and we get to see all the queries coming through. This shows arg1 as being the query, and we must copy it in to kernel land where DTrace works for it to see the string:</p>
-<pre><code>root@ferrari:~# dtrace -qn &#39;pid$target:mysqld:*mysql_parse*:entry { printf(&quot;%Y     %s
-n&quot;, walltimestamp, copyinstr(arg1)) }&#39; -p `pgrep -x mysqld`
+<pre><code>root@ferrari:~# dtrace -qn &#39;pid$target:mysqld:*mysql_parse*:entry { printf(&quot;%Y     %s\n&quot;, walltimestamp, copyinstr(arg1)) }&#39; -p `pgrep -x mysqld`
 2007 Sep 27 10:04:35     select * from blah
 2007 Sep 27 10:04:58     select * from tablenothere</code></pre>
 <p>Notice that this will show all queries, even if they aren&#39;t successful. Now that we can trace queries, this can give us good information. For example we can see what queries are executed the most:</p>
@@ -84,7 +82,7 @@ Time: 2.28</code></pre>
 Write to the slow query log.
 *  /
 bool MYSQL_LOG::write(THD *thd,const char *query, uint query_length,
-time_t query_start_arg)</code></pre>
+                      time_t query_start_arg)</code></pre>
 <p>It&#39;s obvious that this function is the function that writes to the slow query log. Running this script below, looking for function LOG while a slow query is being inserted shows this function being executed with some weird characters around it:</p>
 <pre><code>root@ferrari:~# dtrace -F -n &#39;pid$1:mysqld:*LOG*:entry {} pid$1:mysqld:*LOG*:return {}&#39; `pgrep -x mysqld`
 dtrace: description &#39;pid$1:mysqld:*LOG*:entry &#39; matched 126 probes
@@ -92,7 +90,7 @@ CPU FUNCTION
 0  -&gt; _ZN9MYSQL_LOG5writeEP3THD19enum_server_commandPKcz
 0  -&gt; _ZN9MYSQL_LOG5writeEP3THDPKcjl
 0  &lt; - _ZN9MYSQL_LOG5writeEP3THDPKcjl</code></pre>
-<p>The only thing bad about tracing MySQL through the pid provider is that these weird characters change between MySQL versions, so we can&#39;t always trace for &#39;_ZN9MYSQL_LOG5writeEP3THDPKcjl&#39; if we want it to work on other machines. We have to trace for MYSQ<em>LOG</em>write which slowquerycounts.d uses:</p>
+<p>The only thing bad about tracing MySQL through the pid provider is that these weird characters change between MySQL versions, so we can&#39;t always trace for &#39;_ZN9MYSQL_LOG5writeEP3THDPKcjl&#39; if we want it to work on other machines. We have to trace for MYSQ*LOG*write which slowquerycounts.d uses:</p>
 <pre><code>root@ferrari:~# ./slowquerycounts.d -p `pgrep -x mysqld`
 Tracing... Hit Ctrl-C to end.
 

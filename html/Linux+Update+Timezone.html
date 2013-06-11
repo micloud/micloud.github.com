@@ -42,13 +42,13 @@
   <div align="center" style="text-align:left; width:960px;">
     <h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
 <p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
-<p><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></p>
+<pre><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></pre>
 <p>(2) 執行 date -u</p>
-<p><code># date -u</code></p>
+<pre><code># date -u</code></pre>
 <p>(3) 輸入 date 看看是否已經是正確時區</p>
-<p><code># date</code></p>
+<pre><code># date</code></pre>
 <p>(4) 重開後生效</p>
-<p><code># reboot</code></p>
+<pre><code># reboot</code></pre>
 
   </div>
   </div>

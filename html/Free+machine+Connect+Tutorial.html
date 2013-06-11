@@ -45,7 +45,7 @@
 <p>您申請免費30天試用服務後，SmartOS/Linux主機連線必須透過SSH協定與SSH Key的認證，以確保您與您的伺服器之間的連線安全。</p>
 <p>1.若您已設定ssh key則使用您原本的私鑰進行連線</p>
 <p>2.<font color='blue'>若您尚未設定ssh key則系統會發送一組私鑰和公鑰給您,相關設定如下:</font></p>
-<h1>Linux/MacOS主機</h1>
+<h2>Linux/MacOS主機</h2>
 <p>如您為Linux或MacOS用戶，在登入平台後，選擇主機，點選下方紅色框框部分的任何一台主機，會進入主機的細項畫面，您可以看到如下資訊：</p>
 <p><img src='/images/Free+machine+&+Connect+Tutorial-machine1.jpg' width='650' align='center'/></p>
 <p><img src='/images/Free+machine+&+Connect+Tutorial-dnsport.jpg' width='650' align='center'/></p>
@@ -53,7 +53,7 @@
 <pre><code>ssh root@your.domain.name -p ssh_port -i your_private_key</code></pre>
 <p>ex:</p>
 <pre><code>ssh root@192-168-255-13.my.micloud.tw -p 65013 -i ~/.ssh/id_rsa</code></pre>
-<h1>Windows主機(使用Putty工具連線範例)</h1>
+<h2>Windows主機(使用Putty工具連線範例)</h2>
 <p>由於Putty採用特有格式的puk檔案來封裝SSH Key，因此必須透過Putty相關工具將MiCloud產出之Key File進行轉換，轉換動作如下：</p>
 <p>(1)將信件中的私鑰下載至您的電腦中，如下圖。</p>
 <p><img src='/images/Free+machine+&+Connect+Tutorial-key.png' width='500' align='center'/></p>

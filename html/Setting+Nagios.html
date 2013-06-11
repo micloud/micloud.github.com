@@ -42,8 +42,8 @@
   <div align="center" style="text-align:left; width:960px;">
     <h1>建置Nagios網路監控主機</h1>
 <p>Nagios是一套網路監控軟體，不僅可以監控主機(本地端或遠端)及服務，管理者可自行依需求來撰寫當監控主機或服務發生問題時的反應動作，例如.可以設置當服務出現問題時會透過電子郵件的方式通知管理人員，讓管理人員更快、精準掌握網路、主機設備等狀況。</p>
-<h1>Fedora</h1>
-<h1>安裝Nagios及相關必要套件</h1>
+<h2>Fedora</h2>
+<h2>安裝Nagios及相關必要套件</h2>
 <p><strong>前置作業：</strong></p>
 <p>新增一個使用者(nagios)做為程式的預設使用者</p>
 <pre><code>#useradd -m nagios</code></pre>
@@ -82,7 +82,7 @@
 <pre><code>#./configure
 #make
 #make install</code></pre>
-<h1>設定</h1>
+<h2>設定</h2>
 <p>a.設定一個帳號，此帳號可以透過網頁登入做管理(帳號為nagios)</p>
 <pre><code>#htpasswd -c /usr/local/nagios/etc/htpasswd.users nagios</code></pre>
 <p><img src='/images/Setting+Nagios-pwd.png' width='650' align='center'/></p>
@@ -115,7 +115,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <p>h.關閉防火牆，網頁才能正常開啟，並設置防火牆於開機時不自動啟動</p>
 <pre><code>#/etc/init.d/iptables stop
 #chkconfig iptables off</code></pre>
-<h1>驗證</h1>
+<h2>驗證</h2>
 <p>a.請在瀏覽器上，輸入<a href="http://192.168.xxx.xxx/nagios/">http://192.168.xxx.xxx/nagios/</a> ，輸入您設置好的帳號及密碼<br><img src='/images/Setting+Nagios-login.png' width='650' align='center'/><br>成功登入之頁面<br><img src='/images/Setting+Nagios-success.png' width='650' align='center'/></p>
 <p>b.監控Services<br>安裝完成後，您會發現http服務會有一個警告訊息如下圖紅色框框的部分<br><img src='/images/Setting+Nagios-su2.png' width='650' align='center'/><br>原因:<br>雖然http服務正常，但預設apache網頁目錄/var/www/html沒有相關的index.html檔，才會出現這個警告請在此目錄下加入一個空的index.html，幾分鐘後警告即被排除，指令如下:</p>
 <pre><code>#touch /var/www/html/index.html</code></pre>

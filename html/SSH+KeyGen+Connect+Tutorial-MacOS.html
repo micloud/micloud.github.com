@@ -40,7 +40,8 @@
   </div>
   <hr style="width:960px"/>
   <div align="center" style="text-align:left; width:960px;">
-    <h1>SSH Key 限制</h1>
+    <h1>金鑰產生與連線教學(MacOS)</h1>
+<h2>SSH Key 限制</h2>
 <p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
 <ol>
 <li>SSH Key僅適用於SmartOS及Linux主機，Windows主機不適用。</li>
@@ -51,22 +52,22 @@
 
 </li>
 </ol>
-<h1>MiCloud SSH Key 管理功能</h1>
-<p>MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal([<a href="http://micloud.tw])進行SSH">http://micloud.tw])進行SSH</a> Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。](MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal - [<a href="http://micloud.tw進行SSH">http://micloud.tw進行SSH</a> Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。)</p>
-<p>SSH Key上傳與管理，請參考&quot;[使用Windows連線SmartMachine](SSH KeyGen &amp; Connect Tutorial - Windows)</p>
-<h1>Mac OS 建立 SSH-KEY 與使用方法</h1>
+<h2>MiCloud SSH Key 管理功能</h2>
+<p>MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal(<a href="http://micloud.tw">http://micloud.tw</a>) 進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。</p>
+<p>SSH Key上傳與管理，<a href="html/SSH+KeyGen+Connect+Tutorial-Windows.html">&quot;使用Windows連線SmartMachine&quot;</a> 說明</p>
+<h2>Mac OS 建立 SSH-KEY 與使用方法</h2>
 <p>產生SSH Key:</p>
-<p><code>ssh-keygen -t rsa</code></p>
+<pre><code>ssh-keygen -t rsa</code></pre>
 <p>產生過程如下：<br><img src='/images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic1.png' width='500' align='center'/><br>上圖底下的兩個紅色框框的內容為您的私鑰與公鑰所擺放的位置。</p>
 <pre><code>cd /user/[您的帳號資料夾]/.ssh    #切換到SSH Key的預設資料匣](cd /user/[您的帳號資料夾/.ssh    #切換到SSH Key的預設資料匣)
 ls                              #查看該資料夾底下是否正確產生id_rsa(private key)及id_rsa.pub(public key)兩個檔案
 cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p><img src='/images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic2.png' width='500' align='center'/><br>公開金鑰產出格式一不同機器略有不同。</p>
 <p>複製上圖下方紅色框框內的文字貼於網頁中的SSH-Key欄位中即可</p>
-<h1>Mac OS 連線方式</h1>
+<h2>Mac OS 連線方式</h2>
 <p>使用 openssh client，請帶參數-i來使用剛剛所建的id_rsa這個private ssh key。</p>
 <p>例如：</p>
-<p><code>ssh -i id_rsa root@211.123.123.31</code></p>
+<pre><code>ssh -i id_rsa root@211.123.123.31</code></pre>
 <p><img src='/images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic3.png' width='500' align='center'/></p>
 
   </div>

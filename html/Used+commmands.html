@@ -42,12 +42,96 @@
   <div align="center" style="text-align:left; width:960px;">
     <h1>常用指令集</h1>
 <p>各版本套件指令比較表<br>雖然目前許多市面常見的作業系統例如Ubuntu、Debian、CentOS、Fedora，甚至是目前Micloud所用的SmartOS都是以linux為底的架構。不過由於開發人員的不同在指令的操作上也會有稍稍的不同，在套件的指令集中，我們利用列表來比較各版本不同的指令:</p>
-<p>||             ||Ubuntu、Debian        ||CentOS、Fedora       ||SmartOS<br>|查詢已安裝的套件         |apt-cache pkgnames     |yum list              |pkgin list<br>|查詢套件可安裝套件</p>
-<p>的名稱或關鍵字 | apt-cache search &quot;套件名稱&quot;</p>
-<p>或apt-cache search &quot;關鍵字&quot; |yum search &quot;套件名稱&quot;</p>
-<p>或yum search &quot;關鍵字&quot;  |pkgin search &quot;套件名稱&quot;</p>
-<p>或pkgin search &quot;關鍵字&quot;<br>|安裝套件       |apt-get install &quot;套件名稱&quot;     |yum install &quot;套件名稱&quot;    |pkgin install &quot;套件名稱&quot;<br>|移除套件       |apt-get remove &quot;套件名稱&quot;      |yum remove &quot;套件名稱&quot;     |pkgin remove &quot;套件名稱&quot;<br>|升級所有己安裝</p>
-<p>的最新列表  |apt-get update     |yum update               |pkgin update<br>|下載檔案       |wget &quot;網址&quot;                   |wget &quot;網址&quot;               |wget &quot;網址&quot;<br>|複製檔案       |cp &quot;來源檔&quot;  &quot;目的檔&quot;          |cp &quot;來源檔&quot;  &quot;目的檔&quot;      |cp &quot;來源檔&quot;  &quot;目的檔&quot;<br>|刪除檔案       |rm &quot;檔案或目錄&quot;                |rm &quot;檔案或目錄&quot;            |rm &quot;檔案或目錄&quot;<br>|檢視檔案內容    |cat &quot;檔案名稱&quot;                |cat &quot;檔案名稱&quot;             |cat &quot;檔案名稱&quot;<br>|切換目錄       |cd &quot;相對路徑或絕對路徑&quot;         |cd &quot;相對路徑或絕對路徑&quot;     |cd &quot;相對路徑或絕對路徑&quot;<br>|顯示所在目錄    |pwd                          |pwd                       |pwd<br>|檢視目錄下的檔案 |ls                          |ls                         |ls<br>|重新開機        |reboot                      |reboot                     |reboot</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ubuntu、Debian</th>
+<th>CentOS、Fedora</th>
+<th>SmartOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查詢已安裝的套件</td>
+<td>apt-cache pkgnames</td>
+<td>yum list</td>
+<td>pkgin list</td>
+</tr>
+<tr>
+<td>查詢套件可安裝套件的名稱或關鍵字</td>
+<td>apt-cache search &quot;套件名稱&quot;或apt-cache search &quot;關鍵字&quot;</td>
+<td>yum search &quot;套件名稱&quot;或yum search &quot;關鍵字&quot;</td>
+<td>pkgin search &quot;套件名稱&quot;或pkgin search &quot;關鍵字&quot;</td>
+</tr>
+<tr>
+<td>安裝套件</td>
+<td>apt-get install &quot;套件名稱&quot;</td>
+<td>yum install &quot;套件名稱&quot;</td>
+<td>pkgin install &quot;套件名稱&quot;</td>
+</tr>
+<tr>
+<td>移除套件</td>
+<td>apt-get remove &quot;套件名稱&quot;</td>
+<td>yum remove &quot;套件名稱&quot;</td>
+<td>pkgin remove &quot;套件名稱&quot;</td>
+</tr>
+<tr>
+<td>升級所有己安裝的最新列表</td>
+<td>apt-get update</td>
+<td>yum update</td>
+<td>pkgin update</td>
+</tr>
+<tr>
+<td>下載檔案</td>
+<td>wget &quot;網址&quot;</td>
+<td>wget &quot;網址&quot;</td>
+<td>wget &quot;網址&quot;</td>
+</tr>
+<tr>
+<td>複製檔案</td>
+<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
+<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
+<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
+</tr>
+<tr>
+<td>刪除檔案</td>
+<td>rm &quot;檔案或目錄&quot;</td>
+<td>rm &quot;檔案或目錄&quot;</td>
+<td>rm &quot;檔案或目錄&quot;</td>
+</tr>
+<tr>
+<td>檢視檔案內容</td>
+<td>cat &quot;檔案名稱&quot;</td>
+<td>cat &quot;檔案名稱&quot;</td>
+<td>cat &quot;檔案名稱&quot;</td>
+</tr>
+<tr>
+<td>切換目錄</td>
+<td>cd &quot;相對路徑或絕對路徑&quot;</td>
+<td>cd &quot;相對路徑或絕對路徑&quot;</td>
+<td>cd &quot;相對路徑或絕對路徑&quot;</td>
+</tr>
+<tr>
+<td>顯示所在目錄</td>
+<td>pwd</td>
+<td>pwd</td>
+<td>pwd</td>
+</tr>
+<tr>
+<td>檢視目錄下的檔案</td>
+<td>ls</td>
+<td>ls</td>
+<td>ls</td>
+</tr>
+<tr>
+<td>重新開機</td>
+<td>reboot</td>
+<td>reboot</td>
+<td>reboot</td>
+</tr>
+</tbody>
+</table>
 
   </div>
   </div>

@@ -5,8 +5,8 @@ var fs = require('fs')
   , wikitpage = require('./wikitpage');
 
 // Configure the tree data path and the output file path
-var path = '../javascripts/tree.json'
-  , out = '../tree.html';
+var path = __dirname + '/../javascripts/tree.json'
+  , out = __dirname + '/../tree.html';
 
 // Prepare the json data
 var jsonCfg = JSON.parse(fs.readFileSync(path, "utf-8"));

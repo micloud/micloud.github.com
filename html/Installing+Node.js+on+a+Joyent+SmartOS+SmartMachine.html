@@ -43,13 +43,13 @@
     <h1>Node.js</h1>
 <p>Node.js 是一個高效能、易擴充的網站應用程式開發框架 (Web Application Framework)，是為了讓開發者能夠更容易開發高延展性的網路服務。系統不需要經過太多複雜的調校、效能調整及程式修改，就能滿足網路服務在不同發展階段對效能的要求。</p>
 <p>MiCloud所提供的SmartOS主機中，已有預載Nodejs服務的主機只有SmartOS Plus、SmartOS32+Nodejs這二種版本，若其他規格的主機想安裝Nodejs於您的主機上，請按照下列步驟進行安裝。</p>
-<h1>在SmartOS上安裝Node.js</h1>
+<h2>在SmartOS上安裝Node.js</h2>
 <p>利用pkgin指令搜尋node.js:</p>
 <pre><code># pkgin search nodejs</code></pre>
 <p><img src='/images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p1.PNG' width='650' align='center'/><br>如上圖的範例，顯示0.4.9版本可供下載安裝，利用pkgin指令安裝:</p>
 <pre><code># pkgin install nodejs-0.4.9</code></pre>
 <p><img src='/images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p2.PNG' width='650' align='center'/></p>
-<h1>檢視是否安裝成功</h1>
+<h2>檢視是否安裝成功</h2>
 <p>首先我們透過vi指令來建立名為server.js程式:</p>
 <pre><code># vi server.js</code></pre>
 <p><img src='/images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p3.PNG' width='650' align='center'/></p>
@@ -57,8 +57,7 @@
 <pre><code>var http = require(&#39;http&#39;);
 http.createServer(function (req, res) {
 res.writeHead(200, {&#39;Content-Type&#39;: &#39;text/plain&#39;});
-res.end(&#39;Hello Node.js
-n&#39;);
+res.end(&#39;Hello Node.js\n&#39;);
 }).listen(8102, &quot;127.0.0.1&quot;);
 console.log(&#39;Server running at http://127.0.0.1:8102/&#39;);</code></pre>
 <p>在上方指令中，您可以在.listen後方加入沒有被使用的port(本範例是使用8102)，依序是localhost的網址。如下圖所示:<br><img src='/images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p4.png' width='650' align='center'/></p>

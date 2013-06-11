@@ -40,13 +40,83 @@
   </div>
   <hr style="width:960px"/>
   <div align="center" style="text-align:left; width:960px;">
-    <h1>檢查磁碟使用情況</h1>
-<p>||如何得到這個資訊    ||請使用此命令<br>|查詢整個文件系統的磁碟空間使用情況    |df -ht<br>|查詢當前目錄的磁碟空間使用情況    |du -h<br>|查詢摘要目錄使用的空間    |du -hs /opt<br>在這些命令中的-h參數的結果，是以“人類可讀”的形式呈現。</p>
-<h1>從 shell 檢查程序</h1>
-<p>||相關資訊    ||使用此命令<br>|通用處理器和內存統計資料    |prstat -Z -s cpu</p>
-<p>If prstat changes your terminal settings, use the reset command to reset them.<br>|正在運行的程序列表    |ps -elf<br>|admin用戶程序列表    |ps -uadmin -o pcpu,user,pid,args,comm,s</p>
-<p>ps -uadmin -o user,args,pcpu,pmem,vsz,time,comm<br>|MySQL用戶程序    |ps -umysql -o pcpu,vsz,osz,args,comm,s<br>|使用80 port的所有程序    |/root/bin/pcp -p 80<br>|2806過程中使用的所有埠    |/root/bin/pcp -P 28068<br>|所有埠和程序的資訊    |/root/bin/pcp -a<br>|CPU使用率    |sudo /root/jinf -C<br>|記憶體使用    |sudo /root/jinf -m<br>|互換空間的使用情況    |sudo /root/jinf -S</p>
-<h1>檢查Webmin的過程</h1>
+    <h1>如何檢視已使用的資源?</h1>
+<h2>檢查磁碟使用情況</h2>
+<table>
+<thead>
+<tr>
+<th>如何得到這個資訊</th>
+<th>請使用此命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查詢整個文件系統的磁碟空間使用情況</td>
+<td>df -ht</td>
+</tr>
+<tr>
+<td>查詢當前目錄的磁碟空間使用情況</td>
+<td>du -h</td>
+</tr>
+<tr>
+<td>查詢摘要目錄使用的空間</td>
+<td>du -hs /opt</td>
+</tr>
+</tbody>
+</table>
+<p>在這些命令中的-h參數的結果，是以“人類可讀”的形式呈現。</p>
+<h2>從 shell 檢查程序</h2>
+<table>
+<thead>
+<tr>
+<th>相關資訊</th>
+<th>使用此命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通用處理器和內存統計資料</td>
+<td>prstat -Z -s cpu <br>If prstat changes your terminal settings, use the reset command to reset them.</td>
+</tr>
+<tr>
+<td>正在運行的程序列表</td>
+<td>ps -elf</td>
+</tr>
+<tr>
+<td>admin用戶程序列表</td>
+<td>ps -uadmin -o pcpu,user,pid,args,comm,s<br>ps -uadmin -o user,args,pcpu,pmem,vsz,time,comm</td>
+</tr>
+<tr>
+<td>MySQL用戶程序</td>
+<td>ps -umysql -o pcpu,vsz,osz,args,comm,s</td>
+</tr>
+<tr>
+<td>使用80 port的所有程序</td>
+<td>/root/bin/pcp -p 80</td>
+</tr>
+<tr>
+<td>2806過程中使用的所有埠</td>
+<td>/root/bin/pcp -P 28068</td>
+</tr>
+<tr>
+<td>所有埠和程序的資訊</td>
+<td>/root/bin/pcp -a</td>
+</tr>
+<tr>
+<td>CPU使用率</td>
+<td>sudo /root/jinf -C</td>
+</tr>
+<tr>
+<td>記憶體使用</td>
+<td>sudo /root/jinf -m</td>
+</tr>
+<tr>
+<td>互換空間的使用情況</td>
+<td>sudo /root/jinf -S</td>
+</tr>
+</tbody>
+</table>
+<h2>檢查Webmin的過程</h2>
 <ul>
 <li>登錄到Virtualmin（請參考帳戶登錄及重要網址一文 ）。</li>
 <li>點擊Webmin在左上方的選單，然後點選系統=&gt;運行的程序。</li>

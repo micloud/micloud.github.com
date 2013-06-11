@@ -42,7 +42,7 @@
   <div align="center" style="text-align:left; width:960px;">
     <h1>SmartOS上安裝MySQL</h1>
 <p>MiCloud在SmartOS Plus、SmartOS32中提供預載MySQL的服務，若剛開始沒有選擇預載之用戶，可以參考以下的步驟進行安裝，由於32bit及64bit的安裝過程有些許差異，故分開描述。</p>
-<h1>SmartOS 32bit安裝步驟</h1>
+<h2>SmartOS 32bit安裝步驟</h2>
 <p>1.請先搜尋MySQL的套件，並找到mysql-server最高版本</p>
 <pre><code># pkgin se mysql</code></pre>
 <p><img src='/images/Install+MySQL+on+SmartOS-p1.png' width='650' align='center'/></p>
@@ -72,7 +72,7 @@
 <p>8.連線至MySQL</p>
 <pre><code># mysql -uroot -p</code></pre>
 <p><img src='/images/Install+MySQL+on+SmartOS-p4.png' width='650' align='center'/></p>
-<h1>SmartOS 64bit安裝步驟</h1>
+<h2>SmartOS 64bit安裝步驟</h2>
 <p>1.請先搜尋MySQL的套件</p>
 <pre><code># pkgin se mysql</code></pre>
 <p><img src='/images/Install+MySQL+on+SmartOS-p61.png' width='650' align='center'/></p>
@@ -99,7 +99,7 @@
 <pre><code># svcadm disable mysql
 # svcadm enable mysql</code></pre>
 <hr>
-<h1>重設root密碼</h1>
+<h2>重設root密碼</h2>
 <p>若您忘記MySQL的root密碼，可以用以下的方式重設密碼</p>
 <p>1.請先將Mysql服務停止</p>
 <pre><code># svcadm disable mysql</code></pre>

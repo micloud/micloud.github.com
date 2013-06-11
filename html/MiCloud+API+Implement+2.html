@@ -40,7 +40,8 @@
   </div>
   <hr style="width:960px"/>
   <div align="center" style="text-align:left; width:960px;">
-    <h1>預防尖峰流量拖垮服務：Scale Out應用服務-使用CloudAPI排程</h1>
+    <h1>MiCloudAPI 實做案例</h1>
+<h2>預防尖峰流量拖垮服務：Scale Out應用服務-使用CloudAPI排程</h2>
 <ul>
 <li>調整一臺虛擬主機的記憶體大小</li>
 </ul>
@@ -52,24 +53,26 @@
 <pre><code>simonsuteki-MacBook-Pro:~ simonsu$ sdc-createmachine -name simontest123 -package &quot;S
 1GB RAM (1CORE)&quot; -dataset sdc:sdc:smartos64:1.5.1
 {
-&quot;id&quot;: &quot;845f21fe-1910-4b38-a4ca-e2a81144f9a2&quot;,
-&quot;name&quot;: &quot;simontest123&quot;,
-&quot;type&quot;: &quot;smartmachine&quot;,
-&quot;state&quot;: &quot;provisioning&quot;,
-&quot;dataset&quot;: &quot;sdc:sdc:smartos64:1.5.1&quot;,
-&quot;ips&quot;: [
-&quot;211.78.245.41&quot;
-],
-&quot;memory&quot;: 1024,
-&quot;disk&quot;: 15360,
-&quot;metadata&quot;: {},
-&quot;created&quot;: &quot;2012-01-18T02:13:31+00:00&quot;,
-&quot;updated&quot;: &quot;2012-01-18T02:13:31+00:00&quot;
+   &quot;id&quot;: &quot;845f21fe-1910-4b38-a4ca-e2a81144f9a2&quot;,
+   &quot;name&quot;: &quot;simontest123&quot;,
+   &quot;type&quot;: &quot;smartmachine&quot;,
+   &quot;state&quot;: &quot;provisioning&quot;,
+   &quot;dataset&quot;: &quot;sdc:sdc:smartos64:1.5.1&quot;,
+   &quot;ips&quot;: [
+   &quot;211.78.245.41&quot;
+   ],
+   &quot;memory&quot;: 1024,
+   &quot;disk&quot;: 15360,
+   &quot;metadata&quot;: {},
+   &quot;created&quot;: &quot;2012-01-18T02:13:31+00:00&quot;,
+   &quot;updated&quot;: &quot;2012-01-18T02:13:31+00:00&quot;
 }</code></pre>
-<h1>流量恢復正常了～WEB刪除主機</h1>
+<h2>流量恢復正常了～WEB刪除主機</h2>
 <ul>
-<li>WEB刪除虛擬主機<br><img src='/images/MiCloud+API+Implement+2-p11.PNG' width='650' align='center'/><h1>流量恢復正常了～CloudAPI刪除主機</h1>
-</li>
+<li>WEB刪除虛擬主機<br><img src='/images/MiCloud+API+Implement+2-p11.PNG' width='650' align='center'/></li>
+</ul>
+<h2>流量恢復正常了～CloudAPI刪除主機</h2>
+<ul>
 <li>CloudAPI刪除虛擬主機</li>
 </ul>
 <pre><code>simonsuteki-MacBook-Pro:~ simonsu$ sdc-deletemachine 845f21fe-1910-4b38-a4cae2a81144f9a2

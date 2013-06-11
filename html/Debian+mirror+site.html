@@ -40,16 +40,17 @@
   </div>
   <hr style="width:960px"/>
   <div align="center" style="text-align:left; width:960px;">
-    <p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
+    <h1>變更套件庫來源及安裝軟體(Debian)</h1>
+<p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>Debian採用APT套件管理，其套件庫的修改與設定相似，實際修改方式如下說明:</p>
-<h1>變更套件來源</h1>
+<h2>變更套件來源</h2>
 <p>登入後，請先複製“sources.list”檔案，此檔案存放在“/etc/apt/”下，此複製動作針對改錯時，未來可以回復原來的檔案。將sources.list檔案複製一份，命名為sources.bak，指令如下</p>
 <pre><code>#cp /etc/apt/sources.list /etc/apt/sources.list.bak</code></pre>
 <p>備份完成後請至/etc/apt下確認是否成功增加sources.list.bak檔，如下圖</p>
 <p><img src='/images/Debian+mirror+site-decp.jpg' width='650' align='center'/></p>
 <p>確認Debian 版本並編輯sources.list，編輯指令如下:</p>
 <pre><code>#vi /etc/apt/sources.list</code></pre>
-<p>原來的套件庫參考網站為<a href="http://http.us.debian.org/debian/，將其改為參考台灣鏡像站http://opensource.nchn.org.tw/debian/”">http://http.us.debian.org/debian/，將其改為參考台灣鏡像站http://opensource.nchn.org.tw/debian/”</a> 下圖紅色框框部分即是要修改的部分</p>
+<p>原來的套件庫參考網站為 <a href="http://http.us.debian.org/debian/">http://http.us.debian.org/debian/</a> ，將其改為參考台灣鏡像站 <a href="http://opensource.nchn.org.tw/debian/”">http://opensource.nchn.org.tw/debian/”</a>  下圖紅色框框部分即是要修改的部分</p>
 <pre><code>deb http://opensource.nchc.org.tw/debian squeeze main contrib non-free
 deb http://opensource.nchc.org.tw/debian squeeze-updates main contrib non-free
 deb http://security.debian.org/ squeeze/updates main contrib non-free</code></pre>
@@ -58,35 +59,37 @@ deb http://security.debian.org/ squeeze/updates main contrib non-free</code></pr
 <p>請執行更改後的檔案，並確認是否更新，執行指令及畫面如下系統將於您更改的路徑中找到可更新的套件。(如下方黃色底線)</p>
 <pre><code>#apt-get update</code></pre>
 <p><img src='/images/Debian+mirror+site-deupdate.jpg' width='650' align='center'/></p>
-<h1>更多Debian mirror site list</h1>
+<h2>更多Debian mirror site list</h2>
 <ul>
-<li>Debian全球映射站</li>
+<li><p>Debian全球映射站</p>
+<p> <a href="http://www.debian.org/mirror/list">http://www.debian.org/mirror/list</a></p>
+</li>
 </ul>
-<p><a href="http://www.debian.org/mirror/list">http://www.debian.org/mirror/list</a></p>
 <ul>
-<li>台灣鏡像站推薦使用</li>
+<li><p>台灣鏡像站推薦使用</p>
+<p> <a href="http://opensource.nchc.org.tw/debian/">http://opensource.nchc.org.tw/debian/</a></p>
+<p> <a href="http://ftp.tw.debian.org/debian/">http://ftp.tw.debian.org/debian/</a></p>
+<p> <a href="http://opensource.nchc.org.tw/debian/">http://opensource.nchc.org.tw/debian/</a></p>
+<p> <a href="http://debian.linux.org.tw/debian/">http://debian.linux.org.tw/debian/</a></p>
+</li>
 </ul>
-<p><a href="http://opensource.nchc.org.tw/debian/">http://opensource.nchc.org.tw/debian/</a></p>
-<p><a href="http://ftp.tw.debian.org/debian/">http://ftp.tw.debian.org/debian/</a></p>
-<p><a href="http://opensource.nchc.org.tw/debian/">http://opensource.nchc.org.tw/debian/</a></p>
-<p><a href="http://debian.linux.org.tw/debian/">http://debian.linux.org.tw/debian/</a></p>
 <hr>
-<h1>安裝非預載套件</h1>
+<h2>安裝非預載套件</h2>
 <p>使用apt指令安裝Debian套件，相關指令如下:</p>
 <p>先查詢可安裝的套件</p>
 <pre><code>#apt-cache pkgnames</code></pre>
 <p><img src='/images/Debian+mirror+site-de-apt-cache.jpg' width='650' align='center'/></p>
 <p>若找不到您需要的套件也可透過下面的指令來搜尋</p>
-<pre><code>#apt-cache search [套件名稱/關鍵字]](#apt-cache search [套件名稱/關鍵字)</code></pre>
+<pre><code>#apt-cache search [套件名稱/關鍵字]</code></pre>
 <p><img src='/images/Debian+mirror+site-de-apt-cache-search.jpg' width='650' align='center'/></p>
 <p>再執行安裝，指令如下</p>
-<pre><code>#apt-get install [套件名稱]](#apt-get install [套件名稱)</code></pre>
+<pre><code>#apt-get install [套件名稱]</code></pre>
 <p><img src='/images/Debian+mirror+site-de-apt-+install.png' width='650' align='center'/></p>
 <p>檢查是否安裝成功，指令如下</p>
 <pre><code>#dpkg --get-selections | grep &quot;套件名稱&quot;</code></pre>
 <p><img src='/images/Debian+mirror+site-de-selection.jpg' width='650' align='center'/></p>
 <p>若想移除套件，指令如下</p>
-<pre><code>#apt-get remove [套件名稱]](#apt-get remove [套件名稱)</code></pre>
+<pre><code>#apt-get remove [套件名稱]</code></pre>
 <p><img src='/images/Debian+mirror+site-de-remove.jpg' width='650' align='center'/></p>
 <p>若要更新所有己安裝的套件，指令如下:</p>
 <pre><code>#apt-get upgrade</code></pre>

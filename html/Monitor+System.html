@@ -41,15 +41,14 @@
   <hr style="width:960px"/>
   <div align="center" style="text-align:left; width:960px;">
     <h1>主機監控之設定</h1>
-<h1>Windows</h1>
-<p>1.MiCloud平台虛擬主機之監控程式需使用nodejs來執行，<strong>請先登入您的Windows虛擬主機</strong>，再至<a href="http://nodejs.org/"><a href="http://nodejs.org/">http://nodejs.org/</a></a><br><img src='/images/Monitor+System-node.png' width='650' align='center'/></p>
+<h2>Windows</h2>
+<p>1.MiCloud平台虛擬主機之監控程式需使用nodejs來執行，<strong>請先登入您的Windows虛擬主機</strong>，再至<a href="http://nodejs.org/"><a href="http://nodejs.org/">http://nodejs.org/</a></a>下載並安裝 (如下圖)<br><img src='/images/Monitor+System-node.png' width='650' align='center'/></p>
 <p>2.請下載由MiCloud研發團隊撰寫的監控程式並解壓，下載網址為</p>
 <pre><code>http://211.78.245.110:3000/install/nomon-lastest.tgz</code></pre>
 <p><img src='/images/Monitor+System-nom.png' width='500' align='center'/></p>
 <p>3.請在桌面上新增一個副檔名為.bat的檔案(XXX.bat)，如下圖，這邊建立的檔案為test.bat<br><img src='/images/Monitor+System-bat.png' width='500' align='center'/></p>
 <p>在檔案上點選右鍵→編輯，在檔案中貼上下方指令(如下圖)</p>
-<pre><code>node您將檔案解壓縮後存放的位置
-main.js，主要用來設定排程應該執行哪支程式。</code></pre>
+<pre><code>node您將檔案解壓縮後存放的位置\main.js，主要用來設定排程應該執行哪支程式。</code></pre>
 <p><img src='/images/Monitor+System-node1.png' width='650' align='center'/></p>
 <p>4.點選開始--系統管理工具--工作排程器，設定程式排程<br><img src='/images/Monitor+System-p1.png' width='650' align='center'/></p>
 <p>5.點選建立工作來新增排程<br><img src='/images/Monitor+System-p2.png' width='650' align='center'/></p>
@@ -60,7 +59,7 @@ main.js，主要用來設定排程應該執行哪支程式。</code></pre>
 <p>10.完成排程設定後，15分鐘後即可至MiCloud平台點選您所設置監控的主機，即可檢視您主機上的CPU、Memory、Disk的使用率。<br><img src='/images/Monitor+System-cpu.png' width='650' align='center'/></p>
 <p>歷史監控資料，可檢視一週、一個月或整年的監控狀況，並可下載近半年的原始資料。<br><img src='/images/Monitor+System-cpu2.png' width='650' align='center'/></p>
 <hr>
-<h1>Linux</h1>
+<h2>Linux</h2>
 <p>1.登入MiCloud主機清單中，選擇任何一台Linux主機<br><img src='/images/Monitor+System-pl1.png' width='650' align='center'/></p>
 <p>2.進入主機細項後，請點選”主機監控”頁籤並點擊”複製指令”按鈕<br><img src='/images/Monitor+System-pl2.png' width='650' align='center'/></p>
 <p>3.完成上述步驟後，請登入您欲監控的虛擬主機並貼上剛剛的指令</p>

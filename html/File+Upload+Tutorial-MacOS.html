@@ -40,12 +40,13 @@
   </div>
   <hr style="width:960px"/>
   <div align="center" style="text-align:left; width:960px;">
-    <h1>Mac OS 檔案傳輸</h1>
+    <h1>使用指令上傳檔案(MacOS)</h1>
+<h2>Mac OS 檔案傳輸</h2>
 <p>使用 openssh client，請帶參數 -i 來使用 private ssh key。</p>
 <p>上傳：</p>
-<p><code>scp -i id_rsa ./MiCRM.tgz root@211.123.123.123:/root/</code></p>
+<pre><code>scp -i id_rsa ./MiCRM.tgz root@211.123.123.123:/root/</code></pre>
 <p><img src='/images/File+Upload+Tutorial-MacOS-l2.png' width='650' align='center'/><br>下載：</p>
-<p><code>scp -i id_rsa root@211.123.123.123:/tmp/MiCRM.tgz .</code></p>
+<pre><code>scp -i id_rsa root@211.123.123.123:/tmp/MiCRM.tgz .</code></pre>
 <p><img src='/images/File+Upload+Tutorial-MacOS-l1.png' width='650' align='center'/></p>
 
   </div>
