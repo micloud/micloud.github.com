@@ -1,4 +1,4 @@
-CentOS Mirror Site
+變更套件庫來源及安裝軟體(CentOS)
 ===
 
 
@@ -9,8 +9,8 @@ CentOS引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套
 
 
 
-變更套件來源
-===
+##變更套件來源
+
 登入後，請先複製“CentOS-Base.repo”檔案，此檔案存放在“/etc/yum.repos.d/”下，此複製動作針對改錯時，未來可以回復原來的檔案。將CentOS-Base.repo檔案複製一份，命名為CentOS-Base.repo.bak，指令如下
 
 
@@ -36,24 +36,24 @@ CentOS引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套
 #vi /etc/yum.repos.d/CentOS-Base.repo
 ```
 
-原來的套件庫參考網站為http://mirror.centos.org/centos，將其改為參考台灣鏡像站http://opensource.nchn.org.tw/centos，下圖紅色框框部分包含原來的套件來源(已註解掉，將不會再執行)，以及修改至台灣鏡像站的網址。CentOS有分很多模組，用戶可以自行選擇哪幾個要變更。
+原來的套件庫參考網站為 http://mirror.centos.org/centos ，將其改為參考台灣鏡像站 http://opensource.nchn.org.tw/centos ，下圖紅色框框部分包含原來的套件來源(已註解掉，將不會再執行)，以及修改至台灣鏡像站的網址。CentOS有分很多模組，用戶可以自行選擇哪幾個要變更。
 
 
 
 ```
-[base]]([base)
+[base]
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
 baseurl=http://opensource.nchc.org.tw/centos/$releasever/os/$basearch/
-[updates]]([updates)
+[updates]
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
 baseurl=http://opensource.nchc.org.tw/centos/$releasever/updates/$basearch/
-[extras]]([extras)
+[extras]
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
 baseurl=http://opensource.nchc.org.tw/centos/$releasever/extras/$basearch/
-[centosplus]]([centosplus)
+[centosplus]
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
 baseurl=http://opensource.nchc.org.tw/centos/$releasever/centosplus/$basearch/
-[contrib]]([contrib)
+[contrib]
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=contrib
 baseurl=http://opensource.nchc.org.tw/centos/$releasever/contrib/$basearch/
 ```
@@ -116,33 +116,28 @@ baseurl=http://opensource.nchc.org.tw/centos/$releasever/contrib/$basearch/
 
 
 
-更多CentOS mirror site list
-===
+##更多CentOS mirror site list
+
 *  Debian全球映射站
 
-
-http://www.centos.org/modules/tinycontent/index.php?id=30
+   http://www.centos.org/modules/tinycontent/index.php?id=30
 
 
 *  台灣鏡像站推薦使用
 
+   http://opensource.nchc.org.tw/centos/
 
-http://opensource.nchc.org.tw/centos/
+   http://mirror01.idc.hinet.net/CentOS/
 
+   http://ftp.twaren.net/Linux/CentOS/
 
-http://mirror01.idc.hinet.net/CentOS/
-
-
-http://ftp.twaren.net/Linux/CentOS/
-
-
-http://ftp.isu.edu.tw/pub/Linux/CentOS/
+   http://ftp.isu.edu.tw/pub/Linux/CentOS/
 
 
 
 ----
-安裝非預載套件
-===
+##安裝非預載套件
+
 
 使用yum指令安裝CentOS套件，相關指令如下:
 
@@ -158,7 +153,7 @@ http://ftp.isu.edu.tw/pub/Linux/CentOS/
 若找不到您需要的套件也可透過下面的指令來搜尋
 
 ```
-#yum search [套件名稱/關鍵字]](#yum search [套件名稱/關鍵字)
+#yum search [套件名稱/關鍵字]
 ```
 
 <img src='images/CentOS+mirror+site-ce-search.jpg' width='650' align='center'/>
@@ -166,7 +161,7 @@ http://ftp.isu.edu.tw/pub/Linux/CentOS/
 再執行安裝，指令如下
 
 ```
-#yum install [套件名稱]](#yum install [套件名稱)
+#yum install [套件名稱]
 ```
 
 <img src='images/CentOS+mirror+site-ce-install.jpg' width='650' align='center'/>
@@ -174,7 +169,7 @@ http://ftp.isu.edu.tw/pub/Linux/CentOS/
 若想移除套件，指令如下
 
 ```
-#yum remove [套件名稱]](#yum remove [套件名稱)
+#yum remove [套件名稱]
 ```
 
 <img src='images/CentOS+mirror+site-ce-remove.jpg' width='650' align='center'/>

@@ -23,7 +23,7 @@
 | pgsql  | PostgreSQL資料庫帳號 | postgres | 登入：/opt/local/bin/psql -U postgres<br>密碼：(此時輸入pgsql密碼欄位) |
 | virtualmin  | Virtualmin系統管理工具帳號 | admin | 啓動服務：svcadm enable webmin<br>連線：https://your.ip.address:10000/<br>帳號：admin<br> 密碼：本表格virtualmin密碼 |
 | jill  | 系統帳號 | jill | 登入：ssh jill@your.ip.address<br>密碼：本表格jill密碼 |
-| zxtm  | 負載平衡服務帳號 | admin | 連線：http://your.ip.address:9090 <br>帳號：admin<br>密碼：本表格zxtm密碼 |
+| zxtm  | 負載平衡服務帳號 | admin | 連線：h ttp://your.ip.address:9090 <br>帳號：admin<br>密碼：本表格zxtm密碼 |
 
 
 
@@ -31,31 +31,33 @@
 
 修改預設密碼
 ===
-SmartOS修改密碼
-修改root密碼，指令如下
+SmartOS修改密碼，修改root密碼，指令如下
 
 
+```
+#passwd
+```
 
-```#passwd```
 
 <img src='images/MiCloud+Credential+Description-clip-image001.jpg' width='650' align='center'/>
 
 
-修改Mysql密碼
-先登入mysql後再執行修改密碼
-登入指令如下，此時密碼為主機細項上所預設的密碼:
+修改Mysql密碼，先登入mysql後再執行修改密碼，登入指令如下，此時密碼為主機細項上所預設的密碼:
 
 
+```
+#mysql -u root -p
 
-```#mysql
--u root
--p```
+```
 
 修改密碼指令如下:
 
 
 
-```mysql> SET PASSWORD FOR root@localhost=PASSWORD('yournewpassword'); ```
+```
+mysql> SET PASSWORD FOR root@localhost=PASSWORD('yournewpassword'); 
+```
+
 
 <img src='images/MiCloud+Credential+Description-clip-image002.jpg' width='650' align='center'/>
 
@@ -65,6 +67,8 @@ SmartOS修改密碼
 
 
 
-```#passwd admin```
+```
+#passwd admin
+```
 
 <img src='images/MiCloud+Credential+Description-clip-image003.jpg' width='650' align='center'/>

@@ -1,5 +1,5 @@
-
-
+變更套件庫來源及安裝軟體(Debian)
+===
 
 目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。
 
@@ -7,8 +7,8 @@
 Debian採用APT套件管理，其套件庫的修改與設定相似，實際修改方式如下說明:
 
 
-變更套件來源
-===
+##變更套件來源
+
 登入後，請先複製“sources.list”檔案，此檔案存放在“/etc/apt/”下，此複製動作針對改錯時，未來可以回復原來的檔案。將sources.list檔案複製一份，命名為sources.bak，指令如下
 
 
@@ -34,7 +34,7 @@ Debian採用APT套件管理，其套件庫的修改與設定相似，實際修�
 #vi /etc/apt/sources.list
 ```
 
-原來的套件庫參考網站為http://http.us.debian.org/debian/，將其改為參考台灣鏡像站http://opensource.nchn.org.tw/debian/” 下圖紅色框框部分即是要修改的部分
+原來的套件庫參考網站為 http://http.us.debian.org/debian/ ，將其改為參考台灣鏡像站 http://opensource.nchn.org.tw/debian/”  下圖紅色框框部分即是要修改的部分
 
 ```
 deb http://opensource.nchc.org.tw/debian squeeze main contrib non-free
@@ -60,33 +60,29 @@ deb http://security.debian.org/ squeeze/updates main contrib non-free
 <img src='images/Debian+mirror+site-deupdate.jpg' width='650' align='center'/>
 
 
-更多Debian mirror site list
-===
+##更多Debian mirror site list
+
+
 *  Debian全球映射站
 
-
-http://www.debian.org/mirror/list
+    http://www.debian.org/mirror/list
 
 
 *  台灣鏡像站推薦使用
 
+    http://opensource.nchc.org.tw/debian/
 
-http://opensource.nchc.org.tw/debian/
+    http://ftp.tw.debian.org/debian/
 
+    http://opensource.nchc.org.tw/debian/
 
-http://ftp.tw.debian.org/debian/
-
-
-http://opensource.nchc.org.tw/debian/
-
-
-http://debian.linux.org.tw/debian/
+    http://debian.linux.org.tw/debian/
 
 
 
 ----
-安裝非預載套件
-===
+##安裝非預載套件
+
 
 使用apt指令安裝Debian套件，相關指令如下:
 
@@ -103,7 +99,7 @@ http://debian.linux.org.tw/debian/
 若找不到您需要的套件也可透過下面的指令來搜尋
 
 ```
-#apt-cache search [套件名稱/關鍵字]](#apt-cache search [套件名稱/關鍵字)
+#apt-cache search [套件名稱/關鍵字]
 ```
 
 <img src='images/Debian+mirror+site-de-apt-cache-search.jpg' width='650' align='center'/>
@@ -112,7 +108,7 @@ http://debian.linux.org.tw/debian/
 再執行安裝，指令如下
 
 ```
-#apt-get install [套件名稱]](#apt-get install [套件名稱)
+#apt-get install [套件名稱]
 ```
 
 <img src='images/Debian+mirror+site-de-apt-+install.png' width='650' align='center'/>
@@ -129,7 +125,7 @@ http://debian.linux.org.tw/debian/
 若想移除套件，指令如下
 
 ```
-#apt-get remove [套件名稱]](#apt-get remove [套件名稱)
+#apt-get remove [套件名稱]
 ```
 
 <img src='images/Debian+mirror+site-de-remove.jpg' width='650' align='center'/>

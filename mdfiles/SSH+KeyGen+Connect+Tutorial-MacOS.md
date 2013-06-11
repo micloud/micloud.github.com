@@ -1,6 +1,8 @@
-
-SSH Key 限制
+金鑰產生與連線教學(MacOS)
 ===
+
+##SSH Key 限制
+
 MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：
 
 
@@ -10,18 +12,19 @@ MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：
 
 
 
-MiCloud SSH Key 管理功能
-===
-MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal([http://micloud.tw])進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。](MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal - [http://micloud.tw進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。)
+##MiCloud SSH Key 管理功能
 
+MiCloud提供SSH Key的管理模組，您可透過MiCloud Customer Portal(http://micloud.tw) 進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。
 
-SSH Key上傳與管理，請參考"[使用Windows連線SmartMachine](SSH KeyGen & Connect Tutorial - Windows)
+SSH Key上傳與管理，["使用Windows連線SmartMachine"](/index.html?page=SSH+KeyGen+Connect+Tutorial-Windows.md) 說明
 
-Mac OS 建立 SSH-KEY 與使用方法
-===
+##Mac OS 建立 SSH-KEY 與使用方法
+
 產生SSH Key:
 
-```ssh-keygen -t rsa```
+```
+ssh-keygen -t rsa
+```
 
 產生過程如下：
 <img src='images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic1.png' width='500' align='center'/>
@@ -41,14 +44,16 @@ cat id_rsa.pub		        #讀取產出的金鑰檔案
 
 
 
-Mac OS 連線方式
-===
+##Mac OS 連線方式
+
 使用 openssh client，請帶參數-i來使用剛剛所建的id_rsa這個private ssh key。
 
 
 例如：
 
-```ssh -i id_rsa root@211.123.123.31```
+```
+ssh -i id_rsa root@211.123.123.31
+```
 
 <img src='images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic3.png' width='500' align='center'/>
 

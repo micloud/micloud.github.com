@@ -4,14 +4,14 @@
 Small Package 服務主機為256M記憶體、10GB硬碟、1Core CPU之SmartOs主機，網路配置部分，提供一個內部私有IP，並透過外部DNS設定串聯，內部主機彼此間可以透過私有IP互通。一般設定說明如下:
 
 
-HTTP/HTTPS使用
-===
+##HTTP/HTTPS使用
+
 開放80、443、8080、3000、10000等port供HTTP(S)連線使用，連線時請使用主機DNS名稱連線(Ex:http://192-168-255-13.my.micloud.tw)
 
 
 
-80:Default HTTP protocol
-===
+##80:Default HTTP protocol
+
 預設web目錄：/opt/local/share/httpd/htdocs
 
 
@@ -34,8 +34,8 @@ HTTP/HTTPS使用
 *  includes/directory.conf: 修改DocumentRoot至您的目錄
 *  includes/core.conf: 修改Directory物件之目錄位置至您的目錄
 
-443: Default HTTPS protocol (HTTP轉SSL，使用443 Port)
-===
+##443: Default HTTPS protocol (HTTP轉SSL，使用443 Port)
+
 預設目錄：/opt/local/share/httpd/htdocs
 
 
@@ -67,8 +67,8 @@ DocumentRoot /opt/local/share/httpd/htdocs
 ```
 
 
-8080:Default Tomacat HTTP protoca
-===
+##8080:Default Tomacat HTTP protoca
+
 由於Smartos預設沒有Tomcat, 需自行下載，指令如下
 
 
@@ -108,8 +108,8 @@ Tomcat目錄：/opt/local/share/tomcatl
 
 
 
-3000: Default Node.js (ExpressJS) protocal
-===
+##3000: Default Node.js (ExpressJS) protocal
+
 Node.js版本：v0.6.17
 
 
@@ -138,8 +138,8 @@ $ cd TestProject && npm install
 
 
 
-10000: Default Webmin protocal
-===
+##10000: Default Webmin protocal
+
 (背後服務走HTTPS 10000 Port，Stingray負責重導流量)
 
 
@@ -156,8 +156,8 @@ $ cd TestProject && npm install
 
 
 
-其他-SmartOS套件安裝與管理：
-===
+##其他-SmartOS套件安裝與管理：
+
 
 ```
 搜尋：pkgin search [package name]](搜尋：pkgin search [package name)
@@ -166,8 +166,8 @@ $ cd TestProject && npm install
 ```
 
 
-其他-SMF服務管理：
-===
+##其他-SMF服務管理：
+
 
 ```
 啓動服務：svcadm enable [service name]](啓動服務：svcadm enable [service name)

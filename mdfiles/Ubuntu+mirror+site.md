@@ -1,5 +1,5 @@
-
-
+變更套件庫來源及安裝軟體(Ubuntu)
+===
 
 目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。
 
@@ -10,8 +10,8 @@ Ubuntu採用APT套件管理，其套件庫的修改與設定相似，實際修�
 
 
 
-變更套件來源
-===
+##變更套件來源
+
 登入後，請先複製“sources.list”檔案，此檔案存放在“/etc/apt/”下，此複製動作針對改錯時，未來可以回復原來的檔案。將sources.list檔案複製一份，命名為sources.bak，指令如下
 
 
@@ -35,7 +35,7 @@ Ubuntu採用APT套件管理，其套件庫的修改與設定相似，實際修�
 # vi /etc/apt/sources.list
 ```
 
-原來的套件庫參考網站為http://us.archive.ubuntu.com/ubuntu/，將其改為參考台灣鏡像站http://opensource.nchn.org.tw/ubuntu/，下圖紅色框框部分即是要修改的部分，Ubuntu有分多個模組，用戶可以自行選擇哪幾個要變更。
+原來的套件庫參考網站為 http://us.archive.ubuntu.com/ubuntu/ ，將其改為參考台灣鏡像站 http://opensource.nchn.org.tw/ubuntu/ ，下圖紅色框框部分即是要修改的部分，Ubuntu有分多個模組，用戶可以自行選擇哪幾個要變更。
 
 ```
 deb http://opensource.nchc.org.tw/ubuntu/ lucid main restricted
@@ -57,29 +57,27 @@ deb-src http://opensource.nchc.org.tw/ubuntu/ lucid main restricted
 
 <img src='images/Ubuntu+mirror+site-ubupdate1.jpg' width='650' align='center'/>
 
-更多Ubuntu mirror site list
-===
+##更多Ubuntu mirror site list
+
 *   Ubuntu全球映射站
 https://launchpad.net/ubuntu/+archivemirrors
 
 
 *  台灣鏡像站推薦使用
-http://opensource.nchc.org.tw/ubuntu/
 
+   http://opensource.nchc.org.tw/ubuntu/
 
-http://ftp.nchc.org.tw/ubuntu/
+   http://ftp.nchc.org.tw/ubuntu/
 
+   http://free.nchc.org.tw/ubuntu/
 
-http://free.nchc.org.tw/ubuntu/
-
-
-http://ftp.twaren.net/ubuntu/
+   http://ftp.twaren.net/ubuntu/
 
 
 
 ----
-安裝非預載套件
-===
+##安裝非預載套件
+
 使用apt指令安裝Ubuntu套件，相關指令如下:
 
 
@@ -96,7 +94,7 @@ http://ftp.twaren.net/ubuntu/
 若找不到您需要的套件也可透過下面的指令來搜尋
 
 ```
-#apt-cache search [套件名稱/關鍵字]](#apt-cache search [套件名稱/關鍵字)
+#apt-cache search [套件名稱/關鍵字]
 ```
 
 <img src='images/Ubuntu+mirror+site-un-apt-cache-search.jpg' width='650' align='center'/>
@@ -104,7 +102,7 @@ http://ftp.twaren.net/ubuntu/
 再執行安裝，指令如下
 
 ```
-#apt-get install [套件名稱]](#apt-get install [套件名稱)
+#apt-get install [套件名稱]
 ```
 
 <img src='images/Ubuntu+mirror+site-un-apt-+install.png' width='650' align='center'/>
@@ -120,7 +118,7 @@ http://ftp.twaren.net/ubuntu/
 若想移除套件，指令如下
 
 ```
-#apt-get remove [套件名稱]](#apt-get remove [套件名稱)
+#apt-get remove [套件名稱]
 ```
 
 <img src='images/Ubuntu+mirror+site-un-apt-+remove.jpg' width='650' align='center'/>
@@ -139,7 +137,7 @@ http://ftp.twaren.net/ubuntu/
 只更新某套件
 
 ```
-#apt-get upgrade [套件名稱]](#apt-get upgrade [套件名稱)
+#apt-get upgrade [套件名稱]
 ```
 
 <img src='images/Ubuntu+mirror+site-un-aptupgrade1.jpg' width='650' align='center'/>

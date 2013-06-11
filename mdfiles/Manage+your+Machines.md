@@ -12,9 +12,9 @@
 
 *  右邊黃色框框則顯示您機器目前的狀態，以及開關機的按鈕。
 
-
-*  點擊 __Show Credentials__(左邊紅色框框) 則會顯示您這台機器內[預載程式之預設密碼](Preload Software Default Password)
+                                        
+*  點擊 __Show Credentials__(左邊紅色框框) 則會顯示您這台機器內[預載程式之預設密碼]( /index.html?page=Preload+Software+Default+Password.md)
 
 
 <img src='images/Manage+your+Machines-p1+-18.png' width='650' align='center'/>
-__登入說明請參考：[MiCloud Credential Description]__](--登入說明請參考：[MiCloud Credential Description--)
+__登入說明請參考：__ [MiCloud Credential Description](/index.html?page=MiCloud+Credential+Description.md)

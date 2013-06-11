@@ -1,6 +1,8 @@
-
-SSH Key限制
+金鑰產生與連線教學(Windows)
 ===
+
+##SSH Key限制
+
 MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：
 
 
@@ -17,10 +19,9 @@ MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：
 <embed width="420" height="345" src="http://www.youtube.com/v/1s1HZiPV17Q&hd=1" type="application/x-shockwave-flash"></embed>
 </div>
 
-MiCloud SSH Key管理功能
-===
-MiCloud提供SSH Key的管理模組，您可透過[MiCloud Customer Portal](http://micloud.tw)進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。(MiCloud提供SSH Key的管理模組，您可透過[MiCloud Customer Portal](http://micloud.tw)進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。)
+##MiCloud SSH Key管理功能
 
+MiCloud提供SSH Key的管理模組，您可透過[MiCloud Customer Portal](http://micloud.tw)進行SSH Key的上傳與管理，透過SSH協定與SSH Key的認證，將可確保您與您伺服器之間的連線安全。
 
 
 
@@ -28,8 +29,8 @@ MiCloud提供SSH Key的管理模組，您可透過[MiCloud Customer Portal](http
 
 
 
-Windows端SSH連線設定
-===
+##Windows端SSH連線設定
+
 下面將介紹MiCloud上建立SSH Key與上傳SSH Key的方式：
 
 
@@ -64,8 +65,8 @@ Public key檔案內容範例如上圖，請將第3-7行拷貝下來貼到SSH金�
 <img src='images/SSH+KeyGen+&+Connect+Tutorial-Windows-upload-key4.png' width='500' align='center'/>
 上述動作已完成SSH Key之上傳動作，請妥善保管public / private keys。
 
-Windows使用SSH登入系統
-===
+##Windows使用SSH登入系統
+
 左鍵雙擊下載之putty.exe，下圖為putty執行畫面：
 
 

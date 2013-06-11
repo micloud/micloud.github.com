@@ -1,36 +1,43 @@
-
-Linux (Redhat / Fedora / CentOS) 設定時間的方式
+如何更新主機時區？
 ===
+##Linux (Redhat / Fedora / CentOS) 設定時間的方式
+
 
 (1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime
 
 
 
-```# cp /usr/share/zoneinfo/GMT+0 /etc/localtime```
+```
+# cp /usr/share/zoneinfo/GMT+0 /etc/localtime
+```
 
 (2) 執行 date -u
 
 
 
-```# date -u```
+```
+# date -u
+```
 
 (3) 輸入 date 看看是否已經是正確時區
 
 
 
-```# date```
+```
+# date
+```
 
 
 
 ----
 
-SmartMachine 設定時間的方式
-===
+##SmartMachine 設定時間的方式
+
 
 選擇TimeZone時區
 
 ```
-[root@XXXX /opt/local/etc/nginx]# tzselect]([root@XXXX /opt/local/etc/nginx# tzselect)
+[root@XXXX /opt/local/etc/nginx]# tzselect
 Please identify a location so that time zone rules can be set correctly.
 Please select a continent or ocean.
 1) Africa
@@ -93,7 +100,7 @@ Asia/Taipei
 修改Time Zone設定擋
 
 ```
-[root@XXXX /opt/local/etc/nginx]# vi /etc/default/init]([root@XXXX /opt/local/etc/nginx# vi /etc/default/init)
+[root@XXXX /opt/local/etc/nginx]# vi /etc/default/init
 ```
 
 

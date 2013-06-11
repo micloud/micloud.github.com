@@ -5,16 +5,17 @@
 
 
 
-企業付款說明
-===
+##企業付款說明
+
 企業付款方式僅提供合作或簽約夥伴，不適用於網路申請之用戶。
 
 
 <img src='images/Pay+with+business-pay1.png' width='650' align='center'/>
 ----
-信用卡付款說明
-===
-[{arnaud.Flash src='v4.swf' width='700' height='550' controls='false' play='false' loop='false' }]
+##信用卡付款說明
+
+
+<embed width="700" height="550" src='images/v4.swf' type="application/x-shockwave-flash"></embed>
 用戶皆可透過網路做信用卡認證，認證成功後即可訂購主機，未來帳單將從此張信用卡做扣款動作。
 
 

@@ -3,8 +3,8 @@
 ===
 MiCloud只有在SmartOS中有預載Percona的服務，用戶可參考以下的步驟，在Linux環境下安裝。
 
-在CentOS中安裝Percona
-===
+##在CentOS中安裝Percona
+
 1.將Percona的套件安裝至主機的套件庫中
 
 ```
@@ -44,7 +44,7 @@ MiCloud只有在SmartOS中有預載Percona的服務，用戶可參考以下的�
 
 
 ```
-[mysqld]]([mysqld)
+[mysqld]
 plugin-load=handlersocket.so
 
 loose_handlersocket_port = 9998
@@ -91,8 +91,8 @@ open_files_limit = 65535
 <img src='images/Percona+install-c7.png' width='650' align='center'/>
 
 ----
-在Ubuntu、Debian安裝Percona
-===
+##在Ubuntu、Debian安裝Percona
+
 1.下載Percona套件至套件套中並安裝
 
 ```

@@ -1,8 +1,8 @@
 
 MongoDB
 ===
-在SmartOS上安裝MongoDB
-===
+##在SmartOS上安裝MongoDB
+
 MiCloud 在SmartOS 32bit 提供預載MongoDB的服務，可以直接選擇此預載的套件，若當初沒有選擇預載服務，用戶可以依下列步驟進行安裝。
 
 
@@ -56,8 +56,8 @@ MiCloud 在SmartOS 32bit 提供預載MongoDB的服務，可以直接選擇此預
 
 <img src='images/MongoDB+SmartMachine-p6.png' width='650' align='center'/>
 
-MongoDB操作說明
-===
+##MongoDB操作說明
+
 
 1.檢視服務狀態:
 

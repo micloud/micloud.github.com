@@ -8,9 +8,10 @@ Linux Hostname設置
 
 
 
-Debian
-===
+##Debian
+
 您需要修改的檔案如下:
+
 *  /etc/hostname
 *  /etc/hosts
 
@@ -50,9 +51,10 @@ Debian
 ```
 
 ----
-Ubuntu
-===
+##Ubuntu
+
 您需要修改的檔案如下:
+
 *  /etc/hostname
 *  /etc/hosts
 
@@ -91,9 +93,10 @@ Ubuntu
 ```
 
 ----
-CentOS
-===
+##CentOS
+
 您需要修改的檔案如下:
+
 *  /etc/sysconfig/network
 *  /etc/hosts
 
@@ -128,10 +131,11 @@ CentOS
 ```
 
 ----
-Fedora
-===
+##Fedora
+
 
 您需要修改的檔案如下:
+
 *  /etc/sysconfig/network
 *  /etc/hosts
 

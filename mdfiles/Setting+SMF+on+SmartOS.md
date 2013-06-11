@@ -8,16 +8,16 @@ SmartOS中的服務管理功能 (Service Management Facility, SMF)，類似於Li
 
 
 
-下載腳本範例(manifest)
-===
+##下載腳本範例(manifest)
+
 
 ```
 #wget --no-check-certificate http://github.com/isaacs/joyent-node-on-smart-example/raw/master/node-hello-world-service-manifest.xml
 ```
 
 
-設定服務
-===
+##設定服務
+
 以自建服務至主機為範例，必須修改的指令如下。
 
 ```
@@ -66,8 +66,8 @@ SmartOS中的服務管理功能 (Service Management Facility, SMF)，類似於Li
 
 <img src='images/Setting+SMF+on+SmartOS-CaptureWiz143.png' width='650' align='center'/>
 
-驗證服務啟動
-===
+##驗證服務啟動
+
 完成以上步驟後，開始驗證此自訂服務並將其服務匯入SMF，其指令如下:
 
 ```
@@ -95,8 +95,8 @@ SmartOS中的服務管理功能 (Service Management Facility, SMF)，類似於Li
 
 <img src='images/Setting+SMF+on+SmartOS-p3.png' width='650' align='center'/>
 
-刪除已匯入的SMF
-===
+##刪除已匯入的SMF
+
 刪除服務之前，須先關閉後，方可進行刪除動作。
 
 

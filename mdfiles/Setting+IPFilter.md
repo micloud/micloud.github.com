@@ -1,13 +1,15 @@
-安全與IPFILTER
+設定IPFILTER
 ===
+##安全與IPFILTER
+
 在您全新Joyent的Smartmachines預設虛擬NIC的網路和default情況下， 這意味著您必須在您的電腦的網路協定中進行相關設訂。 最安全的做法，是建立一台防禦主機或是VPN伺服器，並以後端存取訪問相關服務，如資料庫存取或是Web伺服器，並加載負載平衡器如Zeus/Stingray。
 
 
 以下是以IPFILTER為您的SmartOS Smartmachine所做的基本的分配概況：
 
 
-如何啟動與停止IPFILTER
-===
+##如何啟動與停止IPFILTER
+
 以SmartOS的方式，在IPFILTER過程配置下運行的SMF（服務管理工具）進行停止和啟動服務。
 查詢關於服務管理工具。
 
@@ -42,8 +44,8 @@ online         20:49:27 svc:/network/ipfilter:default
 
 
 
-IPFilter相關範例規則
-===
+##IPFilter相關範例規則
+
 *  IPFilter規則都包含在/ etc / IPF / ipf.conf
 *  src.ip.addr指定源頭和dest.ip.addr指定的目的地。
 允許從一個特定的IP位址的進入:

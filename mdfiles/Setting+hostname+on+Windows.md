@@ -25,11 +25,7 @@ Windows Hostname設置
 (3)成功之後開啟我的電腦進入以下路徑
 
 ```
-C:
-WINDOWS
-system32
-drivers
-etc
+C:\WINDOWS\system32\drivers\etc
 ```
 
 利用記事本或是Notepad++開啟hosts文件並且在文件內裡面的127.0.0.1 localhost底下加入您想設定新的hostname，儲存後即可使用新的hostname。

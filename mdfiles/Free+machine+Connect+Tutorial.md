@@ -15,8 +15,8 @@
 
 
 
-Linux/MacOS主機
-===
+##Linux/MacOS主機
+
 如您為Linux或MacOS用戶，在登入平台後，選擇主機，點選下方紅色框框部分的任何一台主機，會進入主機的細項畫面，您可以看到如下資訊：
 
 
@@ -42,8 +42,8 @@ ssh root@192-168-255-13.my.micloud.tw -p 65013 -i ~/.ssh/id_rsa
 
 
 
-Windows主機(使用Putty工具連線範例)
-===
+##Windows主機(使用Putty工具連線範例)
+
 由於Putty採用特有格式的puk檔案來封裝SSH Key，因此必須透過Putty相關工具將MiCloud產出之Key File進行轉換，轉換動作如下：
 
 

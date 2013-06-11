@@ -1,19 +1,21 @@
-檔案上傳教學(指令)
+使用指令上傳檔案(Windows至Linux)
 ===
+
+##檔案上傳教學(指令)
+
 影片:[MiCloud 使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案](http://www.youtube.com/watch?v=Ha17-BbePI4)
 <div align="center">
 <embed width="420" height="345" src="http://www.youtube.com/v/Ha17-BbePI4&hd=1" type="application/x-shockwave-flash"></embed>
 </div>
-使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案
-===
+##使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案
 
-設定環境變數
-===
+
+##設定環境變數
+
 *  選擇一個資料夾放置 Putty 相關檔案(putty.exe,pscp.exe...)
 
 
-本範例放在 __C:
-putty__ 資料夾內
+本範例放在 __C:\putty__ 資料夾內
 
 
 <img src='images/File+Upload+Tutorial-PSCP-a.png' width='600' align='center'/>
@@ -31,16 +33,15 @@ putty__ 資料夾內
 於變數值最後加上__分號(;)__接著加上您putty所在資料夾的路徑
 
 
-本範例則是加上 __;C:
-putty__
+本範例則是加上 __;C:\putty__
 <img src='images/File+Upload+Tutorial-PSCP-a3.png' width='400' align='center'/>
 *  按下 __開始__ -> __執行(R)__ -> 輸入 __cmd__ -> 按下 __確定__ 後便會開啟命令提示字元
 <img src='images/File+Upload+Tutorial-PSCP-a4.png' width='400' align='center'/>
 *  在命令提示字元中輸入 __pscp__ 測試環境變數之設定是否成功
 <img src='images/File+Upload+Tutorial-PSCP-a5.png' width='650' align='center'/>
 
-Putty 連線設定
-===
+##Putty 連線設定
+
 左鍵雙擊下載之putty.exe，下圖為putty執行畫面：
 
 
@@ -84,29 +85,23 @@ __Port__ 則是輸入 __22__ (22為MiCloud的預設SSH連接阜)
 
 進入Putty後,他會要求你輸入帳號(Login as:),請輸入root
 
-
 <font color="red">(註：連線時，請使用root登入，可不用輸入密碼：若使用預設帳號jill登入，則請參照Customer Portal上Credential設定。)</font>
 <img src='images/File+Upload+Tutorial-PSCP-b6.png' width='500' align='center'/>
 <img src='images/File+Upload+Tutorial-PSCP-b5.png' width='500' align='center'/>
 
-PSCP 指令介紹
-===
+##PSCP 指令介紹
+
 於MS-DOS 命令的視窗中輸入指令即可上傳與下載檔案
 *  <font color="red">(1)  pscp  拷貝檔案(絕對路徑)  使用者(root)@電腦地址(IP):新檔名(絕對路徑)    - 從 MS Window 拷貝到 Linux 電腦
 
 </font>
 ex : 我要從我正在使用的電腦,放在C槽中的資料夾Windows_Test底下有一個upload.cpp的檔案,上傳到我在MiCloud申請的電腦(123.123.123.123)中,並放在/home/Linux_Test底下
 
-
-所以我的指令會是 : pscp c:
-Windows_Test
-upload.cpp root@123.123.123.123:/home/Linux_Test
+所以我的指令會是 : pscp c:\Windows_Testupload.cpp root@123.123.123.123:/home/Linux_Test
 *  <font color="red">(2)  pscp  使用者(root)@電腦地址(IP):拷貝檔案(絕對路徑)  新檔名(絕對路徑)    - 從 Linux 拷貝到 MS Window 電腦
 
 </font>
 ex : 我要從我在MiCloud申請的電腦(123.123.123.123)中抓一個download.cpp的檔案,它放在/home/Linux_Test底下,並將它放到我的電腦C槽中的資料夾Windows_Test底下
 
-
-所以我的指令會是 : pscp root@123.123.123.123:/home/Linux_Test/download.cpp c:
-Windows_Test
+所以我的指令會是 : pscp root@123.123.123.123:/home/Linux_Test/download.cpp c:\Windows_Test
 <img src='images/File+Upload+Tutorial-PSCP-a6.png' width='650' align='center'/>

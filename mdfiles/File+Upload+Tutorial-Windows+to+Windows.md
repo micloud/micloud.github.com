@@ -1,14 +1,15 @@
-
-檔案上傳與下載教學(Windows至Windows)
+使用指令上傳檔案(Windows至Windows)
 ===
+##檔案上傳與下載教學(Windows至Windows)
+
 要從MiCloud Windows Server上進行軟體或檔案的上下載有許多方式，在此建議您使用網路芳鄰方式來進行檔案傳輸。
 
 
 下面介紹相關設定方式：
 
 
-遠端登入Windows Server 2008 設定資料夾分享
-===
+##遠端登入Windows Server 2008 設定資料夾分享
+
 1. 新增資料夾並加以命名
 
 
@@ -30,13 +31,11 @@
 
 
 
-在Windows系統下，上傳與下載檔案
-===
+##在Windows系統下，上傳與下載檔案
+
 1. 開始 -> 執行 , 再填入您的ip（ex："__//IP__"）
 <img src='images/File+Upload+Tutorial-Windows+to+Windows-p+-6.png' width='500' align='center'/>
 <img src='images/File+Upload+Tutorial-Windows+to+Windows-p+-7.png' width='500' align='center'/>
 2. 輸入您的帳號密碼 ,就能開始上傳與下載檔案
 <img src='images/File+Upload+Tutorial-Windows+to+Windows-id.png' width='500' align='center'/>
-
-
 <img src='images/File+Upload+Tutorial-Windows+to+Windows-p+-8.png' width='500' align='center'/>

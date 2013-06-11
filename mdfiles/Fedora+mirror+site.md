@@ -1,5 +1,5 @@
-
-
+變更套件庫來源及安裝軟體(Fedora)
+===
 
 目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。
 
@@ -7,8 +7,8 @@
 Fedora引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套件庫的修改與設定相似。實際修改方式如下說明:
 
 
-變更套件來源
-===
+##變更套件來源
+
 登入後，請先複製“fedora.repo、fedora-updates.repo、fedora-updates-testing.repo”這三個檔案存放在“/etc/yum.repos.d/”下，此複製動作針對改錯時，未來可以回復原來的檔案。
 
 
@@ -40,16 +40,16 @@ Fedora引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套
 #vi /etc/yum.repos.d/fedora.repo
 ```
 
-原來的套件庫參考網站為http://download.fedoraproject.org/pub/fedora/，將其改為參考台灣鏡像站http://opensource.nchn.org.tw/fedora，下圖紅色框框部分包含原來的套件來源(已註解掉，將不會再執行)，以及修改至台灣鏡像站的網址。Fedora有分很多模組，用戶可以自行選擇哪幾個要變更。//
+原來的套件庫參考網站為 http://download.fedoraproject.org/pub/fedora/ ，將其改為參考台灣鏡像站 http://opensource.nchn.org.tw/fedora ，下圖紅色框框部分包含原來的套件來源(已註解掉，將不會再執行)，以及修改至台灣鏡像站的網址。Fedora有分很多模組，用戶可以自行選擇哪幾個要變更。//
 
 ```
-[fedora]]([fedora)
+[fedora]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/releases/$releasever/Everything/$basearch/os/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
-[fedora-debuginfo]]([fedora-debuginfo)
+[fedora-debuginfo]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/releases/$releasever/Everything/$basearch/debug/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&arch=$basearch
-[fedora-source]]([fedora-source)
+[fedora-source]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/releases/$releasever/Everything/source/SRPMS/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&arch=$basearch
 ```
@@ -69,16 +69,16 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/releases/$releasever/Everythi
 # vi /etc/yum.repos.d/fedora-updates.repo
 ```
 
-原來的套件庫參考網站為http://download.fedoraproject.org/pub/fedora/，將其改為參考台灣鏡像站http://opensource.nchn.org.tw/fedora，下圖紅色框框部分包含原來的套件來源(已註解掉，將不會再執行)，以及修改至台灣鏡像站的網址。Fedora有分很多模組，用戶可以自行選擇哪幾個要變更。
+原來的套件庫參考網站為 http://download.fedoraproject.org/pub/fedora/ ，將其改為參考台灣鏡像站 http://opensource.nchn.org.tw/fedora ，下圖紅色框框部分包含原來的套件來源(已註解掉，將不會再執行)，以及修改至台灣鏡像站的網址。Fedora有分很多模組，用戶可以自行選擇哪幾個要變更。
 
 ```
-[updates]]([updates)
+[updates]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/$releasever/$basearch/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
-[updates-debuginfo]]([updates-debuginfo)
+[updates-debuginfo]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/$releasever/$basearch/debug/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&arch=$basearch
-[updates-source]]([updates-source)
+[updates-source]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/$releasever/SRPMS/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&arch=$basearch
 ```
@@ -98,16 +98,16 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/$releasever/SRPMS/
 #vi /etc/yum.repos.d/fedora-updates-testing.repo
 ```
 
-原來的套件庫參考網站為http://download.fedoraproject.org/pub/fedora/，將其改為參考台灣鏡像站http://opensource.nchn.org.tw/fedora，下圖紅色框框部分包含原來的套件來源(已註解掉，將不會再執行)，以及修改至台灣鏡像站的網址。Fedora有分很多模組，用戶可以自行選擇哪幾個要變更。
+原來的套件庫參考網站為 http://download.fedoraproject.org/pub/fedora/ ，將其改為參考台灣鏡像站 http://opensource.nchn.org.tw/fedora ，下圖紅色框框部分包含原來的套件來源(已註解掉，將不會再執行)，以及修改至台灣鏡像站的網址。Fedora有分很多模組，用戶可以自行選擇哪幾個要變更。
 
 ```
-[updates-testing]]([updates-testing)
+[updates-testing]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/$basearch/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-testing-f$releasever&arch=$basearch
-[updates-testing-debuginfo]]([updates-testing-debuginfo)
+[updates-testing-debuginfo]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/$basearch/debug/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-testing-debug-f$releasever&arch=$basearch
-[updates-testing-source]]([updates-testing-source)
+[updates-testing-source]
 baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/SRPMS/
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-testing-source-f$releasever&arch=$basearch
 ```
@@ -159,33 +159,28 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 
 
 
-更多Fedora mirror site list
-===
+##更多Fedora mirror site list
+
 *  Fedora全球映射站
 
-
-http://mirrors.fedoraproject.org/publiclist/
+   http://mirrors.fedoraproject.org/publiclist/
 
 
 *  台灣鏡像站推薦使用
 
+   http://opensource.nchc.org.tw/fedora/
 
-http://opensource.nchc.org.tw/fedora/
+   http://free.nchc.org.tw/fedora/linux/
 
+   http://ftp.twaren.net/Linux/Fedora/linux/
 
-http://free.nchc.org.tw/fedora/linux/
-
-
-http://ftp.twaren.net/Linux/Fedora/linux/
-
-
-http://opensource.nchc.org.tw/fedora/linux/
+   http://opensource.nchc.org.tw/fedora/linux/
 
 
 
 ----
-安裝非預載套件
-===
+##安裝非預載套件
+
 使用yum指令安裝Fedora套件，相關指令如下:
 
 
@@ -200,7 +195,7 @@ http://opensource.nchc.org.tw/fedora/linux/
 若找不到您需要的套件也可透過下面的指令來搜尋
 
 ```
-#yum search [套件名稱/關鍵字]](#yum search [套件名稱/關鍵字)
+#yum search [套件名稱/關鍵字]
 ```
 
 <img src='images/Fedora+mirror+site-fe-search.jpg' width='650' align='center'/>
@@ -208,7 +203,7 @@ http://opensource.nchc.org.tw/fedora/linux/
 再執行安裝，指令如下
 
 ```
-#yum install [套件名稱]](#yum install [套件名稱)
+#yum install [套件名稱]
 ```
 
 <img src='images/Fedora+mirror+site-fe-install.jpg' width='650' align='center'/>
@@ -216,7 +211,7 @@ http://opensource.nchc.org.tw/fedora/linux/
 若想移除套件，指令如下
 
 ```
-#yum remove [套件名稱]](#yum remove [套件名稱)
+#yum remove [套件名稱]
 ```
 
 <img src='images/Fedora+mirror+site-fe-remove.jpg' width='650' align='center'/>

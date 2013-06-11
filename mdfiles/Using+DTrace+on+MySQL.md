@@ -1,4 +1,4 @@
-In this page:
+
 
 Using DTrace on MySQL
 ===
@@ -21,8 +21,7 @@ This is the function MySQL uses to parse a query. So all we have to do is trace 
 
 
 ```
-root@ferrari:~# dtrace -qn 'pid$target:mysqld:*mysql_parse*:entry { printf("%Y     %s
-n", walltimestamp, copyinstr(arg1)) }' -p `pgrep -x mysqld`
+root@ferrari:~# dtrace -qn 'pid$target:mysqld:*mysql_parse*:entry { printf("%Y     %s\n", walltimestamp, copyinstr(arg1)) }' -p `pgrep -x mysqld`
 2007 Sep 27 10:04:35     select * from blah
 2007 Sep 27 10:04:58     select * from tablenothere
 ```
@@ -104,7 +103,7 @@ This turns up only a few source code files, one of them looking most obvious cal
 Write to the slow query log.
 *  /
 bool MYSQL_LOG::write(THD *thd,const char *query, uint query_length,
-time_t query_start_arg)
+                      time_t query_start_arg)
 ```
 
 
@@ -124,7 +123,7 @@ CPU FUNCTION
 
 
 
-The only thing bad about tracing MySQL through the pid provider is that these weird characters change between MySQL versions, so we can't always trace for '_ZN9MYSQL_LOG5writeEP3THDPKcjl' if we want it to work on other machines. We have to trace for MYSQ*LOG*write which slowquerycounts.d uses:
+The only thing bad about tracing MySQL through the pid provider is that these weird characters change between MySQL versions, so we can't always trace for '_ZN9MYSQL_LOG5writeEP3THDPKcjl' if we want it to work on other machines. We have to trace for MYSQ\*LOG\*write which slowquerycounts.d uses:
 
 
 

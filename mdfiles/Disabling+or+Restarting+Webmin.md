@@ -1,10 +1,12 @@
+關閉或重啓Webmin
+===
 At times it may be necessary to disable the administration web server of your SmartMachine (aka. Virtualmin or Webmin).  The following is how you disable and restart this service using SMF.
 
 In this page:
 
 
-Disable Webmin
-===
+##Disable Webmin
+
 
 SSH into your SmartMachine, then switch to the root user and run:
 
@@ -16,13 +18,13 @@ svcadm disable webmin
 
 
 
-Restart Webmin
-===
+##Restart Webmin
+
 
 If a service crashes that is maintained by SMF it will be placed into a 'maintenance mode'.  The following process is how to restart a service that has been disabled or that is in maintenance mode:
 
-Check to see if service is in Maintenance Mode
-===
+##Check to see if service is in Maintenance Mode
+
 If a service is in maintenance mode it has cashed and is usually inductive of an error with the service or your SmartMachine is running out of RAM or Disk.
 
 To check that a service is in maintenance mode:
@@ -47,8 +49,8 @@ svcadm clear service_name
 ```
 
 
-Verify service is disabled
-===
+##Verify service is disabled
+
 To verify a service is disabled run this command:
 
 ```
@@ -59,8 +61,8 @@ If the service is disabled you will see something similar to this:
 
 disabled 18:51:10 svc:/network/webmin:webmin
 
-Enable service
-===
+##Enable service
+
 To start a service run this command as root:
 
 ```

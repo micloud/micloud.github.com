@@ -9,8 +9,8 @@ MiCloud所提供的SmartOS主機中，已有預載Nodejs服務的主機只有Sma
 
 
 
-在SmartOS上安裝Node.js
-===
+##在SmartOS上安裝Node.js
+
 利用pkgin指令搜尋node.js:
 
 ```
@@ -26,8 +26,8 @@ MiCloud所提供的SmartOS主機中，已有預載Nodejs服務的主機只有Sma
 
 <img src='images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p2.PNG' width='650' align='center'/>
 
-檢視是否安裝成功
-===
+##檢視是否安裝成功
+
 首先我們透過vi指令來建立名為server.js程式:
 
 ```
@@ -42,8 +42,7 @@ MiCloud所提供的SmartOS主機中，已有預載Nodejs服務的主機只有Sma
 var http = require('http');
 http.createServer(function (req, res) {
 res.writeHead(200, {'Content-Type': 'text/plain'});
-res.end('Hello Node.js
-n');
+res.end('Hello Node.js\n');
 }).listen(8102, "127.0.0.1");
 console.log('Server running at http://127.0.0.1:8102/');
 ```

@@ -10,6 +10,7 @@ SmartOS Hostname設置
 
 
 SmartMachine需要修改的檔案如下:
+
 *  /etc/hosts：修改此檔案，讓您的主機本身認得此Hostname
 *  /etc/nodename：此檔案為主要Hostname所讀取的檔案
 *  /etc/inet/ipnodes：此檔案為/etc/hosts之symbolic link，主要存放主機靜態路由之IP/Name對應
@@ -40,7 +41,7 @@ SmartMachine需要修改的檔案如下:
 設定完畢後，重新開啓主機則會生效(您可以直接使用"reboot"指令重開或至[自助服務平台](http://portal.micloud.tw/)
 
 
-當您設定好，並重開主機後，您可以使用下面指令驗證：
+當您設定好，並[重開主機](/index.html?page=Server+Restart+From+Portal.md)後，您可以使用下面指令驗證：
 
 ```
 #hostname

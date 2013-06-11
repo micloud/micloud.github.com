@@ -1,10 +1,10 @@
 
 主機監控之設定
 ===
-Windows
-===
+##Windows
 
-1.MiCloud平台虛擬主機之監控程式需使用nodejs來執行，__請先登入您的Windows虛擬主機__，再至[http://nodejs.org/](http://nodejs.org/)
+
+1.MiCloud平台虛擬主機之監控程式需使用nodejs來執行，__請先登入您的Windows虛擬主機__，再至[http://nodejs.org/](http://nodejs.org/)下載並安裝 (如下圖)
 <img src='images/Monitor+System-node.png' width='650' align='center'/>
 
 
@@ -29,8 +29,7 @@ http://211.78.245.110:3000/install/nomon-lastest.tgz
 
 
 ```
-node您將檔案解壓縮後存放的位置
-main.js，主要用來設定排程應該執行哪支程式。
+node您將檔案解壓縮後存放的位置\main.js，主要用來設定排程應該執行哪支程式。
 ```
 
 <img src='images/Monitor+System-node1.png' width='650' align='center'/>
@@ -79,8 +78,8 @@ main.js，主要用來設定排程應該執行哪支程式。
 
 ----
 
-Linux
-===
+##Linux
+
 1.登入MiCloud主機清單中，選擇任何一台Linux主機
 <img src='images/Monitor+System-pl1.png' width='650' align='center'/>
 

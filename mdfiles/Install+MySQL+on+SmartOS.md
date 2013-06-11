@@ -3,8 +3,8 @@ SmartOS上安裝MySQL
 ===
 MiCloud在SmartOS Plus、SmartOS32中提供預載MySQL的服務，若剛開始沒有選擇預載之用戶，可以參考以下的步驟進行安裝，由於32bit及64bit的安裝過程有些許差異，故分開描述。
 
-SmartOS 32bit安裝步驟
-===
+##SmartOS 32bit安裝步驟
+
 1.請先搜尋MySQL的套件，並找到mysql-server最高版本
 
 ```
@@ -87,8 +87,8 @@ SmartOS 32bit安裝步驟
 
 
 
-SmartOS 64bit安裝步驟
-===
+##SmartOS 64bit安裝步驟
+
 1.請先搜尋MySQL的套件
 
 ```
@@ -158,8 +158,8 @@ SmartOS 64bit安裝步驟
 
 
 ----
-重設root密碼
-===
+##重設root密碼
+
 若您忘記MySQL的root密碼，可以用以下的方式重設密碼
 
 

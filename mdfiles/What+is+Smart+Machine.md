@@ -9,13 +9,13 @@ SmartMachine係指美國Joyent所研發SDC(SmartDatacenter)上之虛擬主機。
 
 
 
-您可透過MiCloud雲端管理系統([http://micloud.tw])監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache HTTPD、PHP，以及遠端管理界面webmin等。](您可透過MiCloud雲端管理系統 - [http://micloud.tw監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache HTTPD、PHP，以及遠端管理界面webmin等。)
+您可透過MiCloud雲端管理系統 (http://micloud.tw) 監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache HTTPD、PHP，以及遠端管理界面webmin等。
 
 
 
 ----
-更進階的說明，可以在Joyent Wiki搜尋到
-===
+##更進階的說明，可以在Joyent Wiki搜尋到
+
 *  [Joyent wiki](http://wiki.joyent.com/display/smart/Getting+Started+with+SmartMachines)
 
 

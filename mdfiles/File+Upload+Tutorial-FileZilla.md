@@ -1,13 +1,15 @@
-檔案上傳教學(FileZilla)
+使用軟體上傳檔案(FileZilla)
 ===
+##檔案上傳教學(FileZilla)
+
 影片:[MiCloud 使用 FileZilla 配合 SSH-Key(.ppk) 上傳與下載檔案](http://www.youtube.com/watch?v=m-CBesKRE6s)
 <div align="center">
 <embed width="420" height="345" src="http://www.youtube.com/v/m_CBesKRE6s&hd=1" type="application/x-shockwave-flash"></embed>
 </div>
-使用 FileZilla 配合 SSH-Key(.ppk) 上傳與下載檔案
-===
-加入 SSH-Key (紅色框框與黑色箭頭)
-===
+##使用 FileZilla 配合 SSH-Key(.ppk) 上傳與下載檔案
+
+##加入 SSH-Key (紅色框框與黑色箭頭)
+
 開啟 FileZilla 後,於 __編輯(E)__ 內點選 __設定(S)...__
 
 
@@ -18,8 +20,8 @@
 
 
 
-輸入相關設定(黃色框框)
-===
+##輸入相關設定(黃色框框)
+
 主機(H):輸入您的主機IP
 
 

@@ -1,9 +1,11 @@
+使用memcached
+===
 memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主要目的是在於減少資料庫的負擔。透過memcached的快取對於使用者在等待資料存取時間可以加快進行而不會延遲服務。以下將會教您如何在SmartMachine去啟用和設置memcached。
 
 
 
-啟動 Memcached
-===
+##啟動 Memcached
+
 
 
 利用root權限或是利用sudo指令來啟動memcached:
@@ -44,8 +46,8 @@ memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主�
 
 
 
-設置 Memcached
-===
+##設置 Memcached
+
 
 用戶可以自行設置memcached的大小以及所允許的連線數量，使用svcprop驗證目前memcached的大小:
 

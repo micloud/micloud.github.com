@@ -3,8 +3,8 @@ Linux系統上安裝MySQL
 ===
 依下達的指令不同，各作業系統的安裝說明如下:
 
-CentOS、Fedora 安裝MySQL
-===
+##CentOS、Fedora 安裝MySQL
+
 1.請使用yum安裝
 
 ```
@@ -39,8 +39,8 @@ CentOS、Fedora 安裝MySQL
 
 
 
-Ubuntu、Debian 安裝MySQL
-===
+##Ubuntu、Debian 安裝MySQL
+
 1.請使用apt-get安裝MySQL
 
 ```
@@ -73,8 +73,8 @@ Ubuntu、Debian 安裝MySQL
 <img src='images/Install+MySQL+on+Linux-p4.png' width='650' align='center'/>
 
 ----
-重設root密碼
-===
+##重設root密碼
+
 若您忘記MySQL的root密碼，可以用以下的方式重設密碼:
 1.請先將MySQL服務停止
 
