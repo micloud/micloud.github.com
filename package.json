@@ -14,6 +14,9 @@
   ],
   "dependencies": {
     "markdown":"*",
+    "marked":"*",
+    "rss":"*",
+    "nodeutil":"*",
     "json2tree":"*"
   },
   "keywords": [
