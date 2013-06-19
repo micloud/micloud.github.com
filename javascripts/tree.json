@@ -8,18 +8,99 @@
     ]
   },
   {
-    "name": "MiCloud自助服務操作資訊",
+    "name":"Micloud使用前須知",
+    "type": "folder",
+    "nodes": [
+      {"type":"node", "link":"What+is+Smart+Machine.md","name":"何謂Smart Machine?"},
+      {"type":"node", "link":"Micloud+Features.md","name":"MiCloud的特點是什麼?"},
+      {"type":"node", "link":"PuttyLoginErrorCannotAgreeAClientToServerCipher.md","name":"PUTTY連線錯誤訊息：Cannot Agree A Client To Server Cipher"},
+      {"type":"node", "link":"SmartOS+Install+Oracle.md","name":"SmartOS如何安裝Oracle"},
+      {
+        "name":"基本指令",
+        "type": "folder",
+        "nodes": [
+          {"type":"node", "link":"View+network+routing+instructions.md","name":"如何檢視網路路由?"},
+          {"type":"node", "link":"Used+commmands.md","name":"常用指令集有哪些?"},
+          {"type":"node", "link":"Update+Timezone.md","name":"如何更新主機時區？"},
+          {"type":"node", "link":"View+Used+Resources.md","name":"如何檢視已使用的資源?"}
+        ]
+      },
+      {
+        "name":"相關申請,訂購與付款",
+        "type": "folder",
+        "nodes": [
+          {"type":"node", "link":"Apply+MiCloud+Account-new.md","name":"申請帳號"},
+          {"type":"node", "link":"Order+a+Machine.md","name":"訂購主機"},
+          {"type":"node", "link":"Instruction+for+2XS+Machine.md","name":"免費試用主機主機使用說明"}
+        ]
+      },{
+        "name":"更新主機套件庫來源及安裝軟體",
+        "type": "folder",
+        "nodes": [
+          {"type":"node", "link":"Ubuntu+mirror+site.md","name":"變更套件庫來源及安裝軟體(Ubuntu)"},
+          {"type":"node", "link":"Debian+mirror+site.md","name":"變更套件庫來源及安裝軟體(Debian)"},
+          {"type":"node", "link":"CentOS+mirror+site.md","name":"變更套件庫來源及安裝軟體(CentOS)"},
+          {"type":"node", "link":"Fedora+mirror+site.md","name":"變更套件庫來源及安裝軟體(Fedora)"},
+          {"type":"node", "link":"Install+SmartOS+Packages.md","name":"更新套件庫及安裝軟體(SmartOS)"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Micloud基本使用環境設置教學",
     "type": "folder",
     "nodes":[
       {
-        "name":"申請及訂購",
-        "type": "folder",
-        "nodes":[        
-          {"type":"node","link":"Apply+MiCloud+Account-new.md","name":"申請帳號"},
-          {"type":"node","link":"Order+a+Machine.md","name":"訂購主機"},
-          {"type":"node","link":"Instruction+for+2XS+Machine.md","name":"免費試用主機主機使用說明"}
+        "name":"金鑰相關教學",
+        "type":"folder",
+        "nodes": [
+          {"type":"node","link":"SSH+KeyGen+Connect+Tutorial-Windows.md","name":"金鑰產生與連線教學(Windows)"},
+          {"type":"node","link":"SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.md","name":"金鑰產生與連線教學(Linux/Unix)"},
+          {"type":"node","link":"SSH+KeyGen+Connect+Tutorial-MacOS.md","name":"金鑰產生與連線教學(MacOS)"},
+          {"type":"node","link":"Free+machine+Connect+Tutorial.md","name":"主機金鑰設置與連線教學  "}
         ]
       },
+      {
+        "name":"檔案上傳教學",
+        "type":"folder",
+        "nodes": [
+          {"type":"node", "link":"File+Upload+Tutorial-PSCP.md","name":"使用指令上傳檔案(Windows至Linux)"},
+          {"type":"node", "link":"File+Upload+Tutorial-Linux+or+Unix.md","name":"使用指令上傳檔案(Linux/Unix)"},
+          {"type":"node", "link":"File+Upload+Tutorial-MacOS.md","name":"使用指令上傳檔案(MacOS)"},
+          {"type":"node", "link":"File+Upload+Tutorial-WinScp.md","name":"使用軟體上傳檔案(WinScp)"},
+          {"type":"node", "link":"File+Upload+Tutorial-FileZilla.md","name":"使用軟體上傳檔案(FileZilla)"},
+          {"type":"node", "link":"File+Upload+Tutorial-Windows+to+Windows.md","name":"使用指令上傳檔案(Windows至Windows)"},
+          {"type":"node", "link":"File+Upload+Tutorial-Linux+to+Windows.md","name":"使用指令上傳檔案(Linux至Windows)"}
+        ]
+      },
+      {
+        "name":"HostName設定教學",
+        "type":"folder",
+        "nodes": [
+          {"type":"node", "link":"Setting+hostname+on+SmartOS.md","name":"SmartOS Hostname設置"},
+          {"type":"node", "link":"Setting+hostname+on+Linux.md","name":"Linux Hostname設置"},
+          {"type":"node", "link":"Setting+hostname+on+Windows.md","name":"Windows Hostname設置"}
+        ]
+      },
+      {
+        "name": "常見設定",
+        "type": "folder",
+        "nodes": [
+           {"type":"node", "link":"About+Swap+Adjust.md","name":"swap設置"},
+          {"type":"node", "link":"Setting+IPFilter.md","name":"設定IPFilter"},
+          {"type":"node", "link":"Using+Memcached.md","name":"使用memcached"},
+          {"type":"node", "link":"Enable+SMTP+on+SmartOS+Plus.md","name":"啓動SmartOS Plus上之SMTP"},
+          {"type":"node", "link":"Svcadm+usage.md","name":"使用svcadm來管理系統服務"},
+          {"type":"node", "link":"Setting+Nagios.md","name":"建置Nagios網路監控主機"}, 
+          {"type":"node", "link":"Setting+SMF+on+SmartOS.md","name":"在SmartOS上設置SMF"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MiCloud自助管理資訊",
+    "type": "folder",
+    "nodes":[
       {
         "name":"線上管理 - 帳戶管理",
         "type":"folder",
@@ -45,62 +126,6 @@
           {"type":"node","link":"Monitor+System.md","name":"系統監控"},  
           {"type":"node","link":"Linux+Update+Timezone.md","name":"時區設定"},
           {"type":"node","link":"DNS+Manage.md","name":"DNS管理"}
-        ]
-      },
-      {
-        "name": "更新主機套件庫來源及安裝軟體",
-        "type": "folder",
-        "nodes": [
-          {"type":"node","link":"Ubuntu+mirror+site.md","name":"變更套件庫來源及安裝軟體(Ubuntu)"},
-          {"type":"node","link":"Debian+mirror+site.md","name":"變更套件庫來源及安裝軟體(Debian)"},
-          {"type":"node","link":"CentOS+mirror+site.md","name":"變更套件庫來源及安裝軟體(CentOS)"},
-          {"type":"node","link":"Fedora+mirror+site.md","name":"變更套件庫來源及安裝軟體(Fedora)"},
-          {"type":"node","link":"Install+SmartOS+Packages.md","name":"更新套件庫及安裝軟體(SmartOS)"}
-        ]
-      },
-      {
-        "name": "金鑰相關使用教學",
-        "type": "folder",
-        "nodes": [
-          {"type":"node","link":"SSH+KeyGen+Connect+Tutorial-Windows.md","name":"金鑰產生與連線教學(Windows)"},
-          {"type":"node","link":"SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.md","name":"金鑰產生與連線教學(Linux/Unix)"},
-          {"type":"node","link":"SSH+KeyGen+Connect+Tutorial-MacOS.md","name":"金鑰產生與連線教學(MacOS)"},
-          {"type":"node","link":"Free+machine+Connect+Tutorial.md","name":"主機金鑰設置與連線教學"}
-        ]
-      },
-      {
-        "name":"檔案上傳教學",
-        "type": "folder",
-        "nodes": [
-          {"type":"node", "link":"File+Upload+Tutorial-PSCP.md","name":"使用指令上傳檔案(Windows至Linux)"},
-          {"type":"node", "link":"File+Upload+Tutorial-Linux+or+Unix.md","name":"使用指令上傳檔案(Linux/Unix)"},
-          {"type":"node", "link":"File+Upload+Tutorial-MacOS.md","name":"使用指令上傳檔案(MacOS)"},
-          {"type":"node", "link":"File+Upload+Tutorial-WinScp.md","name":"使用軟體上傳檔案(WinScp)"},
-          {"type":"node", "link":"File+Upload+Tutorial-FileZilla.md","name":"使用軟體上傳檔案(FileZilla)"},
-          {"type":"node", "link":"File+Upload+Tutorial-Windows+to+Windows.md","name":"使用指令上傳檔案(Windows至Windows)"},
-          {"type":"node", "link":"File+Upload+Tutorial-Linux+to+Windows.md","name":"使用指令上傳檔案(Linux至Windows)"}
-        ]
-      },
-      {
-        "name":"Hostname設定教學",
-        "type": "folder",
-        "nodes": [
-          {"type":"node", "link":"Setting+hostname+on+SmartOS.md","name":"SmartOS Hostname設置"},
-          {"type":"node", "link":"Setting+hostname+on+Linux.md","name":"Linux Hostname設置"},
-          {"type":"node", "link":"Setting+hostname+on+Windows.md","name":"Windows Hostname設置"}
-        ]
-      },
-      {
-        "name":"常見之設定",
-        "type": "folder",
-        "nodes": [
-          {"type":"node", "link":"About+Swap+Adjust.md","name":"swap設置"},
-          {"type":"node", "link":"Setting+IPFilter.md","name":"設定IPFilter"},
-          {"type":"node", "link":"Using+Memcached.md","name":"使用memcached"},
-          {"type":"node", "link":"Enable+SMTP+on+SmartOS+Plus.md","name":"啓動SmartOS Plus上之SMTP"},
-          {"type":"node", "link":"Svcadm+usage.md","name":"使用svcadm來管理系統服務"},
-          {"type":"node", "link":"Setting+Nagios.md","name":"建置Nagios網路監控主機"}, 
-          {"type":"node", "link":"Setting+SMF+on+SmartOS.md","name":"在SmartOS上設置SMF"}
         ]
       }
     ]
@@ -129,17 +154,6 @@
           {"type":"node", "link":"Install+MySQL+on+Linux.md","name":"Linux上安裝及設定"}
         ]
       },
-      {
-        "name":"Virtualmin/Webmin操作",
-        "type": "folder",
-        "nodes": [
-          {"type":"node", "link":"Disabling+or+Restarting+Webmin.md","name":"關閉或重啓Webmin"},
-          {"type":"node", "link":"Managing+SSL+Certificates+with+Virtualmin.md","name":"使用Virtuakmin管理SSL認證"},
-          {"type":"node", "link":"Updating+Webmin.md","name":"更新Webmin"},
-          {"type":"node", "link":"Recovering+a+Forgotten+SmartMachine+Password.md","name":"使用Webmin回復SmartMachine密碼"},
-          {"type":"node", "link":"Setting+Up+a+New+Domain.md","name":"設定新的Domain"}
-        ]
-      }
     ]
   },
   {
@@ -157,20 +171,6 @@
           {"type":"node", "link":"MiCloud+API+Implement+2.md","name":"MiCloud API實做案例(二)"}
         ]
       }
-    ]
-  },
-  {
-    "name":"常見問題",
-    "type": "folder",
-    "nodes": [
-      {"type":"node", "link":"PuttyLoginErrorCannotAgreeAClientToServerCipher.md","name":"PUTTY連線錯誤訊息：Cannot Agree  A Client To Server Cipher"},
-      {"type":"node", "link":"SmartOS+Install+Oracle.md","name":"SmartOS如何安裝Oracle"},
-      {"type":"node", "link":"What+is+Smart+Machine.md","name":"何謂Smart Machine?"},
-      {"type":"node", "link":"Update+Timezone.md","name":"如何更新主機時區？"},
-      {"type":"node", "link":"View+Used+Resources.md","name":"如何檢視已使用的資源?"},
-      {"type":"node", "link":"View+network+routing+instructions.md","name":"如何檢視網路路由?"},
-      {"type":"node", "link":"Used+commmands.md","name":"常用指令集有哪些?"},
-      {"type":"node", "link":"Micloud+Features.md","name":"MiCloud的特點是什麼？"}
     ]
   },
   {
