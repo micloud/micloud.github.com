@@ -5,7 +5,7 @@
       {"type":"node","link":"http://micloud.tw","name":"MiCloud官方網站"},
       {"type":"node","link":"http://micloud.tw/ch/price/price","name":"MiCloud產品規格"},
       {"type":"node","link":"mailto:service@micloud.tw","name":"MiCloud服務信箱"}
-      
+
     ]
   },
   {
@@ -154,7 +154,7 @@
           {"type":"node", "link":"Install+MySQL+on+SmartOS.md","name":"SmartOS上安裝及設定"},
           {"type":"node", "link":"Install+MySQL+on+Linux.md","name":"Linux上安裝及設定"}
         ]
-      },
+      }
     ]
   },
   {
