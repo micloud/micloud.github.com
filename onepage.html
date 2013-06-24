@@ -21,7 +21,364 @@
   <body>
   <div style="width:100%" align="center">
   <div align="center" style="text-align:left; width:960px;">
-    <h1 style="vertical-align:middle"><img src="images/wiki-logo.png" width="128px"/><a href="http://doc.micloud.tw">MiCloud Wiki Document</a></h1><hr/><p  id="Apply+MiCloud+Account-new.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Apply+MiCloud+Account-new.html">申請帳號</a>&nbsp;<a href="index.html?page=Apply+MiCloud+Account-new.md">(Apply+MiCloud+Account-new.md)</a><a href="#Apply+MiCloud+Account-new.md"></a></h1><br/><h1>申請MiCloud帳號</h1>
+    <h1 style="vertical-align:middle"><img src="images/wiki-logo.png" width="128px"/><a href="http://doc.micloud.tw">MiCloud Wiki Document</a></h1><hr/><p  id="What+is+Smart+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/What+is+Smart+Machine.html">何謂Smart Machine?</a>&nbsp;<a href="index.html?page=What+is+Smart+Machine.md">(What+is+Smart+Machine.md)</a><a href="#What+is+Smart+Machine.md"></a></h1><br/><h1>SmartMachine說明</h1>
+<p>SmartMachine係指美國Joyent所研發SDC(SmartDatacenter)上之虛擬主機。SDC提升虛擬層的各項技術，達到超越市面上一般虛擬機器的效能，因此於SDC上提供之各項服務均優於一般虛擬主機。SmartMachine為植基於Solaris Kernel所發展的作業系統，全盤建構於ZFS檔案系統上。</p>
+<p>該作業系統無縫的與SDC做緊密的結合，可提供同平台的其他作業系統將近一倍以上的運算能力，省去跨系統溝通的耗損，能夠提供用戶動態調整資源、更符合用戶的需求，達到快速部署之應用能力。</p>
+<p>您可透過MiCloud雲端管理系統 (<a href="http://micloud.tw">http://micloud.tw</a>) 監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache HTTPD、PHP，以及遠端管理界面webmin等。</p>
+<hr>
+<h2>更進階的說明，可以在Joyent Wiki搜尋到</h2>
+<ul>
+<li><a href="http://wiki.joyent.com/display/smart/Getting+Started+with+SmartMachines">Joyent wiki</a></li>
+</ul>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Micloud+Features.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Micloud+Features.html">MiCloud的特點是什麼?</a>&nbsp;<a href="index.html?page=Micloud+Features.md">(Micloud+Features.md)</a><a href="#Micloud+Features.md"></a></h1><br/><h1>MiCloud的特點</h1>
+<p>有別於台灣其他業者，不論是在服務或技術方面皆持續完善及創新，以符合整個市場需求，MiCloud是您服務的最佳選擇。MiCloud擁有以下的特點：</p>
+<p>(1) 線上快速申請</p>
+<p>透過 <a href="http://micloud.tw">http://micloud.tw</a> 即可立即申請專屬的虛擬主機。</p>
+<p>(2) 彈性付費</p>
+<p>針對不同的虛擬主機提供不同的計費方式，以分計費，讓您用多少、付多少。</p>
+<p>詳細計費方式，請參考<a href="http://portal.micloud.tw/price/price">MiCloud產品價目表</a></p>
+<p>(3) 提供免費主機</p>
+<p>每個帳號皆可線上申請免費主機(256MB) 試用，直接至<a href="http://micloud.tw">MiCloud平台</a> ， 點選”免費試用”，免付用卡、免個人資料，1分鐘即可擁有個人免費主機。</p>
+<p>(4) 多樣化作業系統</p>
+<p>MiCloud提供三種不同的虛擬主機服務：SmartMachine、Ubuntu Linux、Windows R2 2008，分別可針對不同需求有不同的記憶體、CPU、硬碟規格。</p>
+<p>(5) 高效能</p>
+<p>MiCloud讓企業自訂服務條件，自動調整CPU、記憶體、網路等，透過作業系統內建虛擬化管理功能，直接控管硬體資源，讓效能最大化。</p>
+<p>(6) 高安全性</p>
+<ul>
+<li>MiCloud引進Joyent公有雲架構，從SmartDataCenter的ZFS架構，使用Zone安全隔離每部虛擬機器的檔案空間，並加上網路上安全規劃的實體隔離，達到虛擬主機內部安全機制，並加上MiCloud特殊防火牆規劃，特別防護網路上多種攻擊。</li>
+<li>使用SSH key連線方式，保護虛擬主機之擁有者，亦可隔離無金鑰之駭客。</li>
+<li>嚴密及安全的機房管理<br>*機房門禁管理<br>*24小時機房監視錄影系統<br>*24小時網路監控<br>*防火牆之保護<br>*提供不斷電系統</li>
+</ul>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="PuttyLoginErrorCannotAgreeAClientToServerCipher.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/PuttyLoginErrorCannotAgreeAClientToServerCipher.html">PUTTY連線錯誤訊息：Cannot Agree A Client To Server Cipher</a>&nbsp;<a href="index.html?page=PuttyLoginErrorCannotAgreeAClientToServerCipher.md">(PuttyLoginErrorCannotAgreeAClientToServerCipher.md)</a><a href="#PuttyLoginErrorCannotAgreeAClientToServerCipher.md"></a></h1><br/><h1>Putty登入SmartOS錯誤訊息：Couldn&#39;t agree a client-to-server cipher</h1>
+<p>申請SmartOS之用戶，如遇到登入錯誤訊息如下：<br><img src='images/PuttyLoginErrorCannotAgreeAClientToServerCipher-CannotAgreeAClientToServerCipher.png' align='center'/></p>
+<p>則可能原因有數種，您可檢查下面項目：</p>
+<ul>
+<li>確認SSH Key已經上傳，且本機之連線已經使用SSH私鑰加密。</li>
+<li>針對SmartOS，您可重新產生SSH Key並重新上傳至Portal，應該就可以直些連線。</li>
+<li>如上述均未能解決連線問題，您可確認Putty版本是否為最新，可至Putty官方網站下載新版本軟體，重新執行即可正常連線。</li>
+<li>如均為您解決您的問題，可聯繫<a href="mailto:service@micloud.tw">MiCloud Service</a></li>
+</ul>
+<p>參考：</p>
+<ul>
+<li><a href="http://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=putty&amp;source=web&amp;cd=1&amp;ved=0CDIQFjAA&amp;url=http%3A%2F%2Fwww.chiark.greenend.org.uk%2F~sgtatham%2Fputty%2Fdownload.html&amp;ei=YJbXTtDACITKmQXppsXtCw&amp;usg=AFQjCNEawi7s0aRUeJP3qKnncgvPiSqZYA&amp;sig2=-7FhRbxa0seZVhrrNQUBnw">Putty官方網站</a></li>
+<li><a href="http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001">http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001</a></li>
+</ul>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartOS+Install+Oracle.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/SmartOS+Install+Oracle.html">SmartOS如何安裝Oracle</a>&nbsp;<a href="index.html?page=SmartOS+Install+Oracle.md">(SmartOS+Install+Oracle.md)</a><a href="#SmartOS+Install+Oracle.md"></a></h1><br/><h1>SmartOS install Oracle</h1>
+<h2>準備</h2>
+<p>開始安裝Oracle Universal前，的準備工作：</p>
+<ul>
+<li>建立資料庫專用帳戶、群組與目錄</li>
+<li>修改主機Shared Memory設定</li>
+<li>安裝X11相關套件</li>
+</ul>
+<p>設定步驟可參考下面指令：</p>
+<pre><code>admin$ su
+...
+# groupadd -g 1000 dba
+# groupadd -g 1001 oinstall
+# groupadd -g 1002 oper
+# mkdir -p /u01/app/oracle
+# useradd -u 1000 -g oinstall -G dba,oper -s /bin/bash -d /u01/app/oracle oracle
+# chown -R oracle:dba /u01
+# mkdir -p /u02/oradata
+# chown -R oracle:dba /u02
+# passwd oracle
+...
+# projadd -U oracle -K &quot;project.max-shm-memory=(priv,2GB,deny)&quot; user.oracle
+# exit
+admin$ su oracle
+...</code></pre>
+<h2>遠端安裝Oracle</h2>
+<p>在開始遠端安裝Oracle之前，您需要先安裝X11相關套件，於Mac OS, Linux上以支援X11服務，您可以開啓式窗界面，然後直接使用下面指令將X Window Forward回到您的桌面：</p>
+<pre><code>$xhost +
+access control disabled, clients can connect from any host
+$ssh -X oracle@your.machine.ip</code></pre>
+<p>完成X11套件設定與安裝後，您可以直接下載Oracle之套件進行解壓縮安裝，安裝步驟如下：</p>
+<pre><code>$ ./runInstaller -ignoreSysPrereqs
+Starting Oracle Universal Installer...
+
+Checking installer requirements...
+
+Checking operating system version: must be 5.10.    Actual 5.11
+Failed &lt;&lt;&lt;&lt;
+
+
+&gt;&gt;&gt; Ignoring required pre-requisite failures. Continuing...
+
+Preparing to launch Oracle Universal Installer ...</code></pre>
+<p>注意：OpenSolaris (5.11)版本非Oracle原廠建議之作業系統，因此安裝前需要加設作業系統檢查參數：-ignoreSysPrereqs</p>
+<h2>其他資訊</h2>
+<p>如果您需要更多有關於Oracle之安裝資訊，您可以參考Oracle installation manuals及 The Cuddletech SAs Guide to Oracle.</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="View+network+routing+instructions.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/View+network+routing+instructions.html">如何檢視網路路由?</a>&nbsp;<a href="index.html?page=View+network+routing+instructions.md">(View+network+routing+instructions.md)</a><a href="#View+network+routing+instructions.md"></a></h1><br/><h1>SmartOS檢視網路路由指令</h1>
+<p>透過netstat指令檢視路由表：</p>
+<pre><code># netstat -rn</code></pre>
+<pre><code>Routing Table: IPv4
+Destination           Gateway           Flags  Ref     Use     Interface
+-------------------- -------------------- ----- ----- ---------- ---------
+default              211.78.255.254       UG        3        193
+127.0.0.1            127.0.0.1            UH        3          8 lo0
+211.78.255.0         211.78.255.31        U         3          0 net0
+
+Routing Table: IPv6
+Destination/Mask            Gateway                   Flags Ref   Use    If
+--------------------------- --------------------------- ----- --- ------- -----
+::1                         ::1                         UH      2       0 lo0</code></pre>
+<p>檢視到某個網站的路由：</p>
+<p><code># traceroute google.com</code></p>
+<pre><code>traceroute: Warning: google.com has multiple addresses; using 74.125.31.138
+traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
+1  254.2.......54)  0.189 ms  0.194 ms  0.096 ms
+2  211..........1 ms  0.453 ms  0.444 ms
+....</code></pre>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Used+commmands.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Used+commmands.html">常用指令集有哪些?</a>&nbsp;<a href="index.html?page=Used+commmands.md">(Used+commmands.md)</a><a href="#Used+commmands.md"></a></h1><br/><h1>常用指令集</h1>
+<p>各版本套件指令比較表<br>雖然目前許多市面常見的作業系統例如Ubuntu、Debian、CentOS、Fedora，甚至是目前Micloud所用的SmartOS都是以linux為底的架構。不過由於開發人員的不同在指令的操作上也會有稍稍的不同，在套件的指令集中，我們利用列表來比較各版本不同的指令:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ubuntu、Debian</th>
+<th>CentOS、Fedora</th>
+<th>SmartOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查詢已安裝的套件</td>
+<td>apt-cache pkgnames</td>
+<td>yum list</td>
+<td>pkgin list</td>
+</tr>
+<tr>
+<td>查詢套件可安裝套件的名稱或關鍵字</td>
+<td>apt-cache search &quot;套件名稱&quot;或apt-cache search &quot;關鍵字&quot;</td>
+<td>yum search &quot;套件名稱&quot;或yum search &quot;關鍵字&quot;</td>
+<td>pkgin search &quot;套件名稱&quot;或pkgin search &quot;關鍵字&quot;</td>
+</tr>
+<tr>
+<td>安裝套件</td>
+<td>apt-get install &quot;套件名稱&quot;</td>
+<td>yum install &quot;套件名稱&quot;</td>
+<td>pkgin install &quot;套件名稱&quot;</td>
+</tr>
+<tr>
+<td>移除套件</td>
+<td>apt-get remove &quot;套件名稱&quot;</td>
+<td>yum remove &quot;套件名稱&quot;</td>
+<td>pkgin remove &quot;套件名稱&quot;</td>
+</tr>
+<tr>
+<td>升級所有己安裝的最新列表</td>
+<td>apt-get update</td>
+<td>yum update</td>
+<td>pkgin update</td>
+</tr>
+<tr>
+<td>下載檔案</td>
+<td>wget &quot;網址&quot;</td>
+<td>wget &quot;網址&quot;</td>
+<td>wget &quot;網址&quot;</td>
+</tr>
+<tr>
+<td>複製檔案</td>
+<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
+<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
+<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
+</tr>
+<tr>
+<td>刪除檔案</td>
+<td>rm &quot;檔案或目錄&quot;</td>
+<td>rm &quot;檔案或目錄&quot;</td>
+<td>rm &quot;檔案或目錄&quot;</td>
+</tr>
+<tr>
+<td>檢視檔案內容</td>
+<td>cat &quot;檔案名稱&quot;</td>
+<td>cat &quot;檔案名稱&quot;</td>
+<td>cat &quot;檔案名稱&quot;</td>
+</tr>
+<tr>
+<td>切換目錄</td>
+<td>cd &quot;相對路徑或絕對路徑&quot;</td>
+<td>cd &quot;相對路徑或絕對路徑&quot;</td>
+<td>cd &quot;相對路徑或絕對路徑&quot;</td>
+</tr>
+<tr>
+<td>顯示所在目錄</td>
+<td>pwd</td>
+<td>pwd</td>
+<td>pwd</td>
+</tr>
+<tr>
+<td>檢視目錄下的檔案</td>
+<td>ls</td>
+<td>ls</td>
+<td>ls</td>
+</tr>
+<tr>
+<td>重新開機</td>
+<td>reboot</td>
+<td>reboot</td>
+<td>reboot</td>
+</tr>
+</tbody>
+</table>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Update+Timezone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Update+Timezone.html">如何更新主機時區？</a>&nbsp;<a href="index.html?page=Update+Timezone.md">(Update+Timezone.md)</a><a href="#Update+Timezone.md"></a></h1><br/><h1>如何更新主機時區？</h1>
+<h2>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h2>
+<p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
+<pre><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></pre>
+<p>(2) 執行 date -u</p>
+<pre><code># date -u</code></pre>
+<p>(3) 輸入 date 看看是否已經是正確時區</p>
+<pre><code># date</code></pre>
+<hr>
+<h2>SmartMachine 設定時間的方式</h2>
+<p>選擇TimeZone時區</p>
+<pre><code>[root@XXXX /opt/local/etc/nginx]# tzselect
+Please identify a location so that time zone rules can be set correctly.
+Please select a continent or ocean.
+1) Africa
+2) Americas
+3) Antarctica
+4) Arctic Ocean
+5) Asia
+6) Atlantic Ocean
+7) Australia
+8) Europe
+9) Indian Ocean
+10) Pacific Ocean
+11) none - I want to specify the time zone using the POSIX TZ format.
+#? 5
+Please select a country or region.
+1) Afghanistan                                            26) Laos
+2) Armenia                                                27) Lebanon
+3) Azerbaijan                                             28) Macao
+4) Bahrain                                                29) Malaysia
+5) Bangladesh                                             30) Mongolia
+6) Bhutan                                                 31) Myanmar (Burma)
+7) Brunei                                                 32) Nepal
+8) Cambodia                                               33) Oman
+9) China                                                  34) Pakistan
+10) Cyprus                                                 35) Palestine
+11) East Timor                                             36) Philippines
+12) Georgia                                                37) Qatar
+13) Hong Kong                                              38) Russia
+14) India                                                  39) Saudi Arabia
+15) Indonesia                                              40) Singapore
+16) Iran                                                   41) Sri Lanka
+17) Iraq                                                   42) Syria
+18) Israel                                                 43) Taiwan
+19) Japan                                                  44) Tajikistan
+20) Jordan                                                 45) Thailand
+21) Kazakhstan                                             46) Turkmenistan
+22) Korea (North)                                          47) United Arab Emirates
+23) Korea (South)                                          48) Uzbekistan
+24) Kuwait                                                 49) Vietnam
+25) Kyrgyzstan                                             50) Yemen
+#? 43
+
+The following information has been given:
+
+Taiwan
+
+Therefore TZ=&#39;Asia/Taipei&#39; will be used.
+Local time is now:       Tue Nov  1 18:33:44 CST 2011
+Universal Time is now:   Tue Nov  1 10:33:44 UTC 2011
+Is the above information OK?
+1) Yes
+2) No
+#? 1
+Here is the TZ value again, this time on standard output:
+Asia/Taipei</code></pre>
+<p>修改Time Zone設定擋</p>
+<pre><code>[root@XXXX /opt/local/etc/nginx]# vi /etc/default/init</code></pre>
+<p>修改TZ設定內容為Asia/Taipei</p>
+<pre><code>TZ=Asia/Taipei</code></pre>
+<p>重新開機生效</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="View+Used+Resources.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/View+Used+Resources.html">如何檢視已使用的資源?</a>&nbsp;<a href="index.html?page=View+Used+Resources.md">(View+Used+Resources.md)</a><a href="#View+Used+Resources.md"></a></h1><br/><h1>如何檢視已使用的資源?</h1>
+<h2>檢查磁碟使用情況</h2>
+<table>
+<thead>
+<tr>
+<th>如何得到這個資訊</th>
+<th>請使用此命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查詢整個文件系統的磁碟空間使用情況</td>
+<td>df -ht</td>
+</tr>
+<tr>
+<td>查詢當前目錄的磁碟空間使用情況</td>
+<td>du -h</td>
+</tr>
+<tr>
+<td>查詢摘要目錄使用的空間</td>
+<td>du -hs /opt</td>
+</tr>
+</tbody>
+</table>
+<p>在這些命令中的-h參數的結果，是以“人類可讀”的形式呈現。</p>
+<h2>從 shell 檢查程序</h2>
+<table>
+<thead>
+<tr>
+<th>相關資訊</th>
+<th>使用此命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通用處理器和內存統計資料</td>
+<td>prstat -Z -s cpu <br>If prstat changes your terminal settings, use the reset command to reset them.</td>
+</tr>
+<tr>
+<td>正在運行的程序列表</td>
+<td>ps -elf</td>
+</tr>
+<tr>
+<td>admin用戶程序列表</td>
+<td>ps -uadmin -o pcpu,user,pid,args,comm,s<br>ps -uadmin -o user,args,pcpu,pmem,vsz,time,comm</td>
+</tr>
+<tr>
+<td>MySQL用戶程序</td>
+<td>ps -umysql -o pcpu,vsz,osz,args,comm,s</td>
+</tr>
+<tr>
+<td>使用80 port的所有程序</td>
+<td>/root/bin/pcp -p 80</td>
+</tr>
+<tr>
+<td>2806過程中使用的所有埠</td>
+<td>/root/bin/pcp -P 28068</td>
+</tr>
+<tr>
+<td>所有埠和程序的資訊</td>
+<td>/root/bin/pcp -a</td>
+</tr>
+<tr>
+<td>CPU使用率</td>
+<td>sudo /root/jinf -C</td>
+</tr>
+<tr>
+<td>記憶體使用</td>
+<td>sudo /root/jinf -m</td>
+</tr>
+<tr>
+<td>互換空間的使用情況</td>
+<td>sudo /root/jinf -S</td>
+</tr>
+</tbody>
+</table>
+<h2>檢查Webmin的過程</h2>
+<ul>
+<li>登錄到Virtualmin（請參考帳戶登錄及重要網址一文 ）。</li>
+<li>點擊Webmin在左上方的選單，然後點選系統=&gt;運行的程序。</li>
+<li>點擊PID、用戶、記憶體、或是CPU，以便為您的帳戶上運行的程序列表，分別按不同標準進行排序。</li>
+</ul>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Apply+MiCloud+Account-new.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Apply+MiCloud+Account-new.html">申請帳號</a>&nbsp;<a href="index.html?page=Apply+MiCloud+Account-new.md">(Apply+MiCloud+Account-new.md)</a><a href="#Apply+MiCloud+Account-new.md"></a></h1><br/><h1>申請MiCloud帳號</h1>
 <h2>申請MiCloud帳號 <a href="http://micloud.tw">GO</a></h2>
 <p>請於<strong>MiCloud</strong>首頁左上角點選右邊選項＜<strong>註冊</strong>＞。</p>
 <p><img src='images/Apply+MiCloud+Account-new-p1-2.png' width='650' align='center'/></p>
@@ -49,7 +406,7 @@
 <p>關於機器建立狀況與相關資訊可於 <a href="html/Manage+your+Machines.html">主機管理</a></p>
 <p><img src='images/Order+a+Machine-p1+-5.png' width='650' align='center'/></p>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="Instruction+for+2XS+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Instruction+for+2XS+Machine.html">免費試用主機主機使用說明</a>&nbsp;<a href="index.html?page=Instruction+for+2XS+Machine.md">(Instruction+for+2XS+Machine.md)</a><a href="#Instruction+for+2XS+Machine.md"></a></h1><br/><h1>免費主機主機使用說明</h1>
-<p>Small Package 服務主機為256M記憶體、10GB硬碟、1Core CPU之SmartOs主機，網路配置部分，提供一個內部私有IP，並透過外部DNS設定串聯，內部主機彼此間可以透過私有IP互通。一般設定說明如下:</p>
+<p>Small Package 服務主機為SmartOs主機，網路配置部分，提供一個內部私有IP，並透過外部DNS設定串聯，內部主機彼此間可以透過私有IP互通。一般設定說明如下:</p>
 <h2>HTTP/HTTPS使用</h2>
 <p>開放80、443、8080、3000、10000等port供HTTP(S)連線使用，連線時請使用主機DNS名稱連線(Ex:<a href="http://192-168-255-13.my.micloud.tw">http://192-168-255-13.my.micloud.tw</a>)</p>
 <h2>80:Default HTTP protocol</h2>
@@ -59,8 +416,11 @@
 <p>啟動：svcadm enable apache</p>
 <p>關閉：svcadm disable apache</p>
 <p>瀏覽網址：<a href="http://you_domain_name/">http://you_domain_name/</a></p>
-<p>說明：如欲修改預設的htdoc目錄，可異動：includes/directory.conf與includes/core.conf兩個檔案，置換對應的目錄<br><em>  includes/directory.conf: 修改DocumentRoot至您的目錄
-</em>  includes/core.conf: 修改Directory物件之目錄位置至您的目錄</p>
+<p>說明：如欲修改預設的htdoc目錄，可異動：includes/directory.conf與includes/core.conf兩個檔案，置換對應的目錄</p>
+<ul>
+<li>includes/directory.conf: 修改DocumentRoot至您的目錄</li>
+<li>includes/core.conf: 修改Directory物件之目錄位置至您的目錄</li>
+</ul>
 <h2>443: Default HTTPS protocol (HTTP轉SSL，使用443 Port)</h2>
 <p>預設目錄：/opt/local/share/httpd/htdocs</p>
 <p>預設支援：php模組</p>
@@ -80,9 +440,11 @@ DocumentRoot /opt/local/share/httpd/htdocs
 <p>由於Smartos預設沒有Tomcat, 需自行下載，指令如下</p>
 <p>搜尋可下載的Tomcat(黃色框框部分為可下載的版本)</p>
 <pre><code>#pkgin se tomcat</code></pre>
-<p><img src='images/Instruction+for+2XS+Machine-setomcat.jpg' width='650' align='center'/><br>下載您需要的版本</p>
+<p><img src='images/Instruction+for+2XS+Machine-setomcat.jpg' width='650' align='center'/></p>
+<p>下載您需要的版本</p>
 <pre><code>#pkgin in apache-tomcat-7.0.22</code></pre>
-<p><img src='images/Instruction+for+2XS+Machine-intomcat.jpg' width='650' align='center'/><br>預設JDK版本：JDK6</p>
+<p><img src='images/Instruction+for+2XS+Machine-intomcat.jpg' width='650' align='center'/></p>
+<p>預設JDK版本：JDK6</p>
 <p>Tomcat目錄：/opt/local/share/tomcatl</p>
 <p>部署目錄：/opt/local/share/tomcat/webapps</p>
 <p>使用者可以透過下面指令操作服務：</p>
@@ -106,527 +468,14 @@ DocumentRoot /opt/local/share/httpd/htdocs
 <p>關閉：svcadm disable webmin</p>
 <p>瀏覽網址：<a href="https://you_domain_name:10000/">https://you_domain_name:10000/</a></p>
 <h2>其他-SmartOS套件安裝與管理：</h2>
-<pre><code>搜尋：pkgin search [package name]](搜尋：pkgin search [package name)
-安裝：pkgin install [package name]](安裝：pkgin install [package name)
-移除：pkgin remove [package name]](移除：pkgin remove [package name)</code></pre>
+<pre><code>搜尋：pkgin search [package name]
+安裝：pkgin install [package name]
+移除：pkgin remove [package name]</code></pre>
 <h2>其他-SMF服務管理：</h2>
-<pre><code>啓動服務：svcadm enable [service name]](啓動服務：svcadm enable [service name)
-關閉服務：svcadm disable [service name]](關閉服務：svcadm disable [service name)
-服務狀態檢視：svcs -a ]( grep [service name)
-服務LOG檢視：tail -f `svcs -L [service name]`](服務LOG檢視：tail -f `svcs -L [service name`)</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Account+Modify.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+Account+Modify.html">帳戶資訊管理</a>&nbsp;<a href="index.html?page=MiCloud+Account+Modify.md">(MiCloud+Account+Modify.md)</a><a href="#MiCloud+Account+Modify.md"></a></h1><br/><h1>MiCloud帳戶資訊修改</h1>
-<p>影片:<a href="http://www.youtube.com/watch?v=qyEhOfV7GA0">MiCloud帳戶資訊管理</a></p>
-<div align="center"><br><embed width="420" height="345" src="http://www.youtube.com/v/qyEhOfV7GA0&hd=1" type="application/x-shockwave-flash"></embed><br></div>
-
-<p>若您還未註冊<strong>MiCloud</strong>，請於網頁左上角點選右邊選項＜<strong>註冊</strong>＞<a href="/html/Apply+MiCloud+Account-new.html">申請帳號</a></p>
-<p>若您已註冊完<strong>MiCloud</strong>，請於網頁左上角點選左邊選項＜<strong>登入</strong>＞。</p>
-<h2><img src='images/MiCloud+Account+Modify-p1-2.png' width='650' align='center'/></h2>
-<h2>登入與帳戶設定</h2>
-<p>進入登入頁面輸入您的帳號與密碼</p>
-<h2><img src='images/MiCloud+Account+Modify-p1+-2.png' width='650' align='center'/></h2>
-<h2>MiCloud產品購買頁面</h2>
-<p>登入後系統將自動導向訂購MiCloud產品頁面</p>
-<p>若您第一次登入Micloud請先於右上角點選<strong>帳戶設定</strong></p>
-<p>設定您的<a href="/html/Pay+way.html">付款方式</a> 與<a href="/html/SSH+KeyGen+Connect+Tutorial-Windows.html">SSH-Key</a>的相關設定</p>
-<h2><img src='images/MiCloud+Account+Modify-p1+-5-2.png' width='650' align='center'/></h2>
-<h2>帳戶設定</h2>
-<p>在這個頁面裡能修改您的基本資料</p>
-<p><img src='images/MiCloud+Account+Modify-p1+-6.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+SSH+Key.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+SSH+Key.html">SSH金鑰管理</a>&nbsp;<a href="index.html?page=MiCloud+SSH+Key.md">(MiCloud+SSH+Key.md)</a><a href="#MiCloud+SSH+Key.md"></a></h1><br/><h1>SSH金鑰</h1>
-<p>您若需要在Micloud上建置SmartOS及Linux的作業系統</p>
-<p>則需要在這個頁面建立您的SSH-Key( <a href="/html/SSH+KeyGen+Connect+Tutorial-Windows.html">Windows</a>/<a href="html/SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.html">Linux/Unix</a>/<a href="html/SSH+KeyGen+Connect+Tutorial-MacOS.html">MacOS</a>)</p>
-<p>以便您在登入系統時做驗證</p>
-<p><img src='images/MiCloud+Account+Modify-p1+-7.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Micloud+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Micloud+Password.html">登入密碼管理</a>&nbsp;<a href="index.html?page=Micloud+Password.md">(Micloud+Password.md)</a><a href="#Micloud+Password.md"></a></h1><br/><h1>登入密碼管理</h1>
-<p>若您需要更改登入MiCloud登入時的密碼，可於此頁做變更。<br><img src='images/MiCloud+Account+Modify-p1+-8.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pay+way.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Pay+way.html">付款方式</a>&nbsp;<a href="index.html?page=Pay+way.md">(Pay+way.md)</a><a href="#Pay+way.md"></a></h1><br/><h1>付款方式</h1>
-<p>付款方式分為企業付款、信用卡付款二種，詳細解說如下:</p>
-<h2>企業付款說明</h2>
-<p>企業付款方式僅提供合作或簽約夥伴，不適用於網路申請之用戶。</p>
-<h2><img src='images/Pay+with+business-pay1.png' width='650' align='center'/></h2>
-<h2>信用卡付款說明</h2>
-<p><embed width="700" height="550" src='images/v4.swf' type="application/x-shockwave-flash"></embed><br>用戶皆可透過網路做信用卡認證，認證成功後即可訂購主機，未來帳單將從此張信用卡做扣款動作。</p>
-<p><img src='images/Pay+way-p1+-9.png' width='650' align='center'/><br>請確認您的<strong>帳單寄送地址</strong>是否正確!<br><img src='images/Pay+way-p1+-10.png' width='650' align='center'/><br>請選擇您的信用卡與填寫相關資訊<br><img src='images/Pay+way-CC3.JPG' width='650' align='center'/><br>完成後請確認您的<strong>卡號</strong>是否正確<br><img src='images/Pay+way-CC1.JPG' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+billing.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+billing.html">帳單資料</a>&nbsp;<a href="index.html?page=MiCloud+billing.md">(MiCloud+billing.md)</a><a href="#MiCloud+billing.md"></a></h1><br/><h1>帳單資料</h1>
-<p>用戶可以在帳單資料中，查詢到過去6個月內的帳單細項資訊以及未來帳單。<br><img src='images/MiCloud+Account+Modify-p1+-11.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Manage+your+Machines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Manage+your+Machines.html">主機清單</a>&nbsp;<a href="index.html?page=Manage+your+Machines.md">(Manage+your+Machines.md)</a><a href="#Manage+your+Machines.md"></a></h1><br/><h1>主機</h1>
-<p>此頁可顯示您所建的機器與機器的IP與基本的資料(作業系統、記憶體、購買了多久以及目前狀態)</p>
-<p>若您的機器過多也可於中間的藍色框框內輸入該台機器的資訊來做搜尋的動作</p>
-<p><img src='images/Manage+your+Machines-p2.png' width='650' align='center'/><br>*  左邊藍色框框概述您的機器設備與相關訊息。</p>
-<ul>
-<li>右邊黃色框框則顯示您機器目前的狀態，以及開關機的按鈕。</li>
-</ul>
-<ul>
-<li>點擊 <strong>Show Credentials</strong>(左邊紅色框框) 則會顯示您這台機器內<a href="/html/Preload+Software+Default+Password.html">預載程式之預設密碼</a></li>
-</ul>
-<p><img src='images/Manage+your+Machines-p1+-18.png' width='650' align='center'/><br><strong>登入說明請參考：</strong> <a href="/html/MiCloud+Credential+Description.html">MiCloud Credential Description</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Snapshot+recovery.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Snapshot+recovery.html">使用系統快照備份及還原</a>&nbsp;<a href="index.html?page=Snapshot+recovery.md">(Snapshot+recovery.md)</a><a href="#Snapshot+recovery.md"></a></h1><br/><h1>使用Snapshot備份及還原</h1>
-<p>系統快照功能，可幫助您還原被刪除或被破壞的系統。</p>
-<p>當您需要操作到可能影響系統運作的動作時，可先建立系統快照，以防系統損壞無法回復。</p>
-<h2>以下為系統快照之測試：</h2>
-<p>1.請先登入您的主機，並建立一個測試檔”text.txt”</p>
-<p><img src='images/Snapshot+recovery-snapshot2.jpg' width='650' align='center'/></p>
-<p>2.建立後，登入MiCloud平台中線上管理工具，選擇該台主機，並按下右邊的&quot;建立系統快照&quot;</p>
-<p><img src='images/Snapshot+recovery-snapshot.jpg' width='650' align='center'/></p>
-<p>建立完成，如下圖</p>
-<p><img src='images/Snapshot+recovery-snapshot1.jpg' width='650' align='center'/></p>
-<p>3.回到主機將text.txt檔刪除</p>
-<p><img src='images/Snapshot+recovery-snapshot3.jpg' width='650' align='center'/></p>
-<p>再到平台上選擇您欲回覆時間點的系統快照，點&quot;回復選取的快照&quot;。</p>
-<p><img src='images/Snapshot+recovery-snapshot7.jpg' width='650' align='center'/></p>
-<p>回復選取的快照主機會經過三個動作(關閉主機--&gt;回復主機--&gt;重新啟動)，待重啟完後主機即回覆到之前的時間點狀態。</p>
-<p><img src='images/Snapshot+recovery-snapshot8.jpg' width='650' align='center'/></p>
-<p>開始回復，如下圖</p>
-<p><img src='images/Snapshot+recovery-snapshot4.jpg' width='650' align='center'/></p>
-<p>4.系統回復過程中，主機會重新啟動，所以之前的連線動作會不存在，如下圖<br><img src='images/Snapshot+recovery-snapshot9.jpg' width='650' align='center'/></p>
-<p>請重新連線後確認檔案是否回復</p>
-<p><img src='images/Snapshot+recovery-snapshot5.jpg' width='650' align='center'/></p>
-<p>Text.txt即被回復了。</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Credential+Description.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+Credential+Description.html">預載軟件之預設密碼</a>&nbsp;<a href="index.html?page=MiCloud+Credential+Description.md">(MiCloud+Credential+Description.md)</a><a href="#MiCloud+Credential+Description.md"></a></h1><br/><h1>預載程式之預設密碼</h1>
-<p>登入 MiCloud 完成後能在畫面左上方點選主機，在從下方表格點選您的主機查看細項。<br><img src='images/MiCloud+Credential+Description-p1+-21.png' width='650' align='center'/><br>進入查詢細項頁面，可於 <strong>概述</strong> 中找到 <strong>Credentials</strong> 欄位,左鍵點擊 <strong>Show Credentials</strong>，查看該台主機預載程式之密碼。</p>
-<p><img src='images/MiCloud+Credential+Description-p1+-18.png' width='650' align='center'/></p>
-<p>登入帳號與密碼說明如下:</p>
-<table>
-<thead>
-<tr>
-<th>ROLE</th>
-<th>功能</th>
-<th>登入帳號</th>
-<th>登入步驟</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>root</td>
-<td>系統帳號</td>
-<td>root</td>
-<td>登入：ssh root@your.ip.address<br>密碼：本表格root密碼</td>
-</tr>
-<tr>
-<td>admin</td>
-<td>系統帳號</td>
-<td>admin</td>
-<td>登入：ssh admin@your.ip.address<br>密碼：本表格admin密碼</td>
-</tr>
-<tr>
-<td>mysql</td>
-<td>MySQL資料庫帳號</td>
-<td>root</td>
-<td>登入：mysql -uroot -p<br>密碼：本表格mysql密碼</td>
-</tr>
-<tr>
-<td>pgsql</td>
-<td>PostgreSQL資料庫帳號</td>
-<td>postgres</td>
-<td>登入：/opt/local/bin/psql -U postgres<br>密碼：(此時輸入pgsql密碼欄位)</td>
-</tr>
-<tr>
-<td>virtualmin</td>
-<td>Virtualmin系統管理工具帳號</td>
-<td>admin</td>
-<td>啓動服務：svcadm enable webmin<br>連線：<a href="https://your.ip.address:10000/">https://your.ip.address:10000/</a><br>帳號：admin<br> 密碼：本表格virtualmin密碼</td>
-</tr>
-<tr>
-<td>jill</td>
-<td>系統帳號</td>
-<td>jill</td>
-<td>登入：ssh jill@your.ip.address<br>密碼：本表格jill密碼</td>
-</tr>
-<tr>
-<td>zxtm</td>
-<td>負載平衡服務帳號</td>
-<td>admin</td>
-<td>連線：h ttp://your.ip.address:9090 <br>帳號：admin<br>密碼：本表格zxtm密碼</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h1>修改預設密碼</h1>
-<p>SmartOS修改密碼，修改root密碼，指令如下</p>
-<pre><code>#passwd</code></pre>
-<p><img src='images/MiCloud+Credential+Description-clip-image001.jpg' width='650' align='center'/></p>
-<p>修改Mysql密碼，先登入mysql後再執行修改密碼，登入指令如下，此時密碼為主機細項上所預設的密碼:</p>
-<pre><code>#mysql -u root -p</code></pre>
-<p>修改密碼指令如下:</p>
-<pre><code>mysql&gt; SET PASSWORD FOR root@localhost=PASSWORD(&#39;yournewpassword&#39;);</code></pre>
-<p><img src='images/MiCloud+Credential+Description-clip-image002.jpg' width='650' align='center'/></p>
-<p>如欲更改其他帳戶之密碼，請於root執行下方指令。</p>
-<pre><code>#passwd admin</code></pre>
-<p><img src='images/MiCloud+Credential+Description-clip-image003.jpg' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Server+Restart+From+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Server+Restart+From+Portal.html">重新啟動、關閉與刪除主機</a>&nbsp;<a href="index.html?page=Server+Restart+From+Portal.md">(Server+Restart+From+Portal.md)</a><a href="#Server+Restart+From+Portal.md"></a></h1><br/><h1>主機之重啟、關閉與刪除</h1>
-<p>MiCloud自助服務平台提供給您直接操控主機之重啟、關閉及刪除功能，在您登入MiCloud Customer Portal之後，您可以至主機頁面，點選您欲操控的主機，在右方控制面板中點選您所需要的服務。相關說明如下:</p>
-<h2>主機之重啟</h2>
-<p>在您登入MiCloud Customer Portal之後，您可以至主機頁面，點選您欲操控的主機，在右方控制面板中，點選&quot;REBOOT&quot;進行重啟。如下圖:</p>
-<p><img src='images/Server+Restart+From+Portal-reboot.jpg' width='650px' align='center'/></p>
-<p>Reboot會經過關閉後再啟動主機，請用戶耐心等候。</p>
-<hr>
-<h2>主機之關閉</h2>
-<p>關閉主機可由MiCloud管理平台上點選shutdown按鈕，也可以使用指令進行關閉，相關說明如下:</p>
-<p>1.由MiCloud管理平台上進行</p>
-<p>同上主機管理頁面，點選&quot;shutdown&quot;進行關閉主機。如下圖:<br><img src='images/Server+Restart+From+Portal-shutdown.jpg' width='650px' align='center'/></p>
-<p>※shut down後不代表終止合約，帳單仍會繼續計費，如要停止計費請執行DELETE刪除主機。如下圖提醒:</p>
-<p><img src='images/Server+Restart+From+Portal-shutdown1.jpg' width='650px' align='center'/></p>
-<p>2.執行指令進行關閉<br>登入主機後使用指令來執行shutdown，指令如下:</p>
-<pre><code>#poweroff</code></pre>
-<p>以SmartMachine為例，執行畫面如下:</p>
-<p>執行poweroff後會跳出下方黃色框框的警告視窗，提醒您主機已中斷連線。<br><img src='images/Server+Restart+From+Portal-poweroff.png' width='650px' align='center'/></p>
-<p>再回到MiCloud平台上檢查主機是否已被關閉。<br><img src='images/Server+Restart+From+Portal-poweroff2.jpg' width='650px' align='center'/></p>
-<hr>
-<h2>主機之刪除</h2>
-<p>同上主機管理頁面，點選&quot;DELETE&quot;按鍵後，系統將會移除您的主機。</p>
-<p>※刪除主機前必需先Shut down主機後才能刪除。</p>
-<p><img src='images/Server+Restart+From+Portal-delete.jpg' width='650px' align='center'/></p>
-<p>刪除後主機及其上相關資料將無法回復，請確認後再執行。</p>
-<p><img src='images/Server+Restart+From+Portal-delete1.jpg' width='650px' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Cloud+Analytics.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Using+Cloud+Analytics.html">使用MiCloud分析工具-DTrace</a>&nbsp;<a href="index.html?page=Using+Cloud+Analytics.md">(Using+Cloud+Analytics.md)</a><a href="#Using+Cloud+Analytics.md"></a></h1><br/><h1>使用雲端分析工具</h1>
-<p>雲端分析工具，將幫助您做您Node.js的即時性的績效性能分析™應用。<br>使用雲端分析工具將需要Node 版本0.4.0或更高的版本。<br>在這個頁面，您將可以找到：</p>
-<p>同時看到 <a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/"><a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/">http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/</a></a></p>
-<p>顯示分析的概述如下：</p>
-<p>分析工具將顯示兩種圖表：線狀圖和等級圖。</p>
-<p>線圖顯示的數量，是根據您所給定的時間測量。</p>
-<p>例如，如果您測量的是根據IP地址的HTTP操作，其圖表疊線圖將顯示每個IP地址每秒的回應數量。<br><img src='images/Using+Cloud+Analytics-pic1.jpg' width='650' align='left'/></p>
-<p>而等級圖可讓您看到三個方面的數據，就像在某一特定地區，使用不同的顏色的雨水量畫出降雨分佈的地圖。</p>
-<p>雲端分析等級圖則顯示不同密度的彩色區塊。</p>
-<p>例如，在一個等級圖顯示了應用的細項和CPU運行速度，x軸則顯示在一秒鐘的間隔時間，Y軸則顯示了運行的時間。</p>
-<p>圖中的每個區塊、密度，代表了特定的運行時間的程式的數量。</p>
-<p>您可以使用過濾器，或以點選一個區塊的方式，查詢程式處理器多次執行的時間長短。</p>
-<p>每個區塊的高度，都是以沿y軸的值的範圍做區分。</p>
-<p><img src='images/Using+Cloud+Analytics-pic2.jpg' width='650' align='left'/></p>
-<p>在這兩種圖表，x軸表示在一秒鐘的間隔時間。 y軸代表一個變量，你測量，但規模變化值的範圍擴大或縮小。</p>
-<table>
-<thead>
-<tr>
-<th>控制</th>
-<th>描述  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>儀器儀表選項</td>
-<td>這些控件可以讓你創建一個儀表盤。<br>你可以選擇從幾個指標分解以不同的方式。<br>這些指標都在下一節描述。</td>
-</tr>
-<tr>
-<td>元素列表</td>
-<td>這將列出你測量的項目。<br>例如，如果你測量HTTP服務器的URL分解操作，此窗格包含一個網址列表。<br>在熱圖，從這個名單中選擇一個項目，突出包含該元素的測量所有的水桶。<br>你可以使用隔離或排除選定的項目列表底部的過濾器。</td>
-</tr>
-<tr>
-<td>排名 /線性</td>
-<td>這種控制讓你選擇如何密度桶熱圖呈現。<br>線性著色意味著根據其價值，每個桶的顏色。<br>其價值為100桶，水桶，其價值為1暗100倍。排名基於著色所有的值進行排序和顏色密度分佈其中。 <br>排名基於著色發現離群點是非常有用的。</td>
-</tr>
-<tr>
-<td>粒度</td>
-<td>此滑塊控制每塊的高度，因此，每個桶的值的範圍。</td>
-</tr>
-<tr>
-<td>規模</td>
-<td>此滑桿可讓您控制Y軸的值的範圍。 範圍是在控制下的文本。<br>當滑塊一路的頂部和底部，y軸的變化上顯示的值的範圍而定規模。<br>如果您使用滑桿來設定一個上限或下限，規模不會改變。</td>
-</tr>
-<tr>
-<td>放大</td>
-<td>這些控件可以讓你改變每個桶的寬度，所以你可以看到一個更廣泛的時間。<br> 每個桶的寬度始終是一秒鐘。</td>
-</tr>
-<tr>
-<td>播放 /暫停</td>
-<td>這些控件可以讓您暫停和恢復顯示。</td>
-</tr>
-<tr>
-<td>水桶</td>
-<td>點擊水桶，桶的價值分佈。</td>
-</tr>
-</tbody>
-</table>
-<h2>可用的度量</h2>
-<p>雲分析可以告訴你各種不同的指標:</p>
-<ul>
-<li>CPU線程處決的</li>
-<li>HTTP服務器操作</li>
-<li>HTTP客戶端操作</li>
-<li>垃圾收集作業</li>
-<li>套接字操作</li>
-<li>邏輯文件系統操作<br>在大多數情況下，操作數是不一樣分解操作延遲有趣。 潛伏期是要求其履行的金額之間的時間。</li>
-</ul>
-<h2>CPU線程處決的</h2>
-<p>這種度量可以幫助你了解你的應用程序使用的CPU。 報告數量排序的線程執行不同的標準。 一個線程開始執行時，當線程在CPU和結束時，它被取下。<br>您可以使用自己的下面的分解，得到一個線程執行數線圖或結合運行時，他們顯示熱圖。</p>
-<table>
-<thead>
-<tr>
-<th>分解</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>進程標識符</td>
-<td>對於一個給定的進程ID線程數。</td>
-</tr>
-<tr>
-<td>應用程序的名稱</td>
-<td>每個正在運行的應用程序的線程數。</td>
-</tr>
-<tr>
-<td>區域名稱</td>
-<td>在每個區域運行的線程數（SmartMachine）。<br>如果你正在運行的只有1 SmartMachine，這個信息是不是特別有用。</td>
-</tr>
-<tr>
-<td>原因離開CPU</td>
-<td>離開CPU的原因排序的線程數。</td>
-</tr>
-</tbody>
-</table>
-<p>線圖顯示處決的人數是不是特別有趣。 運行時的熱圖，這表明線程在CPU上多久，更準確，因為它們表明，當您的應用程序已經做了很多計算。</p>
-<pre><code>選擇不加分解本身的運行是在一個線程執行的熱分解圖運行，這不是特別有用的結果。</code></pre>
-<p>如果您的應用程序不運行很長時間，你可以看看為什麼它來CPU。 它可能被內核鎖阻塞（可能表明內核鎖爭用），1用戶級鎖（表示用戶級鎖爭用），1條件變量（表示它很可能等待某些其他事件，如磁盤，I / O或網絡），等等。 或者它可能已經運行的，但採取的CPU，因為別的東西更高的優先級運行所需。</p>
-<p>這是一個低級別和微妙的度量，但它可以幫助你了解是否應用程序這麼長時間的服務請求的理由是因為它在CPU上花費了很多時間。</p>
-<h2>HTTP服務器操作</h2>
-<p>HTTP服務器的性能度量Web服務器的主要性能。</p>
-<p>可以使用下面的分解，自己獲得的事件數量的線圖，或者你可以結合延遲他們獲得熱圖。</p>
-<table>
-<thead>
-<tr>
-<th>分解</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>方法</td>
-<td>HTTP方法的請求：GET，PUT，POST，DELETE</td>
-</tr>
-<tr>
-<td>網址</td>
-<td>通過URL請求的數量。</td>
-</tr>
-<tr>
-<td>遠程IP地址</td>
-<td>發出請求的客戶端的IP地址的請求數。</td>
-</tr>
-<tr>
-<td>遠程TCP端口</td>
-<td>發出請求的客戶端所使用的TCP端口的請求數。<br>這個衡量標準是，挑選出來自同一客戶端的多個請求，在相同的TCP連接使用HTTP保持活動的有用。</td>
-</tr>
-</tbody>
-</table>
-<h2>HTTP客戶端操作</h2>
-<p>這個度量報告HTTP請求和響應，從您的應用程序發起的反對的服務。 您可以使用該數據，以幫助您確定您的服務器的延遲是由於你使用一些其他的Web服務的延遲。 舉例來說，如果Amazon的S3服務存儲數據，你可以看到如何S3 Web服務請求。</p>
-<p>如果您發現另一個Web服務是您的高延遲的源，然後你可以調查，其他的Web服務（如果你能），或重新考慮你的應用程序如何使用它，通過緩存結果在可能的情況下，也許。</p>
-<table>
-<thead>
-<tr>
-<th>分解</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>方法</td>
-<td>請求的HTTP方法。</td>
-</tr>
-<tr>
-<td>網址</td>
-<td>通過URL請求的數量。</td>
-</tr>
-<tr>
-<td>HTTP服務器地址</td>
-<td>服務器地址的請求數。</td>
-</tr>
-<tr>
-<td>HTTP服務器端口</td>
-<td>服務器端口的請求數。</td>
-</tr>
-</tbody>
-</table>
-<h2>垃圾收集作業</h2>
-<p>這種度量可以讓你觀察到的JavaScript虛擬機的垃圾收集器所產生的延遲氣泡。 垃圾收集器跟踪分配內存和釋放內存，這不再被使用。 這意味著，作為一個程序員，你不必擔心內存分配和釋放。 然而，當垃圾收集器運行時，您所有的應用程序代碼被暫停。</p>
-<p>您可以使用此指標，以觀察在您的應用程序的垃圾收集。 在這種情況下，“潛伏期”是指垃圾收集操作了多久。 如果你看到的垃圾收集活動相關的HTTP請求延遲尖峰，你可能需要重新思考如何在您的應用程序內存被使用，以免造成這麼多的垃圾，否則調整GC以避免出現大的尖峰。</p>
-<table>
-<thead>
-<tr>
-<th>分解</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GC型</td>
-<td>按類型的垃圾收集操作。</td>
-</tr>
-</tbody>
-</table>
-<h2>套接字操作</h2>
-<p>套接字操作HTTP活動的WebSockets，和大多數其他類型的網絡活動的基礎上。 這種度量可以讓你觀察到非Web應用程序的活動。 因為它是不可能知道這消息對應於別人，這是不可能直接顯示在這個級別的延遲。</p>
-<table>
-<thead>
-<tr>
-<th>分解</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>類型</td>
-<td>按類型套接字操作（讀，寫）。</td>
-</tr>
-<tr>
-<td>遠程主機</td>
-<td>套接字操作遠程主機的數量。</td>
-</tr>
-<tr>
-<td>遠程端口</td>
-<td>通過遠程端口號的套接字操作。</td>
-</tr>
-<tr>
-<td>大小</td>
-<td>由規模數量的套接字操作。</td>
-</tr>
-<tr>
-<td>緩衝數據</td>
-<td>Node.js的內緩衝的數據量，因為應用程序的書面比內核更可以消耗不阻塞。</td>
-</tr>
-</tbody>
-</table>
-<h2>邏輯文件系統的操作</h2>
-<p>磁盤I / O可以是一個顯著的延遲源。 這種度量檢查磁盤的I / O的應用程序的首要原因之一：訪問文件系統。</p>
-<table>
-<thead>
-<tr>
-<th>分解</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>進程標識符</td>
-<td>文件系統操作的進程的ID號。</td>
-</tr>
-<tr>
-<td>應用程序的名稱</td>
-<td>文件系統操作的應用程序的名稱。</td>
-</tr>
-<tr>
-<td>區域名稱</td>
-<td>文件系統操作的區域名稱。</td>
-</tr>
-<tr>
-<td>操作類型</td>
-<td>按類型的文件系統操作（讀，寫，查找，訪問等）。</td>
-</tr>
-<tr>
-<td>文件系統類型</td>
-<td>（ZFS，進程，LOFS等），文件系統類型的文件系統操作。</td>
-</tr>
-</tbody>
-</table>
-<p>如果你在這裡看到顯著的延遲，HTTP請求延遲對應的，你可能會考慮改變你的應用程序與文件系統交互，也許是通過預取數據緩存。</p>
-<p>分解幫助你準確識別誰在做什麼，這樣可以優化正確的事情。 與Node.js的指標，此指標的檢查文件系統的所有的SmartMachine的活動。在這些情況下，進程ID和應用程序的名稱的分解是有用的。</p>
-<h2>學習更多關於雲分析</h2>
-<p>你可以了解更多有關使用熱圖可視化從這些資源中的延遲：</p>
-<ul>
-<li><a href="http://cacm.acm.org/magazines/2010/7/95062-visualizing-system-latency/fulltext">可視化系統延遲 </a></li>
-<li><a href="http://dtrace.org/blogs/dap/2011/03/01/welcome-to-cloud-analytics/">雲分析</a></li>
-<li><a href="http://joyeur.com/2011/01/24/executive-speaker-series-bryan-cantrill-and-brendan-gregg-on-cloud-analytics/">雲性能與實時可視性解決大問題（視頻）</a></li>
-</ul>
-<hr>
-<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Mounting+the+Data+Volume+on+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Mounting+the+Data+Volume+on+Windows.html">Windows主機掛載硬碟</a>&nbsp;<a href="index.html?page=Mounting+the+Data+Volume+on+Windows.md">(Mounting+the+Data+Volume+on+Windows.md)</a><a href="#Mounting+the+Data+Volume+on+Windows.md"></a></h1><br/><h1>Windows主機掛載硬碟</h1>
-<p>訂購MiCloud Windows主機的硬碟空間屬於額外提供給每台主機的空間，並不包含在原作業系統的硬碟空間中，預設每台虛擬主機之作業系統空間有40GB，但用戶需自行將OS外之硬碟掛載後，才可使用，其掛載及啟用的操作說明如下。</p>
-<p>登入您的主機後點選”開始”在<strong>電腦</strong>上按右鍵點選<strong>管理</strong>，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis.jpg' width='500' align='center'/></p>
-<p>開啟伺服器管理員後點選存放-磁碟管理，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis1.jpg' width='600' align='center'/></p>
-<p>請在<strong>磁碟1</strong>的空白處按右鍵選<strong>連線</strong>，如下圖紅色框框部分。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis2.jpg' width='600' align='center'/></p>
-<p>連線後，再<strong>按右鍵</strong>選<strong>初始化磁碟</strong>，會出現初始化硬碟的視窗，按下確定即可。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis3.jpg' width='600' align='center'/><br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis4.jpg' width='600' align='center'/></p>
-<p>初始化磁碟後，請至紅色框框裡<strong>按右鍵</strong>點選<strong>新增簡單磁碟區</strong>，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis5.jpg' width='600' align='center'/></p>
-<p>出現新增簡單磁碟區精靈視窗，點選下一步即可。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis6.jpg' width='600' align='center'/></p>
-<p>第三步驟可選擇磁碟機代號如下圖橘色框框，再執行下一步至完成即可。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis7.jpg' width='600' align='center'/></p>
-<p>E槽即為您所掛載的硬碟，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis8.jpg' width='600' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Connect+windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Connect+windows.html">遠端連線Windows主機</a>&nbsp;<a href="index.html?page=Connect+windows.md">(Connect+windows.md)</a><a href="#Connect+windows.md"></a></h1><br/><h1>Windows 遠端桌面連線</h1>
-<p>MiCloud Windows Server預設開啓遠端桌面連線服務，讓您可以透過internet連線操控與安裝相關軟體，下面介紹如何使用遠端桌面連線從您的電腦連線至MiCloud Windows Server：</p>
-<h2>Windows 下遠端桌面連線 Windows</h2>
-<p>1.開啟&quot;遠端桌面連線&quot;,輸入您的ip並按下連線<br><img src='images/Connect+windows-p.png' width='450' align='center'/><br>2.輸入您的密碼,,進入後您就可以開始使用<br><img src='images/Connect+windows-p+-1.png' width='650' align='center'/></p>
-<h2><img src='images/Connect+windows-p+-2.png' width='650' align='center'/></h2>
-<h2>Linux 下遠端桌面連線 Windows</h2>
-<p>1.再左上方搜尋欄位中輸入搜尋欄位中輸入&quot;remote desktop viewer&quot;,並點選開啟<br><img src='images/Connect+windows-x1.png' width='550' align='center'/><br>2.開啟&quot;remote desktop viewer&quot;於左上方點選連線<br><img src='images/Connect+windows-x2.png' width='550' align='center'/><br>3.於&quot;主機(H):&quot;欄位中輸入您將遠端連線的ip,&quot;使用者名稱(U):&quot;欄位中輸入您的帳號,並按下連線<br><img src='images/Connect+windows-x3.png' width='450' align='center'/><br>2.輸入您的密碼,,進入後您就可以開始使用<br><img src='images/Connect+windows-x4.png' width='650' align='center'/></p>
-<h2><img src='images/Connect+windows-x5.png' width='650' align='center'/></h2>
-<h2>Mac 下遠端桌面連線Windows</h2>
-<p>Mac下使用遠端桌面連線至windows server，要先安裝Microsoft Remote Desktop Connection Client for Mac(<a href="http://www.microsoft.com/mac/remote-desktop-client">下載</a><br>相關設定如下:</p>
-<p>1.安裝完成後，開啟Microsoft Remote Desktop Connection Client for Mac，輸入您的ip並按下connect。<br><img src='images/Connect+windows-RDCMacIntro.png' width='650' align='center'/></p>
-<p>2.輸入您的User name及Password，而Domain為您主機的ip，您就可開始使用。<br><img src='images/Connect+windows-RDCMacLogin.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Monitor+System.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Monitor+System.html">系統監控</a>&nbsp;<a href="index.html?page=Monitor+System.md">(Monitor+System.md)</a><a href="#Monitor+System.md"></a></h1><br/><h1>主機監控之設定</h1>
-<h2>Windows</h2>
-<p>1.MiCloud平台虛擬主機之監控程式需使用nodejs來執行，<strong>請先登入您的Windows虛擬主機</strong>，再至<a href="http://nodejs.org/"><a href="http://nodejs.org/">http://nodejs.org/</a></a>下載並安裝 (如下圖)<br><img src='images/Monitor+System-node.png' width='650' align='center'/></p>
-<p>2.請下載由MiCloud研發團隊撰寫的監控程式並解壓，下載網址為</p>
-<pre><code>http://211.78.245.110:3000/install/nomon-lastest.tgz</code></pre>
-<p><img src='images/Monitor+System-nom.png' width='500' align='center'/></p>
-<p>3.請在桌面上新增一個副檔名為.bat的檔案(XXX.bat)，如下圖，這邊建立的檔案為test.bat<br><img src='images/Monitor+System-bat.png' width='500' align='center'/></p>
-<p>在檔案上點選右鍵→編輯，在檔案中貼上下方指令(如下圖)</p>
-<pre><code>node您將檔案解壓縮後存放的位置\main.js，主要用來設定排程應該執行哪支程式。</code></pre>
-<p><img src='images/Monitor+System-node1.png' width='650' align='center'/></p>
-<p>4.點選開始--系統管理工具--工作排程器，設定程式排程<br><img src='images/Monitor+System-p1.png' width='650' align='center'/></p>
-<p>5.點選建立工作來新增排程<br><img src='images/Monitor+System-p2.png' width='650' align='center'/></p>
-<p>6.在建立工作--一般，打上排程名稱，名稱可以自己命名，這裡舉例將它命名為”node”(如下圖)<br><img src='images/Monitor+System-p3.png' width='650' align='center'/></p>
-<p>7.點選建立工作--觸發程序之新增並做設定，將排程設定為每5分鐘執行一次且是持續不間斷<br><img src='images/Monitor+System-p4.png' width='650' align='center'/><br><img src='images/Monitor+System-set.png' width='650' align='center'/></p>
-<p>8.點選建立工作--動作之新增並設定，將前面設定的*.bat執行檔的路徑填入(步驟3中建立的檔案)<br><img src='images/Monitor+System-p6.png' width='650' align='center'/><br><img src='images/Monitor+System-p8.png' width='650' align='center'/></p>
-<p>9.完成上方所有的排序設定後，即可在工作排程器主頁上的進行中工作裡看到您新增的排程。<br><img src='images/Monitor+System-p7.png' width='650' align='center'/></p>
-<p>10.完成排程設定後，15分鐘後即可至MiCloud平台點選您所設置監控的主機，即可檢視您主機上的CPU、Memory、Disk的使用率。<br><img src='images/Monitor+System-cpu.png' width='650' align='center'/></p>
-<p>歷史監控資料，可檢視一週、一個月或整年的監控狀況，並可下載近半年的原始資料。<br><img src='images/Monitor+System-cpu2.png' width='650' align='center'/></p>
-<hr>
-<h2>Linux</h2>
-<p>1.登入MiCloud主機清單中，選擇任何一台Linux主機<br><img src='images/Monitor+System-pl1.png' width='650' align='center'/></p>
-<p>2.進入主機細項後，請點選”主機監控”頁籤並點擊”複製指令”按鈕<br><img src='images/Monitor+System-pl2.png' width='650' align='center'/></p>
-<p>3.完成上述步驟後，請登入您欲監控的虛擬主機並貼上剛剛的指令</p>
-<pre><code># curl http://211.78.245.110:3000/install/install.sh | bash</code></pre>
-<p><img src='images/Monitor+System-pl3.png' width='650' align='center'/></p>
-<p>執行成功後，可由下方指令檢視監控程式是否己加入例行排程中</p>
-<pre><code>#crontab -l</code></pre>
-<p><img src='images/Monitor+System-pl4.png' width='650' align='center'/></p>
-<p>4.cron job設定完成後，15分鐘後即可至MiCloud管理平台檢視您主機上的CPU、Memory、Disk的使用率。<br><img src='images/Monitor+System-pl5.png' width='650' align='center'/><br>也可以在歷史監控資料中查看週、月、年的資訊，並可下載近半年的原始資料。<br><img src='images/Monitor+System-pl6.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Update+Timezone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Linux+Update+Timezone.html">時區設定</a>&nbsp;<a href="index.html?page=Linux+Update+Timezone.md">(Linux+Update+Timezone.md)</a><a href="#Linux+Update+Timezone.md"></a></h1><br/><h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
-<p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
-<pre><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></pre>
-<p>(2) 執行 date -u</p>
-<pre><code># date -u</code></pre>
-<p>(3) 輸入 date 看看是否已經是正確時區</p>
-<pre><code># date</code></pre>
-<p>(4) 重開後生效</p>
-<pre><code># reboot</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="DNS+Manage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/DNS+Manage.html">DNS管理</a>&nbsp;<a href="index.html?page=DNS+Manage.md">(DNS+Manage.md)</a><a href="#DNS+Manage.md"></a></h1><br/><h1>DNS設置</h1>
-<p>若您想在MiCloud主機上設置DNS，請先至網址註冊商(例如:Godaddy)申請一個Domain Name，設置方式有以下二種:</p>
-<ul>
-<li>子網域指向MiCloud DNS Server</li>
-<li>直接將您所申請的Domain Name指向MiCloud DNS Server<br>詳細說明如下:</li>
-</ul>
-<h2>設置子網域</h2>
-<ol>
-<li>請先新增一個子網域，並將Points to設為MiCloud DNS Server :</li>
-</ol>
-<pre><code>dns60.micloud.tw或dns64.micloud.tw</code></pre>
-<p><img src='images/DNS+Manage-sub-1.png' width='650' align='center'/></p>
-<p>2.新增完成後，請至MiCloud平台點選”DNS管理”下”專屬網域之主機”按鈕。<br><img src='images/DNS+Manage-sub-2.png' width='650' align='center'/><br><img src='images/DNS+Manage-sub-3.png' width='650' align='center'/></p>
-<p>3.進入頁面後，請點選”新增Domain”按鈕，將剛剛所新增的子網域名稱加入頁面中。<br><img src='images/DNS+Manage-sub-4.png' width='650' align='center'/><br><img src='images/DNS+Manage-sub-5.png' width='650' align='center'/></p>
-<p>4.新增成功後，點選”新增A Record”，即可為您的主機設置Domain name。<br><img src='images/DNS+Manage-sub-7.png' width='650' align='center'/><br><img src='images/DNS+Manage-sub-6.png' width='650' align='center'/></p>
-<p>5.驗證Domain，使用命令提示字元或直接將您所設至的Domain Name貼至網址列即可。</p>
-<p>命令提示字元請執行下方指令做驗證:</p>
-<pre><code>nslookup portal.test.facewithus.com</code></pre>
-<p><img src='images/DNS+Manage-sub-8.png' width='450' align='center'/></p>
-<p>或者可以直接將記錄指向MiCloud DNS server查詢：</p>
-<pre><code>nslookup portal.test.facewithus.com dns60.micloud.tw</code></pre>
-<p><img src='images/DNS+Manage-sub-9.png' width='500' align='center'/></p>
-<h2>設置整個網域</h2>
-<ol>
-<li>將您申請的網域名稱的server設至MiCloud DNS Server。以Godaddy為例。</li>
-</ol>
-<pre><code>MiCloud DNS Server:
-DNS60.MICLOUD.TW
-DNS64.MICLOUD.TW</code></pre>
-<p><img src='images/DNS+Manage-all-1.png' width='650' align='center'/><br><img src='images/DNS+Manage-all-2.png' width='650' align='center'/></p>
-<p>2.修改完成後，請至MiCloud平台點選”DNS管理”下”專屬網域之主機”按鈕。<br><img src='images/DNS+Manage-sub-2.png' width='650' align='center'/><br><img src='images/DNS+Manage-sub-3.png' width='650' align='center'/></p>
-<p>3.進入頁面後，請點選”新增Domain”按鈕，將您的網域名稱新增至頁面中。<br><img src='images/DNS+Manage-sub-4.png' width='650' align='center'/><br><img src='images/DNS+Manage-all-3.png' width='650' align='center'/></p>
-<p>4.新增成功後，點選”新增A Record”，即可為您的主機設置Domain name。<br><img src='images/DNS+Manage-sub-7.png' width='650' align='center'/><br><img src='images/DNS+Manage-all-4.png' width='650' align='center'/></p>
-<p>5.驗證Domain，使用命令提示字元或直接將您所設至的Domain Name貼至網址列即可。</p>
-<p>命令提示字元請執行下方指令做驗證:</p>
-<pre><code>nslookup portal.test.facewithus.com</code></pre>
-<p><img src='images/DNS+Manage-all-5.png' width='450' align='center'/></p>
-<p>或者可以直接將記錄指向MiCloud DNS server查詢：</p>
-<pre><code>nslookup portal.test.facewithus.com dns60.micloud.tw</code></pre>
-<p><img src='images/DNS+Manage-all-6.png' width='450' align='center'/></p>
+<pre><code>啓動服務：svcadm enable [service name]
+關閉服務：svcadm disable [service name]
+服務狀態檢視：svcs -a | grep [service name]
+服務LOG檢視：tail -f `svcs -L [service name]`</code></pre>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="Ubuntu+mirror+site.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Ubuntu+mirror+site.html">變更套件庫來源及安裝軟體(Ubuntu)</a>&nbsp;<a href="index.html?page=Ubuntu+mirror+site.md">(Ubuntu+mirror+site.md)</a><a href="#Ubuntu+mirror+site.md"></a></h1><br/><h1>變更套件庫來源及安裝軟體(Ubuntu)</h1>
 <p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>Ubuntu採用APT套件管理，其套件庫的修改與設定相似，實際修改方式如下說明:</p>
@@ -1090,7 +939,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>例如：</p>
 <pre><code>ssh -i id_rsa root@211.123.123.31</code></pre>
 <p><img src='images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic3.png' width='500' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+Connect+Tutorial.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Free+machine+Connect+Tutorial.html">主機金鑰設置與連線教學</a>&nbsp;<a href="index.html?page=Free+machine+Connect+Tutorial.md">(Free+machine+Connect+Tutorial.md)</a><a href="#Free+machine+Connect+Tutorial.md"></a></h1><br/><h1>主機金鑰設置與連線教學</h1>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Free+machine+Connect+Tutorial.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Free+machine+Connect+Tutorial.html">主機金鑰設置與連線教學  </a>&nbsp;<a href="index.html?page=Free+machine+Connect+Tutorial.md">(Free+machine+Connect+Tutorial.md)</a><a href="#Free+machine+Connect+Tutorial.md"></a></h1><br/><h1>主機金鑰設置與連線教學</h1>
 <p>說明：本次公測主機為MiCloud 2XS型號主機，為小於一般市場提供之虛擬主機機型，提供一般網頁服務應用與開發使用，其中網路連線部分提供Public DNS，讓您用主機之專屬DNS連線，連線方式請參考下面說明：</p>
 <p>您申請免費30天試用服務後，SmartOS/Linux主機連線必須透過SSH協定與SSH Key的認證，以確保您與您的伺服器之間的連線安全。</p>
 <p>1.若您已設定ssh key則使用您原本的私鑰進行連線</p>
@@ -1708,6 +1557,519 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <pre><code># svccfg delete testSMF
 # svcs testSMF</code></pre>
 <p><img src='images/Setting+SMF+on+SmartOS-p5.png' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Account+Modify.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+Account+Modify.html">帳戶資訊管理</a>&nbsp;<a href="index.html?page=MiCloud+Account+Modify.md">(MiCloud+Account+Modify.md)</a><a href="#MiCloud+Account+Modify.md"></a></h1><br/><h1>MiCloud帳戶資訊修改</h1>
+<p>影片:<a href="http://www.youtube.com/watch?v=qyEhOfV7GA0">MiCloud帳戶資訊管理</a></p>
+<div align="center"><br><embed width="420" height="345" src="http://www.youtube.com/v/qyEhOfV7GA0&hd=1" type="application/x-shockwave-flash"></embed><br></div>
+
+<p>若您還未註冊<strong>MiCloud</strong>，請於網頁左上角點選右邊選項＜<strong>註冊</strong>＞<a href="/html/Apply+MiCloud+Account-new.html">申請帳號</a></p>
+<p>若您已註冊完<strong>MiCloud</strong>，請於網頁左上角點選左邊選項＜<strong>登入</strong>＞。</p>
+<h2><img src='images/MiCloud+Account+Modify-p1-2.png' width='650' align='center'/></h2>
+<h2>登入與帳戶設定</h2>
+<p>進入登入頁面輸入您的帳號與密碼</p>
+<h2><img src='images/MiCloud+Account+Modify-p1+-2.png' width='650' align='center'/></h2>
+<h2>MiCloud產品購買頁面</h2>
+<p>登入後系統將自動導向訂購MiCloud產品頁面</p>
+<p>若您第一次登入Micloud請先於右上角點選<strong>帳戶設定</strong></p>
+<p>設定您的<a href="/html/Pay+way.html">付款方式</a> 與<a href="/html/SSH+KeyGen+Connect+Tutorial-Windows.html">SSH-Key</a>的相關設定</p>
+<h2><img src='images/MiCloud+Account+Modify-p1+-5-2.png' width='650' align='center'/></h2>
+<h2>帳戶設定</h2>
+<p>在這個頁面裡能修改您的基本資料</p>
+<p><img src='images/MiCloud+Account+Modify-p1+-6.png' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+SSH+Key.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+SSH+Key.html">SSH金鑰管理</a>&nbsp;<a href="index.html?page=MiCloud+SSH+Key.md">(MiCloud+SSH+Key.md)</a><a href="#MiCloud+SSH+Key.md"></a></h1><br/><h1>SSH金鑰</h1>
+<p>您若需要在Micloud上建置SmartOS及Linux的作業系統</p>
+<p>則需要在這個頁面建立您的SSH-Key( <a href="/html/SSH+KeyGen+Connect+Tutorial-Windows.html">Windows</a>/<a href="html/SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.html">Linux/Unix</a>/<a href="html/SSH+KeyGen+Connect+Tutorial-MacOS.html">MacOS</a>)</p>
+<p>以便您在登入系統時做驗證</p>
+<p><img src='images/MiCloud+Account+Modify-p1+-7.png' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Micloud+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Micloud+Password.html">登入密碼管理</a>&nbsp;<a href="index.html?page=Micloud+Password.md">(Micloud+Password.md)</a><a href="#Micloud+Password.md"></a></h1><br/><h1>登入密碼管理</h1>
+<p>若您需要更改登入MiCloud登入時的密碼，可於此頁做變更。<br><img src='images/MiCloud+Account+Modify-p1+-8.png' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Pay+way.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Pay+way.html">付款方式</a>&nbsp;<a href="index.html?page=Pay+way.md">(Pay+way.md)</a><a href="#Pay+way.md"></a></h1><br/><h1>付款方式</h1>
+<p>付款方式分為企業付款、信用卡付款二種，詳細解說如下:</p>
+<h2>企業付款說明</h2>
+<p>企業付款方式僅提供合作或簽約夥伴，不適用於網路申請之用戶。</p>
+<h2><img src='images/Pay+with+business-pay1.png' width='650' align='center'/></h2>
+<h2>信用卡付款說明</h2>
+<p><embed width="700" height="550" src='images/v4.swf' type="application/x-shockwave-flash"></embed><br>用戶皆可透過網路做信用卡認證，認證成功後即可訂購主機，未來帳單將從此張信用卡做扣款動作。</p>
+<p><img src='images/Pay+way-p1+-9.png' width='650' align='center'/><br>請確認您的<strong>帳單寄送地址</strong>是否正確!<br><img src='images/Pay+way-p1+-10.png' width='650' align='center'/><br>請選擇您的信用卡與填寫相關資訊<br><img src='images/Pay+way-CC3.JPG' width='650' align='center'/><br>完成後請確認您的<strong>卡號</strong>是否正確<br><img src='images/Pay+way-CC1.JPG' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+billing.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+billing.html">帳單資料</a>&nbsp;<a href="index.html?page=MiCloud+billing.md">(MiCloud+billing.md)</a><a href="#MiCloud+billing.md"></a></h1><br/><h1>帳單資料</h1>
+<p>用戶可以在帳單資料中，查詢到過去6個月內的帳單細項資訊以及未來帳單。<br><img src='images/MiCloud+Account+Modify-p1+-11.png' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Manage+your+Machines.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Manage+your+Machines.html">主機清單</a>&nbsp;<a href="index.html?page=Manage+your+Machines.md">(Manage+your+Machines.md)</a><a href="#Manage+your+Machines.md"></a></h1><br/><h1>主機</h1>
+<p>此頁可顯示您所建的機器與機器的IP與基本的資料(作業系統、記憶體、購買了多久以及目前狀態)</p>
+<p>若您的機器過多也可於中間的藍色框框內輸入該台機器的資訊來做搜尋的動作</p>
+<p><img src='images/Manage+your+Machines-p2.png' width='650' align='center'/><br>*  左邊藍色框框概述您的機器設備與相關訊息。</p>
+<ul>
+<li>右邊黃色框框則顯示您機器目前的狀態，以及開關機的按鈕。</li>
+</ul>
+<ul>
+<li>點擊 <strong>Show Credentials</strong>(左邊紅色框框) 則會顯示您這台機器內<a href="/html/Preload+Software+Default+Password.html">預載程式之預設密碼</a></li>
+</ul>
+<p><img src='images/Manage+your+Machines-p1+-18.png' width='650' align='center'/><br><strong>登入說明請參考：</strong> <a href="/html/MiCloud+Credential+Description.html">MiCloud Credential Description</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Snapshot+recovery.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Snapshot+recovery.html">使用系統快照備份及還原</a>&nbsp;<a href="index.html?page=Snapshot+recovery.md">(Snapshot+recovery.md)</a><a href="#Snapshot+recovery.md"></a></h1><br/><h1>使用Snapshot備份及還原</h1>
+<p>系統快照功能，可幫助您還原被刪除或被破壞的系統。</p>
+<p>當您需要操作到可能影響系統運作的動作時，可先建立系統快照，以防系統損壞無法回復。</p>
+<h2>以下為系統快照之測試：</h2>
+<p>1.請先登入您的主機，並建立一個測試檔”text.txt”</p>
+<p><img src='images/Snapshot+recovery-snapshot2.jpg' width='650' align='center'/></p>
+<p>2.建立後，登入MiCloud平台中線上管理工具，選擇該台主機，並按下右邊的&quot;建立系統快照&quot;</p>
+<p><img src='images/Snapshot+recovery-snapshot.jpg' width='650' align='center'/></p>
+<p>建立完成，如下圖</p>
+<p><img src='images/Snapshot+recovery-snapshot1.jpg' width='650' align='center'/></p>
+<p>3.回到主機將text.txt檔刪除</p>
+<p><img src='images/Snapshot+recovery-snapshot3.jpg' width='650' align='center'/></p>
+<p>再到平台上選擇您欲回覆時間點的系統快照，點&quot;回復選取的快照&quot;。</p>
+<p><img src='images/Snapshot+recovery-snapshot7.jpg' width='650' align='center'/></p>
+<p>回復選取的快照主機會經過三個動作(關閉主機--&gt;回復主機--&gt;重新啟動)，待重啟完後主機即回覆到之前的時間點狀態。</p>
+<p><img src='images/Snapshot+recovery-snapshot8.jpg' width='650' align='center'/></p>
+<p>開始回復，如下圖</p>
+<p><img src='images/Snapshot+recovery-snapshot4.jpg' width='650' align='center'/></p>
+<p>4.系統回復過程中，主機會重新啟動，所以之前的連線動作會不存在，如下圖<br><img src='images/Snapshot+recovery-snapshot9.jpg' width='650' align='center'/></p>
+<p>請重新連線後確認檔案是否回復</p>
+<p><img src='images/Snapshot+recovery-snapshot5.jpg' width='650' align='center'/></p>
+<p>Text.txt即被回復了。</p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Credential+Description.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+Credential+Description.html">預載軟件之預設密碼</a>&nbsp;<a href="index.html?page=MiCloud+Credential+Description.md">(MiCloud+Credential+Description.md)</a><a href="#MiCloud+Credential+Description.md"></a></h1><br/><h1>預載程式之預設密碼</h1>
+<p>登入 MiCloud 完成後能在畫面左上方點選主機，在從下方表格點選您的主機查看細項。<br><img src='images/MiCloud+Credential+Description-p1+-21.png' width='650' align='center'/><br>進入查詢細項頁面，可於 <strong>概述</strong> 中找到 <strong>Credentials</strong> 欄位,左鍵點擊 <strong>Show Credentials</strong>，查看該台主機預載程式之密碼。</p>
+<p><img src='images/MiCloud+Credential+Description-p1+-18.png' width='650' align='center'/></p>
+<p>登入帳號與密碼說明如下:</p>
+<table>
+<thead>
+<tr>
+<th>ROLE</th>
+<th>功能</th>
+<th>登入帳號</th>
+<th>登入步驟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>root</td>
+<td>系統帳號</td>
+<td>root</td>
+<td>登入：ssh root@your.ip.address<br>密碼：本表格root密碼</td>
+</tr>
+<tr>
+<td>admin</td>
+<td>系統帳號</td>
+<td>admin</td>
+<td>登入：ssh admin@your.ip.address<br>密碼：本表格admin密碼</td>
+</tr>
+<tr>
+<td>mysql</td>
+<td>MySQL資料庫帳號</td>
+<td>root</td>
+<td>登入：mysql -uroot -p<br>密碼：本表格mysql密碼</td>
+</tr>
+<tr>
+<td>pgsql</td>
+<td>PostgreSQL資料庫帳號</td>
+<td>postgres</td>
+<td>登入：/opt/local/bin/psql -U postgres<br>密碼：(此時輸入pgsql密碼欄位)</td>
+</tr>
+<tr>
+<td>virtualmin</td>
+<td>Virtualmin系統管理工具帳號</td>
+<td>admin</td>
+<td>啓動服務：svcadm enable webmin<br>連線：<a href="https://your.ip.address:10000/">https://your.ip.address:10000/</a><br>帳號：admin<br> 密碼：本表格virtualmin密碼</td>
+</tr>
+<tr>
+<td>jill</td>
+<td>系統帳號</td>
+<td>jill</td>
+<td>登入：ssh jill@your.ip.address<br>密碼：本表格jill密碼</td>
+</tr>
+<tr>
+<td>zxtm</td>
+<td>負載平衡服務帳號</td>
+<td>admin</td>
+<td>連線：h ttp://your.ip.address:9090 <br>帳號：admin<br>密碼：本表格zxtm密碼</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>修改預設密碼</h1>
+<p>SmartOS修改密碼，修改root密碼，指令如下</p>
+<pre><code>#passwd</code></pre>
+<p><img src='images/MiCloud+Credential+Description-clip-image001.jpg' width='650' align='center'/></p>
+<p>修改Mysql密碼，先登入mysql後再執行修改密碼，登入指令如下，此時密碼為主機細項上所預設的密碼:</p>
+<pre><code>#mysql -u root -p</code></pre>
+<p>修改密碼指令如下:</p>
+<pre><code>mysql&gt; SET PASSWORD FOR root@localhost=PASSWORD(&#39;yournewpassword&#39;);</code></pre>
+<p><img src='images/MiCloud+Credential+Description-clip-image002.jpg' width='650' align='center'/></p>
+<p>如欲更改其他帳戶之密碼，請於root執行下方指令。</p>
+<pre><code>#passwd admin</code></pre>
+<p><img src='images/MiCloud+Credential+Description-clip-image003.jpg' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Server+Restart+From+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Server+Restart+From+Portal.html">重新啟動、關閉與刪除主機</a>&nbsp;<a href="index.html?page=Server+Restart+From+Portal.md">(Server+Restart+From+Portal.md)</a><a href="#Server+Restart+From+Portal.md"></a></h1><br/><h1>主機之重啟、關閉與刪除</h1>
+<p>MiCloud自助服務平台提供給您直接操控主機之重啟、關閉及刪除功能，在您登入MiCloud Customer Portal之後，您可以至主機頁面，點選您欲操控的主機，在右方控制面板中點選您所需要的服務。相關說明如下:</p>
+<h2>主機之重啟</h2>
+<p>在您登入MiCloud Customer Portal之後，您可以至主機頁面，點選您欲操控的主機，在右方控制面板中，點選&quot;REBOOT&quot;進行重啟。如下圖:</p>
+<p><img src='images/Server+Restart+From+Portal-reboot.jpg' width='650px' align='center'/></p>
+<p>Reboot會經過關閉後再啟動主機，請用戶耐心等候。</p>
+<hr>
+<h2>主機之關閉</h2>
+<p>關閉主機可由MiCloud管理平台上點選shutdown按鈕，也可以使用指令進行關閉，相關說明如下:</p>
+<p>1.由MiCloud管理平台上進行</p>
+<p>同上主機管理頁面，點選&quot;shutdown&quot;進行關閉主機。如下圖:<br><img src='images/Server+Restart+From+Portal-shutdown.jpg' width='650px' align='center'/></p>
+<p>※shut down後不代表終止合約，帳單仍會繼續計費，如要停止計費請執行DELETE刪除主機。如下圖提醒:</p>
+<p><img src='images/Server+Restart+From+Portal-shutdown1.jpg' width='650px' align='center'/></p>
+<p>2.執行指令進行關閉<br>登入主機後使用指令來執行shutdown，指令如下:</p>
+<pre><code>#poweroff</code></pre>
+<p>以SmartMachine為例，執行畫面如下:</p>
+<p>執行poweroff後會跳出下方黃色框框的警告視窗，提醒您主機已中斷連線。<br><img src='images/Server+Restart+From+Portal-poweroff.png' width='650px' align='center'/></p>
+<p>再回到MiCloud平台上檢查主機是否已被關閉。<br><img src='images/Server+Restart+From+Portal-poweroff2.jpg' width='650px' align='center'/></p>
+<hr>
+<h2>主機之刪除</h2>
+<p>同上主機管理頁面，點選&quot;DELETE&quot;按鍵後，系統將會移除您的主機。</p>
+<p>※刪除主機前必需先Shut down主機後才能刪除。</p>
+<p><img src='images/Server+Restart+From+Portal-delete.jpg' width='650px' align='center'/></p>
+<p>刪除後主機及其上相關資料將無法回復，請確認後再執行。</p>
+<p><img src='images/Server+Restart+From+Portal-delete1.jpg' width='650px' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Using+Cloud+Analytics.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Using+Cloud+Analytics.html">使用MiCloud分析工具-DTrace</a>&nbsp;<a href="index.html?page=Using+Cloud+Analytics.md">(Using+Cloud+Analytics.md)</a><a href="#Using+Cloud+Analytics.md"></a></h1><br/><h1>使用雲端分析工具</h1>
+<p>雲端分析工具，將幫助您做您Node.js的即時性的績效性能分析™應用。<br>使用雲端分析工具將需要Node 版本0.4.0或更高的版本。<br>在這個頁面，您將可以找到：</p>
+<p>同時看到 <a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/"><a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/">http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/</a></a></p>
+<p>顯示分析的概述如下：</p>
+<p>分析工具將顯示兩種圖表：線狀圖和等級圖。</p>
+<p>線圖顯示的數量，是根據您所給定的時間測量。</p>
+<p>例如，如果您測量的是根據IP地址的HTTP操作，其圖表疊線圖將顯示每個IP地址每秒的回應數量。<br><img src='images/Using+Cloud+Analytics-pic1.jpg' width='650' align='left'/></p>
+<p>而等級圖可讓您看到三個方面的數據，就像在某一特定地區，使用不同的顏色的雨水量畫出降雨分佈的地圖。</p>
+<p>雲端分析等級圖則顯示不同密度的彩色區塊。</p>
+<p>例如，在一個等級圖顯示了應用的細項和CPU運行速度，x軸則顯示在一秒鐘的間隔時間，Y軸則顯示了運行的時間。</p>
+<p>圖中的每個區塊、密度，代表了特定的運行時間的程式的數量。</p>
+<p>您可以使用過濾器，或以點選一個區塊的方式，查詢程式處理器多次執行的時間長短。</p>
+<p>每個區塊的高度，都是以沿y軸的值的範圍做區分。</p>
+<p><img src='images/Using+Cloud+Analytics-pic2.jpg' width='650' align='left'/></p>
+<p>在這兩種圖表，x軸表示在一秒鐘的間隔時間。 y軸代表一個變量，你測量，但規模變化值的範圍擴大或縮小。</p>
+<table>
+<thead>
+<tr>
+<th>控制</th>
+<th>描述  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>儀器儀表選項</td>
+<td>這些控件可以讓你創建一個儀表盤。<br>你可以選擇從幾個指標分解以不同的方式。<br>這些指標都在下一節描述。</td>
+</tr>
+<tr>
+<td>元素列表</td>
+<td>這將列出你測量的項目。<br>例如，如果你測量HTTP服務器的URL分解操作，此窗格包含一個網址列表。<br>在熱圖，從這個名單中選擇一個項目，突出包含該元素的測量所有的水桶。<br>你可以使用隔離或排除選定的項目列表底部的過濾器。</td>
+</tr>
+<tr>
+<td>排名 /線性</td>
+<td>這種控制讓你選擇如何密度桶熱圖呈現。<br>線性著色意味著根據其價值，每個桶的顏色。<br>其價值為100桶，水桶，其價值為1暗100倍。排名基於著色所有的值進行排序和顏色密度分佈其中。 <br>排名基於著色發現離群點是非常有用的。</td>
+</tr>
+<tr>
+<td>粒度</td>
+<td>此滑塊控制每塊的高度，因此，每個桶的值的範圍。</td>
+</tr>
+<tr>
+<td>規模</td>
+<td>此滑桿可讓您控制Y軸的值的範圍。 範圍是在控制下的文本。<br>當滑塊一路的頂部和底部，y軸的變化上顯示的值的範圍而定規模。<br>如果您使用滑桿來設定一個上限或下限，規模不會改變。</td>
+</tr>
+<tr>
+<td>放大</td>
+<td>這些控件可以讓你改變每個桶的寬度，所以你可以看到一個更廣泛的時間。<br> 每個桶的寬度始終是一秒鐘。</td>
+</tr>
+<tr>
+<td>播放 /暫停</td>
+<td>這些控件可以讓您暫停和恢復顯示。</td>
+</tr>
+<tr>
+<td>水桶</td>
+<td>點擊水桶，桶的價值分佈。</td>
+</tr>
+</tbody>
+</table>
+<h2>可用的度量</h2>
+<p>雲分析可以告訴你各種不同的指標:</p>
+<ul>
+<li>CPU線程處決的</li>
+<li>HTTP服務器操作</li>
+<li>HTTP客戶端操作</li>
+<li>垃圾收集作業</li>
+<li>套接字操作</li>
+<li>邏輯文件系統操作<br>在大多數情況下，操作數是不一樣分解操作延遲有趣。 潛伏期是要求其履行的金額之間的時間。</li>
+</ul>
+<h2>CPU線程處決的</h2>
+<p>這種度量可以幫助你了解你的應用程序使用的CPU。 報告數量排序的線程執行不同的標準。 一個線程開始執行時，當線程在CPU和結束時，它被取下。<br>您可以使用自己的下面的分解，得到一個線程執行數線圖或結合運行時，他們顯示熱圖。</p>
+<table>
+<thead>
+<tr>
+<th>分解</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>進程標識符</td>
+<td>對於一個給定的進程ID線程數。</td>
+</tr>
+<tr>
+<td>應用程序的名稱</td>
+<td>每個正在運行的應用程序的線程數。</td>
+</tr>
+<tr>
+<td>區域名稱</td>
+<td>在每個區域運行的線程數（SmartMachine）。<br>如果你正在運行的只有1 SmartMachine，這個信息是不是特別有用。</td>
+</tr>
+<tr>
+<td>原因離開CPU</td>
+<td>離開CPU的原因排序的線程數。</td>
+</tr>
+</tbody>
+</table>
+<p>線圖顯示處決的人數是不是特別有趣。 運行時的熱圖，這表明線程在CPU上多久，更準確，因為它們表明，當您的應用程序已經做了很多計算。</p>
+<pre><code>選擇不加分解本身的運行是在一個線程執行的熱分解圖運行，這不是特別有用的結果。</code></pre>
+<p>如果您的應用程序不運行很長時間，你可以看看為什麼它來CPU。 它可能被內核鎖阻塞（可能表明內核鎖爭用），1用戶級鎖（表示用戶級鎖爭用），1條件變量（表示它很可能等待某些其他事件，如磁盤，I / O或網絡），等等。 或者它可能已經運行的，但採取的CPU，因為別的東西更高的優先級運行所需。</p>
+<p>這是一個低級別和微妙的度量，但它可以幫助你了解是否應用程序這麼長時間的服務請求的理由是因為它在CPU上花費了很多時間。</p>
+<h2>HTTP服務器操作</h2>
+<p>HTTP服務器的性能度量Web服務器的主要性能。</p>
+<p>可以使用下面的分解，自己獲得的事件數量的線圖，或者你可以結合延遲他們獲得熱圖。</p>
+<table>
+<thead>
+<tr>
+<th>分解</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方法</td>
+<td>HTTP方法的請求：GET，PUT，POST，DELETE</td>
+</tr>
+<tr>
+<td>網址</td>
+<td>通過URL請求的數量。</td>
+</tr>
+<tr>
+<td>遠程IP地址</td>
+<td>發出請求的客戶端的IP地址的請求數。</td>
+</tr>
+<tr>
+<td>遠程TCP端口</td>
+<td>發出請求的客戶端所使用的TCP端口的請求數。<br>這個衡量標準是，挑選出來自同一客戶端的多個請求，在相同的TCP連接使用HTTP保持活動的有用。</td>
+</tr>
+</tbody>
+</table>
+<h2>HTTP客戶端操作</h2>
+<p>這個度量報告HTTP請求和響應，從您的應用程序發起的反對的服務。 您可以使用該數據，以幫助您確定您的服務器的延遲是由於你使用一些其他的Web服務的延遲。 舉例來說，如果Amazon的S3服務存儲數據，你可以看到如何S3 Web服務請求。</p>
+<p>如果您發現另一個Web服務是您的高延遲的源，然後你可以調查，其他的Web服務（如果你能），或重新考慮你的應用程序如何使用它，通過緩存結果在可能的情況下，也許。</p>
+<table>
+<thead>
+<tr>
+<th>分解</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方法</td>
+<td>請求的HTTP方法。</td>
+</tr>
+<tr>
+<td>網址</td>
+<td>通過URL請求的數量。</td>
+</tr>
+<tr>
+<td>HTTP服務器地址</td>
+<td>服務器地址的請求數。</td>
+</tr>
+<tr>
+<td>HTTP服務器端口</td>
+<td>服務器端口的請求數。</td>
+</tr>
+</tbody>
+</table>
+<h2>垃圾收集作業</h2>
+<p>這種度量可以讓你觀察到的JavaScript虛擬機的垃圾收集器所產生的延遲氣泡。 垃圾收集器跟踪分配內存和釋放內存，這不再被使用。 這意味著，作為一個程序員，你不必擔心內存分配和釋放。 然而，當垃圾收集器運行時，您所有的應用程序代碼被暫停。</p>
+<p>您可以使用此指標，以觀察在您的應用程序的垃圾收集。 在這種情況下，“潛伏期”是指垃圾收集操作了多久。 如果你看到的垃圾收集活動相關的HTTP請求延遲尖峰，你可能需要重新思考如何在您的應用程序內存被使用，以免造成這麼多的垃圾，否則調整GC以避免出現大的尖峰。</p>
+<table>
+<thead>
+<tr>
+<th>分解</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GC型</td>
+<td>按類型的垃圾收集操作。</td>
+</tr>
+</tbody>
+</table>
+<h2>套接字操作</h2>
+<p>套接字操作HTTP活動的WebSockets，和大多數其他類型的網絡活動的基礎上。 這種度量可以讓你觀察到非Web應用程序的活動。 因為它是不可能知道這消息對應於別人，這是不可能直接顯示在這個級別的延遲。</p>
+<table>
+<thead>
+<tr>
+<th>分解</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>類型</td>
+<td>按類型套接字操作（讀，寫）。</td>
+</tr>
+<tr>
+<td>遠程主機</td>
+<td>套接字操作遠程主機的數量。</td>
+</tr>
+<tr>
+<td>遠程端口</td>
+<td>通過遠程端口號的套接字操作。</td>
+</tr>
+<tr>
+<td>大小</td>
+<td>由規模數量的套接字操作。</td>
+</tr>
+<tr>
+<td>緩衝數據</td>
+<td>Node.js的內緩衝的數據量，因為應用程序的書面比內核更可以消耗不阻塞。</td>
+</tr>
+</tbody>
+</table>
+<h2>邏輯文件系統的操作</h2>
+<p>磁盤I / O可以是一個顯著的延遲源。 這種度量檢查磁盤的I / O的應用程序的首要原因之一：訪問文件系統。</p>
+<table>
+<thead>
+<tr>
+<th>分解</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>進程標識符</td>
+<td>文件系統操作的進程的ID號。</td>
+</tr>
+<tr>
+<td>應用程序的名稱</td>
+<td>文件系統操作的應用程序的名稱。</td>
+</tr>
+<tr>
+<td>區域名稱</td>
+<td>文件系統操作的區域名稱。</td>
+</tr>
+<tr>
+<td>操作類型</td>
+<td>按類型的文件系統操作（讀，寫，查找，訪問等）。</td>
+</tr>
+<tr>
+<td>文件系統類型</td>
+<td>（ZFS，進程，LOFS等），文件系統類型的文件系統操作。</td>
+</tr>
+</tbody>
+</table>
+<p>如果你在這裡看到顯著的延遲，HTTP請求延遲對應的，你可能會考慮改變你的應用程序與文件系統交互，也許是通過預取數據緩存。</p>
+<p>分解幫助你準確識別誰在做什麼，這樣可以優化正確的事情。 與Node.js的指標，此指標的檢查文件系統的所有的SmartMachine的活動。在這些情況下，進程ID和應用程序的名稱的分解是有用的。</p>
+<h2>學習更多關於雲分析</h2>
+<p>你可以了解更多有關使用熱圖可視化從這些資源中的延遲：</p>
+<ul>
+<li><a href="http://cacm.acm.org/magazines/2010/7/95062-visualizing-system-latency/fulltext">可視化系統延遲 </a></li>
+<li><a href="http://dtrace.org/blogs/dap/2011/03/01/welcome-to-cloud-analytics/">雲分析</a></li>
+<li><a href="http://joyeur.com/2011/01/24/executive-speaker-series-bryan-cantrill-and-brendan-gregg-on-cloud-analytics/">雲性能與實時可視性解決大問題（視頻）</a></li>
+</ul>
+<hr>
+<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Mounting+the+Data+Volume+on+Windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Mounting+the+Data+Volume+on+Windows.html">Windows主機掛載硬碟</a>&nbsp;<a href="index.html?page=Mounting+the+Data+Volume+on+Windows.md">(Mounting+the+Data+Volume+on+Windows.md)</a><a href="#Mounting+the+Data+Volume+on+Windows.md"></a></h1><br/><h1>Windows主機掛載硬碟</h1>
+<p>訂購MiCloud Windows主機的硬碟空間屬於額外提供給每台主機的空間，並不包含在原作業系統的硬碟空間中，預設每台虛擬主機之作業系統空間有40GB，但用戶需自行將OS外之硬碟掛載後，才可使用，其掛載及啟用的操作說明如下。</p>
+<p>登入您的主機後點選”開始”在<strong>電腦</strong>上按右鍵點選<strong>管理</strong>，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis.jpg' width='500' align='center'/></p>
+<p>開啟伺服器管理員後點選存放-磁碟管理，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis1.jpg' width='600' align='center'/></p>
+<p>請在<strong>磁碟1</strong>的空白處按右鍵選<strong>連線</strong>，如下圖紅色框框部分。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis2.jpg' width='600' align='center'/></p>
+<p>連線後，再<strong>按右鍵</strong>選<strong>初始化磁碟</strong>，會出現初始化硬碟的視窗，按下確定即可。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis3.jpg' width='600' align='center'/><br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis4.jpg' width='600' align='center'/></p>
+<p>初始化磁碟後，請至紅色框框裡<strong>按右鍵</strong>點選<strong>新增簡單磁碟區</strong>，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis5.jpg' width='600' align='center'/></p>
+<p>出現新增簡單磁碟區精靈視窗，點選下一步即可。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis6.jpg' width='600' align='center'/></p>
+<p>第三步驟可選擇磁碟機代號如下圖橘色框框，再執行下一步至完成即可。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis7.jpg' width='600' align='center'/></p>
+<p>E槽即為您所掛載的硬碟，如下圖。<br><img src='images/Mounting+the+Data+Volume+on+Windows-win-dis8.jpg' width='600' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Connect+windows.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Connect+windows.html">遠端連線Windows主機</a>&nbsp;<a href="index.html?page=Connect+windows.md">(Connect+windows.md)</a><a href="#Connect+windows.md"></a></h1><br/><h1>Windows 遠端桌面連線</h1>
+<p>MiCloud Windows Server預設開啓遠端桌面連線服務，讓您可以透過internet連線操控與安裝相關軟體，下面介紹如何使用遠端桌面連線從您的電腦連線至MiCloud Windows Server：</p>
+<h2>Windows 下遠端桌面連線 Windows</h2>
+<p>1.開啟&quot;遠端桌面連線&quot;,輸入您的ip並按下連線<br><img src='images/Connect+windows-p.png' width='450' align='center'/><br>2.輸入您的密碼,,進入後您就可以開始使用<br><img src='images/Connect+windows-p+-1.png' width='650' align='center'/></p>
+<h2><img src='images/Connect+windows-p+-2.png' width='650' align='center'/></h2>
+<h2>Linux 下遠端桌面連線 Windows</h2>
+<p>1.再左上方搜尋欄位中輸入搜尋欄位中輸入&quot;remote desktop viewer&quot;,並點選開啟<br><img src='images/Connect+windows-x1.png' width='550' align='center'/><br>2.開啟&quot;remote desktop viewer&quot;於左上方點選連線<br><img src='images/Connect+windows-x2.png' width='550' align='center'/><br>3.於&quot;主機(H):&quot;欄位中輸入您將遠端連線的ip,&quot;使用者名稱(U):&quot;欄位中輸入您的帳號,並按下連線<br><img src='images/Connect+windows-x3.png' width='450' align='center'/><br>2.輸入您的密碼,,進入後您就可以開始使用<br><img src='images/Connect+windows-x4.png' width='650' align='center'/></p>
+<h2><img src='images/Connect+windows-x5.png' width='650' align='center'/></h2>
+<h2>Mac 下遠端桌面連線Windows</h2>
+<p>Mac下使用遠端桌面連線至windows server，要先安裝Microsoft Remote Desktop Connection Client for Mac(<a href="http://www.microsoft.com/mac/remote-desktop-client">下載</a><br>相關設定如下:</p>
+<p>1.安裝完成後，開啟Microsoft Remote Desktop Connection Client for Mac，輸入您的ip並按下connect。<br><img src='images/Connect+windows-RDCMacIntro.png' width='650' align='center'/></p>
+<p>2.輸入您的User name及Password，而Domain為您主機的ip，您就可開始使用。<br><img src='images/Connect+windows-RDCMacLogin.png' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Monitor+System.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Monitor+System.html">系統監控</a>&nbsp;<a href="index.html?page=Monitor+System.md">(Monitor+System.md)</a><a href="#Monitor+System.md"></a></h1><br/><h1>主機監控之設定</h1>
+<h2>Windows</h2>
+<p>1.MiCloud平台虛擬主機之監控程式需使用nodejs來執行，<strong>請先登入您的Windows虛擬主機</strong>，再至<a href="http://nodejs.org/"><a href="http://nodejs.org/">http://nodejs.org/</a></a>下載並安裝 (如下圖)<br><img src='images/Monitor+System-node.png' width='650' align='center'/></p>
+<p>2.請下載由MiCloud研發團隊撰寫的監控程式並解壓，下載網址為</p>
+<pre><code>http://211.78.245.110:3000/install/nomon-lastest.tgz</code></pre>
+<p><img src='images/Monitor+System-nom.png' width='500' align='center'/></p>
+<p>3.請在桌面上新增一個副檔名為.bat的檔案(XXX.bat)，如下圖，這邊建立的檔案為test.bat<br><img src='images/Monitor+System-bat.png' width='500' align='center'/></p>
+<p>在檔案上點選右鍵→編輯，在檔案中貼上下方指令(如下圖)</p>
+<pre><code>node您將檔案解壓縮後存放的位置\main.js，主要用來設定排程應該執行哪支程式。</code></pre>
+<p><img src='images/Monitor+System-node1.png' width='650' align='center'/></p>
+<p>4.點選開始--系統管理工具--工作排程器，設定程式排程<br><img src='images/Monitor+System-p1.png' width='650' align='center'/></p>
+<p>5.點選建立工作來新增排程<br><img src='images/Monitor+System-p2.png' width='650' align='center'/></p>
+<p>6.在建立工作--一般，打上排程名稱，名稱可以自己命名，這裡舉例將它命名為”node”(如下圖)<br><img src='images/Monitor+System-p3.png' width='650' align='center'/></p>
+<p>7.點選建立工作--觸發程序之新增並做設定，將排程設定為每5分鐘執行一次且是持續不間斷<br><img src='images/Monitor+System-p4.png' width='650' align='center'/><br><img src='images/Monitor+System-set.png' width='650' align='center'/></p>
+<p>8.點選建立工作--動作之新增並設定，將前面設定的*.bat執行檔的路徑填入(步驟3中建立的檔案)<br><img src='images/Monitor+System-p6.png' width='650' align='center'/><br><img src='images/Monitor+System-p8.png' width='650' align='center'/></p>
+<p>9.完成上方所有的排序設定後，即可在工作排程器主頁上的進行中工作裡看到您新增的排程。<br><img src='images/Monitor+System-p7.png' width='650' align='center'/></p>
+<p>10.完成排程設定後，15分鐘後即可至MiCloud平台點選您所設置監控的主機，即可檢視您主機上的CPU、Memory、Disk的使用率。<br><img src='images/Monitor+System-cpu.png' width='650' align='center'/></p>
+<p>歷史監控資料，可檢視一週、一個月或整年的監控狀況，並可下載近半年的原始資料。<br><img src='images/Monitor+System-cpu2.png' width='650' align='center'/></p>
+<hr>
+<h2>Linux</h2>
+<p>1.登入MiCloud主機清單中，選擇任何一台Linux主機<br><img src='images/Monitor+System-pl1.png' width='650' align='center'/></p>
+<p>2.進入主機細項後，請點選”主機監控”頁籤並點擊”複製指令”按鈕<br><img src='images/Monitor+System-pl2.png' width='650' align='center'/></p>
+<p>3.完成上述步驟後，請登入您欲監控的虛擬主機並貼上剛剛的指令</p>
+<pre><code># curl http://211.78.245.110:3000/install/install.sh | bash</code></pre>
+<p><img src='images/Monitor+System-pl3.png' width='650' align='center'/></p>
+<p>執行成功後，可由下方指令檢視監控程式是否己加入例行排程中</p>
+<pre><code>#crontab -l</code></pre>
+<p><img src='images/Monitor+System-pl4.png' width='650' align='center'/></p>
+<p>4.cron job設定完成後，15分鐘後即可至MiCloud管理平台檢視您主機上的CPU、Memory、Disk的使用率。<br><img src='images/Monitor+System-pl5.png' width='650' align='center'/><br>也可以在歷史監控資料中查看週、月、年的資訊，並可下載近半年的原始資料。<br><img src='images/Monitor+System-pl6.png' width='650' align='center'/></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="Linux+Update+Timezone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Linux+Update+Timezone.html">時區設定</a>&nbsp;<a href="index.html?page=Linux+Update+Timezone.md">(Linux+Update+Timezone.md)</a><a href="#Linux+Update+Timezone.md"></a></h1><br/><h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
+<p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
+<pre><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></pre>
+<p>(2) 執行 date -u</p>
+<pre><code># date -u</code></pre>
+<p>(3) 輸入 date 看看是否已經是正確時區</p>
+<pre><code># date</code></pre>
+<p>(4) 重開後生效</p>
+<pre><code># reboot</code></pre>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="DNS+Manage.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/DNS+Manage.html">DNS管理</a>&nbsp;<a href="index.html?page=DNS+Manage.md">(DNS+Manage.md)</a><a href="#DNS+Manage.md"></a></h1><br/><h1>DNS設置</h1>
+<p>若您想在MiCloud主機上設置DNS，請先至網址註冊商(例如:Godaddy)申請一個Domain Name，設置方式有以下二種:</p>
+<ul>
+<li>子網域指向MiCloud DNS Server</li>
+<li>直接將您所申請的Domain Name指向MiCloud DNS Server<br>詳細說明如下:</li>
+</ul>
+<h2>設置子網域</h2>
+<ol>
+<li>請先新增一個子網域，並將Points to設為MiCloud DNS Server :</li>
+</ol>
+<pre><code>dns60.micloud.tw或dns64.micloud.tw</code></pre>
+<p><img src='images/DNS+Manage-sub-1.png' width='650' align='center'/></p>
+<p>2.新增完成後，請至MiCloud平台點選”DNS管理”下”專屬網域之主機”按鈕。<br><img src='images/DNS+Manage-sub-2.png' width='650' align='center'/><br><img src='images/DNS+Manage-sub-3.png' width='650' align='center'/></p>
+<p>3.進入頁面後，請點選”新增Domain”按鈕，將剛剛所新增的子網域名稱加入頁面中。<br><img src='images/DNS+Manage-sub-4.png' width='650' align='center'/><br><img src='images/DNS+Manage-sub-5.png' width='650' align='center'/></p>
+<p>4.新增成功後，點選”新增A Record”，即可為您的主機設置Domain name。<br><img src='images/DNS+Manage-sub-7.png' width='650' align='center'/><br><img src='images/DNS+Manage-sub-6.png' width='650' align='center'/></p>
+<p>5.驗證Domain，使用命令提示字元或直接將您所設至的Domain Name貼至網址列即可。</p>
+<p>命令提示字元請執行下方指令做驗證:</p>
+<pre><code>nslookup portal.test.facewithus.com</code></pre>
+<p><img src='images/DNS+Manage-sub-8.png' width='450' align='center'/></p>
+<p>或者可以直接將記錄指向MiCloud DNS server查詢：</p>
+<pre><code>nslookup portal.test.facewithus.com dns60.micloud.tw</code></pre>
+<p><img src='images/DNS+Manage-sub-9.png' width='500' align='center'/></p>
+<h2>設置整個網域</h2>
+<ol>
+<li>將您申請的網域名稱的server設至MiCloud DNS Server。以Godaddy為例。</li>
+</ol>
+<pre><code>MiCloud DNS Server:
+DNS60.MICLOUD.TW
+DNS64.MICLOUD.TW</code></pre>
+<p><img src='images/DNS+Manage-all-1.png' width='650' align='center'/><br><img src='images/DNS+Manage-all-2.png' width='650' align='center'/></p>
+<p>2.修改完成後，請至MiCloud平台點選”DNS管理”下”專屬網域之主機”按鈕。<br><img src='images/DNS+Manage-sub-2.png' width='650' align='center'/><br><img src='images/DNS+Manage-sub-3.png' width='650' align='center'/></p>
+<p>3.進入頁面後，請點選”新增Domain”按鈕，將您的網域名稱新增至頁面中。<br><img src='images/DNS+Manage-sub-4.png' width='650' align='center'/><br><img src='images/DNS+Manage-all-3.png' width='650' align='center'/></p>
+<p>4.新增成功後，點選”新增A Record”，即可為您的主機設置Domain name。<br><img src='images/DNS+Manage-sub-7.png' width='650' align='center'/><br><img src='images/DNS+Manage-all-4.png' width='650' align='center'/></p>
+<p>5.驗證Domain，使用命令提示字元或直接將您所設至的Domain Name貼至網址列即可。</p>
+<p>命令提示字元請執行下方指令做驗證:</p>
+<pre><code>nslookup portal.test.facewithus.com</code></pre>
+<p><img src='images/DNS+Manage-all-5.png' width='450' align='center'/></p>
+<p>或者可以直接將記錄指向MiCloud DNS server查詢：</p>
+<pre><code>nslookup portal.test.facewithus.com dns60.micloud.tw</code></pre>
+<p><img src='images/DNS+Manage-all-6.png' width='450' align='center'/></p>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="Percona+install.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Percona+install.html">安裝Percona</a>&nbsp;<a href="index.html?page=Percona+install.md">(Percona+install.md)</a><a href="#Percona+install.md"></a></h1><br/><h1>安裝Percona</h1>
 <p>MiCloud只有在SmartOS中有預載Percona的服務，用戶可參考以下的步驟，在Linux環境下安裝。</p>
 <h2>在CentOS中安裝Percona</h2>
@@ -2075,160 +2437,6 @@ FLUSH PRIVILEGES;</code></pre>
 <p>8.驗證密碼是否已更改</p>
 <pre><code>#mysql -uroot -p</code></pre>
 <p><img src='images/Install+MySQL+on+Linux-p11.png' width='650' align='center'/></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Disabling+or+Restarting+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Disabling+or+Restarting+Webmin.html">關閉或重啓Webmin</a>&nbsp;<a href="index.html?page=Disabling+or+Restarting+Webmin.md">(Disabling+or+Restarting+Webmin.md)</a><a href="#Disabling+or+Restarting+Webmin.md"></a></h1><br/><h1>關閉或重啓Webmin</h1>
-<p>At times it may be necessary to disable the administration web server of your SmartMachine (aka. Virtualmin or Webmin).  The following is how you disable and restart this service using SMF.</p>
-<p>In this page:</p>
-<h2>Disable Webmin</h2>
-<p>SSH into your SmartMachine, then switch to the root user and run:</p>
-<pre><code>svcadm disable webmin</code></pre>
-<h2>Restart Webmin</h2>
-<p>If a service crashes that is maintained by SMF it will be placed into a &#39;maintenance mode&#39;.  The following process is how to restart a service that has been disabled or that is in maintenance mode:</p>
-<h2>Check to see if service is in Maintenance Mode</h2>
-<p>If a service is in maintenance mode it has cashed and is usually inductive of an error with the service or your SmartMachine is running out of RAM or Disk.</p>
-<p>To check that a service is in maintenance mode:</p>
-<pre><code>svcs -a</code></pre>
-<p>If the service is in maintenance mode you will see something similar to this:</p>
-<p>maintenence 18:50:25 svc:/network/webmin:webmin</p>
-<p>You should review the log and check for a core file to derive root cause of why the service was in maintenance mode.</p>
-<p>To bring a service out of maintenance mode run the following as root:</p>
-<pre><code>svcadm clear service_name</code></pre>
-<h2>Verify service is disabled</h2>
-<p>To verify a service is disabled run this command:</p>
-<pre><code>svcs -a</code></pre>
-<p>If the service is disabled you will see something similar to this:</p>
-<p>disabled 18:51:10 svc:/network/webmin:webmin</p>
-<h2>Enable service</h2>
-<p>To start a service run this command as root:</p>
-<pre><code>svcadm enable service_name</code></pre>
-<p>Then verify the service is running with:</p>
-<pre><code>svcs -a | grep service_name</code></pre>
-<p>You should see something similar to this:</p>
-<p>online 18:50:25 svc:/network/webmin:webmin</p>
-<p>&quot;online&quot; state indicates that the service is back and running.</p>
-<hr>
-<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Managing+SSL+Certificates+with+Virtualmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Managing+SSL+Certificates+with+Virtualmin.html">使用Virtuakmin管理SSL認證</a>&nbsp;<a href="index.html?page=Managing+SSL+Certificates+with+Virtualmin.md">(Managing+SSL+Certificates+with+Virtualmin.md)</a><a href="#Managing+SSL+Certificates+with+Virtualmin.md"></a></h1><br/><h1>使用Virtuakmin管理SSL認證</h1>
-<p>This page guides you through enabling SSL encryption for a domain and installing an SSL certificate through Virtualmin.</p>
-<p>In this page:</p>
-<h2>Enable SSL for your Domain</h2>
-<ul>
-<li>Log in to Virtualmin</li>
-<li>Select a domain from the drop-down menu in the left-hand navigation pane. Your main domain is selected by default when you first login to Virtualmin. This is the domain for which you will enable SSL encryption.</li>
-<li>Click Edit Virtual Server.</li>
-<li>Click Enabled features and then select SSL website enabled? This assumes you already have Apache website enabled? turned on.</li>
-<li>Click Save Virtual Server. A page will display a warning that SSL cannot be enabled for more than one domain on the IP address.</li>
-<li>Click Yes, Modify Virtual Server to override and conclude with the SSL setup.<h2>Install the SSL Certificate via Virtualmin</h2>
-</li>
-</ul>
-<ul>
-<li>Sign in to Virtualmin</li>
-<li>Click Server Configuration in the left-hand navigation, then click Manage SSL Certificate.</li>
-<li>Click the New Certificate tab in the right frame.</li>
-<li>Paste in the certificate and private key files into the respective input boxes, and click Install Now.</li>
-</ul>
-<hr>
-<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Updating+Webmin.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Updating+Webmin.html">更新Webmin</a>&nbsp;<a href="index.html?page=Updating+Webmin.md">(Updating+Webmin.md)</a><a href="#Updating+Webmin.md"></a></h1><br/><h1>更新Webmin</h1>
-<p>In this page:</p>
-<h2>Webmin / Virtualmin</h2>
-<p>Webmin is the web-based configuration tool provided by default with SmartMachines. It runs as its own process, and includes its own web server.</p>
-<p>After customizing your SmartMachines, you may find that you eventually need to upgrade the Webmin / Virtualmin software. Alternatively, you may also decide that you prefer to monitor and configure your system exclusively with an SSH session.</p>
-<h2>Upgrading</h2>
-<h2>Preflight</h2>
-<p>Get to the Upgrade Webmin area</p>
-<ul>
-<li>Log into your smartmachine <a href="https://1.2.3.4:10000/">https://1.2.3.4:10000/</a> as </li>
-<li>From the left-hand navigation bar select </li>
-<li>From the left-hand navigation bar select below admin</li>
-<li>Select Configuration</li>
-<li>From the right-hand tab select Webmin. You&#39;ll now see the &quot;Upgrade Webmin&quot; page.<h2>Find out what is out of date</h2>
-</li>
-</ul>
-<p>You will be presented with a list of items which require updating and what has changed.</p>
-<ul>
-<li>Select the modules tab</li>
-<li>Select show which modules would be updated checkbox</li>
-<li>Select Modules</li>
-</ul>
-<p>You then can uncheck the show and actually perform the updates.</p>
-<pre><code>Virtualmin is considered a non-core module. Ensure you check the Update non-core modules as well option to include Virtualmin in any updates.</code></pre>
-<h2>Setting automatic update schedule</h2>
-<ul>
-<li>Select the update tab</li>
-<li>Check the updating currently enabled box</li>
-<li><p>Set your desired schedule</p>
-<h2>Upgrading Webmin</h2>
-</li>
-<li><p>From the Webmin tab</p>
-</li>
-<li>Chose from where you wish to upgrade from, typically that would be version from www.webmin.com</li>
-<li>Unless you know what you are doing, check the re-install deleted or new modules? option</li>
-<li>Select the Webmin buttton</li>
-</ul>
-<pre><code>Before Webmin 1.490 was released, Sourceforge.net (which the Webmin developers use to host their project files) changed the URL scheme, effectively breaking Webmin upgrades from versions earlier than 1.490. To work around, in step *2 above, instead of pulling from the www.webmin.com website, choose the %%From ftp or http URL%% option and enter this long URL (the latest Webmin 1.500):
-%%http://prdownloads.sourceforge.net/webadmin/webmin-1.500.tar.gz%%
-Further upgrades will work as outlined above.</code></pre>
-<h2>Removing</h2>
-<p>You may decide that you do not want to use Webmin at all and wish to manage your SmartMachine solely using SSH.</p>
-<p>If you want to remove Webmin completely, open a new SSH session.</p>
-<ul>
-<li>Change to root: sudo su -</li>
-<li>Disable the Webmin service:</li>
-</ul>
-<pre><code>svcadm disable svc:/application/webmin:default</code></pre>
-<p>or</p>
-<pre><code>svcadm disable svc:/network/webmin:webmin</code></pre>
-<ul>
-<li>Then execute the Webmin uninstall script:</li>
-</ul>
-<pre><code>sudo /etc/webmin/uninstall.sh</code></pre>
-<ul>
-<li>Finally, remove the Webmin manifest:</li>
-</ul>
-<pre><code>svccfg delete svc:/application/webmin:default</code></pre>
-<p>or</p>
-<pre><code>svccfg delete svc:/network/webmin:webmin</code></pre>
-<h2>Changing webmin passwords</h2>
-<p>If you forget your webmin password, run the command below. You may have to change the path based on your webmin version. &quot;admin&quot; is the webmin &quot;root&quot; user.</p>
-<pre><code>sudo /opt/webmin-1.340/changepass.pl /etc/webmin admin new_password</code></pre>
-<h2>Restarting</h2>
-<p>If Webmin becomes unresponsive or unreachable, you can restart it from an ssh session.</p>
-<ul>
-<li>*Login as an administrative user. ssh admin@1.2.3.4<br>   Check Webmin&#39;s current state: sudo svcs -p webmin<br>*If shown as &quot;running&quot; then:</li>
-<li>Restart Webmin: sudo svcadm restart webmin<br>*If shown as &quot;disabled&quot; then:</li>
-<li>Start Webmin: sudo svcadm enable webmin<br>*If shown as &quot;maintenance&quot;:</li>
-<li>Clear Webmin: sudo svcadm clear webmin<br>*Make sure Webmin is not in maintenance: svcs -x<br>  If Webmin is listed as being in maintenance, run:</li>
-</ul>
-<pre><code>sudo svcadm clear webmin</code></pre>
-<h2>Webmin (approximate) system requirements</h2>
-<ul>
-<li>80 RSS</li>
-<li>100 Swap</li>
-</ul>
-<p>Check on what&#39;s available by ssh&#39;ing in and</p>
-<pre><code>prstat -Z -n 10 -s rss</code></pre>
-<p>Kill processes as necessary to free up the required minimum resources. Occassionally Apache (called httpd in the &#39;Process&#39; column of the prstat listing) will consume very large amounts of memory.</p>
-<h2>Webmin really won&#39;t startup</h2>
-<p>If your system has the available resources (you can confirm this by running the command described in the section &#39;Webmin (approximate) system requirements&#39;) and Webmin still refuses to startup, then you may need to restart your server. Follow the steps described in the section &#39;Restarting&#39;.</p>
-<pre><code>sudo reboot</code></pre>
-<h2>Where are webmin&#39;s log files</h2>
-<p>You&#39;ll find them here:</p>
-<pre><code>sudo ls /var/webmin/
-sudo cat /var/webmin/miniserv.error</code></pre>
-<hr>
-<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Recovering+a+Forgotten+SmartMachine+Password.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Recovering+a+Forgotten+SmartMachine+Password.html">使用Webmin回復SmartMachine密碼</a>&nbsp;<a href="index.html?page=Recovering+a+Forgotten+SmartMachine+Password.md">(Recovering+a+Forgotten+SmartMachine+Password.md)</a><a href="#Recovering+a+Forgotten+SmartMachine+Password.md"></a></h1><br/><h1>使用Webmin回復SmartMachine密碼</h1>
-<p>如您忘記SmartMachine只密碼，您可以使用下面方式，透過Webmin來回復您的密碼:</p>
-<pre><code>https://&lt;PUBLIC_IP&gt;:10000/password-recovery</code></pre>
-<p>or</p>
-<pre><code>https://&lt;HOSTNAME&gt;:10000/password-recovery</code></pre>
-<p>您可以參考相關影片片段：<a href="您可以參考相關影片片段：[http://p.castfire.com/NTYYi/video/511969/511969-2011-02-14-160309.sd.m4v"><a href="http://p.castfire.com/NTYYi/video/511969/511969_2011-02-14-160309.sd.m4v">http://p.castfire.com/NTYYi/video/511969/511969_2011-02-14-160309.sd.m4v</a></a></p>
-<hr>
-<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Setting+Up+a+New+Domain.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Setting+Up+a+New+Domain.html">設定新的Domain</a>&nbsp;<a href="index.html?page=Setting+Up+a+New+Domain.md">(Setting+Up+a+New+Domain.md)</a><a href="#Setting+Up+a+New+Domain.md"></a></h1><br/><h1>設定新的Domain</h1>
-<p>此部分展示如何使用Webmin與您的網域名稱連結，並透過Webmin設定FTP： <a href="http://p.castfire.com/NTYYi/video/511915/setting-up-new-domain-mov_2011-02-14-142915.sd.m4v">http://p.castfire.com/NTYYi/video/511915/setting-up-new-domain-mov_2011-02-14-142915.sd.m4v</a></p>
-<hr>
-<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+Self-Service+Portal.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+Self-Service+Portal.html">在MiCloud上建置我的雲端服務</a>&nbsp;<a href="index.html?page=MiCloud+Self-Service+Portal.md">(MiCloud+Self-Service+Portal.md)</a><a href="#MiCloud+Self-Service+Portal.md"></a></h1><br/><h1>MiCloud Self-Service Portal實作</h1>
 <h2>主題：我的第一個雲端服務</h2>
 <h2>我的雲端服務簡介</h2>
@@ -2318,6 +2526,281 @@ SELECT COUNT(*) FROM joe_visitors where  upper(vs_browser) not like &#39;%GOOGLE
 <p>As you can see DTrace can be very powerful even if we don&#39;t have probes released yet, we just have to do a little extra work. Some of the information shown can be obtained from MySQL, but using DTrace still provides a benefit because we don&#39;t have to enable anything in the MySQL configuration, possibly making us restart the server. I&#39;m providing these scripts in the <a href="http://hell.jedicoder.net/files/MySQLDTraceKit.tar.gz">MySQLDTraceKit.tar.gz</a><br>Hopefully in the near future we will have real MySQL probes.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="sdcAnalytics.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/sdcAnalytics.html">MiCloudAPI Analysis</a>&nbsp;<a href="index.html?page=sdcAnalytics.md">(sdcAnalytics.md)</a><a href="#sdcAnalytics.md"></a></h1><br/><h1>MiCloud API Analysis</h1>
+<p>MiCloud繼承Joyent的雲端平台，提供有一個進階的服務監控方式 -- Dtrace，這是個非常進階的狀態監控系統，原生於Solaris Unix上，已有Mac與SmartOS的實作套件，亦可於MiCloud環境上直接使用。本篇講解如何使用CloudAPI操作此部份分析功能…<br>首先請大家先準備好Node.js環境與CloudAPI，假設大家已經安裝好Node.js，那只要透過下面指令就可以安裝CloudAPI(由於SDC環境持續改板中，請安裝對應目前MiCloud環境的smartdc套件，目前選定的是6.5.4版本的smartdc): </p>
+<pre><code>npm install smartdc@6.5.4</code></pre>
+<p>安裝好相關套件後，可以透過sdc-describeanalytics指令查詢有哪些可用分析：</p>
+<pre><code>$ sdc-describeanalytics</code></pre>
+<p>針對回應的部份將會相當長…其中切幾個部分來看：</p>
+<p>(1). 模組概述： 此部份為所有監控項目的大略說明</p>
+<pre><code>{
+  &quot;modules&quot;: {
+    &quot;cpu&quot;: {
+      &quot;label&quot;: &quot;CPU&quot;
+    },
+    &quot;memory&quot;: {
+      &quot;label&quot;: &quot;Memory&quot;
+    },
+    &quot;mysql&quot;: {
+      &quot;label&quot;: &quot;MySQL&quot;
+    },
+    …(略)
+    &quot;zfs&quot;: {
+      &quot;label&quot;: &quot;ZFS&quot;
+    }
+  },</code></pre>
+<p>(2). 欄位說明： 此部份為每種欄位的設定說明</p>
+<pre><code>  &quot;fields&quot;: {
+    &quot;zonename&quot;: {
+      &quot;label&quot;: &quot;zone name&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;pid&quot;: {
+      &quot;label&quot;: &quot;process identifier&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;execname&quot;: {
+      &quot;label&quot;: &quot;application name&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    …(略)
+    &quot;errno&quot;: {
+      &quot;label&quot;: &quot;error code&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;zdataset&quot;: {
+      &quot;label&quot;: &quot;ZFS dataset&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    }
+  },</code></pre>
+<p>(3). 型別說明：此部份說明於分析上定義的基本資料型態有哪些...</p>
+<pre><code>  &quot;types&quot;: {
+    &quot;string&quot;: {
+      &quot;name&quot;: &quot;string&quot;,
+      &quot;arity&quot;: &quot;discrete&quot;,
+      &quot;unit&quot;: &quot;&quot;
+    },
+    &quot;subsecond&quot;: {
+      &quot;arity&quot;: &quot;numeric&quot;,
+      &quot;unit&quot;: &quot;seconds&quot;,
+      &quot;abbr&quot;: &quot;s&quot;,
+      &quot;base&quot;: 10,
+      &quot;power&quot;: -3,
+      &quot;name&quot;: &quot;subsecond&quot;
+    },
+    …(略)
+    &quot;number&quot;: {
+      &quot;arity&quot;: &quot;numeric&quot;,
+      &quot;name&quot;: &quot;number&quot;,
+      &quot;unit&quot;: &quot;&quot;
+    }
+  },</code></pre>
+<p>(4). 可用監控設定說明： 這個是主要監控要設定的參考值...</p>
+<pre><code>  &quot;metrics&quot;: [
+    {
+      &quot;module&quot;: &quot;cpu&quot;,
+      &quot;stat&quot;: &quot;thread_samples&quot;,
+      &quot;label&quot;: &quot;thread samples&quot;,
+      &quot;interval&quot;: &quot;interval&quot;,
+      &quot;fields&quot;: [
+        &quot;zonename&quot;,
+        &quot;pid&quot;,
+        &quot;execname&quot;,
+        &quot;psargs&quot;,
+        &quot;ppid&quot;,
+        &quot;pexecname&quot;,
+        &quot;ppsargs&quot;,
+        &quot;subsecond&quot;
+      ],
+      &quot;unit&quot;: &quot;samples&quot;
+    },
+    {
+      &quot;module&quot;: &quot;cpu&quot;,
+      &quot;stat&quot;: &quot;thread_executions&quot;,
+      &quot;label&quot;: &quot;thread executions&quot;,
+      &quot;interval&quot;: &quot;interval&quot;,
+      &quot;fields&quot;: [
+        &quot;zonename&quot;,
+        &quot;pid&quot;,
+        &quot;execname&quot;,
+        &quot;psargs&quot;,
+        &quot;ppid&quot;,
+        &quot;pexecname&quot;,
+        &quot;ppsargs&quot;,
+        &quot;leavereason&quot;,
+        &quot;runtime&quot;,
+        &quot;subsecond&quot;
+      ],
+      &quot;unit&quot;: &quot;operations&quot;
+    },…(略)
+    {
+      &quot;module&quot;: &quot;zfs&quot;,
+      &quot;stat&quot;: &quot;dataset_quota&quot;,
+      &quot;label&quot;: &quot;quota size&quot;,
+      &quot;interval&quot;: &quot;point&quot;,
+      &quot;fields&quot;: [
+        &quot;zdataset&quot;
+      ],
+      &quot;type&quot;: &quot;size&quot;
+    }
+  ],</code></pre>
+<p>(5). 轉換說明：此部份可以透過IP轉換地理位置，來進階顯示於世界地圖上…</p>
+<pre><code>  &quot;transformations&quot;: {
+    &quot;geolocate&quot;: {
+      &quot;label&quot;: &quot;geolocate IP addresses&quot;,
+      &quot;fields&quot;: [
+        &quot;raddr&quot;
+      ]
+    },
+    &quot;reversedns&quot;: {
+      &quot;label&quot;: &quot;reverse dns IP addresses lookup&quot;,
+      &quot;fields&quot;: [
+        &quot;raddr&quot;
+      ]
+    }
+  }
+}</code></pre>
+<p>建立分析項目前，我們先來看看建立分析的指令… </p>
+<pre><code>$ sdc-createinstrumentation --help
+sdc-createinstrumentation [--account string] [--clone number] [--debug boolean] [--decomposition string] [--help boolean] [--identity path] [--keyId string] [--module string] [--predicate string] [--stat string] [--url url]</code></pre>
+<p>這邊我們先測試監控cpu的值，使用&quot;--module cpu --stat usage&quot;來建立分析項目，而執行後，系統匯吐回完整的設定值：</p>
+<pre><code>$ sdc-createinstrumentation --module cpu --stat usage
+{
+  &quot;module&quot;: &quot;cpu&quot;,
+  &quot;stat&quot;: &quot;usage&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1371829609584,
+  &quot;value-scope&quot;: &quot;point&quot;,
+  &quot;id&quot;: &quot;3&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/peihsinsu@hotmail.com/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p>植入監控後，接下來就是採收了，剛剛上面的監控設定好後，有回傳整個監控的詳細設定，其中有個id欄位，是整個監控取值的重點，透過sdc-getinstrumentation加上id來取回監控的結果…<br>首先來看看sdc-getinstrumentation可以使用哪些參數：</p>
+<pre><code>$ sdc-getinstrumentation --help
+sdc-getinstrumentation [--account string] [--debug boolean] [--help boolean] [--identity path] [--keyId string] [--value boolean] [--url url]  instrumentation_id</code></pre>
+<p>這邊我們使用&quot;--value true&quot;來指定回傳部分為值，並在最後帶入&quot;3&quot;，就是剛剛建完監控所回傳的id欄位值，然後我們可以得到下面的結果：</p>
+<pre><code>$ sdc-getinstrumentation --value true 3
+{
+  &quot;value&quot;: 0,
+  &quot;transformations&quot;: {},
+  &quot;start_time&quot;: 1371829715,
+  &quot;duration&quot;: 1,
+  &quot;end_time&quot;: 1371829716,
+  &quot;nsources&quot;: 1,
+  &quot;minreporting&quot;: 1,
+  &quot;requested_start_time&quot;: 1371829715,
+  &quot;requested_duration&quot;: 1,
+  &quot;requested_end_time&quot;: 1371829716
+}
+
+$ sdc-getinstrumentation --value true 3
+{
+  &quot;value&quot;: 48,
+  &quot;transformations&quot;: {},
+  &quot;start_time&quot;: 1371829863,
+  &quot;duration&quot;: 1,
+  &quot;end_time&quot;: 1371829864,
+  &quot;nsources&quot;: 1,
+  &quot;minreporting&quot;: 1,
+  &quot;requested_start_time&quot;: 1371829863,
+  &quot;requested_duration&quot;: 1,
+  &quot;requested_end_time&quot;: 1371829864
+}</code></pre>
+<p>但是當我們有一台以上機器時候，上面這樣的結果值就很難滿足我們監控的需求，這時候可以加入decomposition藍未來將結果做某個屬性的分類… 下面是使用zonename(就是主機建立時候系統所給予的主機ID)來建立的監控：</p>
+<pre><code>$ sdc-createinstrumentation --module cpu --stat usage --decomposition zonename
+{
+  &quot;module&quot;: &quot;cpu&quot;,
+  &quot;stat&quot;: &quot;usage&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [
+    &quot;zonename&quot;
+  ],
+  &quot;value-dimension&quot;: 2,
+  &quot;value-arity&quot;: &quot;discrete-decomposition&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1371830663771,
+  &quot;value-scope&quot;: &quot;point&quot;,
+  &quot;id&quot;: &quot;4&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/peihsinsu@hotmail.com/analytics/instrumentations/4/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p>建立完成後，取值就會發現value部分將會帶出每台主機的ID，並且匯顯示對應的值...</p>
+<pre><code>$ sdc-getinstrumentation --value true 4
+{
+  &quot;value&quot;: {
+    &quot;4066be38-321a-4884-8979-d8629284d2d0&quot;: 0
+  },
+  &quot;transformations&quot;: {},
+  &quot;start_time&quot;: 1371830729,
+  &quot;duration&quot;: 1,
+  &quot;end_time&quot;: 1371830730,
+  &quot;nsources&quot;: 1,
+  &quot;minreporting&quot;: 1,
+  &quot;requested_start_time&quot;: 1371830729,
+  &quot;requested_duration&quot;: 1,
+  &quot;requested_end_time&quot;: 1371830730
+}</code></pre>
+<p>另外，下面換監控記憶體的使用量，採用&quot;--module memory --stat rss&quot;來監控主機，一樣以&quot;--decomposition zonename&quot;來分類...</p>
+<pre><code>$ sdc-createinstrumentation --module memory --stat rss --decomposition zonename
+{
+  &quot;module&quot;: &quot;memory&quot;,
+  &quot;stat&quot;: &quot;rss&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [
+    &quot;zonename&quot;
+  ],
+  &quot;value-dimension&quot;: 2,
+  &quot;value-arity&quot;: &quot;discrete-decomposition&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1371830787956,
+  &quot;value-scope&quot;: &quot;point&quot;,
+  &quot;id&quot;: &quot;5&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/peihsinsu@hotmail.com/analytics/instrumentations/5/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p>接下來可以透過sdc-getinstrumentation來取值… 此時搭配json commond line tool可以更有效率的切割資料...</p>
+<pre><code>$ sdc-getinstrumentation --value true 5 | json value
+{
+  &quot;4066be38-321a-4884-8979-d8629284d2d0&quot;: 84439040
+}</code></pre>
+<p>當系統希望取記憶體使用數值來做其他處理時，我們也可以透過下面的方式，只把&quot;值&quot;取出來就好...</p>
+<pre><code>$ sdc-getinstrumentation --value true 5 | json value.4066be38-321a-4884-8979-d8629284d2d0
+84439040</code></pre>
+<p>PS: 關於json command tools，請參考：<a href="http://opennodes.github.io/wiki/html/jsontool.html"><a href="http://opennodes.github.io/wiki/html/jsontool.html">http://opennodes.github.io/wiki/html/jsontool.md</a></a></p>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+API.html">MiCloud API</a>&nbsp;<a href="index.html?page=MiCloud+API.md">(MiCloud+API.md)</a><a href="#MiCloud+API.md"></a></h1><br/><h1>MiCloud API</h1>
 <p>本文件為MiCloud API之簡短說明文件，MiCloud使用Joyent服務，進行IaaS環境部署，基於Joyent提供之API套件進行MiCloud API相關功能之提供。</p>
 <h2>MiCloud API簡介</h2>
@@ -2649,363 +3132,6 @@ Requested transition is not acceptable due to current resource state
 simonsuteki-MacBook-Pro:~ simonsu$ sdc-stopmachine 845f21fe-1910-4b38-a4cae2a81144f9a2
 # Confirm stop OK and delete...
 simonsuteki-MacBook-Pro:~ simonsu$ sdc-deletemachine 845f21fe-1910-4b38-a4cae2a81144f9a2</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="PuttyLoginErrorCannotAgreeAClientToServerCipher.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/PuttyLoginErrorCannotAgreeAClientToServerCipher.html">PUTTY連線錯誤訊息：Cannot Agree  A Client To Server Cipher</a>&nbsp;<a href="index.html?page=PuttyLoginErrorCannotAgreeAClientToServerCipher.md">(PuttyLoginErrorCannotAgreeAClientToServerCipher.md)</a><a href="#PuttyLoginErrorCannotAgreeAClientToServerCipher.md"></a></h1><br/><h1>Putty登入SmartOS錯誤訊息：Couldn&#39;t agree a client-to-server cipher</h1>
-<p>申請SmartOS之用戶，如遇到登入錯誤訊息如下：<br><img src='images/PuttyLoginErrorCannotAgreeAClientToServerCipher-CannotAgreeAClientToServerCipher.png' align='center'/></p>
-<p>則可能原因有數種，您可檢查下面項目：</p>
-<ul>
-<li>確認SSH Key已經上傳，且本機之連線已經使用SSH私鑰加密。</li>
-<li>針對SmartOS，您可重新產生SSH Key並重新上傳至Portal，應該就可以直些連線。</li>
-<li>如上述均未能解決連線問題，您可確認Putty版本是否為最新，可至Putty官方網站下載新版本軟體，重新執行即可正常連線。</li>
-<li>如均為您解決您的問題，可聯繫<a href="mailto:service@micloud.tw">MiCloud Service</a></li>
-</ul>
-<p>參考：</p>
-<ul>
-<li><a href="http://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=putty&amp;source=web&amp;cd=1&amp;ved=0CDIQFjAA&amp;url=http%3A%2F%2Fwww.chiark.greenend.org.uk%2F~sgtatham%2Fputty%2Fdownload.html&amp;ei=YJbXTtDACITKmQXppsXtCw&amp;usg=AFQjCNEawi7s0aRUeJP3qKnncgvPiSqZYA&amp;sig2=-7FhRbxa0seZVhrrNQUBnw">Putty官方網站</a></li>
-<li><a href="http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001">http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001</a></li>
-</ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="SmartOS+Install+Oracle.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/SmartOS+Install+Oracle.html">SmartOS如何安裝Oracle</a>&nbsp;<a href="index.html?page=SmartOS+Install+Oracle.md">(SmartOS+Install+Oracle.md)</a><a href="#SmartOS+Install+Oracle.md"></a></h1><br/><h1>SmartOS install Oracle</h1>
-<h2>準備</h2>
-<p>開始安裝Oracle Universal前，的準備工作：</p>
-<ul>
-<li>建立資料庫專用帳戶、群組與目錄</li>
-<li>修改主機Shared Memory設定</li>
-<li>安裝X11相關套件</li>
-</ul>
-<p>設定步驟可參考下面指令：</p>
-<pre><code>admin$ su
-...
-# groupadd -g 1000 dba
-# groupadd -g 1001 oinstall
-# groupadd -g 1002 oper
-# mkdir -p /u01/app/oracle
-# useradd -u 1000 -g oinstall -G dba,oper -s /bin/bash -d /u01/app/oracle oracle
-# chown -R oracle:dba /u01
-# mkdir -p /u02/oradata
-# chown -R oracle:dba /u02
-# passwd oracle
-...
-# projadd -U oracle -K &quot;project.max-shm-memory=(priv,2GB,deny)&quot; user.oracle
-# exit
-admin$ su oracle
-...</code></pre>
-<h2>遠端安裝Oracle</h2>
-<p>在開始遠端安裝Oracle之前，您需要先安裝X11相關套件，於Mac OS, Linux上以支援X11服務，您可以開啓式窗界面，然後直接使用下面指令將X Window Forward回到您的桌面：</p>
-<pre><code>$xhost +
-access control disabled, clients can connect from any host
-$ssh -X oracle@your.machine.ip</code></pre>
-<p>完成X11套件設定與安裝後，您可以直接下載Oracle之套件進行解壓縮安裝，安裝步驟如下：</p>
-<pre><code>$ ./runInstaller -ignoreSysPrereqs
-Starting Oracle Universal Installer...
-
-Checking installer requirements...
-
-Checking operating system version: must be 5.10.    Actual 5.11
-Failed &lt;&lt;&lt;&lt;
-
-
-&gt;&gt;&gt; Ignoring required pre-requisite failures. Continuing...
-
-Preparing to launch Oracle Universal Installer ...</code></pre>
-<p>注意：OpenSolaris (5.11)版本非Oracle原廠建議之作業系統，因此安裝前需要加設作業系統檢查參數：-ignoreSysPrereqs</p>
-<h2>其他資訊</h2>
-<p>如果您需要更多有關於Oracle之安裝資訊，您可以參考Oracle installation manuals及 The Cuddletech SAs Guide to Oracle.</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="What+is+Smart+Machine.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/What+is+Smart+Machine.html">何謂Smart Machine?</a>&nbsp;<a href="index.html?page=What+is+Smart+Machine.md">(What+is+Smart+Machine.md)</a><a href="#What+is+Smart+Machine.md"></a></h1><br/><h1>SmartMachine說明</h1>
-<p>SmartMachine係指美國Joyent所研發SDC(SmartDatacenter)上之虛擬主機。SDC提升虛擬層的各項技術，達到超越市面上一般虛擬機器的效能，因此於SDC上提供之各項服務均優於一般虛擬主機。SmartMachine為植基於Solaris Kernel所發展的作業系統，全盤建構於ZFS檔案系統上。</p>
-<p>該作業系統無縫的與SDC做緊密的結合，可提供同平台的其他作業系統將近一倍以上的運算能力，省去跨系統溝通的耗損，能夠提供用戶動態調整資源、更符合用戶的需求，達到快速部署之應用能力。</p>
-<p>您可透過MiCloud雲端管理系統 (<a href="http://micloud.tw">http://micloud.tw</a>) 監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache HTTPD、PHP，以及遠端管理界面webmin等。</p>
-<hr>
-<h2>更進階的說明，可以在Joyent Wiki搜尋到</h2>
-<ul>
-<li><a href="http://wiki.joyent.com/display/smart/Getting+Started+with+SmartMachines">Joyent wiki</a></li>
-</ul>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Update+Timezone.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Update+Timezone.html">如何更新主機時區？</a>&nbsp;<a href="index.html?page=Update+Timezone.md">(Update+Timezone.md)</a><a href="#Update+Timezone.md"></a></h1><br/><h1>如何更新主機時區？</h1>
-<h2>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h2>
-<p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
-<pre><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></pre>
-<p>(2) 執行 date -u</p>
-<pre><code># date -u</code></pre>
-<p>(3) 輸入 date 看看是否已經是正確時區</p>
-<pre><code># date</code></pre>
-<hr>
-<h2>SmartMachine 設定時間的方式</h2>
-<p>選擇TimeZone時區</p>
-<pre><code>[root@XXXX /opt/local/etc/nginx]# tzselect
-Please identify a location so that time zone rules can be set correctly.
-Please select a continent or ocean.
-1) Africa
-2) Americas
-3) Antarctica
-4) Arctic Ocean
-5) Asia
-6) Atlantic Ocean
-7) Australia
-8) Europe
-9) Indian Ocean
-10) Pacific Ocean
-11) none - I want to specify the time zone using the POSIX TZ format.
-#? 5
-Please select a country or region.
-1) Afghanistan                                            26) Laos
-2) Armenia                                                27) Lebanon
-3) Azerbaijan                                             28) Macao
-4) Bahrain                                                29) Malaysia
-5) Bangladesh                                             30) Mongolia
-6) Bhutan                                                 31) Myanmar (Burma)
-7) Brunei                                                 32) Nepal
-8) Cambodia                                               33) Oman
-9) China                                                  34) Pakistan
-10) Cyprus                                                 35) Palestine
-11) East Timor                                             36) Philippines
-12) Georgia                                                37) Qatar
-13) Hong Kong                                              38) Russia
-14) India                                                  39) Saudi Arabia
-15) Indonesia                                              40) Singapore
-16) Iran                                                   41) Sri Lanka
-17) Iraq                                                   42) Syria
-18) Israel                                                 43) Taiwan
-19) Japan                                                  44) Tajikistan
-20) Jordan                                                 45) Thailand
-21) Kazakhstan                                             46) Turkmenistan
-22) Korea (North)                                          47) United Arab Emirates
-23) Korea (South)                                          48) Uzbekistan
-24) Kuwait                                                 49) Vietnam
-25) Kyrgyzstan                                             50) Yemen
-#? 43
-
-The following information has been given:
-
-Taiwan
-
-Therefore TZ=&#39;Asia/Taipei&#39; will be used.
-Local time is now:       Tue Nov  1 18:33:44 CST 2011
-Universal Time is now:   Tue Nov  1 10:33:44 UTC 2011
-Is the above information OK?
-1) Yes
-2) No
-#? 1
-Here is the TZ value again, this time on standard output:
-Asia/Taipei</code></pre>
-<p>修改Time Zone設定擋</p>
-<pre><code>[root@XXXX /opt/local/etc/nginx]# vi /etc/default/init</code></pre>
-<p>修改TZ設定內容為Asia/Taipei</p>
-<pre><code>TZ=Asia/Taipei</code></pre>
-<p>重新開機生效</p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="View+Used+Resources.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/View+Used+Resources.html">如何檢視已使用的資源?</a>&nbsp;<a href="index.html?page=View+Used+Resources.md">(View+Used+Resources.md)</a><a href="#View+Used+Resources.md"></a></h1><br/><h1>如何檢視已使用的資源?</h1>
-<h2>檢查磁碟使用情況</h2>
-<table>
-<thead>
-<tr>
-<th>如何得到這個資訊</th>
-<th>請使用此命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>查詢整個文件系統的磁碟空間使用情況</td>
-<td>df -ht</td>
-</tr>
-<tr>
-<td>查詢當前目錄的磁碟空間使用情況</td>
-<td>du -h</td>
-</tr>
-<tr>
-<td>查詢摘要目錄使用的空間</td>
-<td>du -hs /opt</td>
-</tr>
-</tbody>
-</table>
-<p>在這些命令中的-h參數的結果，是以“人類可讀”的形式呈現。</p>
-<h2>從 shell 檢查程序</h2>
-<table>
-<thead>
-<tr>
-<th>相關資訊</th>
-<th>使用此命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>通用處理器和內存統計資料</td>
-<td>prstat -Z -s cpu <br>If prstat changes your terminal settings, use the reset command to reset them.</td>
-</tr>
-<tr>
-<td>正在運行的程序列表</td>
-<td>ps -elf</td>
-</tr>
-<tr>
-<td>admin用戶程序列表</td>
-<td>ps -uadmin -o pcpu,user,pid,args,comm,s<br>ps -uadmin -o user,args,pcpu,pmem,vsz,time,comm</td>
-</tr>
-<tr>
-<td>MySQL用戶程序</td>
-<td>ps -umysql -o pcpu,vsz,osz,args,comm,s</td>
-</tr>
-<tr>
-<td>使用80 port的所有程序</td>
-<td>/root/bin/pcp -p 80</td>
-</tr>
-<tr>
-<td>2806過程中使用的所有埠</td>
-<td>/root/bin/pcp -P 28068</td>
-</tr>
-<tr>
-<td>所有埠和程序的資訊</td>
-<td>/root/bin/pcp -a</td>
-</tr>
-<tr>
-<td>CPU使用率</td>
-<td>sudo /root/jinf -C</td>
-</tr>
-<tr>
-<td>記憶體使用</td>
-<td>sudo /root/jinf -m</td>
-</tr>
-<tr>
-<td>互換空間的使用情況</td>
-<td>sudo /root/jinf -S</td>
-</tr>
-</tbody>
-</table>
-<h2>檢查Webmin的過程</h2>
-<ul>
-<li>登錄到Virtualmin（請參考帳戶登錄及重要網址一文 ）。</li>
-<li>點擊Webmin在左上方的選單，然後點選系統=&gt;運行的程序。</li>
-<li>點擊PID、用戶、記憶體、或是CPU，以便為您的帳戶上運行的程序列表，分別按不同標準進行排序。</li>
-</ul>
-<hr>
-<p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="View+network+routing+instructions.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/View+network+routing+instructions.html">如何檢視網路路由?</a>&nbsp;<a href="index.html?page=View+network+routing+instructions.md">(View+network+routing+instructions.md)</a><a href="#View+network+routing+instructions.md"></a></h1><br/><h1>SmartOS檢視網路路由指令</h1>
-<p>透過netstat指令檢視路由表：</p>
-<pre><code># netstat -rn</code></pre>
-<pre><code>Routing Table: IPv4
-Destination           Gateway           Flags  Ref     Use     Interface
--------------------- -------------------- ----- ----- ---------- ---------
-default              211.78.255.254       UG        3        193
-127.0.0.1            127.0.0.1            UH        3          8 lo0
-211.78.255.0         211.78.255.31        U         3          0 net0
-
-Routing Table: IPv6
-Destination/Mask            Gateway                   Flags Ref   Use    If
---------------------------- --------------------------- ----- --- ------- -----
-::1                         ::1                         UH      2       0 lo0</code></pre>
-<p>檢視到某個網站的路由：</p>
-<p><code># traceroute google.com</code></p>
-<pre><code>traceroute: Warning: google.com has multiple addresses; using 74.125.31.138
-traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
-1  254.2.......54)  0.189 ms  0.194 ms  0.096 ms
-2  211..........1 ms  0.453 ms  0.444 ms
-....</code></pre>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Used+commmands.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Used+commmands.html">常用指令集有哪些?</a>&nbsp;<a href="index.html?page=Used+commmands.md">(Used+commmands.md)</a><a href="#Used+commmands.md"></a></h1><br/><h1>常用指令集</h1>
-<p>各版本套件指令比較表<br>雖然目前許多市面常見的作業系統例如Ubuntu、Debian、CentOS、Fedora，甚至是目前Micloud所用的SmartOS都是以linux為底的架構。不過由於開發人員的不同在指令的操作上也會有稍稍的不同，在套件的指令集中，我們利用列表來比較各版本不同的指令:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Ubuntu、Debian</th>
-<th>CentOS、Fedora</th>
-<th>SmartOS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>查詢已安裝的套件</td>
-<td>apt-cache pkgnames</td>
-<td>yum list</td>
-<td>pkgin list</td>
-</tr>
-<tr>
-<td>查詢套件可安裝套件的名稱或關鍵字</td>
-<td>apt-cache search &quot;套件名稱&quot;或apt-cache search &quot;關鍵字&quot;</td>
-<td>yum search &quot;套件名稱&quot;或yum search &quot;關鍵字&quot;</td>
-<td>pkgin search &quot;套件名稱&quot;或pkgin search &quot;關鍵字&quot;</td>
-</tr>
-<tr>
-<td>安裝套件</td>
-<td>apt-get install &quot;套件名稱&quot;</td>
-<td>yum install &quot;套件名稱&quot;</td>
-<td>pkgin install &quot;套件名稱&quot;</td>
-</tr>
-<tr>
-<td>移除套件</td>
-<td>apt-get remove &quot;套件名稱&quot;</td>
-<td>yum remove &quot;套件名稱&quot;</td>
-<td>pkgin remove &quot;套件名稱&quot;</td>
-</tr>
-<tr>
-<td>升級所有己安裝的最新列表</td>
-<td>apt-get update</td>
-<td>yum update</td>
-<td>pkgin update</td>
-</tr>
-<tr>
-<td>下載檔案</td>
-<td>wget &quot;網址&quot;</td>
-<td>wget &quot;網址&quot;</td>
-<td>wget &quot;網址&quot;</td>
-</tr>
-<tr>
-<td>複製檔案</td>
-<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
-<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
-<td>cp &quot;來源檔&quot;  &quot;目的檔&quot;</td>
-</tr>
-<tr>
-<td>刪除檔案</td>
-<td>rm &quot;檔案或目錄&quot;</td>
-<td>rm &quot;檔案或目錄&quot;</td>
-<td>rm &quot;檔案或目錄&quot;</td>
-</tr>
-<tr>
-<td>檢視檔案內容</td>
-<td>cat &quot;檔案名稱&quot;</td>
-<td>cat &quot;檔案名稱&quot;</td>
-<td>cat &quot;檔案名稱&quot;</td>
-</tr>
-<tr>
-<td>切換目錄</td>
-<td>cd &quot;相對路徑或絕對路徑&quot;</td>
-<td>cd &quot;相對路徑或絕對路徑&quot;</td>
-<td>cd &quot;相對路徑或絕對路徑&quot;</td>
-</tr>
-<tr>
-<td>顯示所在目錄</td>
-<td>pwd</td>
-<td>pwd</td>
-<td>pwd</td>
-</tr>
-<tr>
-<td>檢視目錄下的檔案</td>
-<td>ls</td>
-<td>ls</td>
-<td>ls</td>
-</tr>
-<tr>
-<td>重新開機</td>
-<td>reboot</td>
-<td>reboot</td>
-<td>reboot</td>
-</tr>
-</tbody>
-</table>
-</p><hr style="border-top: 1px dotted #f00;"/><p  id="Micloud+Features.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Micloud+Features.html">MiCloud的特點是什麼？</a>&nbsp;<a href="index.html?page=Micloud+Features.md">(Micloud+Features.md)</a><a href="#Micloud+Features.md"></a></h1><br/><h1>MiCloud的特點</h1>
-<p>有別於台灣其他業者，不論是在服務或技術方面皆持續完善及創新，以符合整個市場需求，MiCloud是您服務的最佳選擇。MiCloud擁有以下的特點：</p>
-<p>(1) 線上快速申請</p>
-<p>透過 <a href="http://micloud.tw">http://micloud.tw</a> 即可立即申請專屬的虛擬主機。</p>
-<p>(2) 彈性付費</p>
-<p>針對不同的虛擬主機提供不同的計費方式，以分計費，讓您用多少、付多少。</p>
-<p>詳細計費方式，請參考<a href="http://portal.micloud.tw/price/price">MiCloud產品價目表</a></p>
-<p>(3) 提供免費主機</p>
-<p>每個帳號皆可線上申請免費主機(256MB) 試用，直接至<a href="http://micloud.tw">MiCloud平台</a> ， 點選”免費試用”，免付用卡、免個人資料，1分鐘即可擁有個人免費主機。</p>
-<p>(4) 多樣化作業系統</p>
-<p>MiCloud提供三種不同的虛擬主機服務：SmartMachine、Ubuntu Linux、Windows R2 2008，分別可針對不同需求有不同的記憶體、CPU、硬碟規格。</p>
-<p>(5) 高效能</p>
-<p>MiCloud讓企業自訂服務條件，自動調整CPU、記憶體、網路等，透過作業系統內建虛擬化管理功能，直接控管硬體資源，讓效能最大化。</p>
-<p>(6) 高安全性</p>
-<ul>
-<li>MiCloud引進Joyent公有雲架構，從SmartDataCenter的ZFS架構，使用Zone安全隔離每部虛擬機器的檔案空間，並加上網路上安全規劃的實體隔離，達到虛擬主機內部安全機制，並加上MiCloud特殊防火牆規劃，特別防護網路上多種攻擊。</li>
-<li>使用SSH key連線方式，保護虛擬主機之擁有者，亦可隔離無金鑰之駭客。</li>
-<li>嚴密及安全的機房管理<br>*機房門禁管理<br>*24小時機房監視錄影系統<br>*24小時網路監控<br>*防火牆之保護<br>*提供不斷電系統</li>
-</ul>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="Share+by+qrtt1.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/Share+by+qrtt1.html">Micloud API</a>&nbsp;<a href="index.html?page=Share+by+qrtt1.md">(Share+by+qrtt1.md)</a><a href="#Share+by+qrtt1.md"></a></h1><br/><h1>聖藍科技分享文章</h1>
 <p>感謝聖藍科技使用MiCloud服務，透過CloudAPI提供聖藍科技自動Scale之功能以架構多媒體影音服務，以下文章轉載自qrtt1 github repository<a href="http://www.accupass.com/Event/Register?eid=359099570305727">本文</a></p>
 <h2>簡介</h2>

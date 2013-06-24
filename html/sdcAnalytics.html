@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>sdcAnalytics</title>
+    <meta name="description" content="sdcAnalytics">
+    <meta name="keywords" content="sdcAnalytics">
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="/index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="/index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>MiCloud API Analysis</h1>
+<p>MiCloud繼承Joyent的雲端平台，提供有一個進階的服務監控方式 -- Dtrace，這是個非常進階的狀態監控系統，原生於Solaris Unix上，已有Mac與SmartOS的實作套件，亦可於MiCloud環境上直接使用。本篇講解如何使用CloudAPI操作此部份分析功能…<br>首先請大家先準備好Node.js環境與CloudAPI，假設大家已經安裝好Node.js，那只要透過下面指令就可以安裝CloudAPI(由於SDC環境持續改板中，請安裝對應目前MiCloud環境的smartdc套件，目前選定的是6.5.4版本的smartdc): </p>
+<pre><code>npm install smartdc@6.5.4</code></pre>
+<p>安裝好相關套件後，可以透過sdc-describeanalytics指令查詢有哪些可用分析：</p>
+<pre><code>$ sdc-describeanalytics</code></pre>
+<p>針對回應的部份將會相當長…其中切幾個部分來看：</p>
+<p>(1). 模組概述： 此部份為所有監控項目的大略說明</p>
+<pre><code>{
+  &quot;modules&quot;: {
+    &quot;cpu&quot;: {
+      &quot;label&quot;: &quot;CPU&quot;
+    },
+    &quot;memory&quot;: {
+      &quot;label&quot;: &quot;Memory&quot;
+    },
+    &quot;mysql&quot;: {
+      &quot;label&quot;: &quot;MySQL&quot;
+    },
+    …(略)
+    &quot;zfs&quot;: {
+      &quot;label&quot;: &quot;ZFS&quot;
+    }
+  },</code></pre>
+<p>(2). 欄位說明： 此部份為每種欄位的設定說明</p>
+<pre><code>  &quot;fields&quot;: {
+    &quot;zonename&quot;: {
+      &quot;label&quot;: &quot;zone name&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;pid&quot;: {
+      &quot;label&quot;: &quot;process identifier&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;execname&quot;: {
+      &quot;label&quot;: &quot;application name&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    …(略)
+    &quot;errno&quot;: {
+      &quot;label&quot;: &quot;error code&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;zdataset&quot;: {
+      &quot;label&quot;: &quot;ZFS dataset&quot;,
+      &quot;type&quot;: &quot;string&quot;
+    }
+  },</code></pre>
+<p>(3). 型別說明：此部份說明於分析上定義的基本資料型態有哪些...</p>
+<pre><code>  &quot;types&quot;: {
+    &quot;string&quot;: {
+      &quot;name&quot;: &quot;string&quot;,
+      &quot;arity&quot;: &quot;discrete&quot;,
+      &quot;unit&quot;: &quot;&quot;
+    },
+    &quot;subsecond&quot;: {
+      &quot;arity&quot;: &quot;numeric&quot;,
+      &quot;unit&quot;: &quot;seconds&quot;,
+      &quot;abbr&quot;: &quot;s&quot;,
+      &quot;base&quot;: 10,
+      &quot;power&quot;: -3,
+      &quot;name&quot;: &quot;subsecond&quot;
+    },
+    …(略)
+    &quot;number&quot;: {
+      &quot;arity&quot;: &quot;numeric&quot;,
+      &quot;name&quot;: &quot;number&quot;,
+      &quot;unit&quot;: &quot;&quot;
+    }
+  },</code></pre>
+<p>(4). 可用監控設定說明： 這個是主要監控要設定的參考值...</p>
+<pre><code>  &quot;metrics&quot;: [
+    {
+      &quot;module&quot;: &quot;cpu&quot;,
+      &quot;stat&quot;: &quot;thread_samples&quot;,
+      &quot;label&quot;: &quot;thread samples&quot;,
+      &quot;interval&quot;: &quot;interval&quot;,
+      &quot;fields&quot;: [
+        &quot;zonename&quot;,
+        &quot;pid&quot;,
+        &quot;execname&quot;,
+        &quot;psargs&quot;,
+        &quot;ppid&quot;,
+        &quot;pexecname&quot;,
+        &quot;ppsargs&quot;,
+        &quot;subsecond&quot;
+      ],
+      &quot;unit&quot;: &quot;samples&quot;
+    },
+    {
+      &quot;module&quot;: &quot;cpu&quot;,
+      &quot;stat&quot;: &quot;thread_executions&quot;,
+      &quot;label&quot;: &quot;thread executions&quot;,
+      &quot;interval&quot;: &quot;interval&quot;,
+      &quot;fields&quot;: [
+        &quot;zonename&quot;,
+        &quot;pid&quot;,
+        &quot;execname&quot;,
+        &quot;psargs&quot;,
+        &quot;ppid&quot;,
+        &quot;pexecname&quot;,
+        &quot;ppsargs&quot;,
+        &quot;leavereason&quot;,
+        &quot;runtime&quot;,
+        &quot;subsecond&quot;
+      ],
+      &quot;unit&quot;: &quot;operations&quot;
+    },…(略)
+    {
+      &quot;module&quot;: &quot;zfs&quot;,
+      &quot;stat&quot;: &quot;dataset_quota&quot;,
+      &quot;label&quot;: &quot;quota size&quot;,
+      &quot;interval&quot;: &quot;point&quot;,
+      &quot;fields&quot;: [
+        &quot;zdataset&quot;
+      ],
+      &quot;type&quot;: &quot;size&quot;
+    }
+  ],</code></pre>
+<p>(5). 轉換說明：此部份可以透過IP轉換地理位置，來進階顯示於世界地圖上…</p>
+<pre><code>  &quot;transformations&quot;: {
+    &quot;geolocate&quot;: {
+      &quot;label&quot;: &quot;geolocate IP addresses&quot;,
+      &quot;fields&quot;: [
+        &quot;raddr&quot;
+      ]
+    },
+    &quot;reversedns&quot;: {
+      &quot;label&quot;: &quot;reverse dns IP addresses lookup&quot;,
+      &quot;fields&quot;: [
+        &quot;raddr&quot;
+      ]
+    }
+  }
+}</code></pre>
+<p>建立分析項目前，我們先來看看建立分析的指令… </p>
+<pre><code>$ sdc-createinstrumentation --help
+sdc-createinstrumentation [--account string] [--clone number] [--debug boolean] [--decomposition string] [--help boolean] [--identity path] [--keyId string] [--module string] [--predicate string] [--stat string] [--url url]</code></pre>
+<p>這邊我們先測試監控cpu的值，使用&quot;--module cpu --stat usage&quot;來建立分析項目，而執行後，系統匯吐回完整的設定值：</p>
+<pre><code>$ sdc-createinstrumentation --module cpu --stat usage
+{
+  &quot;module&quot;: &quot;cpu&quot;,
+  &quot;stat&quot;: &quot;usage&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1371829609584,
+  &quot;value-scope&quot;: &quot;point&quot;,
+  &quot;id&quot;: &quot;3&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/peihsinsu@hotmail.com/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p>植入監控後，接下來就是採收了，剛剛上面的監控設定好後，有回傳整個監控的詳細設定，其中有個id欄位，是整個監控取值的重點，透過sdc-getinstrumentation加上id來取回監控的結果…<br>首先來看看sdc-getinstrumentation可以使用哪些參數：</p>
+<pre><code>$ sdc-getinstrumentation --help
+sdc-getinstrumentation [--account string] [--debug boolean] [--help boolean] [--identity path] [--keyId string] [--value boolean] [--url url]  instrumentation_id</code></pre>
+<p>這邊我們使用&quot;--value true&quot;來指定回傳部分為值，並在最後帶入&quot;3&quot;，就是剛剛建完監控所回傳的id欄位值，然後我們可以得到下面的結果：</p>
+<pre><code>$ sdc-getinstrumentation --value true 3
+{
+  &quot;value&quot;: 0,
+  &quot;transformations&quot;: {},
+  &quot;start_time&quot;: 1371829715,
+  &quot;duration&quot;: 1,
+  &quot;end_time&quot;: 1371829716,
+  &quot;nsources&quot;: 1,
+  &quot;minreporting&quot;: 1,
+  &quot;requested_start_time&quot;: 1371829715,
+  &quot;requested_duration&quot;: 1,
+  &quot;requested_end_time&quot;: 1371829716
+}
+
+$ sdc-getinstrumentation --value true 3
+{
+  &quot;value&quot;: 48,
+  &quot;transformations&quot;: {},
+  &quot;start_time&quot;: 1371829863,
+  &quot;duration&quot;: 1,
+  &quot;end_time&quot;: 1371829864,
+  &quot;nsources&quot;: 1,
+  &quot;minreporting&quot;: 1,
+  &quot;requested_start_time&quot;: 1371829863,
+  &quot;requested_duration&quot;: 1,
+  &quot;requested_end_time&quot;: 1371829864
+}</code></pre>
+<p>但是當我們有一台以上機器時候，上面這樣的結果值就很難滿足我們監控的需求，這時候可以加入decomposition藍未來將結果做某個屬性的分類… 下面是使用zonename(就是主機建立時候系統所給予的主機ID)來建立的監控：</p>
+<pre><code>$ sdc-createinstrumentation --module cpu --stat usage --decomposition zonename
+{
+  &quot;module&quot;: &quot;cpu&quot;,
+  &quot;stat&quot;: &quot;usage&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [
+    &quot;zonename&quot;
+  ],
+  &quot;value-dimension&quot;: 2,
+  &quot;value-arity&quot;: &quot;discrete-decomposition&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1371830663771,
+  &quot;value-scope&quot;: &quot;point&quot;,
+  &quot;id&quot;: &quot;4&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/peihsinsu@hotmail.com/analytics/instrumentations/4/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p>建立完成後，取值就會發現value部分將會帶出每台主機的ID，並且匯顯示對應的值...</p>
+<pre><code>$ sdc-getinstrumentation --value true 4
+{
+  &quot;value&quot;: {
+    &quot;4066be38-321a-4884-8979-d8629284d2d0&quot;: 0
+  },
+  &quot;transformations&quot;: {},
+  &quot;start_time&quot;: 1371830729,
+  &quot;duration&quot;: 1,
+  &quot;end_time&quot;: 1371830730,
+  &quot;nsources&quot;: 1,
+  &quot;minreporting&quot;: 1,
+  &quot;requested_start_time&quot;: 1371830729,
+  &quot;requested_duration&quot;: 1,
+  &quot;requested_end_time&quot;: 1371830730
+}</code></pre>
+<p>另外，下面換監控記憶體的使用量，採用&quot;--module memory --stat rss&quot;來監控主機，一樣以&quot;--decomposition zonename&quot;來分類...</p>
+<pre><code>$ sdc-createinstrumentation --module memory --stat rss --decomposition zonename
+{
+  &quot;module&quot;: &quot;memory&quot;,
+  &quot;stat&quot;: &quot;rss&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [
+    &quot;zonename&quot;
+  ],
+  &quot;value-dimension&quot;: 2,
+  &quot;value-arity&quot;: &quot;discrete-decomposition&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1371830787956,
+  &quot;value-scope&quot;: &quot;point&quot;,
+  &quot;id&quot;: &quot;5&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/peihsinsu@hotmail.com/analytics/instrumentations/5/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p>接下來可以透過sdc-getinstrumentation來取值… 此時搭配json commond line tool可以更有效率的切割資料...</p>
+<pre><code>$ sdc-getinstrumentation --value true 5 | json value
+{
+  &quot;4066be38-321a-4884-8979-d8629284d2d0&quot;: 84439040
+}</code></pre>
+<p>當系統希望取記憶體使用數值來做其他處理時，我們也可以透過下面的方式，只把&quot;值&quot;取出來就好...</p>
+<pre><code>$ sdc-getinstrumentation --value true 5 | json value.4066be38-321a-4884-8979-d8629284d2d0
+84439040</code></pre>
+<p>PS: 關於json command tools，請參考：<a href="http://opennodes.github.io/wikihtml/jsontool.html"><a href="http://opennodes.github.io/wikihtml/jsontool.html">http://opennodes.github.io/wikihtml/jsontool.md</a></a></p>
+
+  </div>
+  </div>
+  </body>
+</html>
