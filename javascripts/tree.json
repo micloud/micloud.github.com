@@ -163,7 +163,7 @@
     "nodes": [
       {"type":"node", "link":"MiCloud+Self-Service+Portal.md","name":"在MiCloud上建置我的雲端服務"},
       {"type":"node", "link":"Using+DTrace+on+MySQL.md","name":"使用DTrace分析MySQL"},
-      {"type":"node", "link":"sdcAnalytics.md","name":"MiCloudAPI......"},
+      {"type":"node", "link":"sdcAnalytics.md","name":"MiCloudAPI Analysis"},
       {
         "name":"MiCloud API案例說明",
         "type": "folder",
