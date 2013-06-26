@@ -225,8 +225,7 @@ $ sdc-getinstrumentation --value true 3
   "requested_end_time": 1371829716
 }
 
- SimonAIR in ~
-○ → sdc-getinstrumentation --value true 3
+$ sdc-getinstrumentation --value true 3
 {
   "value": 48,
   "transformations": {},

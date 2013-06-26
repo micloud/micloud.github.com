@@ -59,9 +59,10 @@
 <p>Once enough time has passed for your changes to have been propagated to your ISP&#39;s DNS servers, you should be able to access your SmartMachine via your domain rather than its IP.</p>
 <h1>Hostname vs SmartMachine name and reverse record</h1>
 <p>1.Run these commands at the shell prompt to find out:<br>a.What is my hostname?</p>
-<p><code>hostname</code></p>
-<p>b.What is my SmartMachine name?</p>
-<p><code>zonename</code></p>
+<pre><code class="language-hostname```">
+b.What is my SmartMachine name?
+
+```zonename</code></pre>
 <p>c.What is my IP?</p>
 <p><code>cat /etc/hosts</code></p>
 <p>Out of the box your SmartMachine will have its hostname set to an internal ID of the format zonename.joyent.us.<br>You are able to access your SmartMachine by IP or <a href="http://zonename.joyent.us">http://zonename.joyent.us</a>. It is recommended that you change your hostname to one of your own choosing (example.com). This is necessary if you want to send email from your SmartMachine (forum post).</p>
@@ -207,7 +208,7 @@ openssl s_client -ssl3 -connect example.joyeurs.com:993
 Troubleshooting
 ===
 1. Seeing errors like this in /var/log/syslog</code></pre>
-<p>Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076]: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x6c;&#105;&#110;&#100;&#x61;&#64;&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x6c;&#105;&#110;&#100;&#x61;&#64;&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred (host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201] (in reply to RCPT TO command))](Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x6c;&#105;&#x6e;&#100;&#97;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#x63;&#111;&#109;">&#x6c;&#105;&#x6e;&#100;&#97;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#x63;&#111;&#109;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred  - host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201]  - in reply to RCPT TO command)</p>
+<p>Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076]: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#108;&#105;&#110;&#x64;&#97;&#64;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#109;">&#108;&#105;&#110;&#x64;&#97;&#64;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#109;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred (host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201] (in reply to RCPT TO command))](Oct 20 21:22:57 example.joyeurs.com postfix/smtp[2076: [ID 197553 mail.info] 2E35E2F68: to=<a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#108;&#105;&#110;&#x64;&#x61;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#108;&#105;&#110;&#x64;&#x61;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a>, relay=mail.example.com[8.12.37.104], delay=0, status=deferred  - host mail.example.com[8.12.37.104] said: 450 4.7.1 Client host rejected: cannot find your reverse hostname, [8.12.36.201]  - in reply to RCPT TO command)</p>
 <pre><code>
 You need to submit a ticket requesting the PTR reverse record added. When it is correct then doing host domain.tld and the host X.X.X.X will correctly resolve as shown below</code></pre>
 <p>$ host example.joyeurs.com<br>example.joyeurs.com has address 8.12.36.201<br>example.joyeurs.com mail is handled by 10 mail.example.joyeurs.com.<br>$ host 8.12.36.201<br>201.36.12.8.in-addr.arpa domain name pointer example.joyeurs.com.</p>
