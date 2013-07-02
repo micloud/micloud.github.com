@@ -10,6 +10,9 @@ MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command�
 
 ##關於 Tag：
 --------------------------------------------------------------------------------------
+Returns the value for a single tag on this machine. Note that this API is "special",
+as it returns content in text or plain; this also means you must set the Accept header to text or plain.
+
 
 __\#sdc-addmachinetags  -t  key=value  [machine id]__ 可以讓你添加新的標籤，而不是覆蓋現有的標籤
  
@@ -62,6 +65,12 @@ __\#sdc-listmachinetags [machine id]__ 可查詢所有tag與tag的值
 
 ##關於 metadata：
 --------------------------------------------------------------------------------------
+Allows you to update the metadata for a given machine. 
+Note that updating the metadata via CloudAPI will result in the metadata being updated in the running instance.
+
+The semantics of this call are sublty different that the AddMachineTags call, 
+in that any metadata keys passed in here are created if they do not exist, and overwritten if they do.
+
 
 __\#sdc-updatemachinemetadata   --metadata key=value [mahine id]__ 新增metadata
  
@@ -103,6 +112,10 @@ __\#sdc-getmachinemetadata    [mahine id]__ 查詢metadata
 
 ##關於 instrumentation：
 --------------------------------------------------------------------------------------
+Creates an instrumentation. 
+Note you can clone an existing instrumentation by passing in the parameter clone, 
+which should be a numeric id of an existing instrumentation.
+
 
 __\#sdc-createinstrumentation__      
 

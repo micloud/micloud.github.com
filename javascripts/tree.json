@@ -169,9 +169,9 @@
         "type": "folder",
         "nodes": [
           {"type":"node", "link":"MiCloud+API.md","name":"MiCloud API"},
-          {"type":"node", "link":"API+1.md","name":"Machine,Datasets,Packages相關說明"},
-          {"type":"node", "link":"API+2.md","name":"Tag,Metadata,Instrumentation相關說明"},
-          {"type":"node", "link":"API+3.md","name":"Key,Machinesnapshot及其他指令相關說明"},
+          {"type":"node", "link":"API+1.md","name":"Machine,Datasets,Packages"},
+          {"type":"node", "link":"API+2.md","name":"Tag,Metadata,Instrumentation"},
+          {"type":"node", "link":"API+3.md","name":"Key,Machinesnapshot,other"},
           {"type":"node", "link":"MiCloud+API+Implement+1.md","name":"MiCloud API實做案例(一)"},
           {"type":"node", "link":"MiCloud+API+Implement+2.md","name":"MiCloud API實做案例(二)"}
         ]
