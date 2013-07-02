@@ -6,10 +6,16 @@ MiCloud API 基本操作(三) :
 
 MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法
 
-以下將教您如何 __管理Key__,__查詢Machinesnapshot__,及其他指令。
+以下將教您如何 __管理Key__,__查詢Machinesnapshot__,及__其他指令__。
 
 ##關於 key：
 --------------------------------------------------------------------------------------
+Keys are the means by which you operate on your SSH/signing keys. 
+Currently CloudAPI supports uploads of public keys in the OpenSSH format.
+
+Note that while it's possible to provide a name attribute for an SSH key in order to use it as an human friendly alias, 
+this attribute presence is completely optional.
+
 
 __\#sdc-createkey__ 產生一個key
 
@@ -73,6 +79,12 @@ __\#sdc-listkeys__ 查詢所有key
 
 ##關於 machinesnapshot ：
 --------------------------------------------------------------------------------------
+Allows you to take a snapshot of a machine. Note that snapshots are not usable with other machines; 
+they are a point in time snapshot of "this" machine. Once you have one or more snapshots, 
+you can boot the machine from a snapshot.
+
+You can only take snapshots on machines that are of type 'smartmachine'.
+
 
 __\#sdc-createmachinesnapshot [machine id]__
 
@@ -93,7 +105,9 @@ __\#sdc-createmachinesnapshot [machine id]__
 
 __\#sdc-deletemachinesnapshot [snapshot name] --machine [machine id]__
 
-__\#sdc-getmachinesnapshot [snapshot name] --machine[machine id]__
+__\#sdc-getmachinesnapshot [snapshot name] --machine[machine id]__   
+
+You can poll on GetMachineSnapshot until the state is success.
 
 使用方式如下:
 
