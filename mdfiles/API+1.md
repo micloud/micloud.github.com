@@ -18,7 +18,9 @@ Please, note that starting with version 7.0 of CloudAPI datasets are not support
 and their usage should be replaced with images. Specially, 
 note the lack of urn attribute for images when compared with datasets.
 
-__\#sdc-getdataset [name]__  查詢單筆datasets，包含id,urn,name,os,type,description,default,requirement,version
+__\#sdc-getdataset [name]__  
+
+檢索指定的 datasets，包含其id,urn,name,os,type,description,default,requirement,version等。
 
 使用方式如下:
 
@@ -39,7 +41,9 @@ __\#sdc-getdataset [name]__  查詢單筆datasets，包含id,urn,name,os,type,de
   }
 ```
 
-__\#sdc-listdatasets__ 查詢所有datasets，包含id,urn,name,os,type,description,default,requirement,version
+__\#sdc-listdatasets__ 
+
+檢索所有的datasets，包含id,urn,name,os,type,description,default,requirement,version等。
 
 使用方式如下:
 
@@ -54,7 +58,9 @@ These resources include (but are not limited to) RAM, CPUs, CPU Caps, Lightweigh
 and Logical Networks.
 
 
-__\#sdc-getpackage [name]__ 查詢單筆package，包含name,mwmory,disk,vcpus,swap,default
+__\#sdc-getpackage [name]__ 
+
+檢索單筆的package，包含name,mwmory,disk,vcpus,swap,default等。
 
 使用方式如下:
 
@@ -73,7 +79,9 @@ __\#sdc-getpackage [name]__ 查詢單筆package，包含name,mwmory,disk,vcpus,s
 ```
 
 
-__\#sdc-listpackages__ 查詢所有package，包含name,mwmory,disk,vcpus,swap,default
+__\#sdc-listpackages__ 
+
+檢索所有package，包含name,mwmory,disk,vcpus,swap,default等。
 
 使用方式如下:
 
@@ -85,8 +93,10 @@ __\#sdc-listpackages__ 查詢所有package，包含name,mwmory,disk,vcpus,swap,d
 --------------------------------------------------------------------------------------
 
 __\#sdc-createmachine --package [name] --dataset [urn]__ 
+
 產生一台新機器(其中package與dataset必須由使用者自行輸入,而其他參數若使用者沒輸入則電腦會自動預設好)
-可以使用sdc-listpackages 與 sdc-listdatasets 查詢
+
+可以使用sdc-listpackages 與 sdc-listdatasets查詢
 
 使用方式如下:
 
@@ -115,12 +125,16 @@ __\#sdc-createmachine --package [name] --dataset [urn]__
 ```
 __\#sdc-deletemachine [machine id] __
 
+刪除指定機器(其中機器的狀態必須是"stopped"方可進行刪除動做)。
+
 使用方式如下:
 
 ```
 
 ```
-__\#sdc-getmachine [machine id]__ 查詢指定機器
+__\#sdc-getmachine [machine id]__ 
+
+藉由id查詢指定機器詳細資料。
 
 使用方式如下:
 
@@ -146,10 +160,14 @@ __\#sdc-getmachine [machine id]__ 查詢指定機器
 }
 
 ```
-__\#sdc-listmachines__查詢所有機器
+__\#sdc-listmachines__
+
+檢索該帳戶上的所有機器。
 
 
 __\#sdc-rebootmachine [id]__
+
+藉由id而重新啟動該機器。
 
 使用方式如下:
 
@@ -160,7 +178,10 @@ __\#sdc-rebootmachine [id]__
 
   "state": "running" → "state": "stopped" → "state": "running"
 ```
-__\#sdc-resizemachine --package [name] [machine id]__  修改機器 (memory,disk)
+
+__\#sdc-resizemachine --package [name] [machine id]__  
+
+修改機器 (memory,disk)
 
 使用方式如下:
 
@@ -189,6 +210,8 @@ __\#sdc-resizemachine --package [name] [machine id]__  修改機器 (memory,disk
 ```
 __\#sdc-startmachine [machine id]__
 
+藉由id而啟動該機器。
+
 使用方式如下:
 
 ```
@@ -206,6 +229,8 @@ __\#sdc-stopmachine [machine id]__
 ```
 
 #sdc-stopmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+藉由id而停止該機器。
 
 結果:
 

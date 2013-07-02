@@ -10,11 +10,10 @@ MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command�
 
 ##關於 Tag：
 --------------------------------------------------------------------------------------
-Returns the value for a single tag on this machine. Note that this API is "special",
-as it returns content in text or plain; this also means you must set the Accept header to text or plain.
 
+__\#sdc-addmachinetags  -t  key=value  [machine id]__ 
 
-__\#sdc-addmachinetags  -t  key=value  [machine id]__ 可以讓你添加新的標籤，而不是覆蓋現有的標籤
+ 此指令可以讓你添加新的標籤，而不是覆蓋現有的標籤
  
  此乎叫允許您傳送任意數量的參數，而這些參數將被轉為標籤可供您所使用
  
@@ -29,7 +28,9 @@ __\#sdc-addmachinetags  -t  key=value  [machine id]__ 可以讓你添加新的�
  }
 ```   
 
-__\#sdc-deletemachinetag [key] --machine [machine id]__ 刪除tag
+__\#sdc-deletemachinetag [key] --machine [machine id]__ 
+
+ 刪除指定機器上的tag與其值
 
  使用方法如下:
  
@@ -37,7 +38,9 @@ __\#sdc-deletemachinetag [key] --machine [machine id]__ 刪除tag
  #sdc-deletemachinetag foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
 ```
 
-__\#sdc-getmachinetag [key] --machine [machine id]__ 可單筆查詢tag的值
+__\#sdc-getmachinetag [key] --machine [machine id]__
+
+ 可檢索指定機器上的tag的值
  
  使用方法如下:
 
@@ -49,7 +52,9 @@ __\#sdc-getmachinetag [key] --machine [machine id]__ 可單筆查詢tag的值
    bar
 ```
 
-__\#sdc-listmachinetags [machine id]__ 可查詢所有tag與tag的值
+__\#sdc-listmachinetags [machine id]__
+
+ 檢索某一機器的所有tag與其值
 
 使用方法如下:
 
@@ -65,14 +70,10 @@ __\#sdc-listmachinetags [machine id]__ 可查詢所有tag與tag的值
 
 ##關於 metadata：
 --------------------------------------------------------------------------------------
-Allows you to update the metadata for a given machine. 
-Note that updating the metadata via CloudAPI will result in the metadata being updated in the running instance.
-
-The semantics of this call are sublty different that the AddMachineTags call, 
-in that any metadata keys passed in here are created if they do not exist, and overwritten if they do.
-
 
 __\#sdc-updatemachinemetadata   --metadata key=value [mahine id]__ 新增metadata
+ 
+ 允許您更新某一機器的metadata。
  
  使用方式如下:
  
@@ -87,7 +88,9 @@ __\#sdc-updatemachinemetadata   --metadata key=value [mahine id]__ 新增metadat
 }
 ```
 
-__\#sdc-deletemachinemetadata [key] --machine [machine id] __ 刪除metadata
+__\#sdc-deletemachinemetadata [key] --machine [machine id] __ 
+
+ 刪除某一機器的指定之metadata。
  
  使用方式如下:
 
@@ -95,9 +98,11 @@ __\#sdc-deletemachinemetadata [key] --machine [machine id] __ 刪除metadata
  #sdc-deletemachinemetadata foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
 ```
 
-__\#sdc-getmachinemetadata    [mahine id]__ 查詢metadata
+__\#sdc-getmachinemetadata  [mahine id]__
 
-使用方式如下:
+ 查詢某一機器的metadata
+
+ 使用方式如下:
 
 ```
 #sdc-getmachinemetadata  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
@@ -119,7 +124,9 @@ which should be a numeric id of an existing instrumentation.
 
 __\#sdc-createinstrumentation__      
 
-使用方法如下:
+ 創見一個instrumentation。
+
+ 使用方法如下:
 
 ```
 #sdc-createinstrumentation -m syscall -s syscalls
@@ -154,6 +161,8 @@ __\#sdc-createinstrumentation__
 
 __\#sdc-deleteinstrumentation [instrumentation_id]__
 
+ 刪除instrumentation。
+
 使用方法如下:
 
 ```
@@ -161,6 +170,8 @@ sdc-deleteinstrumentation 1
 ```
 
 __\#sdc-getinstrumentation [instrumentation_id]__
+
+ 藉由id 檢索 instrumentation 的組態。
 
 使用方法如下:
 
@@ -195,6 +206,8 @@ __\#sdc-getinstrumentation [instrumentation_id]__
 ```
 
 __\#sdc-listinstrumentations__
+
+檢索木前所創建的所有instrumentations。
 
 使用方法如下:
 

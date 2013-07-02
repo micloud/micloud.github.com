@@ -16,8 +16,23 @@ Currently CloudAPI supports uploads of public keys in the OpenSSH format.
 Note that while it's possible to provide a name attribute for an SSH key in order to use it as an human friendly alias, 
 this attribute presence is completely optional.
 
+When it's not given, the ssh key fingerprint will be used instead to fill also the name attribute, 
+appart of the always present fingerprint atribute.
 
-__\#sdc-createkey__ 產生一個key
+On the following routes, the parameter placeholder :key can be replaced either with key's name or fingerprint.
+
+It's strongly recommended to use fingerprint when possible, 
+since name attribute hasn't got - neither will have - uniqueness restrictions.
+
+
+
+
+目前CloudAPI支持以OpenSSH格式的公鑰上傳。
+值得注意的是，在此也提供了相較友善的 "name" 屬性給 SSH key (其中name 可有可無)
+
+__\#sdc-createkey__ 
+
+上傳一個新的 OpenSSH key 到 SmartDataCenter。
 
  使用方法如下:
  
@@ -39,7 +54,9 @@ __\#sdc-createkey__ 產生一個key
 }
 ```
 
-__\#sdc-deletekey  [key id]__ 刪除key
+__\#sdc-deletekey  [key id]__ 
+
+刪除一個SSH key。
 
  使用方法如下:
 
@@ -47,7 +64,9 @@ __\#sdc-deletekey  [key id]__ 刪除key
  #sdc-deletekey id_rsa
 ```
 
-__\#sdc-getkey [key id]__ 查詢單筆key
+__\#sdc-getkey [key id]__ 
+
+檢索個別Key的記錄。
 
  使用方法如下:
 
@@ -69,7 +88,9 @@ __\#sdc-getkey [key id]__ 查詢單筆key
 }
 ```
 
-__\#sdc-listkeys__ 查詢所有key
+__\#sdc-listkeys__  
+
+列出指定帳戶的所有公共密鑰。
 
  使用方法如下:
 
@@ -86,7 +107,9 @@ you can boot the machine from a snapshot.
 You can only take snapshots on machines that are of type 'smartmachine'.
 
 
-__\#sdc-createmachinesnapshot [machine id]__
+__\#sdc-createmachinesnapshot [machine id]__  
+
+對所指定smartmachine創見一個新的快照。
 
 使用方式如下:
 
@@ -103,11 +126,13 @@ __\#sdc-createmachinesnapshot [machine id]__
 
 ```
 
-__\#sdc-deletemachinesnapshot [snapshot name] --machine [machine id]__
+__\#sdc-deletemachinesnapshot [snapshot name] --machine [machine id]__  
 
-__\#sdc-getmachinesnapshot [snapshot name] --machine[machine id]__   
+刪除指定smartmachine的快照。
 
-You can poll on GetMachineSnapshot until the state is success.
+__\#sdc-getmachinesnapshot [snapshot name] --machine[machine id]__  
+
+藉由name取得指定smartmachine的快照。
 
 使用方式如下:
 
@@ -124,7 +149,11 @@ You can poll on GetMachineSnapshot until the state is success.
 
 ```
 
-__\#sdc-listmachinesnapshots__ 
+__\#sdc-listmachinesnapshots__  
+
+列出指定一個smartmachine的所有快照。
 
 __\#sdc-startmachinefromsnapshot -n [snapshot name] [machine id]__  
+
+當機器處於 'stopped' 狀態下，您可以選擇用快照起動機器。
 
