@@ -6,7 +6,7 @@ MiCloud API 基本操作(三) :
 
 MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法
 
-以下將教您如何 管理[Key](#Key),查詢[Machinesnapshot](#Machinesnapshot),及[其他指令](#other)。
+以下將教您如何 管理[Key](#Key),查詢[Machinesnapshot](#Machinesnapshot),及[其他指令](#Other)。
 
 ##關於 key：<a name="Key"></a>
 --------------------------------------------------------------------------------------
@@ -34,7 +34,7 @@ __\#sdc-createkey__
 
 上傳一個新的 OpenSSH key 到 SmartDataCenter。
 
- 使用方法如下:
+範例如下:
  
 ```
 #sdc-createkey -n id_rsa ~/.ssh/id_rsa.pub
@@ -58,7 +58,7 @@ __\#sdc-deletekey  [key id]__
 
 刪除一個SSH key。
 
- 使用方法如下:
+範例如下:
 
 ```
  #sdc-deletekey id_rsa
@@ -68,7 +68,7 @@ __\#sdc-getkey [key id]__
 
 檢索個別Key的記錄。
 
- 使用方法如下:
+範例如下:
 
 ```
 #sdc-getkey id_rsa
@@ -92,7 +92,7 @@ __\#sdc-listkeys__
 
 列出指定帳戶的所有公共密鑰。
 
- 使用方法如下:
+範例如下:
 
 ```
 #sdc-listkeys
@@ -111,7 +111,7 @@ __\#sdc-createmachinesnapshot [machine id]__
 
 對所指定smartmachine創見一個新的快照。
 
-使用方式如下:
+範例如下:
 
 ```
 #sdc-createmachinesnapshot 0fa17f7b-7cf4-4504-b0c7-062178c3850c
@@ -134,7 +134,7 @@ __\#sdc-getmachinesnapshot [snapshot name] --machine[machine id]__
 
 藉由name取得指定smartmachine的快照。
 
-使用方式如下:
+範例如下:
 
 ```
 #sdc-getmachinesnapshot "20130701021139" --machine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
@@ -156,4 +156,49 @@ __\#sdc-listmachinesnapshots__
 __\#sdc-startmachinefromsnapshot -n [snapshot name] [machine id]__  
 
 當機器處於 'stopped' 狀態下，您可以選擇用快照起動機器。
+
+##其他指令：<a name="Other"></a>
+--------------------------------------------------------------------------------------
+
+__\#sdc-describeanalytics__ 
+
+檢索可以創建所使用的分析端點 instrumentations 的 架構。
+
+範例如下:
+
+```
+#sdc-describeanalytics
+```
+
+__\#sdc-listdatacenters__ 
+
+提供一個關於所有數據中心的列表 。
+
+範例如下:
+
+```
+#sdc-listdatacenters
+```
+
+__\#sdc-setup__ 
+
+在數據中心設置一個帳戶來使用。
+
+範例如下:
+
+```
+#sdc-setup
+
+SDC_ACCOUNT:    輸入您的username。
+
+SDC_URL:   CloudAPI 端點.
+例如，一個為JoyentCloud的CloudAPI端點https://us-west-1.api.joyentcloud.com。 
+(每個數據中心在雲其自己的CloudAPI端點)。
+
+SDC_KEY_ID:  您上傳到 SmartDC 的 key fingerprint。
+```
+
+
+
+
 
