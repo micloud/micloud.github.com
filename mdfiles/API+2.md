@@ -6,9 +6,9 @@ MiCloud API 基本操作(二) :
 
 MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法
 
-以下將教您如何 __使用Tag__,__使用Metadata__,__使用Instrumentation__。
+以下將教您如何 使用[Tag](#Tag),使用[Metadata](#Metadata),使用[Instrumentation](#Instrumentation)。
 
-##關於 Tag：
+##關於 Tag：<a name="Tag"></a>
 --------------------------------------------------------------------------------------
 
 __\#sdc-addmachinetags  -t  key=value  [machine id]__ 
@@ -68,7 +68,7 @@ __\#sdc-listmachinetags [machine id]__
  
 ```
 
-##關於 metadata：
+##關於 metadata：<a name="Metadata"></a>
 --------------------------------------------------------------------------------------
 
 __\#sdc-updatemachinemetadata   --metadata key=value [mahine id]__ 新增metadata
@@ -115,7 +115,7 @@ __\#sdc-getmachinemetadata  [mahine id]__
 }
 ```
 
-##關於 instrumentation：
+##關於 instrumentation：<a name="Instrumentation"></a>
 --------------------------------------------------------------------------------------
 Creates an instrumentation. 
 Note you can clone an existing instrumentation by passing in the parameter clone, 

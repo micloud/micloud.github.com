@@ -6,99 +6,19 @@ MiCloud API 基本操作(一) :
 
 MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法
 
-以下將教您如何 __管理Machine__,__查詢Datasets__,__查詢Packages__。
-
-##關於 datasets：
---------------------------------------------------------------------------------------
-A dataset is the image of the software on your machine. 
-It contains the software packages that will be available on newly provisioned machines. 
-In the case of virtual machines, the dataset also includes the operating system.
-
-Please, note that starting with version 7.0 of CloudAPI datasets are not supported, 
-and their usage should be replaced with images. Specially, 
-note the lack of urn attribute for images when compared with datasets.
-
-__\#sdc-getdataset [name]__  
-
-檢索指定的 datasets，包含其id,urn,name,os,type,description,default,requirement,version等。
-
-使用方式如下:
-
-```
-#sdc-getdatasets chefserver
-
-結果:
-  {
-    "id": "e6f10814-a38d-11e2-8138-67b96e228c1e",
-    "urn": "sdc:sdc:chefserver:1.1.0",
-    "name": "chefserver",
-    "os": "smartos",
-    "type": "smartmachine",
-    "description": "machine_new_SmartOS64ChefServer",
-    "default": false,
-    "requirements": {},
-    "version": "1.1.0"
-  }
-```
-
-__\#sdc-listdatasets__ 
-
-檢索所有的datasets，包含id,urn,name,os,type,description,default,requirement,version等。
-
-使用方式如下:
-
-```
-#sdc-listdatasets
-```
-
-##關於 packages：
---------------------------------------------------------------------------------------
-Packages are named collections of resources that are used to describe the ‘sizes’ of either a smart machine or a virtual machine. 
-These resources include (but are not limited to) RAM, CPUs, CPU Caps, Lightweight Threads, Disk Space, Swap size, 
-and Logical Networks.
+以下將教您如何 管理[Machine](#Machine)   ,查詢[Datasets](#Datasets),查詢[Packages](#Packages)。
 
 
-__\#sdc-getpackage [name]__ 
-
-檢索單筆的package，包含name,mwmory,disk,vcpus,swap,default等。
-
-使用方式如下:
-
-```
-#sdc-listpackages "3XL 32GB RAM (4CORE)"
-
- 結果:
-{
-  "name": "3XL 32GB RAM (4CORE)",
-  "memory": 32768,
-  "disk": 512000,
-  "vcpus": 4,
-  "swap": 32768,
-  "default": false
-}
-```
-
-
-__\#sdc-listpackages__ 
-
-檢索所有package，包含name,mwmory,disk,vcpus,swap,default等。
-
-使用方式如下:
-
-```
-#sdc-listpackages
-```
-
-##關於 machine：
+##關於 machine：<a name="Machine"></a>
 --------------------------------------------------------------------------------------
 
 __\#sdc-createmachine --package [name] --dataset [urn]__ 
 
 產生一台新機器(其中package與dataset必須由使用者自行輸入,而其他參數若使用者沒輸入則電腦會自動預設好)
 
-可以使用sdc-listpackages 與 sdc-listdatasets查詢
+可以查看[__關於Datasets__](#Datasets),[__關於Packages__](#Packages)。
 
-使用方式如下:
+範例如下:
 
 ```
 #sdc-createmachine --package "regular_512" --dataset "sdc:sdc:nodejs:1.1.4"
@@ -127,7 +47,7 @@ __\#sdc-deletemachine [machine id] __
 
 刪除指定機器(其中機器的狀態必須是"stopped"方可進行刪除動做)。
 
-使用方式如下:
+範例如下:
 
 ```
 
@@ -136,7 +56,7 @@ __\#sdc-getmachine [machine id]__
 
 藉由id查詢指定機器詳細資料。
 
-使用方式如下:
+範例如下:
 
 ```
 #sdc-getmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
@@ -169,7 +89,7 @@ __\#sdc-rebootmachine [id]__
 
 藉由id而重新啟動該機器。
 
-使用方式如下:
+範例如下:
 
 ```
 #sdc-rebootmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
@@ -183,7 +103,7 @@ __\#sdc-resizemachine --package [name] [machine id]__
 
 修改機器 (memory,disk)
 
-使用方式如下:
+範例如下:
 
 ```
 #sdc-resizemachine --package "S 1GB RAM (1CORE)" 0fa17f7b-7cf4-4504-b0c7-062178c3850c
@@ -212,7 +132,7 @@ __\#sdc-startmachine [machine id]__
 
 藉由id而啟動該機器。
 
-使用方式如下:
+範例如下:
 
 ```
 #sdc-startmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
@@ -224,7 +144,7 @@ __\#sdc-startmachine [machine id]__
 
 __\#sdc-stopmachine [machine id]__
 
-使用方式如下:
+範例如下:
 
 ```
 
@@ -235,4 +155,85 @@ __\#sdc-stopmachine [machine id]__
 結果:
 
   "state": "stopped"
+```
+
+##關於 datasets：<a name="Datasets"></a>
+--------------------------------------------------------------------------------------
+A dataset is the image of the software on your machine. 
+It contains the software packages that will be available on newly provisioned machines. 
+In the case of virtual machines, the dataset also includes the operating system.
+
+Please, note that starting with version 7.0 of CloudAPI datasets are not supported, 
+and their usage should be replaced with images. Specially, 
+note the lack of urn attribute for images when compared with datasets.
+
+__\#sdc-getdataset [name]__  
+
+檢索指定的 datasets，包含其id,urn,name,os,type,description,default,requirement,version等。
+
+範例如下:
+
+```
+#sdc-getdatasets chefserver
+
+結果:
+  {
+    "id": "e6f10814-a38d-11e2-8138-67b96e228c1e",
+    "urn": "sdc:sdc:chefserver:1.1.0",
+    "name": "chefserver",
+    "os": "smartos",
+    "type": "smartmachine",
+    "description": "machine_new_SmartOS64ChefServer",
+    "default": false,
+    "requirements": {},
+    "version": "1.1.0"
+  }
+```
+
+__\#sdc-listdatasets__ 
+
+檢索所有的datasets，包含id,urn,name,os,type,description,default,requirement,version等。
+
+範例如下:
+
+```
+#sdc-listdatasets
+```
+
+##關於 packages：<a name="Packages"></a>
+--------------------------------------------------------------------------------------
+Packages are named collections of resources that are used to describe the ‘sizes’ of either a smart machine or a virtual machine. 
+These resources include (but are not limited to) RAM, CPUs, CPU Caps, Lightweight Threads, Disk Space, Swap size, 
+and Logical Networks.
+
+
+__\#sdc-getpackage [name]__ 
+
+檢索單筆的package，包含name,mwmory,disk,vcpus,swap,default等。
+
+範例如下:
+
+```
+#sdc-listpackages "3XL 32GB RAM (4CORE)"
+
+ 結果:
+{
+  "name": "3XL 32GB RAM (4CORE)",
+  "memory": 32768,
+  "disk": 512000,
+  "vcpus": 4,
+  "swap": 32768,
+  "default": false
+}
+```
+
+
+__\#sdc-listpackages__ 
+
+檢索所有package，包含name,mwmory,disk,vcpus,swap,default等。
+
+範例如下:
+
+```
+#sdc-listpackages
 ```
