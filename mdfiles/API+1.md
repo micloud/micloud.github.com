@@ -159,13 +159,6 @@ __\#sdc-stopmachine [machine id]__
 
 ##關於 datasets：<a name="Datasets"></a>
 --------------------------------------------------------------------------------------
-A dataset is the image of the software on your machine. 
-It contains the software packages that will be available on newly provisioned machines. 
-In the case of virtual machines, the dataset also includes the operating system.
-
-Please, note that starting with version 7.0 of CloudAPI datasets are not supported, 
-and their usage should be replaced with images. Specially, 
-note the lack of urn attribute for images when compared with datasets.
 
 __\#sdc-getdataset [name]__  
 
@@ -202,10 +195,6 @@ __\#sdc-listdatasets__
 
 ##關於 packages：<a name="Packages"></a>
 --------------------------------------------------------------------------------------
-Packages are named collections of resources that are used to describe the ‘sizes’ of either a smart machine or a virtual machine. 
-These resources include (but are not limited to) RAM, CPUs, CPU Caps, Lightweight Threads, Disk Space, Swap size, 
-and Logical Networks.
-
 
 __\#sdc-getpackage [name]__ 
 

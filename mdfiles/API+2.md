@@ -117,10 +117,6 @@ __\#sdc-getmachinemetadata  [mahine id]__
 
 ##關於 instrumentation：<a name="Instrumentation"></a>
 --------------------------------------------------------------------------------------
-Creates an instrumentation. 
-Note you can clone an existing instrumentation by passing in the parameter clone, 
-which should be a numeric id of an existing instrumentation.
-
 
 __\#sdc-createinstrumentation__      
 
