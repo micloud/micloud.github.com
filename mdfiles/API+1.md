@@ -47,11 +47,6 @@ __\#sdc-deletemachine [machine id] __
 
 刪除指定機器(其中機器的狀態必須是"stopped"方可進行刪除動做)。
 
-範例如下:
-
-```
-
-```
 __\#sdc-getmachine [machine id]__ 
 
 藉由id查詢指定機器詳細資料。
