@@ -142,7 +142,6 @@ __\#sdc-stopmachine [machine id]__
 範例如下:
 
 ```
-
 #sdc-stopmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
 
 藉由id而停止該機器。

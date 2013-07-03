@@ -71,7 +71,7 @@ __\#sdc-listmachinetags [machine id]__
 ##關於 metadata：<a name="Metadata"></a>
 --------------------------------------------------------------------------------------
 
-__\#sdc-updatemachinemetadata   --metadata key=value [mahine id]__ 新增metadata
+__\#sdc-updatemachinemetadata   --metadata key=value [mahine id]__ 
  
  允許您更新某一機器的metadata。
  
@@ -120,7 +120,7 @@ __\#sdc-getmachinemetadata  [mahine id]__
 
 __\#sdc-createinstrumentation__      
 
- 創見一個instrumentation。
+ 創建一個instrumentation。
 
 範例如下:
 
