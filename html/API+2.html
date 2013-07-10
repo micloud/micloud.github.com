@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>API 2</title>
+    <meta name="description" content="API 2">
+    <meta name="keywords" content="API 2">
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="/index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="/index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>MiCloud API 基本操作(二) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 使用<a href="#Tag">Tag</a>,使用<a href="#Metadata">Metadata</a>,使用<a href="#Instrumentation">Instrumentation</a>。</p>
+<h2>關於 Tag：<a name="Tag"></a></h2>
+<hr>
+<p><strong>#sdc-addmachinetags  -t  key=value  [machine id]</strong> </p>
+<p> 此指令可以讓你添加新的標籤，而不是覆蓋現有的標籤</p>
+<p> 此乎叫允許您傳送任意數量的參數，而這些參數將被轉為標籤可供您所使用</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-addmachinetags -t foo=bar  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+ {
+   &quot;foo&quot;: &quot;bar&quot;
+ }</code></pre>
+<p><strong>#sdc-deletemachinetag [key] --machine [machine id]</strong> </p>
+<p> 刪除指定機器上的tag與其值</p>
+<p> 範例如下:</p>
+<pre><code> #sdc-deletemachinetag foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5</code></pre>
+<p><strong>#sdc-getmachinetag [key] --machine [machine id]</strong></p>
+<p> 可檢索指定機器上的tag的值</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-getmachinetag  foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+  結果:
+
+   bar</code></pre>
+<p><strong>#sdc-listmachinetags [machine id]</strong></p>
+<p> 檢索某一機器的所有tag與其值</p>
+<p>範例如下:</p>
+<pre><code> #sdc-listmachinetags 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+ {
+   &quot;foo&quot;: &quot;bar&quot;
+ }</code></pre>
+<h2>關於 metadata：<a name="Metadata"></a></h2>
+<hr>
+<p><strong>#sdc-updatemachinemetadata   --metadata key=value [mahine id]</strong> </p>
+<p> 允許您更新某一機器的metadata。</p>
+<p>範例如下:</p>
+<pre><code> #sdc-updatemachinemetadata --metadata foo=bar 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+
+{
+  &quot;root_authorized_keys&quot;: &quot;ssh-rsa ......................略&quot;,
+  &quot;foo&quot;: &quot;bar&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachinemetadata [key] --machine [machine id] </strong> </p>
+<p> 刪除某一機器的指定之metadata。</p>
+<p> 範例如下:</p>
+<pre><code> #sdc-deletemachinemetadata foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5</code></pre>
+<p><strong>#sdc-getmachinemetadata  [mahine id]</strong></p>
+<p> 查詢某一機器的metadata</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-getmachinemetadata  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+
+{
+  &quot;root_authorized_keys&quot;: &quot;ssh-rsa ......................略&quot;,
+  &quot;foo&quot;: &quot;bar&quot;
+}</code></pre>
+<h2>關於 instrumentation：<a name="Instrumentation"></a></h2>
+<hr>
+<p><strong>#sdc-createinstrumentation</strong>      </p>
+<p> 創建一個instrumentation。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createinstrumentation -m syscall -s syscalls
+
+結果:
+{
+  &quot;module&quot;: &quot;syscall&quot;,
+  &quot;stat&quot;: &quot;syscalls&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1372235215353,
+  &quot;value-scope&quot;: &quot;interval&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/sunwing/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>#sdc-deleteinstrumentation [instrumentation_id]</strong></p>
+<p> 刪除instrumentation。</p>
+<p>範例如下:</p>
+<pre><code>sdc-deleteinstrumentation 1</code></pre>
+<p><strong>#sdc-getinstrumentation [instrumentation_id]</strong></p>
+<p> 藉由id 檢索 instrumentation 的組態。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getinstrumentation 1
+
+結果:
+{
+  &quot;module&quot;: &quot;syscall&quot;,
+  &quot;stat&quot;: &quot;syscalls&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1372235215353,
+  &quot;value-scope&quot;: &quot;interval&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/sunwing/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>#sdc-listinstrumentations</strong></p>
+<p>檢索木前所創建的所有instrumentations。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listinstrumentations</code></pre>
+
+  </div>
+  </div>
+  </body>
+</html>

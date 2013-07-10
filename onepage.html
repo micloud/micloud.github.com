@@ -2955,6 +2955,391 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 <p>刪除SSH Key</p>
 <p>另外，您或許會想要把目前沒用到的SSH Key刪除，透過下面指令可以把SSH Key移除：</p>
 <pre><code>sdc-deletekey id_rsa</code></pre>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="API+1.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/API+1.html">Machine,Datasets,Packages</a>&nbsp;<a href="index.html?page=API+1.md">(API+1.md)</a><a href="#API+1.md"></a></h1><br/><h1>MiCloud API 基本操作(一) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 管理<a href="#Machine">Machine</a>   ,查詢<a href="#Datasets">Datasets</a>,查詢<a href="#Packages">Packages</a>。</p>
+<h2>關於 machine：<a name="Machine"></a></h2>
+<hr>
+<p><strong>#sdc-createmachine --package [name] --dataset [urn]</strong> </p>
+<p>產生一台新機器(其中package與dataset必須由使用者自行輸入,而其他參數若使用者沒輸入則電腦會自動預設好)</p>
+<p>可以查看<a href="#Datasets"><strong>關於Datasets</strong></a>,<a href="#Packages"><strong>關於Packages</strong></a>。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createmachine --package &quot;regular_512&quot; --dataset &quot;sdc:sdc:nodejs:1.1.4&quot;
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;provisioning&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 512,
+  &quot;disk&quot;: 10240,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachine [machine id] </strong></p>
+<p>刪除指定機器(其中機器的狀態必須是&quot;stopped&quot;方可進行刪除動做)。</p>
+<p><strong>#sdc-getmachine [machine id]</strong> </p>
+<p>藉由id查詢指定機器詳細資料。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;provisioning&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 512,
+  &quot;disk&quot;: 10240,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-listmachines</strong></p>
+<p>檢索該帳戶上的所有機器。</p>
+<p><strong>#sdc-rebootmachine [id]</strong></p>
+<p>藉由id而重新啟動該機器。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-rebootmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+
+  &quot;state&quot;: &quot;running&quot; → &quot;state&quot;: &quot;stopped&quot; → &quot;state&quot;: &quot;running&quot;</code></pre>
+<p><strong>#sdc-resizemachine --package [name] [machine id]</strong>  </p>
+<p>修改機器 (memory,disk)</p>
+<p>範例如下:</p>
+<pre><code>#sdc-resizemachine --package &quot;S 1GB RAM (1CORE)&quot; 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 1024,
+  &quot;disk&quot;: 15360,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:42:23+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:07:03+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-startmachine [machine id]</strong></p>
+<p>藉由id而啟動該機器。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-startmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+
+  &quot;state&quot;: &quot;running&quot;</code></pre>
+<p><strong>#sdc-stopmachine [machine id]</strong></p>
+<p>範例如下:</p>
+<pre><code>#sdc-stopmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+藉由id而停止該機器。
+
+結果:
+
+  &quot;state&quot;: &quot;stopped&quot;</code></pre>
+<h2>關於 datasets：<a name="Datasets"></a></h2>
+<hr>
+<p><strong>#sdc-getdataset [name]</strong>  </p>
+<p>檢索指定的 datasets，包含其id,urn,name,os,type,description,default,requirement,version等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getdatasets chefserver
+
+結果:
+  {
+    &quot;id&quot;: &quot;e6f10814-a38d-11e2-8138-67b96e228c1e&quot;,
+    &quot;urn&quot;: &quot;sdc:sdc:chefserver:1.1.0&quot;,
+    &quot;name&quot;: &quot;chefserver&quot;,
+    &quot;os&quot;: &quot;smartos&quot;,
+    &quot;type&quot;: &quot;smartmachine&quot;,
+    &quot;description&quot;: &quot;machine_new_SmartOS64ChefServer&quot;,
+    &quot;default&quot;: false,
+    &quot;requirements&quot;: {},
+    &quot;version&quot;: &quot;1.1.0&quot;
+  }</code></pre>
+<p><strong>#sdc-listdatasets</strong> </p>
+<p>檢索所有的datasets，包含id,urn,name,os,type,description,default,requirement,version等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listdatasets</code></pre>
+<h2>關於 packages：<a name="Packages"></a></h2>
+<hr>
+<p><strong>#sdc-getpackage [name]</strong> </p>
+<p>檢索單筆的package，包含name,mwmory,disk,vcpus,swap,default等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listpackages &quot;3XL 32GB RAM (4CORE)&quot;
+
+ 結果:
+{
+  &quot;name&quot;: &quot;3XL 32GB RAM (4CORE)&quot;,
+  &quot;memory&quot;: 32768,
+  &quot;disk&quot;: 512000,
+  &quot;vcpus&quot;: 4,
+  &quot;swap&quot;: 32768,
+  &quot;default&quot;: false
+}</code></pre>
+<p><strong>#sdc-listpackages</strong> </p>
+<p>檢索所有package，包含name,mwmory,disk,vcpus,swap,default等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listpackages</code></pre>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="API+2.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/API+2.html">Tag,Metadata,Instrumentation</a>&nbsp;<a href="index.html?page=API+2.md">(API+2.md)</a><a href="#API+2.md"></a></h1><br/><h1>MiCloud API 基本操作(二) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 使用<a href="#Tag">Tag</a>,使用<a href="#Metadata">Metadata</a>,使用<a href="#Instrumentation">Instrumentation</a>。</p>
+<h2>關於 Tag：<a name="Tag"></a></h2>
+<hr>
+<p><strong>#sdc-addmachinetags  -t  key=value  [machine id]</strong> </p>
+<p> 此指令可以讓你添加新的標籤，而不是覆蓋現有的標籤</p>
+<p> 此乎叫允許您傳送任意數量的參數，而這些參數將被轉為標籤可供您所使用</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-addmachinetags -t foo=bar  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+ {
+   &quot;foo&quot;: &quot;bar&quot;
+ }</code></pre>
+<p><strong>#sdc-deletemachinetag [key] --machine [machine id]</strong> </p>
+<p> 刪除指定機器上的tag與其值</p>
+<p> 範例如下:</p>
+<pre><code> #sdc-deletemachinetag foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5</code></pre>
+<p><strong>#sdc-getmachinetag [key] --machine [machine id]</strong></p>
+<p> 可檢索指定機器上的tag的值</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-getmachinetag  foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+  結果:
+
+   bar</code></pre>
+<p><strong>#sdc-listmachinetags [machine id]</strong></p>
+<p> 檢索某一機器的所有tag與其值</p>
+<p>範例如下:</p>
+<pre><code> #sdc-listmachinetags 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+ {
+   &quot;foo&quot;: &quot;bar&quot;
+ }</code></pre>
+<h2>關於 metadata：<a name="Metadata"></a></h2>
+<hr>
+<p><strong>#sdc-updatemachinemetadata   --metadata key=value [mahine id]</strong> </p>
+<p> 允許您更新某一機器的metadata。</p>
+<p>範例如下:</p>
+<pre><code> #sdc-updatemachinemetadata --metadata foo=bar 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+
+{
+  &quot;root_authorized_keys&quot;: &quot;ssh-rsa ......................略&quot;,
+  &quot;foo&quot;: &quot;bar&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachinemetadata [key] --machine [machine id] </strong> </p>
+<p> 刪除某一機器的指定之metadata。</p>
+<p> 範例如下:</p>
+<pre><code> #sdc-deletemachinemetadata foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5</code></pre>
+<p><strong>#sdc-getmachinemetadata  [mahine id]</strong></p>
+<p> 查詢某一機器的metadata</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-getmachinemetadata  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+
+{
+  &quot;root_authorized_keys&quot;: &quot;ssh-rsa ......................略&quot;,
+  &quot;foo&quot;: &quot;bar&quot;
+}</code></pre>
+<h2>關於 instrumentation：<a name="Instrumentation"></a></h2>
+<hr>
+<p><strong>#sdc-createinstrumentation</strong>      </p>
+<p> 創建一個instrumentation。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createinstrumentation -m syscall -s syscalls
+
+結果:
+{
+  &quot;module&quot;: &quot;syscall&quot;,
+  &quot;stat&quot;: &quot;syscalls&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1372235215353,
+  &quot;value-scope&quot;: &quot;interval&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/sunwing/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>#sdc-deleteinstrumentation [instrumentation_id]</strong></p>
+<p> 刪除instrumentation。</p>
+<p>範例如下:</p>
+<pre><code>sdc-deleteinstrumentation 1</code></pre>
+<p><strong>#sdc-getinstrumentation [instrumentation_id]</strong></p>
+<p> 藉由id 檢索 instrumentation 的組態。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getinstrumentation 1
+
+結果:
+{
+  &quot;module&quot;: &quot;syscall&quot;,
+  &quot;stat&quot;: &quot;syscalls&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1372235215353,
+  &quot;value-scope&quot;: &quot;interval&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/sunwing/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>#sdc-listinstrumentations</strong></p>
+<p>檢索木前所創建的所有instrumentations。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listinstrumentations</code></pre>
+</p><hr style="border-top: 1px dotted #f00;"/><p  id="API+3.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/API+3.html">Key,Machinesnapshot,other</a>&nbsp;<a href="index.html?page=API+3.md">(API+3.md)</a><a href="#API+3.md"></a></h1><br/><h1>MiCloud API 基本操作(三) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 管理<a href="#Key">Key</a>,查詢<a href="#Machinesnapshot">Machinesnapshot</a>,及<a href="#Other">其他指令</a>。</p>
+<h2>關於 key：<a name="Key"></a></h2>
+<hr>
+<p>目前CloudAPI支持以OpenSSH格式的公鑰上傳。<br>值得注意的是，在此也提供了相較友善的 &quot;name&quot; 屬性給 SSH key (其中name 可有可無)</p>
+<p><strong>#sdc-createkey</strong> </p>
+<p>上傳一個新的 OpenSSH key 到 SmartDataCenter。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createkey -n id_rsa ~/.ssh/id_rsa.pub
+
+結果:
+{
+  &quot;name&quot;: &quot;id_rsa&quot;,
+    &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuMb+L3kt4ZQELQ8q07VzZ/
+          tOBe6G+POo8j/WNyriKLa/nG6+419EGRetcnPY6UpuE5adIppVdG7FqId6
+          XNIRcVzxYs6clZ7R1/8f9F9YJLZZphfoGQrR6YZHfePn2joRSZ1L02DAYx
+          N7UID3S8TEiT+2tnmUeTB2W9Y1ddkQOQE12w5jrtKIN3QwJBl5TZ7D+sv6
+          Pepw3yWvxKSrTQdsalrkkJC3tDgctyPCHY4yqNWIFEFui7hIbfZPThNRkI
+          vdqtAEAyB/9tlB9MrmHaoW2C49aFLnh2Qtf5xniT8FwJc9kurbYBJnK8pr
+          beJ/Kug5DdC11k/sJCoaFQ45Sw== root@*********&quot;,
+  &quot;created&quot;: &quot;2013-06-26T06:46:45+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-06-26T06:46:45+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-deletekey  [key id]</strong> </p>
+<p>刪除一個SSH key。</p>
+<p>範例如下:</p>
+<pre><code> #sdc-deletekey id_rsa</code></pre>
+<p><strong>#sdc-getkey [key id]</strong> </p>
+<p>檢索個別Key的記錄。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getkey id_rsa
+
+結果:
+{
+  &quot;name&quot;: &quot;id_rsa&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuMb+L3kt4ZQELQ8q07VzZ/
+          tOBe6G+POo8j/WNyriKLa/nG6+419EGRetcnPY6UpuE5adIppVdG7FqId6
+          XNIRcVzxYs6clZ7R1/8f9F9YJLZZphCoGQrR6YZHvePn2joRSZ1L02DAYx
+          N7UID3S8TEiT+2tnmUeTB2fd9Y1dNkQOQE12w5jrfKIN3QwJBl5TZ7D+sv
+          Pepw3yWvxKSdsQ+alrkkJC3tDgctyPCHY4yqNWIFEFui7hIbfZPThNRkIn
+          vdqtAEAyB/9tlB9MrmHaoW2C49aFLnh2Qtf5xniT8FwJc9kurbYBJnK8pr
+          beJ/Kug5DdC11k/sJCoaFQ45Sw== root@*********&quot;,
+  &quot;created&quot;: &quot;2013-06-26T06:46:45+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-06-26T06:46:45+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-listkeys</strong>  </p>
+<p>列出指定帳戶的所有公共密鑰。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listkeys</code></pre>
+<h2>關於 machinesnapshot ：<a name="Machinesnapshot"></a></h2>
+<hr>
+<p><strong>#sdc-createmachinesnapshot [machine id]</strong>  </p>
+<p>對所指定smartmachine創見一個新的快照。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createmachinesnapshot 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;name&quot;: &quot;20130701021139&quot;,
+  &quot;state&quot;: &quot;queued&quot;,
+  &quot;created&quot;: &quot;2013-07-01T02:11:39+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:11:39+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachinesnapshot [snapshot name] --machine [machine id]</strong>  </p>
+<p>刪除指定smartmachine的快照。</p>
+<p><strong>#sdc-getmachinesnapshot [snapshot name] --machine[machine id]</strong>  </p>
+<p>藉由name取得指定smartmachine的快照。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getmachinesnapshot &quot;20130701021139&quot; --machine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;name&quot;: &quot;20130701021139&quot;,
+  &quot;state&quot;: &quot;queued&quot;,
+  &quot;created&quot;: &quot;2013-07-01T02:11:39+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:11:39+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-listmachinesnapshots</strong>  </p>
+<p>列出指定一個smartmachine的所有快照。</p>
+<p><strong>#sdc-startmachinefromsnapshot -n [snapshot name] [machine id]</strong>  </p>
+<p>當機器處於 &#39;stopped&#39; 狀態下，您可以選擇用快照起動機器。</p>
+<h2>其他指令：<a name="Other"></a></h2>
+<hr>
+<p><strong>#sdc-describeanalytics</strong> </p>
+<p>檢索可以創建所使用的分析端點 instrumentations 的 架構。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-describeanalytics</code></pre>
+<p><strong>#sdc-listdatacenters</strong> </p>
+<p>提供一個關於所有數據中心的列表 。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listdatacenters</code></pre>
+<p><strong>#sdc-setup</strong> </p>
+<p>在數據中心設置一個帳戶來使用。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-setup
+
+SDC_ACCOUNT:    輸入您的username。
+
+SDC_URL:   CloudAPI 端點.
+例如，一個為JoyentCloud的CloudAPI端點https://us-west-1.api.joyentcloud.com。 
+(每個數據中心在雲其自己的CloudAPI端點)。
+
+SDC_KEY_ID:  您上傳到 SmartDC 的 key fingerprint。</code></pre>
 </p><hr style="border-top: 1px dotted #f00;"/><p  id="MiCloud+API+Implement+1.md"><h1><img width="50px" src="images/book.png"/>頁面：<a href="html/MiCloud+API+Implement+1.html">MiCloud API實做案例(一)</a>&nbsp;<a href="index.html?page=MiCloud+API+Implement+1.md">(MiCloud+API+Implement+1.md)</a><a href="#MiCloud+API+Implement+1.md"></a></h1><br/><h1>MiCloudAPI 實做案例</h1>
 <h2>情境：</h2>
 <p>我是一個購物網站的主機管理員，當季的商品促銷期間常會造成流量爆滿，大量的transaction會導至網頁資料傳輸與反應變慢，運行在傳統的主機服務架構下，此時除非新增加伺服器規格外，似乎無其他方法... 但在雲端的環境下，我可以規劃我的促消時間，依照網站上統計的到訪人數資料來讓我可以知道大約尖峰時期在甚麼時候，透過MiCloudAPI，我建置了一個可以依據我所規劃的時間來進行增加服務端點的架構。</p>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>API 3</title>
+    <meta name="description" content="API 3">
+    <meta name="keywords" content="API 3">
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="/index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="/index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>MiCloud API 基本操作(三) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 管理<a href="#Key">Key</a>,查詢<a href="#Machinesnapshot">Machinesnapshot</a>,及<a href="#Other">其他指令</a>。</p>
+<h2>關於 key：<a name="Key"></a></h2>
+<hr>
+<p>目前CloudAPI支持以OpenSSH格式的公鑰上傳。<br>值得注意的是，在此也提供了相較友善的 &quot;name&quot; 屬性給 SSH key (其中name 可有可無)</p>
+<p><strong>#sdc-createkey</strong> </p>
+<p>上傳一個新的 OpenSSH key 到 SmartDataCenter。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createkey -n id_rsa ~/.ssh/id_rsa.pub
+
+結果:
+{
+  &quot;name&quot;: &quot;id_rsa&quot;,
+    &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuMb+L3kt4ZQELQ8q07VzZ/
+          tOBe6G+POo8j/WNyriKLa/nG6+419EGRetcnPY6UpuE5adIppVdG7FqId6
+          XNIRcVzxYs6clZ7R1/8f9F9YJLZZphfoGQrR6YZHfePn2joRSZ1L02DAYx
+          N7UID3S8TEiT+2tnmUeTB2W9Y1ddkQOQE12w5jrtKIN3QwJBl5TZ7D+sv6
+          Pepw3yWvxKSrTQdsalrkkJC3tDgctyPCHY4yqNWIFEFui7hIbfZPThNRkI
+          vdqtAEAyB/9tlB9MrmHaoW2C49aFLnh2Qtf5xniT8FwJc9kurbYBJnK8pr
+          beJ/Kug5DdC11k/sJCoaFQ45Sw== root@*********&quot;,
+  &quot;created&quot;: &quot;2013-06-26T06:46:45+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-06-26T06:46:45+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-deletekey  [key id]</strong> </p>
+<p>刪除一個SSH key。</p>
+<p>範例如下:</p>
+<pre><code> #sdc-deletekey id_rsa</code></pre>
+<p><strong>#sdc-getkey [key id]</strong> </p>
+<p>檢索個別Key的記錄。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getkey id_rsa
+
+結果:
+{
+  &quot;name&quot;: &quot;id_rsa&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuMb+L3kt4ZQELQ8q07VzZ/
+          tOBe6G+POo8j/WNyriKLa/nG6+419EGRetcnPY6UpuE5adIppVdG7FqId6
+          XNIRcVzxYs6clZ7R1/8f9F9YJLZZphCoGQrR6YZHvePn2joRSZ1L02DAYx
+          N7UID3S8TEiT+2tnmUeTB2fd9Y1dNkQOQE12w5jrfKIN3QwJBl5TZ7D+sv
+          Pepw3yWvxKSdsQ+alrkkJC3tDgctyPCHY4yqNWIFEFui7hIbfZPThNRkIn
+          vdqtAEAyB/9tlB9MrmHaoW2C49aFLnh2Qtf5xniT8FwJc9kurbYBJnK8pr
+          beJ/Kug5DdC11k/sJCoaFQ45Sw== root@*********&quot;,
+  &quot;created&quot;: &quot;2013-06-26T06:46:45+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-06-26T06:46:45+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-listkeys</strong>  </p>
+<p>列出指定帳戶的所有公共密鑰。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listkeys</code></pre>
+<h2>關於 machinesnapshot ：<a name="Machinesnapshot"></a></h2>
+<hr>
+<p><strong>#sdc-createmachinesnapshot [machine id]</strong>  </p>
+<p>對所指定smartmachine創見一個新的快照。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createmachinesnapshot 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;name&quot;: &quot;20130701021139&quot;,
+  &quot;state&quot;: &quot;queued&quot;,
+  &quot;created&quot;: &quot;2013-07-01T02:11:39+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:11:39+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachinesnapshot [snapshot name] --machine [machine id]</strong>  </p>
+<p>刪除指定smartmachine的快照。</p>
+<p><strong>#sdc-getmachinesnapshot [snapshot name] --machine[machine id]</strong>  </p>
+<p>藉由name取得指定smartmachine的快照。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getmachinesnapshot &quot;20130701021139&quot; --machine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;name&quot;: &quot;20130701021139&quot;,
+  &quot;state&quot;: &quot;queued&quot;,
+  &quot;created&quot;: &quot;2013-07-01T02:11:39+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:11:39+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-listmachinesnapshots</strong>  </p>
+<p>列出指定一個smartmachine的所有快照。</p>
+<p><strong>#sdc-startmachinefromsnapshot -n [snapshot name] [machine id]</strong>  </p>
+<p>當機器處於 &#39;stopped&#39; 狀態下，您可以選擇用快照起動機器。</p>
+<h2>其他指令：<a name="Other"></a></h2>
+<hr>
+<p><strong>#sdc-describeanalytics</strong> </p>
+<p>檢索可以創建所使用的分析端點 instrumentations 的 架構。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-describeanalytics</code></pre>
+<p><strong>#sdc-listdatacenters</strong> </p>
+<p>提供一個關於所有數據中心的列表 。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listdatacenters</code></pre>
+<p><strong>#sdc-setup</strong> </p>
+<p>在數據中心設置一個帳戶來使用。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-setup
+
+SDC_ACCOUNT:    輸入您的username。
+
+SDC_URL:   CloudAPI 端點.
+例如，一個為JoyentCloud的CloudAPI端點https://us-west-1.api.joyentcloud.com。 
+(每個數據中心在雲其自己的CloudAPI端點)。
+
+SDC_KEY_ID:  您上傳到 SmartDC 的 key fingerprint。</code></pre>
+
+  </div>
+  </div>
+  </body>
+</html>

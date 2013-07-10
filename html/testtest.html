@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>testtest</title>
+    <meta name="description" content="testtest">
+    <meta name="keywords" content="testtest">
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="/index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="/index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>MiCloud API :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p><strong>實做 MiCloud API:</strong></p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<h2>關於 Tag：</h2>
+<p><strong>#sdc-addmachinetags  -t  key=value  [machine id]</strong> 可以讓你添加新的標籤，而不是覆蓋現有的標籤</p>
+<p> 此乎叫允許您傳送任意數量的參數，而這些參數將被轉為標籤可供您所使用</p>
+<p> 使用方法如下:</p>
+<pre><code>#sdc-addmachinetags -t foo=bar  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果如下:
+ {
+   &quot;foo&quot;: &quot;bar&quot;
+ }</code></pre>
+<p><strong>#sdc-deletemachinetag [key] --machine [machine id]</strong> 刪除tag</p>
+<p> 使用方法如下:</p>
+<pre><code> #sdc-deletemachinetag foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5</code></pre>
+<p><strong>#sdc-getmachinetag [key] --machine [machine id]</strong> 可單筆查詢tag的值</p>
+<p> 使用方法如下:</p>
+<pre><code>#sdc-getmachinetag  foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+  結果如下:
+
+   bar</code></pre>
+<p><strong>#sdc-listmachinetags [machine id]</strong> 可查詢所有tag與tag的值</p>
+<p>使用方法如下:</p>
+<pre><code> #sdc-listmachinetags 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果如下:
+ {
+   &quot;foo&quot;: &quot;bar&quot;
+ }</code></pre>
+<h2>關於 instrumentation：</h2>
+<p><strong>#sdc-createinstrumentation</strong>      </p>
+<p>使用方法如下:</p>
+<pre><code>#sdc-createinstrumentation -m syscall -s syscalls
+
+結果
+{
+  &quot;module&quot;: &quot;syscall&quot;,
+  &quot;stat&quot;: &quot;syscalls&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1372235215353,
+  &quot;value-scope&quot;: &quot;interval&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/sunwing/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>#sdc-deleteinstrumentation [instrumentation_id]</strong></p>
+<p>使用方法如下:</p>
+<pre><code>sdc-deleteinstrumentation 1</code></pre>
+<p><strong>#sdc-getinstrumentation [instrumentation_id]</strong></p>
+<p>使用方法如下:</p>
+<pre><code>#sdc-getinstrumentation 1
+
+結果
+{
+  &quot;module&quot;: &quot;syscall&quot;,
+  &quot;stat&quot;: &quot;syscalls&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1372235215353,
+  &quot;value-scope&quot;: &quot;interval&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/sunwing/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>#sdc-listinstrumentations</strong></p>
+<p>使用方法如下:</p>
+<pre><code>#sdc-listinstrumentations</code></pre>
+<h2>關於 key：</h2>
+<p><strong>#sdc-createkey</strong> 產生一個key</p>
+<p> 使用方法如下:</p>
+<pre><code>#sdc-createkey -n id_rsa ~/.ssh/id_rsa.pub
+
+結果
+{
+  &quot;name&quot;: &quot;id_rsa&quot;,
+    &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuMb+L3kt4ZQELQ8q07VzZ/
+          tOBe6G+POo8j/WNyriKLa/nG6+419EGRetcnPY6UpuE5adIppVdG7FqId6
+          XNIRcVzxYs6clZ7R1/8f9F9YJLZZphfoGQrR6YZHfePn2joRSZ1L02DAYx
+          N7UID3S8TEiT+2tnmUeTB2W9Y1ddkQOQE12w5jrtKIN3QwJBl5TZ7D+sv6
+          Pepw3yWvxKSrTQdsalrkkJC3tDgctyPCHY4yqNWIFEFui7hIbfZPThNRkI
+          vdqtAEAyB/9tlB9MrmHaoW2C49aFLnh2Qtf5xniT8FwJc9kurbYBJnK8pr
+          beJ/Kug5DdC11k/sJCoaFQ45Sw== root@*********&quot;,
+  &quot;created&quot;: &quot;2013-06-26T06:46:45+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-06-26T06:46:45+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-deletekey  [key id]</strong> 刪除key</p>
+<p> 使用方法如下:</p>
+<pre><code> #sdc-deletekey id_rsa</code></pre>
+<p><strong>#sdc-getkey [key id]</strong> 查詢單筆key</p>
+<p> 使用方法如下:</p>
+<pre><code>#sdc-getkey id_rsa
+
+結果
+{
+  &quot;name&quot;: &quot;id_rsa&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuMb+L3kt4ZQELQ8q07VzZ/
+          tOBe6G+POo8j/WNyriKLa/nG6+419EGRetcnPY6UpuE5adIppVdG7FqId6
+          XNIRcVzxYs6clZ7R1/8f9F9YJLZZphCoGQrR6YZHvePn2joRSZ1L02DAYx
+          N7UID3S8TEiT+2tnmUeTB2fd9Y1dNkQOQE12w5jrfKIN3QwJBl5TZ7D+sv
+          Pepw3yWvxKSdsQ+alrkkJC3tDgctyPCHY4yqNWIFEFui7hIbfZPThNRkIn
+          vdqtAEAyB/9tlB9MrmHaoW2C49aFLnh2Qtf5xniT8FwJc9kurbYBJnK8pr
+          beJ/Kug5DdC11k/sJCoaFQ45Sw== root@*********&quot;,
+  &quot;created&quot;: &quot;2013-06-26T06:46:45+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-06-26T06:46:45+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-listkeys</strong> 查詢所有key</p>
+<p> 使用方法如下:</p>
+<pre><code>#sdc-listkeys</code></pre>
+<h2>關於 metadata：</h2>
+<p><strong>#sdc-updatemachinemetadata   --metadata key=value [mahine id]</strong> 新增metadata</p>
+<p> 使用方式如下:</p>
+<pre><code> #sdc-updatemachinemetadata --metadata foo=bar 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果
+
+{
+  &quot;root_authorized_keys&quot;: &quot;ssh-rsa ......................略&quot;,
+  &quot;foo&quot;: &quot;bar&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachinemetadata [key] --machine [machine id] </strong> 刪除metadata</p>
+<p> 使用方式如下:</p>
+<pre><code> #sdc-deletemachinemetadata foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5</code></pre>
+<p><strong>#sdc-getmachinemetadata    [mahine id]</strong> 查詢metadata</p>
+<p>使用方式如下:</p>
+<pre><code>#sdc-getmachinemetadata  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果
+
+{
+  &quot;root_authorized_keys&quot;: &quot;ssh-rsa ......................略&quot;,
+  &quot;foo&quot;: &quot;bar&quot;
+}</code></pre>
+<h2>關於 datasets：</h2>
+<p><strong>#sdc-getdataset [name]</strong>  查詢單筆datasets，包含id,urn,name,os,type,description,default,requirement,version</p>
+<p>使用方式如下:</p>
+<pre><code>#sdc-getdatasets chefserver
+
+結果
+  {
+    &quot;id&quot;: &quot;e6f10814-a38d-11e2-8138-67b96e228c1e&quot;,
+    &quot;urn&quot;: &quot;sdc:sdc:chefserver:1.1.0&quot;,
+    &quot;name&quot;: &quot;chefserver&quot;,
+    &quot;os&quot;: &quot;smartos&quot;,
+    &quot;type&quot;: &quot;smartmachine&quot;,
+    &quot;description&quot;: &quot;machine_new_SmartOS64ChefServer&quot;,
+    &quot;default&quot;: false,
+    &quot;requirements&quot;: {},
+    &quot;version&quot;: &quot;1.1.0&quot;
+  }</code></pre>
+<p><strong>#sdc-listdatasets</strong> 查詢所有datasets，包含id,urn,name,os,type,description,default,requirement,version</p>
+<p>使用方式如下:</p>
+<pre><code>#sdc-listdatasets</code></pre>
+<h2>關於 packages：</h2>
+<p><strong>#sdc-getpackage [name]</strong> 查詢單筆package，包含name,mwmory,disk,vcpus,swap,default</p>
+<p>使用方式如下:</p>
+<pre><code>#sdc-listpackages &quot;3XL 32GB RAM (4CORE)&quot;
+
+ 結果
+{
+  &quot;name&quot;: &quot;3XL 32GB RAM (4CORE)&quot;,
+  &quot;memory&quot;: 32768,
+  &quot;disk&quot;: 512000,
+  &quot;vcpus&quot;: 4,
+  &quot;swap&quot;: 32768,
+  &quot;default&quot;: false
+}</code></pre>
+<p><strong>#sdc-listpackages</strong> 查詢所有package，包含name,mwmory,disk,vcpus,swap,default</p>
+<p>使用方式如下:</p>
+<pre><code>#sdc-listpackages</code></pre>
+
+  </div>
+  </div>
+  </body>
+</html>
