@@ -12,5 +12,7 @@ var path = __dirname + '/../javascripts/tree.json'
 var jsonCfg = JSON.parse(fs.readFileSync(path, "utf-8"));
 
 // Start translate
+log.info('Reading tree cfg from: ', path);
+log.info('Write tree page to file:', out);
 wikitpage.json2ultree(jsonCfg, out);
 
