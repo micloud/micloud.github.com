@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>API 1</title>
+    <meta name="description" content="API 1">
+    <meta name="keywords" content="API 1">
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <div style="width:100%" align="center">
+  <div style="width:960px;vertical-align:bottom" align="left">
+    <span style="text-align:left">
+    <a href="/index.html">
+    <img src="/images/wiki-logo.png" height="50px"/>
+    <img src="/images/micloud-logo.png" height="40px"/>
+    </a>
+    </span>
+    <div align="left" style="width:100%;text-align:right">
+    <a href="/index.html" >
+      <img src="/images/back.png" height="20px"/>
+      Back to Wiki
+    </a>
+    </div>
+  </div>
+  <hr style="width:960px"/>
+  <div align="center" style="text-align:left; width:960px;">
+    <h1>MiCloud API 基本操作(一) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 管理<a href="#Machine">Machine</a>   ,查詢<a href="#Datasets">Datasets</a>,查詢<a href="#Packages">Packages</a>。</p>
+<h2>關於 machine：<a name="Machine"></a></h2>
+<hr>
+<p><strong>#sdc-createmachine --package [name] --dataset [urn]</strong> </p>
+<p>產生一台新機器(其中package與dataset必須由使用者自行輸入,而其他參數若使用者沒輸入則電腦會自動預設好)</p>
+<p>可以查看<a href="#Datasets"><strong>關於Datasets</strong></a>,<a href="#Packages"><strong>關於Packages</strong></a>。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createmachine --package &quot;regular_512&quot; --dataset &quot;sdc:sdc:nodejs:1.1.4&quot;
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;provisioning&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 512,
+  &quot;disk&quot;: 10240,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachine [machine id] </strong></p>
+<p>刪除指定機器(其中機器的狀態必須是&quot;stopped&quot;方可進行刪除動做)。</p>
+<p><strong>#sdc-getmachine [machine id]</strong> </p>
+<p>藉由id查詢指定機器詳細資料。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;provisioning&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 512,
+  &quot;disk&quot;: 10240,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-listmachines</strong></p>
+<p>檢索該帳戶上的所有機器。</p>
+<p><strong>#sdc-rebootmachine [id]</strong></p>
+<p>藉由id而重新啟動該機器。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-rebootmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+
+  &quot;state&quot;: &quot;running&quot; → &quot;state&quot;: &quot;stopped&quot; → &quot;state&quot;: &quot;running&quot;</code></pre>
+<p><strong>#sdc-resizemachine --package [name] [machine id]</strong>  </p>
+<p>修改機器 (memory,disk)</p>
+<p>範例如下:</p>
+<pre><code>#sdc-resizemachine --package &quot;S 1GB RAM (1CORE)&quot; 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 1024,
+  &quot;disk&quot;: 15360,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:42:23+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:07:03+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-startmachine [machine id]</strong></p>
+<p>藉由id而啟動該機器。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-startmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+
+  &quot;state&quot;: &quot;running&quot;</code></pre>
+<p><strong>#sdc-stopmachine [machine id]</strong></p>
+<p>範例如下:</p>
+<pre><code>#sdc-stopmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+藉由id而停止該機器。
+
+結果:
+
+  &quot;state&quot;: &quot;stopped&quot;</code></pre>
+<h2>關於 datasets：<a name="Datasets"></a></h2>
+<hr>
+<p><strong>#sdc-getdataset [name]</strong>  </p>
+<p>檢索指定的 datasets，包含其id,urn,name,os,type,description,default,requirement,version等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getdatasets chefserver
+
+結果:
+  {
+    &quot;id&quot;: &quot;e6f10814-a38d-11e2-8138-67b96e228c1e&quot;,
+    &quot;urn&quot;: &quot;sdc:sdc:chefserver:1.1.0&quot;,
+    &quot;name&quot;: &quot;chefserver&quot;,
+    &quot;os&quot;: &quot;smartos&quot;,
+    &quot;type&quot;: &quot;smartmachine&quot;,
+    &quot;description&quot;: &quot;machine_new_SmartOS64ChefServer&quot;,
+    &quot;default&quot;: false,
+    &quot;requirements&quot;: {},
+    &quot;version&quot;: &quot;1.1.0&quot;
+  }</code></pre>
+<p><strong>#sdc-listdatasets</strong> </p>
+<p>檢索所有的datasets，包含id,urn,name,os,type,description,default,requirement,version等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listdatasets</code></pre>
+<h2>關於 packages：<a name="Packages"></a></h2>
+<hr>
+<p><strong>#sdc-getpackage [name]</strong> </p>
+<p>檢索單筆的package，包含name,mwmory,disk,vcpus,swap,default等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listpackages &quot;3XL 32GB RAM (4CORE)&quot;
+
+ 結果:
+{
+  &quot;name&quot;: &quot;3XL 32GB RAM (4CORE)&quot;,
+  &quot;memory&quot;: 32768,
+  &quot;disk&quot;: 512000,
+  &quot;vcpus&quot;: 4,
+  &quot;swap&quot;: 32768,
+  &quot;default&quot;: false
+}</code></pre>
+<p><strong>#sdc-listpackages</strong> </p>
+<p>檢索所有package，包含name,mwmory,disk,vcpus,swap,default等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listpackages</code></pre>
+
+  </div>
+  </div>
+  </body>
+</html>

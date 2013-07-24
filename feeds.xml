@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MiCloud Wiki RSS]]></title><description><![CDATA[Feeds for MiCloud Wiki]]></description><link>http://doc.micloud.tw</link><image><url>http://doc.micloud.tw/icon.png</url><title>MiCloud Wiki RSS</title><link>http://doc.micloud.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Mon, 24 Jun 2013 07:15:49 GMT</lastBuildDate><atom:link href="http://doc.micloud.tw/feeds.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[何謂Smart Machine?]]></title><description><![CDATA[<h1>SmartMachine說明</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MiCloud Wiki RSS]]></title><description><![CDATA[Feeds for MiCloud Wiki]]></description><link>http://doc.micloud.tw</link><image><url>http://doc.micloud.tw/icon.png</url><title>MiCloud Wiki RSS</title><link>http://doc.micloud.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 10 Jul 2013 03:21:04 GMT</lastBuildDate><atom:link href="http://doc.micloud.tw/feeds.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Simon Su]]></author><item><title><![CDATA[何謂Smart Machine?]]></title><description><![CDATA[<h1>SmartMachine說明</h1>
 <p>SmartMachine係指美國Joyent所研發SDC(SmartDatacenter)上之虛擬主機。SDC提升虛擬層的各項技術，達到超越市面上一般虛擬機器的效能，因此於SDC上提供之各項服務均優於一般虛擬主機。SmartMachine為植基於Solaris Kernel所發展的作業系統，全盤建構於ZFS檔案系統上。</p>
 <p>該作業系統無縫的與SDC做緊密的結合，可提供同平台的其他作業系統將近一倍以上的運算能力，省去跨系統溝通的耗損，能夠提供用戶動態調整資源、更符合用戶的需求，達到快速部署之應用能力。</p>
 <p>您可透過MiCloud雲端管理系統 (<a href="http://micloud.tw">http://micloud.tw</a>) 監控並管理您的虛擬主機，以及連線操控所部屬的應用服務。MiCloud為持續精進的雲端管理平台，提供多項第三方預載套件，包含最常使用的資料庫MySQL與網頁工具Apache HTTPD、PHP，以及遠端管理界面webmin等。</p>
@@ -8,7 +8,7 @@
 <ul>
 <li><a href="http://wiki.joyent.com/display/smart/Getting+Started+with+SmartMachines">Joyent wiki</a></li>
 </ul>
-]]></description><link>http://doc.micloud.tw/html/What+is+Smart+Machine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/What+is+Smart+Machine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[MiCloud的特點是什麼?]]></title><description><![CDATA[<h1>MiCloud的特點</h1>
+]]></description><link>http://doc.micloud.tw/html/What+is+Smart+Machine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/What+is+Smart+Machine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[MiCloud的特點是什麼?]]></title><description><![CDATA[<h1>MiCloud的特點</h1>
 <p>有別於台灣其他業者，不論是在服務或技術方面皆持續完善及創新，以符合整個市場需求，MiCloud是您服務的最佳選擇。MiCloud擁有以下的特點：</p>
 <p>(1) 線上快速申請</p>
 <p>透過 <a href="http://micloud.tw">http://micloud.tw</a> 即可立即申請專屬的虛擬主機。</p>
@@ -27,7 +27,7 @@
 <li>使用SSH key連線方式，保護虛擬主機之擁有者，亦可隔離無金鑰之駭客。</li>
 <li>嚴密及安全的機房管理<br>*機房門禁管理<br>*24小時機房監視錄影系統<br>*24小時網路監控<br>*防火牆之保護<br>*提供不斷電系統</li>
 </ul>
-]]></description><link>http://doc.micloud.tw/html/Micloud+Features.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Micloud+Features.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[PUTTY連線錯誤訊息：Cannot Agree A Client To Server Cipher]]></title><description><![CDATA[<h1>Putty登入SmartOS錯誤訊息：Couldn&#39;t agree a client-to-server cipher</h1>
+]]></description><link>http://doc.micloud.tw/html/Micloud+Features.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Micloud+Features.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[PUTTY連線錯誤訊息：Cannot Agree A Client To Server Cipher]]></title><description><![CDATA[<h1>Putty登入SmartOS錯誤訊息：Couldn&#39;t agree a client-to-server cipher</h1>
 <p>申請SmartOS之用戶，如遇到登入錯誤訊息如下：<br><img src='http://doc.micloud.tw/images/PuttyLoginErrorCannotAgreeAClientToServerCipher-CannotAgreeAClientToServerCipher.png' align='center'/></p>
 <p>則可能原因有數種，您可檢查下面項目：</p>
 <ul>
@@ -41,7 +41,7 @@
 <li><a href="http://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=putty&amp;source=web&amp;cd=1&amp;ved=0CDIQFjAA&amp;url=http%3A%2F%2Fwww.chiark.greenend.org.uk%2F~sgtatham%2Fputty%2Fdownload.html&amp;ei=YJbXTtDACITKmQXppsXtCw&amp;usg=AFQjCNEawi7s0aRUeJP3qKnncgvPiSqZYA&amp;sig2=-7FhRbxa0seZVhrrNQUBnw">Putty官方網站</a></li>
 <li><a href="http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001">http://hub.opensolaris.org/bin/view/Community+Group+on/2009013001</a></li>
 </ul>
-]]></description><link>http://doc.micloud.tw/html/PuttyLoginErrorCannotAgreeAClientToServerCipher.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/PuttyLoginErrorCannotAgreeAClientToServerCipher.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[SmartOS如何安裝Oracle]]></title><description><![CDATA[<h1>SmartOS install Oracle</h1>
+]]></description><link>http://doc.micloud.tw/html/PuttyLoginErrorCannotAgreeAClientToServerCipher.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/PuttyLoginErrorCannotAgreeAClientToServerCipher.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[SmartOS如何安裝Oracle]]></title><description><![CDATA[<h1>SmartOS install Oracle</h1>
 <h2>準備</h2>
 <p>開始安裝Oracle Universal前，的準備工作：</p>
 <ul>
@@ -87,7 +87,7 @@ Preparing to launch Oracle Universal Installer ...</code></pre>
 <p>注意：OpenSolaris (5.11)版本非Oracle原廠建議之作業系統，因此安裝前需要加設作業系統檢查參數：-ignoreSysPrereqs</p>
 <h2>其他資訊</h2>
 <p>如果您需要更多有關於Oracle之安裝資訊，您可以參考Oracle installation manuals及 The Cuddletech SAs Guide to Oracle.</p>
-]]></description><link>http://doc.micloud.tw/html/SmartOS+Install+Oracle.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/SmartOS+Install+Oracle.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[如何檢視網路路由?]]></title><description><![CDATA[<h1>SmartOS檢視網路路由指令</h1>
+]]></description><link>http://doc.micloud.tw/html/SmartOS+Install+Oracle.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/SmartOS+Install+Oracle.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[如何檢視網路路由?]]></title><description><![CDATA[<h1>SmartOS檢視網路路由指令</h1>
 <p>透過netstat指令檢視路由表：</p>
 <pre><code># netstat -rn</code></pre>
 <pre><code>Routing Table: IPv4
@@ -108,7 +108,7 @@ traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
 1  254.2.......54)  0.189 ms  0.194 ms  0.096 ms
 2  211..........1 ms  0.453 ms  0.444 ms
 ....</code></pre>
-]]></description><link>http://doc.micloud.tw/html/View+network+routing+instructions.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/View+network+routing+instructions.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Sat, 04 May 2013 08:30:14 GMT</pubDate></item><item><title><![CDATA[常用指令集有哪些?]]></title><description><![CDATA[<h1>常用指令集</h1>
+]]></description><link>http://doc.micloud.tw/html/View+network+routing+instructions.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/View+network+routing+instructions.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 30 Apr 2013 10:27:10 GMT</pubDate></item><item><title><![CDATA[常用指令集有哪些?]]></title><description><![CDATA[<h1>常用指令集</h1>
 <p>各版本套件指令比較表<br>雖然目前許多市面常見的作業系統例如Ubuntu、Debian、CentOS、Fedora，甚至是目前Micloud所用的SmartOS都是以linux為底的架構。不過由於開發人員的不同在指令的操作上也會有稍稍的不同，在套件的指令集中，我們利用列表來比較各版本不同的指令:</p>
 <table>
 <thead>
@@ -200,7 +200,7 @@ traceroute to google.com (74.125.31.138), 30 hops max, 40 byte packets
 </tr>
 </tbody>
 </table>
-]]></description><link>http://doc.micloud.tw/html/Used+commmands.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Used+commmands.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[如何更新主機時區？]]></title><description><![CDATA[<h1>如何更新主機時區？</h1>
+]]></description><link>http://doc.micloud.tw/html/Used+commmands.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Used+commmands.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[如何更新主機時區？]]></title><description><![CDATA[<h1>如何更新主機時區？</h1>
 <h2>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h2>
 <p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
 <pre><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></pre>
@@ -272,7 +272,7 @@ Asia/Taipei</code></pre>
 <p>修改TZ設定內容為Asia/Taipei</p>
 <pre><code>TZ=Asia/Taipei</code></pre>
 <p>重新開機生效</p>
-]]></description><link>http://doc.micloud.tw/html/Update+Timezone.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Update+Timezone.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[如何檢視已使用的資源?]]></title><description><![CDATA[<h1>如何檢視已使用的資源?</h1>
+]]></description><link>http://doc.micloud.tw/html/Update+Timezone.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Update+Timezone.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[如何檢視已使用的資源?]]></title><description><![CDATA[<h1>如何檢視已使用的資源?</h1>
 <h2>檢查磁碟使用情況</h2>
 <table>
 <thead>
@@ -356,7 +356,7 @@ Asia/Taipei</code></pre>
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-]]></description><link>http://doc.micloud.tw/html/View+Used+Resources.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/View+Used+Resources.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[申請帳號]]></title><description><![CDATA[<h1>申請MiCloud帳號</h1>
+]]></description><link>http://doc.micloud.tw/html/View+Used+Resources.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/View+Used+Resources.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[申請帳號]]></title><description><![CDATA[<h1>申請MiCloud帳號</h1>
 <h2>申請MiCloud帳號 <a href="http://micloud.tw">GO</a></h2>
 <p>請於<strong>MiCloud</strong>首頁左上角點選右邊選項＜<strong>註冊</strong>＞。</p>
 <p><img src='http://doc.micloud.tw/images/Apply+MiCloud+Account-new-p1-2.png' width='650' align='center'/></p>
@@ -369,7 +369,7 @@ Asia/Taipei</code></pre>
 <h2>註冊完成</h2>
 <p>註冊完成後，您將可以訂購我們所提供的產品(訂購前，需至先先完成帳單資訊及付款方式填寫，此相關操作說明，請參考 <a href="http://doc.micloud.tw/html/MiCloud+Account+Modify.html">帳戶資訊修改</a></p>
 <p><img src='http://doc.micloud.tw/images/Apply+MiCloud+Account-new-set2.jpg' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Apply+MiCloud+Account-new.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Apply+MiCloud+Account-new.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[訂購主機]]></title><description><![CDATA[<h1>訂購主機</h1>
+]]></description><link>http://doc.micloud.tw/html/Apply+MiCloud+Account-new.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Apply+MiCloud+Account-new.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[訂購主機]]></title><description><![CDATA[<h1>訂購主機</h1>
 <p>若您還未建立您的 <strong>SSH-Key</strong> 以及 <strong>付款方式</strong> 的資料填寫 ，請先建立完成。</p>
 <ul>
 <li>SSH-Key 相關教學:<a href="http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Windows.html">Windows</a><a href="http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.html">Linux/Unix</a><a href="http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-MacOS.html">MacOS</a></li>
@@ -383,7 +383,7 @@ Asia/Taipei</code></pre>
 </ul>
 <p>關於機器建立狀況與相關資訊可於 <a href="http://doc.micloud.tw/html/Manage+your+Machines.html">主機管理</a></p>
 <p><img src='http://doc.micloud.tw/images/Order+a+Machine-p1+-5.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Order+a+Machine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Order+a+Machine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[免費試用主機主機使用說明]]></title><description><![CDATA[<h1>免費主機主機使用說明</h1>
+]]></description><link>http://doc.micloud.tw/html/Order+a+Machine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Order+a+Machine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[免費試用主機主機使用說明]]></title><description><![CDATA[<h1>免費主機主機使用說明</h1>
 <p>Small Package 服務主機為SmartOs主機，網路配置部分，提供一個內部私有IP，並透過外部DNS設定串聯，內部主機彼此間可以透過私有IP互通。一般設定說明如下:</p>
 <h2>HTTP/HTTPS使用</h2>
 <p>開放80、443、8080、3000、10000等port供HTTP(S)連線使用，連線時請使用主機DNS名稱連線(Ex:<a href="http://192-168-255-13.my.micloud.tw">http://192-168-255-13.my.micloud.tw</a>)</p>
@@ -454,7 +454,7 @@ DocumentRoot /opt/local/share/httpd/htdocs
 關閉服務：svcadm disable [service name]
 服務狀態檢視：svcs -a | grep [service name]
 服務LOG檢視：tail -f `svcs -L [service name]`</code></pre>
-]]></description><link>http://doc.micloud.tw/html/Instruction+for+2XS+Machine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Instruction+for+2XS+Machine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[變更套件庫來源及安裝軟體(Ubuntu)]]></title><description><![CDATA[<h1>變更套件庫來源及安裝軟體(Ubuntu)</h1>
+]]></description><link>http://doc.micloud.tw/html/Instruction+for+2XS+Machine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Instruction+for+2XS+Machine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 17 Jun 2013 08:29:18 GMT</pubDate></item><item><title><![CDATA[變更套件庫來源及安裝軟體(Ubuntu)]]></title><description><![CDATA[<h1>變更套件庫來源及安裝軟體(Ubuntu)</h1>
 <p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>Ubuntu採用APT套件管理，其套件庫的修改與設定相似，實際修改方式如下說明:</p>
 <h2>變更套件來源</h2>
@@ -509,7 +509,7 @@ deb-src http://opensource.nchc.org.tw/ubuntu/ lucid main restricted</code></pre>
 <p>只更新某套件</p>
 <pre><code>#apt-get upgrade [套件名稱]</code></pre>
 <p><img src='http://doc.micloud.tw/images/Ubuntu+mirror+site-un-aptupgrade1.jpg' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Ubuntu+mirror+site.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Ubuntu+mirror+site.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[變更套件庫來源及安裝軟體(Debian)]]></title><description><![CDATA[<h1>變更套件庫來源及安裝軟體(Debian)</h1>
+]]></description><link>http://doc.micloud.tw/html/Ubuntu+mirror+site.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Ubuntu+mirror+site.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[變更套件庫來源及安裝軟體(Debian)]]></title><description><![CDATA[<h1>變更套件庫來源及安裝軟體(Debian)</h1>
 <p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>Debian採用APT套件管理，其套件庫的修改與設定相似，實際修改方式如下說明:</p>
 <h2>變更套件來源</h2>
@@ -563,7 +563,7 @@ deb http://security.debian.org/ squeeze/updates main contrib non-free</code></pr
 <p>若要更新所有己安裝的套件，指令如下:</p>
 <pre><code>#apt-get upgrade</code></pre>
 <p><img src='http://doc.micloud.tw/images/Debian+mirror+site-de-aptupgrade.jpg' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Debian+mirror+site.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Debian+mirror+site.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[變更套件庫來源及安裝軟體(CentOS)]]></title><description><![CDATA[<h1>變更套件庫來源及安裝軟體(CentOS)</h1>
+]]></description><link>http://doc.micloud.tw/html/Debian+mirror+site.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Debian+mirror+site.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[變更套件庫來源及安裝軟體(CentOS)]]></title><description><![CDATA[<h1>變更套件庫來源及安裝軟體(CentOS)</h1>
 <p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>CentOS引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套件庫的修改與設定相似。實際修改方式如下說明:</p>
 <h2>變更套件來源</h2>
@@ -641,7 +641,7 @@ baseurl=http://opensource.nchc.org.tw/centos/$releasever/contrib/$basearch/</cod
 <p>若想移除套件，指令如下</p>
 <pre><code>#yum remove [套件名稱]</code></pre>
 <p><img src='http://doc.micloud.tw/images/CentOS+mirror+site-ce-remove.jpg' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/CentOS+mirror+site.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/CentOS+mirror+site.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[變更套件庫來源及安裝軟體(Fedora)]]></title><description><![CDATA[<h1>變更套件庫來源及安裝軟體(Fedora)</h1>
+]]></description><link>http://doc.micloud.tw/html/CentOS+mirror+site.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/CentOS+mirror+site.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[變更套件庫來源及安裝軟體(Fedora)]]></title><description><![CDATA[<h1>變更套件庫來源及安裝軟體(Fedora)</h1>
 <p>目前MiCloud提供的系統各自採用國外所提供的套件庫，主要是因為台灣的鏡像站點並不保證其服務的可靠度及可用率，但您也可以透過修改設定檔將套件庫來源指向台灣，其可靠度您必須自行評估，以保障您的虛擬主機。</p>
 <p>Fedora引入了為Yellow Dog Linux 而設的YUM系統套件管理工具，其套件庫的修改與設定相似。實際修改方式如下說明:</p>
 <h2>變更套件來源</h2>
@@ -745,7 +745,7 @@ baseurl=http://opensource.nchc.org.tw/fedora/linux/updates/testing/$releasever/S
 <p>若想移除套件，指令如下</p>
 <pre><code>#yum remove [套件名稱]</code></pre>
 <p><img src='http://doc.micloud.tw/images/Fedora+mirror+site-fe-remove.jpg' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Fedora+mirror+site.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Fedora+mirror+site.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[更新套件庫及安裝軟體(SmartOS)]]></title><description><![CDATA[<h1>更新套件庫及安裝軟體(SmartOS)</h1>
+]]></description><link>http://doc.micloud.tw/html/Fedora+mirror+site.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Fedora+mirror+site.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[更新套件庫及安裝軟體(SmartOS)]]></title><description><![CDATA[<h1>更新套件庫及安裝軟體(SmartOS)</h1>
 <h2>套件更新</h2>
 <p>不同SmartOS版本有不同的套件庫來源，無法任意變更，但可以執行套件更新，相關指令如下:</p>
 <p>先從套件庫找出需要更新的套件，指令如下:</p>
@@ -782,7 +782,7 @@ ex:pkgin remove postgresql90-adminpack-9.0.4</code></pre>
 <li>Install Apache With Tomcat</li>
 <li>Install Java jdk 1.5 and jboss 4.0</li>
 </ul>
-]]></description><link>http://doc.micloud.tw/html/Install+SmartOS+Packages.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Install+SmartOS+Packages.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[金鑰產生與連線教學(Windows)]]></title><description><![CDATA[<h1>金鑰產生與連線教學(Windows)</h1>
+]]></description><link>http://doc.micloud.tw/html/Install+SmartOS+Packages.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Install+SmartOS+Packages.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[金鑰產生與連線教學(Windows)]]></title><description><![CDATA[<h1>金鑰產生與連線教學(Windows)</h1>
 <h2>SSH Key限制</h2>
 <p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
 <ol>
@@ -827,7 +827,7 @@ ex:pkgin remove postgresql90-adminpack-9.0.4</code></pre>
 <p><img src='http://doc.micloud.tw/images/SSH+KeyGen+&+Connect+Tutorial-Windows-b3.png' width='500' align='center'/></p>
 <p>進入Putty後,他會要求你輸入帳號(Login as:),請輸入root</p>
 <p><font color="red">(註：連線時，請使用root登入，可不用輸入密碼：若使用預設帳號jill登入，則請參照Customer Portal上Credential設定。)</font><br><img src='http://doc.micloud.tw/images/SSH+KeyGen+&+Connect+Tutorial-Windows-b6.png' width='500' align='center'/><br><img src='http://doc.micloud.tw/images/SSH+KeyGen+&+Connect+Tutorial-Windows-b5.png' width='500' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[金鑰產生與連線教學(Linux/Unix)]]></title><description><![CDATA[<h1>金鑰產生與連線教學(Linux/Unix)</h1>
+]]></description><link>http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[金鑰產生與連線教學(Linux/Unix)]]></title><description><![CDATA[<h1>金鑰產生與連線教學(Linux/Unix)</h1>
 <h2>SSH Key 限制</h2>
 <p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
 <ol>
@@ -888,7 +888,7 @@ r91eLfYSbMGqqkqS371G68HFDqTgjSAOoPUTWms8afMZ67B/Fr3Yrt8egEaSdpTw== root@XXXX</co
 <li>SSH金鑰產生與設定：<a href="http://wiki.joyent.com/display/gen/SSH+Guide">http://wiki.joyent.com/display/gen/SSH+Guide</a></li>
 <li>SSH連線緩慢之設定調整：<a href="http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin">http://wiki.joyent.com/display/gen/SSH+Guide#SSHGuide-SSHslowfromUbuntuLinuxorCygwin</a></li>
 </ul>
-]]></description><link>http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[金鑰產生與連線教學(MacOS)]]></title><description><![CDATA[<h1>金鑰產生與連線教學(MacOS)</h1>
+]]></description><link>http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[金鑰產生與連線教學(MacOS)]]></title><description><![CDATA[<h1>金鑰產生與連線教學(MacOS)</h1>
 <h2>SSH Key 限制</h2>
 <p>MiCloud SSH Key模組使用上有下面限制，使用前需要特別注意：</p>
 <ol>
@@ -917,7 +917,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>例如：</p>
 <pre><code>ssh -i id_rsa root@211.123.123.31</code></pre>
 <p><img src='http://doc.micloud.tw/images/SSH+KeyGen+&+Connect+Tutorial-MacOS-pic3.png' width='500' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-MacOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-MacOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[主機金鑰設置與連線教學  ]]></title><description><![CDATA[<h1>主機金鑰設置與連線教學</h1>
+]]></description><link>http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-MacOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-MacOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[主機金鑰設置與連線教學  ]]></title><description><![CDATA[<h1>主機金鑰設置與連線教學</h1>
 <p>說明：本次公測主機為MiCloud 2XS型號主機，為小於一般市場提供之虛擬主機機型，提供一般網頁服務應用與開發使用，其中網路連線部分提供Public DNS，讓您用主機之專屬DNS連線，連線方式請參考下面說明：</p>
 <p>您申請免費30天試用服務後，SmartOS/Linux主機連線必須透過SSH協定與SSH Key的認證，以確保您與您的伺服器之間的連線安全。</p>
 <p>1.若您已設定ssh key則使用您原本的私鑰進行連線</p>
@@ -951,7 +951,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>(6)新增完後請先登入平台選擇主機，檢視主機的細項畫面，再開啟putty.exe，hostname為DNS，設定完按下open按鈕，進入putty後輸入root即可使用。</p>
 <p><img src='http://doc.micloud.tw/images/Free+machine+&+Connect+Tutorial-machine.jpg' width='650' align='center'/></p>
 <p><img src='http://doc.micloud.tw/images/Free+machine+&+Connect+Tutorial-dnsport1.jpg' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Free+machine+Connect+Tutorial.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Free+machine+Connect+Tutorial.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(Windows至Linux)]]></title><description><![CDATA[<h1>使用指令上傳檔案(Windows至Linux)</h1>
+]]></description><link>http://doc.micloud.tw/html/Free+machine+Connect+Tutorial.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Free+machine+Connect+Tutorial.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(Windows至Linux)]]></title><description><![CDATA[<h1>使用指令上傳檔案(Windows至Linux)</h1>
 <h2>檔案上傳教學(指令)</h2>
 <p>影片:<a href="http://www.youtube.com/watch?v=Ha17-BbePI4">MiCloud 使用 PSCP 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"></p>
@@ -990,7 +990,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>所以我的指令會是 : pscp c:\Windows_Testupload.cpp root@123.123.123.123:/home/Linux_Test<br>*  <font color="red">(2)  pscp  使用者(root)@電腦地址(IP):拷貝檔案(絕對路徑)  新檔名(絕對路徑)    - 從 Linux 拷貝到 MS Window 電腦</p>
 <p></font><br>ex : 我要從我在MiCloud申請的電腦(123.123.123.123)中抓一個download.cpp的檔案,它放在/home/Linux_Test底下,並將它放到我的電腦C槽中的資料夾Windows_Test底下</p>
 <p>所以我的指令會是 : pscp root@123.123.123.123:/home/Linux_Test/download.cpp c:\Windows_Test<br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-PSCP-a6.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-PSCP.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-PSCP.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(Linux/Unix)]]></title><description><![CDATA[<h1>使用指令上傳檔案(Linux/Unix)</h1>
+]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-PSCP.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-PSCP.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(Linux/Unix)]]></title><description><![CDATA[<h1>使用指令上傳檔案(Linux/Unix)</h1>
 <h2>Linux/Unix Like 檔案傳輸</h2>
 <p>使用 openssh client，請帶參數 -i 來使用 private ssh key。</p>
 <p>上傳：</p>
@@ -998,7 +998,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Linux+or+Unix-l4.png' width='720' align='center'/><br>下載：</p>
 <pre><code>scp -i id_rsa root@211.123.123.123:/home/Test_2/download.txt /home/Test</code></pre>
 <p><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Linux+or+Unix-l3.png' width='720' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-Linux+or+Unix.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-Linux+or+Unix.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(MacOS)]]></title><description><![CDATA[<h1>使用指令上傳檔案(MacOS)</h1>
+]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-Linux+or+Unix.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-Linux+or+Unix.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(MacOS)]]></title><description><![CDATA[<h1>使用指令上傳檔案(MacOS)</h1>
 <h2>Mac OS 檔案傳輸</h2>
 <p>使用 openssh client，請帶參數 -i 來使用 private ssh key。</p>
 <p>上傳：</p>
@@ -1006,7 +1006,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-MacOS-l2.png' width='650' align='center'/><br>下載：</p>
 <pre><code>scp -i id_rsa root@211.123.123.123:/tmp/MiCRM.tgz .</code></pre>
 <p><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-MacOS-l1.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-MacOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-MacOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用軟體上傳檔案(WinScp)]]></title><description><![CDATA[<h1>使用軟體上傳檔案(WinScp)</h1>
+]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-MacOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-MacOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用軟體上傳檔案(WinScp)]]></title><description><![CDATA[<h1>使用軟體上傳檔案(WinScp)</h1>
 <h2>檔案上傳教學(WinScp)</h2>
 <p>影片:<a href="http://www.youtube.com/watch?v=O-HDpdX7mD8">MiCloud 使用 WinScp 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"></p>
@@ -1024,7 +1024,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>成功登入後,左邊紅色框框為你本機的資料夾,右邊藍色框框為你連線過去的電腦資料夾.</p>
 <p>如果要上傳A檔案,只需要從左邊紅色框框內找出那份檔案後,將其拖曳去右邊的資料夾即可.</p>
 <p>同理,如果要下載A檔案至你本機電腦,只需在右邊藍色框框內找出您的檔案後,拖曳至左邊紅色框框內即可.<br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-WinScp-winscp3.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-WinScp.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-WinScp.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用軟體上傳檔案(FileZilla)]]></title><description><![CDATA[<h1>使用軟體上傳檔案(FileZilla)</h1>
+]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-WinScp.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-WinScp.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用軟體上傳檔案(FileZilla)]]></title><description><![CDATA[<h1>使用軟體上傳檔案(FileZilla)</h1>
 <h2>檔案上傳教學(FileZilla)</h2>
 <p>影片:<a href="http://www.youtube.com/watch?v=m-CBesKRE6s">MiCloud 使用 FileZilla 配合 SSH-Key(.ppk) 上傳與下載檔案</a></p>
 <p><div align="center"></p>
@@ -1040,7 +1040,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>密碼(W):空白即可</p>
 <p>連接阜(P):22   (22為MiCloud的預設SSH連接阜)</p>
 <p><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-FileZilla-fz.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-FileZilla.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-FileZilla.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(Windows至Windows)]]></title><description><![CDATA[<h1>使用指令上傳檔案(Windows至Windows)</h1>
+]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-FileZilla.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-FileZilla.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(Windows至Windows)]]></title><description><![CDATA[<h1>使用指令上傳檔案(Windows至Windows)</h1>
 <h2>檔案上傳與下載教學(Windows至Windows)</h2>
 <p>要從MiCloud Windows Server上進行軟體或檔案的上下載有許多方式，在此建議您使用網路芳鄰方式來進行檔案傳輸。</p>
 <p>下面介紹相關設定方式：</p>
@@ -1060,7 +1060,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <li>開始 -&gt; 執行 , 再填入您的ip（ex：&quot;<strong>//IP</strong>&quot;）<br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Windows+to+Windows-p+-6.png' width='500' align='center'/><br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Windows+to+Windows-p+-7.png' width='500' align='center'/></li>
 <li>輸入您的帳號密碼 ,就能開始上傳與下載檔案<br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Windows+to+Windows-id.png' width='500' align='center'/><br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Windows+to+Windows-p+-8.png' width='500' align='center'/></li>
 </ol>
-]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-Windows+to+Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-Windows+to+Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(Linux至Windows)]]></title><description><![CDATA[<h1>使用指令上傳檔案(Linux至Windows)</h1>
+]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-Windows+to+Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-Windows+to+Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用指令上傳檔案(Linux至Windows)]]></title><description><![CDATA[<h1>使用指令上傳檔案(Linux至Windows)</h1>
 <h2>檔案上傳與下載教學(Linux至Windows)</h2>
 <p>要從MiCloud Windows Server上進行軟體或檔案的上下載有許多方式，在此建議您使用網路芳鄰方式來進行檔案傳輸。</p>
 <p>下面介紹相關設定方式：</p>
@@ -1088,7 +1088,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <li>User name:輸入您的帳號</li>
 <li>Password:輸入您的密碼<br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Linux+to+Windows-l2.png' width='500' align='center'/><br>.3. 進入後便可看到您共用的資料夾<br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Linux+to+Windows-l3.png' width='500' align='center'/><br>.4. 若您要進一步上傳或下載檔案,需再次驗證您要登入的角色 , 然後您就能開始上傳與下載檔案<br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Linux+to+Windows-l4.png' width='500' align='center'/><br><img src='http://doc.micloud.tw/images/File+Upload+Tutorial-Linux+to+Windows-l5.png' width='500' align='center'/></li>
 </ul>
-]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-Linux+to+Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-Linux+to+Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[SmartOS Hostname設置]]></title><description><![CDATA[<h1>SmartOS Hostname設置</h1>
+]]></description><link>http://doc.micloud.tw/html/File+Upload+Tutorial-Linux+to+Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/File+Upload+Tutorial-Linux+to+Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[SmartOS Hostname設置]]></title><description><![CDATA[<h1>SmartOS Hostname設置</h1>
 <p>當您申請MiCloud上任何主機時，若未指定主機名稱，系統將預設以亂數產生一串文字做為您的主機名稱，可能類似：fxyzabcd.local的名稱。您可以以IP登入您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。</p>
 <p>如您需要重設您的主機名稱，您可以修改某些檔案來達到修改Hostname的目的，詳細說明如下:</p>
 <p>SmartMachine需要修改的檔案如下:</p>
@@ -1120,7 +1120,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>以micloud為例：</p>
 <pre><code># nslookup portal.micloud.tw</code></pre>
 <p><img src='http://doc.micloud.tw/images/Setting+hostname+on+SmartOS-nslookup.png' width='500' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Setting+hostname+on+SmartOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+hostname+on+SmartOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[Linux Hostname設置]]></title><description><![CDATA[<h1>Linux Hostname設置</h1>
+]]></description><link>http://doc.micloud.tw/html/Setting+hostname+on+SmartOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+hostname+on+SmartOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[Linux Hostname設置]]></title><description><![CDATA[<h1>Linux Hostname設置</h1>
 <p>當您申請MiCloud上任何主機時，若未指定主機名稱，系統將預設以亂數產生一串文字做為您的主機名稱，可能類似：fxyzabcd.local的名稱。您可以以IP登入您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。<br>如您需要重設您的主機名稱，您可以修改某些檔案來達到修改Hostname的目的，不同的作業系統需要更改的檔案並不相同，詳細說明如下:</p>
 <h2>Debian</h2>
 <p>您需要修改的檔案如下:</p>
@@ -1185,7 +1185,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>於下方畫面紅色框框更改您的主機名稱<br><img src='http://doc.micloud.tw/images/Setting+hostname+on+Linux-fehosname1.jpg' width='650px' align='center'/></p>
 <p>(3)當您設定好，並重開主機後，您可以使用下面指令驗證：</p>
 <pre><code>#hostname</code></pre>
-]]></description><link>http://doc.micloud.tw/html/Setting+hostname+on+Linux.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+hostname+on+Linux.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[Windows Hostname設置]]></title><description><![CDATA[<h1>Windows Hostname設置</h1>
+]]></description><link>http://doc.micloud.tw/html/Setting+hostname+on+Linux.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+hostname+on+Linux.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[Windows Hostname設置]]></title><description><![CDATA[<h1>Windows Hostname設置</h1>
 <p>當您申請MiCloud上任何主機時，若未指定主機名稱，系統將預設以亂數產生一串文字做為您的主機名稱，可能類似：fxyzabcd.local的名稱。您可以以IP登入您的主機，並透過&quot;hostname&quot;之指令看到您的Hostname。</p>
 <p>如您需要重設您的主機名稱，您可以修改某些檔案來達到修改Hostname的目的，詳細說明如下:</p>
 <p>(1)點選開始，並且進入我的電腦，進入後點選上方工具，再點選資料夾選項<br><img src='http://doc.micloud.tw/images/Setting+hostname+on+Windows-wihostname.jpg' width='650px' align='center'/></p>
@@ -1196,7 +1196,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <p>利用記事本或是Notepad++開啟hosts文件並且在文件內裡面的127.0.0.1 localhost底下加入您想設定新的hostname，儲存後即可使用新的hostname。</p>
 <pre><code>127.0.0.1       localhost
 127.0.1.1       windows.example.com localhost</code></pre>
-]]></description><link>http://doc.micloud.tw/html/Setting+hostname+on+Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+hostname+on+Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[swap設置]]></title><description><![CDATA[<h1>Swap調整</h1>
+]]></description><link>http://doc.micloud.tw/html/Setting+hostname+on+Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+hostname+on+Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[swap設置]]></title><description><![CDATA[<h1>Swap調整</h1>
 <p>Micloud 客戶的Linux虛擬機會有兩個虛擬磁碟，第一個是OS掛載在&quot;/&quot;之下，另一個是packages中設定的disk space，預設掛載在/data下。 MiCloud已為SmartMachine、及1G以下用戶預先做好swap空間的預留，其餘類型的虛擬主機沒有預設swap空間，用戶需自行做設定。</p>
 <p>如果客戶新建一個新的VM，可以採用下列Partition swap及File swap兩種方式中任一種，如果客戶已經寫了資料在/data 且無法更動，那只能選擇File swap的方式。</p>
 <p>兩種swap設定方法及說明如下：</p>
@@ -1250,7 +1250,7 @@ cat id_rsa.pub                #讀取產出的金鑰檔案</code></pre>
 <pre><code># vi /etc/fstab
 加入一行/data/swap.img swap swap defaults 0 0</code></pre>
 <p><img src='http://doc.micloud.tw/images/About+Swap+Adjust-mount2.jpg' width='650' align='center'/><br>附註： /data 是目前 MiCloud Linux VMs 預設第二顆磁碟的掛載點，依客戶使用方式不同而有所差異</p>
-]]></description><link>http://doc.micloud.tw/html/About+Swap+Adjust.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/About+Swap+Adjust.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Sat, 04 May 2013 08:30:14 GMT</pubDate></item><item><title><![CDATA[設定IPFilter]]></title><description><![CDATA[<h1>設定IPFILTER</h1>
+]]></description><link>http://doc.micloud.tw/html/About+Swap+Adjust.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/About+Swap+Adjust.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 30 Apr 2013 10:27:10 GMT</pubDate></item><item><title><![CDATA[設定IPFilter]]></title><description><![CDATA[<h1>設定IPFILTER</h1>
 <h2>安全與IPFILTER</h2>
 <p>在您全新Joyent的Smartmachines預設虛擬NIC的網路和default情況下， 這意味著您必須在您的電腦的網路協定中進行相關設訂。 最安全的做法，是建立一台防禦主機或是VPN伺服器，並以後端存取訪問相關服務，如資料庫存取或是Web伺服器，並加載負載平衡器如Zeus/Stingray。</p>
 <p>以下是以IPFILTER為您的SmartOS Smartmachine所做的基本的分配概況：</p>
@@ -1293,7 +1293,7 @@ block in from any to dest.ip.addr</code></pre>
 <p>只要使用XXXX / XX，而不是使用一個特定的IP，範圍可以適用於任何規則.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-]]></description><link>http://doc.micloud.tw/html/Setting+IPFilter.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+IPFilter.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用memcached]]></title><description><![CDATA[<h1>使用memcached</h1>
+]]></description><link>http://doc.micloud.tw/html/Setting+IPFilter.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+IPFilter.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用memcached]]></title><description><![CDATA[<h1>使用memcached</h1>
 <p>memcached是一套 Name-Value Pair(NVP) 分散式記憶體快取系統，其主要目的是在於減少資料庫的負擔。透過memcached的快取對於使用者在等待資料存取時間可以加快進行而不會延遲服務。以下將會教您如何在SmartMachine去啟用和設置memcached。</p>
 <h2>啟動 Memcached</h2>
 <p>利用root權限或是利用sudo指令來啟動memcached:</p>
@@ -1314,7 +1314,7 @@ block in from any to dest.ip.addr</code></pre>
 # svcprop -p config/memory memcached
 128</code></pre>
 <p><img src='http://doc.micloud.tw/images/Using+Memcached-memcached-4.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Using+Memcached.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Using+Memcached.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[啓動SmartOS Plus上之SMTP]]></title><description><![CDATA[<h1>啓動SmartOS Plus上之SMTP</h1>
+]]></description><link>http://doc.micloud.tw/html/Using+Memcached.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Using+Memcached.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[啓動SmartOS Plus上之SMTP]]></title><description><![CDATA[<h1>啓動SmartOS Plus上之SMTP</h1>
 <p>如果您需要建立電子郵件伺服器來收發電子郵件，您必須在您的主機上啟用此服務，而處理電子郵件收發服務的通訊協定為簡易郵件傳送通訊協定，簡稱SMTP(Simple Mail Transfer Protocol)，在SmartMachines上SMTP預設是關閉，但用戶可以利用以下步驟來啟用SMTP的服務。</p>
 <h2>前置作業</h2>
 <p>在啟動SmartOS 主機上的SMTP之前，必需先安裝postfix和courier，您可以先使用pkgin search指令搜尋是否已有存在postfix 、courier，指令如下：</p>
@@ -1360,7 +1360,7 @@ block in from any to dest.ip.addr</code></pre>
 <li><p>完成後可以前往電子郵件信箱確認是否收到信件，如下圖所示收到主旨為“The Subject”的郵件，表示此設定為成功。<br><img src='http://doc.micloud.tw/images/Enable+SMTP+on+SmartOS+Plus-SMTP9.png' width='600' align='center'/></p>
 </li>
 </ol>
-]]></description><link>http://doc.micloud.tw/html/Enable+SMTP+on+SmartOS+Plus.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Enable+SMTP+on+SmartOS+Plus.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用svcadm來管理系統服務]]></title><description><![CDATA[<h1>使用svcadm開啟或關閉服務</h1>
+]]></description><link>http://doc.micloud.tw/html/Enable+SMTP+on+SmartOS+Plus.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Enable+SMTP+on+SmartOS+Plus.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用svcadm來管理系統服務]]></title><description><![CDATA[<h1>使用svcadm開啟或關閉服務</h1>
 <p>Solaris base的技術，可以利用svcadm管理系統服務，以下列出常用管理的指令。</p>
 <h2>svcadm用法：</h2>
 <pre><code>[root@MiCloudDBT /home/user]# svcadm
@@ -1396,7 +1396,7 @@ ex:svcadm disable apache</code></pre>
 <h2>svcadm重新啟動服務</h2>
 <pre><code>svcadm restart [軟體名稱]
 ex:svcadm restart apache</code></pre>
-]]></description><link>http://doc.micloud.tw/html/Svcadm+usage.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Svcadm+usage.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[建置Nagios網路監控主機]]></title><description><![CDATA[<h1>建置Nagios網路監控主機</h1>
+]]></description><link>http://doc.micloud.tw/html/Svcadm+usage.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Svcadm+usage.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[建置Nagios網路監控主機]]></title><description><![CDATA[<h1>建置Nagios網路監控主機</h1>
 <p>Nagios是一套網路監控軟體，不僅可以監控主機(本地端或遠端)及服務，管理者可自行依需求來撰寫當監控主機或服務發生問題時的反應動作，例如.可以設置當服務出現問題時會透過電子郵件的方式通知管理人員，讓管理人員更快、精準掌握網路、主機設備等狀況。</p>
 <h2>Fedora</h2>
 <h2>安裝Nagios及相關必要套件</h2>
@@ -1476,7 +1476,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <p>b.監控Services<br>安裝完成後，您會發現http服務會有一個警告訊息如下圖紅色框框的部分<br><img src='http://doc.micloud.tw/images/Setting+Nagios-su2.png' width='650' align='center'/><br>原因:<br>雖然http服務正常，但預設apache網頁目錄/var/www/html沒有相關的index.html檔，才會出現這個警告請在此目錄下加入一個空的index.html，幾分鐘後警告即被排除，指令如下:</p>
 <pre><code>#touch /var/www/html/index.html</code></pre>
 <p>c.驗證是否收到系統報警通知<br><img src='http://doc.micloud.tw/images/Setting+Nagios-http.png' width='650' align='center'/><br>由上方service監控畫面上，可以看出Swap Usage為Critical，故Nagios會自動發信至您之前設定的郵件地址，信件內容如下<br><img src='http://doc.micloud.tw/images/Setting+Nagios-mail.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Setting+Nagios.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+Nagios.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[在SmartOS上設置SMF]]></title><description><![CDATA[<h1>在SmartOS上設置SMF</h1>
+]]></description><link>http://doc.micloud.tw/html/Setting+Nagios.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+Nagios.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[在SmartOS上設置SMF]]></title><description><![CDATA[<h1>在SmartOS上設置SMF</h1>
 <p>SmartOS中的服務管理功能 (Service Management Facility, SMF)，類似於Linux系統中init.d的service架構，使用者可透過SMF的管理，系統會依設定來開啟會暫停每個服務。 本範例為如何建立一個服務加入SMF中。</p>
 <p>若要執行一項服務，首先必須設置一個腳本，透過腳本即可設定服務的狀態，SMF中所使用之腳本的檔案類型為xml。以下將透過下載一個腳本做為範例，我們將利用此下載的腳本來修改為我們需要的腳本並進行測試及驗證。</p>
 <h2>下載腳本範例(manifest)</h2>
@@ -1535,7 +1535,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <pre><code># svccfg delete testSMF
 # svcs testSMF</code></pre>
 <p><img src='http://doc.micloud.tw/images/Setting+SMF+on+SmartOS-p5.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Setting+SMF+on+SmartOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+SMF+on+SmartOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[帳戶資訊管理]]></title><description><![CDATA[<h1>MiCloud帳戶資訊修改</h1>
+]]></description><link>http://doc.micloud.tw/html/Setting+SMF+on+SmartOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Setting+SMF+on+SmartOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[帳戶資訊管理]]></title><description><![CDATA[<h1>MiCloud帳戶資訊修改</h1>
 <p>影片:<a href="http://www.youtube.com/watch?v=qyEhOfV7GA0">MiCloud帳戶資訊管理</a></p>
 <div align="center"><br><embed width="420" height="345" src="http://www.youtube.com/v/qyEhOfV7GA0&hd=1" type="application/x-shockwave-flash"></embed><br></div>
 
@@ -1553,14 +1553,14 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <h2>帳戶設定</h2>
 <p>在這個頁面裡能修改您的基本資料</p>
 <p><img src='http://doc.micloud.tw/images/MiCloud+Account+Modify-p1+-6.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/MiCloud+Account+Modify.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+Account+Modify.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[SSH金鑰管理]]></title><description><![CDATA[<h1>SSH金鑰</h1>
+]]></description><link>http://doc.micloud.tw/html/MiCloud+Account+Modify.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+Account+Modify.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[SSH金鑰管理]]></title><description><![CDATA[<h1>SSH金鑰</h1>
 <p>您若需要在Micloud上建置SmartOS及Linux的作業系統</p>
 <p>則需要在這個頁面建立您的SSH-Key( <a href="/http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Windows.html">Windows</a>/<a href="http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-Linux+or+Unix.html">Linux/Unix</a>/<a href="http://doc.micloud.tw/html/SSH+KeyGen+Connect+Tutorial-MacOS.html">MacOS</a>)</p>
 <p>以便您在登入系統時做驗證</p>
 <p><img src='http://doc.micloud.tw/images/MiCloud+Account+Modify-p1+-7.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/MiCloud+SSH+Key.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+SSH+Key.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[登入密碼管理]]></title><description><![CDATA[<h1>登入密碼管理</h1>
+]]></description><link>http://doc.micloud.tw/html/MiCloud+SSH+Key.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+SSH+Key.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[登入密碼管理]]></title><description><![CDATA[<h1>登入密碼管理</h1>
 <p>若您需要更改登入MiCloud登入時的密碼，可於此頁做變更。<br><img src='http://doc.micloud.tw/images/MiCloud+Account+Modify-p1+-8.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Micloud+Password.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Micloud+Password.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Sat, 04 May 2013 08:30:14 GMT</pubDate></item><item><title><![CDATA[付款方式]]></title><description><![CDATA[<h1>付款方式</h1>
+]]></description><link>http://doc.micloud.tw/html/Micloud+Password.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Micloud+Password.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 30 Apr 2013 10:27:10 GMT</pubDate></item><item><title><![CDATA[付款方式]]></title><description><![CDATA[<h1>付款方式</h1>
 <p>付款方式分為企業付款、信用卡付款二種，詳細解說如下:</p>
 <h2>企業付款說明</h2>
 <p>企業付款方式僅提供合作或簽約夥伴，不適用於網路申請之用戶。</p>
@@ -1568,9 +1568,9 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <h2>信用卡付款說明</h2>
 <p><embed width="700" height="550" src='http://doc.micloud.tw/images/v4.swf' type="application/x-shockwave-flash"></embed><br>用戶皆可透過網路做信用卡認證，認證成功後即可訂購主機，未來帳單將從此張信用卡做扣款動作。</p>
 <p><img src='http://doc.micloud.tw/images/Pay+way-p1+-9.png' width='650' align='center'/><br>請確認您的<strong>帳單寄送地址</strong>是否正確!<br><img src='http://doc.micloud.tw/images/Pay+way-p1+-10.png' width='650' align='center'/><br>請選擇您的信用卡與填寫相關資訊<br><img src='http://doc.micloud.tw/images/Pay+way-CC3.JPG' width='650' align='center'/><br>完成後請確認您的<strong>卡號</strong>是否正確<br><img src='http://doc.micloud.tw/images/Pay+way-CC1.JPG' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Pay+way.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Pay+way.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[帳單資料]]></title><description><![CDATA[<h1>帳單資料</h1>
+]]></description><link>http://doc.micloud.tw/html/Pay+way.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Pay+way.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[帳單資料]]></title><description><![CDATA[<h1>帳單資料</h1>
 <p>用戶可以在帳單資料中，查詢到過去6個月內的帳單細項資訊以及未來帳單。<br><img src='http://doc.micloud.tw/images/MiCloud+Account+Modify-p1+-11.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/MiCloud+billing.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+billing.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Sat, 04 May 2013 08:30:14 GMT</pubDate></item><item><title><![CDATA[主機清單]]></title><description><![CDATA[<h1>主機</h1>
+]]></description><link>http://doc.micloud.tw/html/MiCloud+billing.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+billing.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 30 Apr 2013 10:27:10 GMT</pubDate></item><item><title><![CDATA[主機清單]]></title><description><![CDATA[<h1>主機</h1>
 <p>此頁可顯示您所建的機器與機器的IP與基本的資料(作業系統、記憶體、購買了多久以及目前狀態)</p>
 <p>若您的機器過多也可於中間的藍色框框內輸入該台機器的資訊來做搜尋的動作</p>
 <p><img src='http://doc.micloud.tw/images/Manage+your+Machines-p2.png' width='650' align='center'/><br>*  左邊藍色框框概述您的機器設備與相關訊息。</p>
@@ -1581,7 +1581,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <li>點擊 <strong>Show Credentials</strong>(左邊紅色框框) 則會顯示您這台機器內<a href="/http://doc.micloud.tw/html/Preload+Software+Default+Password.html">預載程式之預設密碼</a></li>
 </ul>
 <p><img src='http://doc.micloud.tw/images/Manage+your+Machines-p1+-18.png' width='650' align='center'/><br><strong>登入說明請參考：</strong> <a href="/http://doc.micloud.tw/html/MiCloud+Credential+Description.html">MiCloud Credential Description</a></p>
-]]></description><link>http://doc.micloud.tw/html/Manage+your+Machines.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Manage+your+Machines.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用系統快照備份及還原]]></title><description><![CDATA[<h1>使用Snapshot備份及還原</h1>
+]]></description><link>http://doc.micloud.tw/html/Manage+your+Machines.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Manage+your+Machines.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用系統快照備份及還原]]></title><description><![CDATA[<h1>使用Snapshot備份及還原</h1>
 <p>系統快照功能，可幫助您還原被刪除或被破壞的系統。</p>
 <p>當您需要操作到可能影響系統運作的動作時，可先建立系統快照，以防系統損壞無法回復。</p>
 <h2>以下為系統快照之測試：</h2>
@@ -1603,7 +1603,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <p>請重新連線後確認檔案是否回復</p>
 <p><img src='http://doc.micloud.tw/images/Snapshot+recovery-snapshot5.jpg' width='650' align='center'/></p>
 <p>Text.txt即被回復了。</p>
-]]></description><link>http://doc.micloud.tw/html/Snapshot+recovery.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Snapshot+recovery.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[預載軟件之預設密碼]]></title><description><![CDATA[<h1>預載程式之預設密碼</h1>
+]]></description><link>http://doc.micloud.tw/html/Snapshot+recovery.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Snapshot+recovery.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[預載軟件之預設密碼]]></title><description><![CDATA[<h1>預載程式之預設密碼</h1>
 <p>登入 MiCloud 完成後能在畫面左上方點選主機，在從下方表格點選您的主機查看細項。<br><img src='http://doc.micloud.tw/images/MiCloud+Credential+Description-p1+-21.png' width='650' align='center'/><br>進入查詢細項頁面，可於 <strong>概述</strong> 中找到 <strong>Credentials</strong> 欄位,左鍵點擊 <strong>Show Credentials</strong>，查看該台主機預載程式之密碼。</p>
 <p><img src='http://doc.micloud.tw/images/MiCloud+Credential+Description-p1+-18.png' width='650' align='center'/></p>
 <p>登入帳號與密碼說明如下:</p>
@@ -1674,7 +1674,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <p>如欲更改其他帳戶之密碼，請於root執行下方指令。</p>
 <pre><code>#passwd admin</code></pre>
 <p><img src='http://doc.micloud.tw/images/MiCloud+Credential+Description-clip-image003.jpg' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/MiCloud+Credential+Description.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+Credential+Description.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[重新啟動、關閉與刪除主機]]></title><description><![CDATA[<h1>主機之重啟、關閉與刪除</h1>
+]]></description><link>http://doc.micloud.tw/html/MiCloud+Credential+Description.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+Credential+Description.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[重新啟動、關閉與刪除主機]]></title><description><![CDATA[<h1>主機之重啟、關閉與刪除</h1>
 <p>MiCloud自助服務平台提供給您直接操控主機之重啟、關閉及刪除功能，在您登入MiCloud Customer Portal之後，您可以至主機頁面，點選您欲操控的主機，在右方控制面板中點選您所需要的服務。相關說明如下:</p>
 <h2>主機之重啟</h2>
 <p>在您登入MiCloud Customer Portal之後，您可以至主機頁面，點選您欲操控的主機，在右方控制面板中，點選&quot;REBOOT&quot;進行重啟。如下圖:</p>
@@ -1699,7 +1699,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <p><img src='http://doc.micloud.tw/images/Server+Restart+From+Portal-delete.jpg' width='650px' align='center'/></p>
 <p>刪除後主機及其上相關資料將無法回復，請確認後再執行。</p>
 <p><img src='http://doc.micloud.tw/images/Server+Restart+From+Portal-delete1.jpg' width='650px' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Server+Restart+From+Portal.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Server+Restart+From+Portal.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用MiCloud分析工具-DTrace]]></title><description><![CDATA[<h1>使用雲端分析工具</h1>
+]]></description><link>http://doc.micloud.tw/html/Server+Restart+From+Portal.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Server+Restart+From+Portal.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用MiCloud分析工具-DTrace]]></title><description><![CDATA[<h1>使用雲端分析工具</h1>
 <p>雲端分析工具，將幫助您做您Node.js的即時性的績效性能分析™應用。<br>使用雲端分析工具將需要Node 版本0.4.0或更高的版本。<br>在這個頁面，您將可以找到：</p>
 <p>同時看到 <a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/"><a href="http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/">http://dtrace.org/blogs/dap/2011/08/29/new-metrics-on-no-de/</a></a></p>
 <p>顯示分析的概述如下：</p>
@@ -1948,7 +1948,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 </ul>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-]]></description><link>http://doc.micloud.tw/html/Using+Cloud+Analytics.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Using+Cloud+Analytics.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[Windows主機掛載硬碟]]></title><description><![CDATA[<h1>Windows主機掛載硬碟</h1>
+]]></description><link>http://doc.micloud.tw/html/Using+Cloud+Analytics.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Using+Cloud+Analytics.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[Windows主機掛載硬碟]]></title><description><![CDATA[<h1>Windows主機掛載硬碟</h1>
 <p>訂購MiCloud Windows主機的硬碟空間屬於額外提供給每台主機的空間，並不包含在原作業系統的硬碟空間中，預設每台虛擬主機之作業系統空間有40GB，但用戶需自行將OS外之硬碟掛載後，才可使用，其掛載及啟用的操作說明如下。</p>
 <p>登入您的主機後點選”開始”在<strong>電腦</strong>上按右鍵點選<strong>管理</strong>，如下圖。<br><img src='http://doc.micloud.tw/images/Mounting+the+Data+Volume+on+Windows-win-dis.jpg' width='500' align='center'/></p>
 <p>開啟伺服器管理員後點選存放-磁碟管理，如下圖。<br><img src='http://doc.micloud.tw/images/Mounting+the+Data+Volume+on+Windows-win-dis1.jpg' width='600' align='center'/></p>
@@ -1958,7 +1958,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <p>出現新增簡單磁碟區精靈視窗，點選下一步即可。<br><img src='http://doc.micloud.tw/images/Mounting+the+Data+Volume+on+Windows-win-dis6.jpg' width='600' align='center'/></p>
 <p>第三步驟可選擇磁碟機代號如下圖橘色框框，再執行下一步至完成即可。<br><img src='http://doc.micloud.tw/images/Mounting+the+Data+Volume+on+Windows-win-dis7.jpg' width='600' align='center'/></p>
 <p>E槽即為您所掛載的硬碟，如下圖。<br><img src='http://doc.micloud.tw/images/Mounting+the+Data+Volume+on+Windows-win-dis8.jpg' width='600' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Mounting+the+Data+Volume+on+Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Mounting+the+Data+Volume+on+Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Sat, 04 May 2013 08:30:14 GMT</pubDate></item><item><title><![CDATA[遠端連線Windows主機]]></title><description><![CDATA[<h1>Windows 遠端桌面連線</h1>
+]]></description><link>http://doc.micloud.tw/html/Mounting+the+Data+Volume+on+Windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Mounting+the+Data+Volume+on+Windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 30 Apr 2013 10:27:10 GMT</pubDate></item><item><title><![CDATA[遠端連線Windows主機]]></title><description><![CDATA[<h1>Windows 遠端桌面連線</h1>
 <p>MiCloud Windows Server預設開啓遠端桌面連線服務，讓您可以透過internet連線操控與安裝相關軟體，下面介紹如何使用遠端桌面連線從您的電腦連線至MiCloud Windows Server：</p>
 <h2>Windows 下遠端桌面連線 Windows</h2>
 <p>1.開啟&quot;遠端桌面連線&quot;,輸入您的ip並按下連線<br><img src='http://doc.micloud.tw/images/Connect+windows-p.png' width='450' align='center'/><br>2.輸入您的密碼,,進入後您就可以開始使用<br><img src='http://doc.micloud.tw/images/Connect+windows-p+-1.png' width='650' align='center'/></p>
@@ -1970,7 +1970,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <p>Mac下使用遠端桌面連線至windows server，要先安裝Microsoft Remote Desktop Connection Client for Mac(<a href="http://www.microsoft.com/mac/remote-desktop-client">下載</a><br>相關設定如下:</p>
 <p>1.安裝完成後，開啟Microsoft Remote Desktop Connection Client for Mac，輸入您的ip並按下connect。<br><img src='http://doc.micloud.tw/images/Connect+windows-RDCMacIntro.png' width='650' align='center'/></p>
 <p>2.輸入您的User name及Password，而Domain為您主機的ip，您就可開始使用。<br><img src='http://doc.micloud.tw/images/Connect+windows-RDCMacLogin.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Connect+windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Connect+windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[系統監控]]></title><description><![CDATA[<h1>主機監控之設定</h1>
+]]></description><link>http://doc.micloud.tw/html/Connect+windows.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Connect+windows.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[系統監控]]></title><description><![CDATA[<h1>主機監控之設定</h1>
 <h2>Windows</h2>
 <p>1.MiCloud平台虛擬主機之監控程式需使用nodejs來執行，<strong>請先登入您的Windows虛擬主機</strong>，再至<a href="http://nodejs.org/"><a href="http://nodejs.org/">http://nodejs.org/</a></a>下載並安裝 (如下圖)<br><img src='http://doc.micloud.tw/images/Monitor+System-node.png' width='650' align='center'/></p>
 <p>2.請下載由MiCloud研發團隊撰寫的監控程式並解壓，下載網址為</p>
@@ -1999,7 +1999,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <pre><code>#crontab -l</code></pre>
 <p><img src='http://doc.micloud.tw/images/Monitor+System-pl4.png' width='650' align='center'/></p>
 <p>4.cron job設定完成後，15分鐘後即可至MiCloud管理平台檢視您主機上的CPU、Memory、Disk的使用率。<br><img src='http://doc.micloud.tw/images/Monitor+System-pl5.png' width='650' align='center'/><br>也可以在歷史監控資料中查看週、月、年的資訊，並可下載近半年的原始資料。<br><img src='http://doc.micloud.tw/images/Monitor+System-pl6.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Monitor+System.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Monitor+System.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[時區設定]]></title><description><![CDATA[<h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
+]]></description><link>http://doc.micloud.tw/html/Monitor+System.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Monitor+System.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[時區設定]]></title><description><![CDATA[<h1>Linux (Redhat / Fedora / CentOS) 設定時間的方式</h1>
 <p>(1) copy /usr/share/zoneinfo/* 內的確切時區資料檔案為 /etc/localtime</p>
 <pre><code># cp /usr/share/zoneinfo/GMT+0 /etc/localtime</code></pre>
 <p>(2) 執行 date -u</p>
@@ -2008,7 +2008,7 @@ authorized_for_all_host_commands=nagiosadmin,nagios</code></pre>
 <pre><code># date</code></pre>
 <p>(4) 重開後生效</p>
 <pre><code># reboot</code></pre>
-]]></description><link>http://doc.micloud.tw/html/Linux+Update+Timezone.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Linux+Update+Timezone.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[DNS管理]]></title><description><![CDATA[<h1>DNS設置</h1>
+]]></description><link>http://doc.micloud.tw/html/Linux+Update+Timezone.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Linux+Update+Timezone.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[DNS管理]]></title><description><![CDATA[<h1>DNS設置</h1>
 <p>若您想在MiCloud主機上設置DNS，請先至網址註冊商(例如:Godaddy)申請一個Domain Name，設置方式有以下二種:</p>
 <ul>
 <li>子網域指向MiCloud DNS Server</li>
@@ -2048,7 +2048,7 @@ DNS64.MICLOUD.TW</code></pre>
 <p>或者可以直接將記錄指向MiCloud DNS server查詢：</p>
 <pre><code>nslookup portal.test.facewithus.com dns60.micloud.tw</code></pre>
 <p><img src='http://doc.micloud.tw/images/DNS+Manage-all-6.png' width='450' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/DNS+Manage.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/DNS+Manage.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[安裝Percona]]></title><description><![CDATA[<h1>安裝Percona</h1>
+]]></description><link>http://doc.micloud.tw/html/DNS+Manage.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/DNS+Manage.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[安裝Percona]]></title><description><![CDATA[<h1>安裝Percona</h1>
 <p>MiCloud只有在SmartOS中有預載Percona的服務，用戶可參考以下的步驟，在Linux環境下安裝。</p>
 <h2>在CentOS中安裝Percona</h2>
 <p>1.將Percona的套件安裝至主機的套件庫中</p>
@@ -2124,7 +2124,7 @@ deb-src http://repo.percona.com/apt squeeze main</code></pre>
 <p>6.登入mysql</p>
 <pre><code>#mysql -uroot -p</code></pre>
 <p><img src='http://doc.micloud.tw/images/Percona+install-c7.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Percona+install.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Percona+install.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[安裝Riak]]></title><description><![CDATA[<h1>安裝Riak</h1>
+]]></description><link>http://doc.micloud.tw/html/Percona+install.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Percona+install.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[安裝Riak]]></title><description><![CDATA[<h1>安裝Riak</h1>
 <p>Riak為開放式、高擴增性、可容錯的NoSQL資料庫套件，提供大量資料快速存儲服務，以開放程式碼為基礎的分散式資料庫系統。<br>MiCloud所提供的SmartOS主機中，已有預載Riak服務的主機只有SmartOS32+Riak這個版本，若其他規格的主機想安裝Riak於您的主機上，請按照下列步驟進行安裝。</p>
 <p>1.檢視主機上Riak可安裝的版本</p>
 <pre><code>#pkgin se riak</code></pre>
@@ -2149,7 +2149,7 @@ deb-src http://repo.percona.com/apt squeeze main</code></pre>
 <p>6.連線至riak</p>
 <pre><code>#riak attach</code></pre>
 <p><img src='http://doc.micloud.tw/images/Riak+SmartMachine-p8.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Riak+SmartMachine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Riak+SmartMachine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Sat, 04 May 2013 08:30:14 GMT</pubDate></item><item><title><![CDATA[Stingray 基本操作說明]]></title><description><![CDATA[<h1>Stingray基本操作說明</h1>
+]]></description><link>http://doc.micloud.tw/html/Riak+SmartMachine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Riak+SmartMachine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 30 Apr 2013 10:27:10 GMT</pubDate></item><item><title><![CDATA[Stingray 基本操作說明]]></title><description><![CDATA[<h1>Stingray基本操作說明</h1>
 <h2>簡介</h2>
 <p>Stingray原名Zeus，為Riverbed公司所購買之Zeus公司產品，專職負載平衡與網路流量管理相關功能。</p>
 <p>研究Stingray的緣起是越來越多的專案使用到網路層的Load Balancer，因大型的軟體架構中，時常需要有負載平衡及Cluster的架構，而仰賴Apache或是簡單的Load Balancer軟體常常不能滿足需求，而硬體方式的Load Balancer像是BigIP或是Cisco相對應的負載平衡設備都往往超出預算而又超出一般軟體工程師可以觸及的範圍，在這些條件之下，Stingray反而圖顯了一些他存在的重要性。</p>
@@ -2195,7 +2195,7 @@ deb-src http://repo.percona.com/apt squeeze main</code></pre>
 <p><img src='http://doc.micloud.tw/images/Stingray+SmartMachine-p9.PNG' width='650' align='center'/></p>
 <p><strong>Stingray 應用影片</strong><a href="http://www.youtube.com/embed/KM5bRJJDDaw">Go to YouTube</a></p>
 <iframe width="640" height="480" src="http://www.youtube.com/embed/KM5bRJJDDaw?rel=0" align="center" frameborder="0" allowfullscreen ></iframe>
-]]></description><link>http://doc.micloud.tw/html/Stingray+SmartMachine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Stingray+SmartMachine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[安裝MongoDB 與操作說明]]></title><description><![CDATA[<h1>MongoDB</h1>
+]]></description><link>http://doc.micloud.tw/html/Stingray+SmartMachine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Stingray+SmartMachine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[安裝MongoDB 與操作說明]]></title><description><![CDATA[<h1>MongoDB</h1>
 <h2>在SmartOS上安裝MongoDB</h2>
 <p>MiCloud 在SmartOS 32bit 提供預載MongoDB的服務，可以直接選擇此預載的套件，若當初沒有選擇預載服務，用戶可以依下列步驟進行安裝。</p>
 <p>1.本範例將在 /tmp路徑下安裝MongoDB，請先切換至tmp目錄下。</p>
@@ -2236,7 +2236,7 @@ deb-src http://repo.percona.com/apt squeeze main</code></pre>
 <p>在MiCloud平台中，自行安裝MongoDB及預載的連結方式有些許差異，自行安裝的連結方式，可參考前面介紹的指令；選擇預載的用戶，需要用admin來連結至MongoDB，其指令如下，另外，登入的密碼可以在主機細項的Credentials內查看。</p>
 <pre><code># mongo -u admin -p admin</code></pre>
 <p><img src='http://doc.micloud.tw/images/MongoDB+SmartMachine-p10.png' width='650' align='center'/><br><img src='http://doc.micloud.tw/images/MongoDB+SmartMachine-p11.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/MongoDB+SmartMachine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MongoDB+SmartMachine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[安裝Node.js]]></title><description><![CDATA[<h1>Node.js</h1>
+]]></description><link>http://doc.micloud.tw/html/MongoDB+SmartMachine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MongoDB+SmartMachine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[安裝Node.js]]></title><description><![CDATA[<h1>Node.js</h1>
 <p>Node.js 是一個高效能、易擴充的網站應用程式開發框架 (Web Application Framework)，是為了讓開發者能夠更容易開發高延展性的網路服務。系統不需要經過太多複雜的調校、效能調整及程式修改，就能滿足網路服務在不同發展階段對效能的要求。</p>
 <p>MiCloud所提供的SmartOS主機中，已有預載Nodejs服務的主機只有SmartOS Plus、SmartOS32+Nodejs這二種版本，若其他規格的主機想安裝Nodejs於您的主機上，請按照下列步驟進行安裝。</p>
 <h2>在SmartOS上安裝Node.js</h2>
@@ -2261,7 +2261,7 @@ console.log(&#39;Server running at http://127.0.0.1:8102/&#39;);</code></pre>
 <pre><code># node server.js</code></pre>
 <p><img src='http://doc.micloud.tw/images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p5.png' width='650' align='center'/></p>
 <p>最後前往瀏覽器輸入您的localhost以及後方所設定port位置來確認是否運行成功，本操作以google瀏覽器做為範例，如有出現Hello Node.js文字時，表示成功:<br><img src='http://doc.micloud.tw/images/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine-p6.png' width='500' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[Npm安裝及操作]]></title><description><![CDATA[<h1>NPM的安裝與操作</h1>
+]]></description><link>http://doc.micloud.tw/html/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Installing+Node.js+on+a+Joyent+SmartOS+SmartMachine.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[Npm安裝及操作]]></title><description><![CDATA[<h1>NPM的安裝與操作</h1>
 <p>Node.js 的套件管理工具(Node Package Manager)可以讓 Node.js 的開發者直接利用、擴充線上的套件庫（packages registry），加速軟體專案的開發。此外npm 提供很友善的搜尋功能，可以快速找到及安裝需要的套件，當這些套件發行新版本時，npm 也可以協助開發者自動更新這些套件。</p>
 <h2>安裝NPM</h2>
 <p>利用下方指令安裝</p>
@@ -2285,7 +2285,7 @@ console.log(&#39;Server running at http://127.0.0.1:8102/&#39;);</code></pre>
 <p>利用npm uninstall指令來刪除既有套件，以textlogin套件為例，如下圖:</p>
 <pre><code># npm uninstall textlogin</code></pre>
 <p><img src='http://doc.micloud.tw/images/Npm+usage-p13.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Npm+usage.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Npm+usage.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[SmartOS上安裝及設定]]></title><description><![CDATA[<h1>SmartOS上安裝MySQL</h1>
+]]></description><link>http://doc.micloud.tw/html/Npm+usage.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Npm+usage.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[SmartOS上安裝及設定]]></title><description><![CDATA[<h1>SmartOS上安裝MySQL</h1>
 <p>MiCloud在SmartOS Plus、SmartOS32中提供預載MySQL的服務，若剛開始沒有選擇預載之用戶，可以參考以下的步驟進行安裝，由於32bit及64bit的安裝過程有些許差異，故分開描述。</p>
 <h2>SmartOS 32bit安裝步驟</h2>
 <p>1.請先搜尋MySQL的套件，並找到mysql-server最高版本</p>
@@ -2366,7 +2366,7 @@ FLUSH PRIVILEGES;</code></pre>
 <p>7.驗證密碼是否已更改</p>
 <pre><code># mysql -uroot -p</code></pre>
 <p><img src='http://doc.micloud.tw/images/Install+MySQL+on+Linux-p11.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Install+MySQL+on+SmartOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Install+MySQL+on+SmartOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[Linux上安裝及設定]]></title><description><![CDATA[<h1>Linux系統上安裝MySQL</h1>
+]]></description><link>http://doc.micloud.tw/html/Install+MySQL+on+SmartOS.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Install+MySQL+on+SmartOS.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[Linux上安裝及設定]]></title><description><![CDATA[<h1>Linux系統上安裝MySQL</h1>
 <p>依下達的指令不同，各作業系統的安裝說明如下:</p>
 <h2>CentOS、Fedora 安裝MySQL</h2>
 <p>1.請使用yum安裝</p>
@@ -2415,7 +2415,7 @@ FLUSH PRIVILEGES;</code></pre>
 <p>8.驗證密碼是否已更改</p>
 <pre><code>#mysql -uroot -p</code></pre>
 <p><img src='http://doc.micloud.tw/images/Install+MySQL+on+Linux-p11.png' width='650' align='center'/></p>
-]]></description><link>http://doc.micloud.tw/html/Install+MySQL+on+Linux.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Install+MySQL+on+Linux.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[在MiCloud上建置我的雲端服務]]></title><description><![CDATA[<h1>MiCloud Self-Service Portal實作</h1>
+]]></description><link>http://doc.micloud.tw/html/Install+MySQL+on+Linux.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Install+MySQL+on+Linux.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[在MiCloud上建置我的雲端服務]]></title><description><![CDATA[<h1>MiCloud Self-Service Portal實作</h1>
 <h2>主題：我的第一個雲端服務</h2>
 <h2>我的雲端服務簡介</h2>
 <ul>
@@ -2444,7 +2444,7 @@ FLUSH PRIVILEGES;</code></pre>
 <iframe width="560" height="315" src="http://www.youtube.com/embed/6QxgkmEs_zE" frameborder="0" allowfullscreen></iframe>
 
 
-]]></description><link>http://doc.micloud.tw/html/MiCloud+Self-Service+Portal.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+Self-Service+Portal.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[使用DTrace分析MySQL]]></title><description><![CDATA[<h1>Using DTrace on MySQL</h1>
+]]></description><link>http://doc.micloud.tw/html/MiCloud+Self-Service+Portal.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+Self-Service+Portal.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[使用DTrace分析MySQL]]></title><description><![CDATA[<h1>Using DTrace on MySQL</h1>
 <p>Even though there aren&#39;t DTrace probes for MySQL released yet, we can still get useful information from MySQL. DTrace has a pid provider which allows us to get into any function the program is executing and see it&#39;s arguments. The only drawback is you have to go digging around in the source code to find out what you want to see. But thanks to guys like Brendan Gregg, they have already done some of the digging for us</p>
 <p>Even if we want to go digging around ourselves, it&#39;s really not that hard; you just have to get your feet wet. And because SmartMachines have DTrace probes enabled, you can take advantage of using DTrace on MySQL. I will show some examples of this and how easy it is to hunt down your own functions.</p>
 <p>First let&#39;s start with functions that have already been dug up for us:</p>
@@ -2504,7 +2504,7 @@ SELECT COUNT(*) FROM joe_visitors where  upper(vs_browser) not like &#39;%GOOGLE
 <p>As you can see DTrace can be very powerful even if we don&#39;t have probes released yet, we just have to do a little extra work. Some of the information shown can be obtained from MySQL, but using DTrace still provides a benefit because we don&#39;t have to enable anything in the MySQL configuration, possibly making us restart the server. I&#39;m providing these scripts in the <a href="http://hell.jedicoder.net/files/MySQLDTraceKit.tar.gz">MySQLDTraceKit.tar.gz</a><br>Hopefully in the near future we will have real MySQL probes.</p>
 <hr>
 <p>資料來源：<a href="http://wiki.joyent.com/display/www/Documentation+Home">Joyent Wiki</a></p>
-]]></description><link>http://doc.micloud.tw/html/Using+DTrace+on+MySQL.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Using+DTrace+on+MySQL.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[MiCloudAPI Analysis]]></title><description><![CDATA[<h1>MiCloud API Analysis</h1>
+]]></description><link>http://doc.micloud.tw/html/Using+DTrace+on+MySQL.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Using+DTrace+on+MySQL.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[MiCloudAPI Analysis]]></title><description><![CDATA[<h1>MiCloud API Analysis</h1>
 <p>MiCloud繼承Joyent的雲端平台，提供有一個進階的服務監控方式 -- Dtrace，這是個非常進階的狀態監控系統，原生於Solaris Unix上，已有Mac與SmartOS的實作套件，亦可於MiCloud環境上直接使用。本篇講解如何使用CloudAPI操作此部份分析功能…<br>首先請大家先準備好Node.js環境與CloudAPI，假設大家已經安裝好Node.js，那只要透過下面指令就可以安裝CloudAPI(由於SDC環境持續改板中，請安裝對應目前MiCloud環境的smartdc套件，目前選定的是6.5.4版本的smartdc): </p>
 <pre><code>npm install smartdc@6.5.4</code></pre>
 <p>安裝好相關套件後，可以透過sdc-describeanalytics指令查詢有哪些可用分析：</p>
@@ -2779,7 +2779,7 @@ $ sdc-getinstrumentation --value true 3
 <pre><code>$ sdc-getinstrumentation --value true 5 | json value.4066be38-321a-4884-8979-d8629284d2d0
 84439040</code></pre>
 <p>PS: 關於json command tools，請參考：<a href="http://opennodes.github.io/wiki/http://doc.micloud.tw/html/jsontool.html"><a href="http://opennodes.github.io/wiki/http://doc.micloud.tw/html/jsontool.html">http://opennodes.github.io/wiki/http://doc.micloud.tw/html/jsontool.md</a></a></p>
-]]></description><link>http://doc.micloud.tw/html/sdcAnalytics.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/sdcAnalytics.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:20:41 GMT</pubDate></item><item><title><![CDATA[MiCloud API]]></title><description><![CDATA[<h1>MiCloud API</h1>
+]]></description><link>http://doc.micloud.tw/html/sdcAnalytics.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/sdcAnalytics.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Fri, 21 Jun 2013 18:15:03 GMT</pubDate></item><item><title><![CDATA[MiCloud API]]></title><description><![CDATA[<h1>MiCloud API</h1>
 <p>本文件為MiCloud API之簡短說明文件，MiCloud使用Joyent服務，進行IaaS環境部署，基於Joyent提供之API套件進行MiCloud API相關功能之提供。</p>
 <h2>MiCloud API簡介</h2>
 <h2>何謂MiCloud API?</h2>
@@ -2933,7 +2933,392 @@ $ sdc-listmachines -n getting-started | json 0.id | xargs sdc-deletemachine</cod
 <p>刪除SSH Key</p>
 <p>另外，您或許會想要把目前沒用到的SSH Key刪除，透過下面指令可以把SSH Key移除：</p>
 <pre><code>sdc-deletekey id_rsa</code></pre>
-]]></description><link>http://doc.micloud.tw/html/MiCloud+API.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+API.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[MiCloud API實做案例(一)]]></title><description><![CDATA[<h1>MiCloudAPI 實做案例</h1>
+]]></description><link>http://doc.micloud.tw/html/MiCloud+API.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+API.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[Machine,Datasets,Packages]]></title><description><![CDATA[<h1>MiCloud API 基本操作(一) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 管理<a href="#Machine">Machine</a>   ,查詢<a href="#Datasets">Datasets</a>,查詢<a href="#Packages">Packages</a>。</p>
+<h2>關於 machine：<a name="Machine"></a></h2>
+<hr>
+<p><strong>#sdc-createmachine --package [name] --dataset [urn]</strong> </p>
+<p>產生一台新機器(其中package與dataset必須由使用者自行輸入,而其他參數若使用者沒輸入則電腦會自動預設好)</p>
+<p>可以查看<a href="#Datasets"><strong>關於Datasets</strong></a>,<a href="#Packages"><strong>關於Packages</strong></a>。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createmachine --package &quot;regular_512&quot; --dataset &quot;sdc:sdc:nodejs:1.1.4&quot;
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;provisioning&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 512,
+  &quot;disk&quot;: 10240,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachine [machine id] </strong></p>
+<p>刪除指定機器(其中機器的狀態必須是&quot;stopped&quot;方可進行刪除動做)。</p>
+<p><strong>#sdc-getmachine [machine id]</strong> </p>
+<p>藉由id查詢指定機器詳細資料。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;provisioning&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 512,
+  &quot;disk&quot;: 10240,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T01:41:37+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-listmachines</strong></p>
+<p>檢索該帳戶上的所有機器。</p>
+<p><strong>#sdc-rebootmachine [id]</strong></p>
+<p>藉由id而重新啟動該機器。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-rebootmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+
+  &quot;state&quot;: &quot;running&quot; → &quot;state&quot;: &quot;stopped&quot; → &quot;state&quot;: &quot;running&quot;</code></pre>
+<p><strong>#sdc-resizemachine --package [name] [machine id]</strong>  </p>
+<p>修改機器 (memory,disk)</p>
+<p>範例如下:</p>
+<pre><code>#sdc-resizemachine --package &quot;S 1GB RAM (1CORE)&quot; 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;id&quot;: &quot;0fa17f7b-7cf4-4504-b0c7-062178c3850c&quot;,
+  &quot;name&quot;: &quot;0f3e84f&quot;,
+  &quot;type&quot;: &quot;smartmachine&quot;,
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;dataset&quot;: &quot;sdc:sdc:nodejs:1.1.4&quot;,
+  &quot;ips&quot;: [
+    &quot;211.78.254.30&quot;
+  ],
+  &quot;memory&quot;: 1024,
+  &quot;disk&quot;: 15360,
+  &quot;metadata&quot;: {},
+  &quot;created&quot;: &quot;2013-07-01T01:42:23+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:07:03+00:00&quot;,
+  &quot;primaryIp&quot;: &quot;211.78.254.30&quot;
+}</code></pre>
+<p><strong>#sdc-startmachine [machine id]</strong></p>
+<p>藉由id而啟動該機器。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-startmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+
+  &quot;state&quot;: &quot;running&quot;</code></pre>
+<p><strong>#sdc-stopmachine [machine id]</strong></p>
+<p>範例如下:</p>
+<pre><code>#sdc-stopmachine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+藉由id而停止該機器。
+
+結果:
+
+  &quot;state&quot;: &quot;stopped&quot;</code></pre>
+<h2>關於 datasets：<a name="Datasets"></a></h2>
+<hr>
+<p><strong>#sdc-getdataset [name]</strong>  </p>
+<p>檢索指定的 datasets，包含其id,urn,name,os,type,description,default,requirement,version等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getdatasets chefserver
+
+結果:
+  {
+    &quot;id&quot;: &quot;e6f10814-a38d-11e2-8138-67b96e228c1e&quot;,
+    &quot;urn&quot;: &quot;sdc:sdc:chefserver:1.1.0&quot;,
+    &quot;name&quot;: &quot;chefserver&quot;,
+    &quot;os&quot;: &quot;smartos&quot;,
+    &quot;type&quot;: &quot;smartmachine&quot;,
+    &quot;description&quot;: &quot;machine_new_SmartOS64ChefServer&quot;,
+    &quot;default&quot;: false,
+    &quot;requirements&quot;: {},
+    &quot;version&quot;: &quot;1.1.0&quot;
+  }</code></pre>
+<p><strong>#sdc-listdatasets</strong> </p>
+<p>檢索所有的datasets，包含id,urn,name,os,type,description,default,requirement,version等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listdatasets</code></pre>
+<h2>關於 packages：<a name="Packages"></a></h2>
+<hr>
+<p><strong>#sdc-getpackage [name]</strong> </p>
+<p>檢索單筆的package，包含name,mwmory,disk,vcpus,swap,default等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listpackages &quot;3XL 32GB RAM (4CORE)&quot;
+
+ 結果:
+{
+  &quot;name&quot;: &quot;3XL 32GB RAM (4CORE)&quot;,
+  &quot;memory&quot;: 32768,
+  &quot;disk&quot;: 512000,
+  &quot;vcpus&quot;: 4,
+  &quot;swap&quot;: 32768,
+  &quot;default&quot;: false
+}</code></pre>
+<p><strong>#sdc-listpackages</strong> </p>
+<p>檢索所有package，包含name,mwmory,disk,vcpus,swap,default等。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listpackages</code></pre>
+]]></description><link>http://doc.micloud.tw/html/API+1.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/API+1.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Wed, 10 Jul 2013 03:15:44 GMT</pubDate></item><item><title><![CDATA[Tag,Metadata,Instrumentation]]></title><description><![CDATA[<h1>MiCloud API 基本操作(二) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 使用<a href="#Tag">Tag</a>,使用<a href="#Metadata">Metadata</a>,使用<a href="#Instrumentation">Instrumentation</a>。</p>
+<h2>關於 Tag：<a name="Tag"></a></h2>
+<hr>
+<p><strong>#sdc-addmachinetags  -t  key=value  [machine id]</strong> </p>
+<p> 此指令可以讓你添加新的標籤，而不是覆蓋現有的標籤</p>
+<p> 此乎叫允許您傳送任意數量的參數，而這些參數將被轉為標籤可供您所使用</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-addmachinetags -t foo=bar  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+ {
+   &quot;foo&quot;: &quot;bar&quot;
+ }</code></pre>
+<p><strong>#sdc-deletemachinetag [key] --machine [machine id]</strong> </p>
+<p> 刪除指定機器上的tag與其值</p>
+<p> 範例如下:</p>
+<pre><code> #sdc-deletemachinetag foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5</code></pre>
+<p><strong>#sdc-getmachinetag [key] --machine [machine id]</strong></p>
+<p> 可檢索指定機器上的tag的值</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-getmachinetag  foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+  結果:
+
+   bar</code></pre>
+<p><strong>#sdc-listmachinetags [machine id]</strong></p>
+<p> 檢索某一機器的所有tag與其值</p>
+<p>範例如下:</p>
+<pre><code> #sdc-listmachinetags 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+ {
+   &quot;foo&quot;: &quot;bar&quot;
+ }</code></pre>
+<h2>關於 metadata：<a name="Metadata"></a></h2>
+<hr>
+<p><strong>#sdc-updatemachinemetadata   --metadata key=value [mahine id]</strong> </p>
+<p> 允許您更新某一機器的metadata。</p>
+<p>範例如下:</p>
+<pre><code> #sdc-updatemachinemetadata --metadata foo=bar 33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+
+{
+  &quot;root_authorized_keys&quot;: &quot;ssh-rsa ......................略&quot;,
+  &quot;foo&quot;: &quot;bar&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachinemetadata [key] --machine [machine id] </strong> </p>
+<p> 刪除某一機器的指定之metadata。</p>
+<p> 範例如下:</p>
+<pre><code> #sdc-deletemachinemetadata foo --machine 33fc3da1-2a33-4463-9dd8-f37f8b5597c5</code></pre>
+<p><strong>#sdc-getmachinemetadata  [mahine id]</strong></p>
+<p> 查詢某一機器的metadata</p>
+<p> 範例如下:</p>
+<pre><code>#sdc-getmachinemetadata  33fc3da1-2a33-4463-9dd8-f37f8b5597c5
+
+ 結果:
+
+{
+  &quot;root_authorized_keys&quot;: &quot;ssh-rsa ......................略&quot;,
+  &quot;foo&quot;: &quot;bar&quot;
+}</code></pre>
+<h2>關於 instrumentation：<a name="Instrumentation"></a></h2>
+<hr>
+<p><strong>#sdc-createinstrumentation</strong>      </p>
+<p> 創建一個instrumentation。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createinstrumentation -m syscall -s syscalls
+
+結果:
+{
+  &quot;module&quot;: &quot;syscall&quot;,
+  &quot;stat&quot;: &quot;syscalls&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1372235215353,
+  &quot;value-scope&quot;: &quot;interval&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/sunwing/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>#sdc-deleteinstrumentation [instrumentation_id]</strong></p>
+<p> 刪除instrumentation。</p>
+<p>範例如下:</p>
+<pre><code>sdc-deleteinstrumentation 1</code></pre>
+<p><strong>#sdc-getinstrumentation [instrumentation_id]</strong></p>
+<p> 藉由id 檢索 instrumentation 的組態。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getinstrumentation 1
+
+結果:
+{
+  &quot;module&quot;: &quot;syscall&quot;,
+  &quot;stat&quot;: &quot;syscalls&quot;,
+  &quot;predicate&quot;: {},
+  &quot;decomposition&quot;: [],
+  &quot;value-dimension&quot;: 1,
+  &quot;value-arity&quot;: &quot;scalar&quot;,
+  &quot;enabled&quot;: true,
+  &quot;retention-time&quot;: 600,
+  &quot;idle-max&quot;: 3600,
+  &quot;transformations&quot;: {},
+  &quot;nsources&quot;: 0,
+  &quot;granularity&quot;: 1,
+  &quot;persist-data&quot;: false,
+  &quot;crtime&quot;: 1372235215353,
+  &quot;value-scope&quot;: &quot;interval&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;uris&quot;: [
+    {
+      &quot;uri&quot;: &quot;/sunwing/analytics/instrumentations/1/value/raw&quot;,
+      &quot;name&quot;: &quot;value_raw&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>#sdc-listinstrumentations</strong></p>
+<p>檢索木前所創建的所有instrumentations。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listinstrumentations</code></pre>
+]]></description><link>http://doc.micloud.tw/html/API+2.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/API+2.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Wed, 10 Jul 2013 03:15:44 GMT</pubDate></item><item><title><![CDATA[Key,Machinesnapshot,other]]></title><description><![CDATA[<h1>MiCloud API 基本操作(三) :</h1>
+<p>若在command line下輸入 sdc- +[tab][tab] (字元補其)會出現所有指令</p>
+<p>MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command的使用方法</p>
+<p>以下將教您如何 管理<a href="#Key">Key</a>,查詢<a href="#Machinesnapshot">Machinesnapshot</a>,及<a href="#Other">其他指令</a>。</p>
+<h2>關於 key：<a name="Key"></a></h2>
+<hr>
+<p>目前CloudAPI支持以OpenSSH格式的公鑰上傳。<br>值得注意的是，在此也提供了相較友善的 &quot;name&quot; 屬性給 SSH key (其中name 可有可無)</p>
+<p><strong>#sdc-createkey</strong> </p>
+<p>上傳一個新的 OpenSSH key 到 SmartDataCenter。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createkey -n id_rsa ~/.ssh/id_rsa.pub
+
+結果:
+{
+  &quot;name&quot;: &quot;id_rsa&quot;,
+    &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuMb+L3kt4ZQELQ8q07VzZ/
+          tOBe6G+POo8j/WNyriKLa/nG6+419EGRetcnPY6UpuE5adIppVdG7FqId6
+          XNIRcVzxYs6clZ7R1/8f9F9YJLZZphfoGQrR6YZHfePn2joRSZ1L02DAYx
+          N7UID3S8TEiT+2tnmUeTB2W9Y1ddkQOQE12w5jrtKIN3QwJBl5TZ7D+sv6
+          Pepw3yWvxKSrTQdsalrkkJC3tDgctyPCHY4yqNWIFEFui7hIbfZPThNRkI
+          vdqtAEAyB/9tlB9MrmHaoW2C49aFLnh2Qtf5xniT8FwJc9kurbYBJnK8pr
+          beJ/Kug5DdC11k/sJCoaFQ45Sw== root@*********&quot;,
+  &quot;created&quot;: &quot;2013-06-26T06:46:45+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-06-26T06:46:45+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-deletekey  [key id]</strong> </p>
+<p>刪除一個SSH key。</p>
+<p>範例如下:</p>
+<pre><code> #sdc-deletekey id_rsa</code></pre>
+<p><strong>#sdc-getkey [key id]</strong> </p>
+<p>檢索個別Key的記錄。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getkey id_rsa
+
+結果:
+{
+  &quot;name&quot;: &quot;id_rsa&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuMb+L3kt4ZQELQ8q07VzZ/
+          tOBe6G+POo8j/WNyriKLa/nG6+419EGRetcnPY6UpuE5adIppVdG7FqId6
+          XNIRcVzxYs6clZ7R1/8f9F9YJLZZphCoGQrR6YZHvePn2joRSZ1L02DAYx
+          N7UID3S8TEiT+2tnmUeTB2fd9Y1dNkQOQE12w5jrfKIN3QwJBl5TZ7D+sv
+          Pepw3yWvxKSdsQ+alrkkJC3tDgctyPCHY4yqNWIFEFui7hIbfZPThNRkIn
+          vdqtAEAyB/9tlB9MrmHaoW2C49aFLnh2Qtf5xniT8FwJc9kurbYBJnK8pr
+          beJ/Kug5DdC11k/sJCoaFQ45Sw== root@*********&quot;,
+  &quot;created&quot;: &quot;2013-06-26T06:46:45+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-06-26T06:46:45+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-listkeys</strong>  </p>
+<p>列出指定帳戶的所有公共密鑰。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listkeys</code></pre>
+<h2>關於 machinesnapshot ：<a name="Machinesnapshot"></a></h2>
+<hr>
+<p><strong>#sdc-createmachinesnapshot [machine id]</strong>  </p>
+<p>對所指定smartmachine創見一個新的快照。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-createmachinesnapshot 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;name&quot;: &quot;20130701021139&quot;,
+  &quot;state&quot;: &quot;queued&quot;,
+  &quot;created&quot;: &quot;2013-07-01T02:11:39+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:11:39+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-deletemachinesnapshot [snapshot name] --machine [machine id]</strong>  </p>
+<p>刪除指定smartmachine的快照。</p>
+<p><strong>#sdc-getmachinesnapshot [snapshot name] --machine[machine id]</strong>  </p>
+<p>藉由name取得指定smartmachine的快照。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-getmachinesnapshot &quot;20130701021139&quot; --machine 0fa17f7b-7cf4-4504-b0c7-062178c3850c
+
+結果:
+{
+  &quot;name&quot;: &quot;20130701021139&quot;,
+  &quot;state&quot;: &quot;queued&quot;,
+  &quot;created&quot;: &quot;2013-07-01T02:11:39+00:00&quot;,
+  &quot;updated&quot;: &quot;2013-07-01T02:11:39+00:00&quot;
+}</code></pre>
+<p><strong>#sdc-listmachinesnapshots</strong>  </p>
+<p>列出指定一個smartmachine的所有快照。</p>
+<p><strong>#sdc-startmachinefromsnapshot -n [snapshot name] [machine id]</strong>  </p>
+<p>當機器處於 &#39;stopped&#39; 狀態下，您可以選擇用快照起動機器。</p>
+<h2>其他指令：<a name="Other"></a></h2>
+<hr>
+<p><strong>#sdc-describeanalytics</strong> </p>
+<p>檢索可以創建所使用的分析端點 instrumentations 的 架構。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-describeanalytics</code></pre>
+<p><strong>#sdc-listdatacenters</strong> </p>
+<p>提供一個關於所有數據中心的列表 。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-listdatacenters</code></pre>
+<p><strong>#sdc-setup</strong> </p>
+<p>在數據中心設置一個帳戶來使用。</p>
+<p>範例如下:</p>
+<pre><code>#sdc-setup
+
+SDC_ACCOUNT:    輸入您的username。
+
+SDC_URL:   CloudAPI 端點.
+例如，一個為JoyentCloud的CloudAPI端點https://us-west-1.api.joyentcloud.com。 
+(每個數據中心在雲其自己的CloudAPI端點)。
+
+SDC_KEY_ID:  您上傳到 SmartDC 的 key fingerprint。</code></pre>
+]]></description><link>http://doc.micloud.tw/html/API+3.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/API+3.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Wed, 10 Jul 2013 03:15:44 GMT</pubDate></item><item><title><![CDATA[MiCloud API實做案例(一)]]></title><description><![CDATA[<h1>MiCloudAPI 實做案例</h1>
 <h2>情境：</h2>
 <p>我是一個購物網站的主機管理員，當季的商品促銷期間常會造成流量爆滿，大量的transaction會導至網頁資料傳輸與反應變慢，運行在傳統的主機服務架構下，此時除非新增加伺服器規格外，似乎無其他方法... 但在雲端的環境下，我可以規劃我的促消時間，依照網站上統計的到訪人數資料來讓我可以知道大約尖峰時期在甚麼時候，透過MiCloudAPI，我建置了一個可以依據我所規劃的時間來進行增加服務端點的架構。</p>
 <p><img src='http://doc.micloud.tw/images/MiCloud+API+Implement+1-p12.png' width='450' align='center'/><br>圖：利用MiCloudAPI建構可延展架構</p>
@@ -3068,7 +3453,7 @@ echo “Server Create Done” | mailx -s “Add a Server to MiCloud” simonsu.m
 <h2>將服務加入Cron Job</h2>
 <pre><code>10 0 20 12 * $ HOME / script / bin / createServer.sh</code></pre>
 <p>上述腳本正常執行後，就可以順利的在12/20當天延展AP主機的服務，並且提供服務囉！</p>
-]]></description><link>http://doc.micloud.tw/html/MiCloud+API+Implement+1.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+API+Implement+1.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[MiCloud API實做案例(二)]]></title><description><![CDATA[<h1>MiCloudAPI 實做案例</h1>
+]]></description><link>http://doc.micloud.tw/html/MiCloud+API+Implement+1.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+API+Implement+1.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[MiCloud API實做案例(二)]]></title><description><![CDATA[<h1>MiCloudAPI 實做案例</h1>
 <h2>預防尖峰流量拖垮服務：Scale Out應用服務-使用CloudAPI排程</h2>
 <ul>
 <li>調整一臺虛擬主機的記憶體大小</li>
@@ -3110,7 +3495,7 @@ Requested transition is not acceptable due to current resource state
 simonsuteki-MacBook-Pro:~ simonsu$ sdc-stopmachine 845f21fe-1910-4b38-a4cae2a81144f9a2
 # Confirm stop OK and delete...
 simonsuteki-MacBook-Pro:~ simonsu$ sdc-deletemachine 845f21fe-1910-4b38-a4cae2a81144f9a2</code></pre>
-]]></description><link>http://doc.micloud.tw/html/MiCloud+API+Implement+2.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+API+Implement+2.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[Micloud API]]></title><description><![CDATA[<h1>聖藍科技分享文章</h1>
+]]></description><link>http://doc.micloud.tw/html/MiCloud+API+Implement+2.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/MiCloud+API+Implement+2.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[Micloud API]]></title><description><![CDATA[<h1>聖藍科技分享文章</h1>
 <p>感謝聖藍科技使用MiCloud服務，透過CloudAPI提供聖藍科技自動Scale之功能以架構多媒體影音服務，以下文章轉載自qrtt1 github repository<a href="http://www.accupass.com/Event/Register?eid=359099570305727">本文</a></p>
 <h2>簡介</h2>
 <p>最近在蒐集國內 IaaS 的資料，目前只看到 MiCloud 有提供 API。依照「沒有釋出API，就不能稱得上是真正的IaaS服務。」 那目前 MiCloud 算是國內的『真。IaaS』MiCloud 採用的 solution 是 joyent <a href="https://github.com/joyent">https://github.com/joyent</a> 的Cloud API。 對使用 solution 的 MiCloud 來說，它能提供 web 的管理頁面，而 customer 可以 command line tools 與 RESTful API 來操作它。 我們可以由 wiki 獲得操作的資訊：<a href="http://wiki.micloud.tw/Wiki/">http://wiki.micloud.tw/Wiki/</a> 。本文主要是為了 Command Line 操作而寫，希望能補足 wiki 模糊的部分。</p>
@@ -3406,7 +3791,7 @@ http://s3-ap-southeast-1.amazonaws.com/qrtt1.software/rpms/nodejs-0.6.8-1.el6.x8
 <ul>
 <li><a href="https://github.com/qrtt1/joyent.cloudapi/blob/master/MiCloud.Notes.zh_tw.md#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%A9%9F%E5%99%A8">Github MiCloud.Notes.zh_tw.md</a></li>
 </ul>
-]]></description><link>http://doc.micloud.tw/html/Share+by+qrtt1.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Share+by+qrtt1.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Mon, 24 Jun 2013 06:08:53 GMT</pubDate></item><item><title><![CDATA[回首頁]]></title><description><![CDATA[<h1>歡迎使用</h1>
+]]></description><link>http://doc.micloud.tw/html/Share+by+qrtt1.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Share+by+qrtt1.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 11 Jun 2013 03:41:11 GMT</pubDate></item><item><title><![CDATA[回首頁]]></title><description><![CDATA[<h1>歡迎使用</h1>
 <p>歡迎使用MiCloud Wiki，我們將在此分享MiCloud的相關說明文件。</p>
 <h2>我們的特色</h2>
 <ul>
@@ -3424,4 +3809,4 @@ http://s3-ap-southeast-1.amazonaws.com/qrtt1.software/rpms/nodejs-0.6.8-1.el6.x8
 <p>如有其他建議，或需要我們改進的地方，請隨時連絡我們！</p>
 <p><img src='http://doc.micloud.tw/images/Main-p1.png' width='650'  align='center'/></p>
 <p>MiCloud客服信箱：<a href="mailto:service@micloud.tw">service@micloud.tw</a></p>
-]]></description><link>http://doc.micloud.tw/html/Main.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Main.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Sat, 04 May 2013 08:30:14 GMT</pubDate></item></channel></rss>
+]]></description><link>http://doc.micloud.tw/html/Main.html</link><guid isPermaLink="false">http://doc.micloud.tw/html/Main.html</guid><dc:creator><![CDATA[MiCloud]]></dc:creator><pubDate>Tue, 30 Apr 2013 10:27:10 GMT</pubDate></item></channel></rss>
