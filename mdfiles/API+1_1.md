@@ -12,22 +12,9 @@ MiCloud CLI的使用上，您可以透過 command --help 方式查詢該command�
 ##關於 machine：<a name="Machine"></a>
 --------------------------------------------------------------------------------------
 
-在Machine建立的當下，MiCloud賦予Machine一些主機上的特殊屬性，讓使用者可以透過API的方式查詢。
-
-一般我們可以在CLI上查詢Create Machine的 help page可以知道有哪些參數可以帶入：
-
-__\# sdc-createmachine --help__
-
-```
-sdc-createmachine [--account string] [--debug boolean] [--dataset string] [--help boolean] 
-
-[--identity path] [--keyId string] [--metadata ] [--name string] [--package string] [--tag ] [--url url]
-
-```
-
 __\#sdc-createmachine --package [name] --dataset [urn]__ 
 
-建立一台新機器，參數Datasets與Packages是必要條件。(其他參數若使用者沒輸入則電腦會自動預設好)
+產生一台新機器(其中package與dataset必須由使用者自行輸入,而其他參數若使用者沒輸入則電腦會自動預設好)
 
 可以查看[__關於Datasets__](#Datasets),[__關於Packages__](#Packages)。
 
