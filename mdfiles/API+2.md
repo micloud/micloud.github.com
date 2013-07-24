@@ -229,17 +229,20 @@ HELLO simonsu
 
 建立主機的指令：
 
+```
 # sdc-createmachine \
 --dataset local:robin:hadoop-node:0.1.0 \
 --package "S 1GB RAM (1CORE)" \
 --script ./install.sh \
 --tag servername=JoomlaServer01
+```
 
 其中install.sh內容如下
 
+```
 # cat install.sh
 curl -k https://raw.github.com/micloud/installer/master/smartos-standard64/install-joomla.sh | sh
-
+```
 
 ##關於 instrumentation：<a name="Instrumentation"></a>
 --------------------------------------------------------------------------------------
