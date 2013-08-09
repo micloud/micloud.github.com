@@ -16,8 +16,18 @@
       {"type":"node", "link":"Micloud+Features.md","name":"MiCloud的特點是什麼?"},
       {"type":"node", "link":"PuttyLoginErrorCannotAgreeAClientToServerCipher.md","name":"PUTTY連線錯誤訊息：Cannot Agree A Client To Server Cipher"},
       {"type":"node", "link":"SmartOS+Install+Oracle.md","name":"SmartOS如何安裝Oracle"},
+       {
+        "name":"基本指令1",
+        "type": "folder",
+        "nodes": [
+          {"type":"node", "link":"View+network+routing+instructions.md","name":"如何檢視網路路由?"},
+          {"type":"node", "link":"Used+commmands.md","name":"常用指令集有哪些?"},
+          {"type":"node", "link":"Update+Timezone.md","name":"如何更新主機時區？"},
+          {"type":"node", "link":"View+Used+Resources.md","name":"如何檢視已使用的資源?"}
+        ]
+      } ,
       {
-        "name":"基本指令",
+        "name":"基本指令2",
         "type": "folder",
         "nodes": [
           {"type":"node", "link":"View+network+routing+instructions.md","name":"如何檢視網路路由?"},
@@ -196,3 +206,6 @@
     "link":"Main.md"
   }
 ]
+
+
+
