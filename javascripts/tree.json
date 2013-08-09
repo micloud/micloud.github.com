@@ -17,17 +17,17 @@
       {"type":"node", "link":"PuttyLoginErrorCannotAgreeAClientToServerCipher.md","name":"PUTTY連線錯誤訊息：Cannot Agree A Client To Server Cipher"},
       {"type":"node", "link":"SmartOS+Install+Oracle.md","name":"SmartOS如何安裝Oracle"},
        {
-        "name":"基本指令1",
+        "name":"SmartOs系列資訊",
         "type": "folder",
         "nodes": [
-          {"type":"node", "link":"View+network+routing+instructions.md","name":"如何檢視網路路由?"},
-          {"type":"node", "link":"Used+commmands.md","name":"常用指令集有哪些?"},
-          {"type":"node", "link":"Update+Timezone.md","name":"如何更新主機時區？"},
-          {"type":"node", "link":"View+Used+Resources.md","name":"如何檢視已使用的資源?"}
+          {"type":"node", "link":"dataset+smartos.md","name":"sdc:sdc:smartos:1.3.18"},
+          {"type":"node", "link":"dataset+smartosplus.md","name":"sdc:sdc:smartosplus:3.0.7"},
+          {"type":"node", "link":"dataset+smartosplus64.md","name":"sdc:sdc:smartosplus64:3.0.7"},
+          {"type":"node", "link":"dataset+smartos64.md","name":"sdc:sdc:smartos64:1.5.1"}
         ]
       } ,
       {
-        "name":"基本指令2",
+        "name":"基本指令",
         "type": "folder",
         "nodes": [
           {"type":"node", "link":"View+network+routing+instructions.md","name":"如何檢視網路路由?"},

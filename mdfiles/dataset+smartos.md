@@ -7,9 +7,9 @@ __Repository位置__
 http://pkgsrc.joyent.com/sdc6/2010Q4/gcc45/All
 ```
 
-__無SDC Doc的位置__
+__無SDC Doc的位置!__
 
-__Preload packages__
+__預載packages如下: __
 
 ```
 bmake-20100808 Portable (autoconf) version of NetBSD 'make' utility
